@@ -88,10 +88,14 @@ export default function Header() {
 
               {isApplicationsOpen && (
                 <div
-                  className="absolute left-1/2 transform -translate-x-1/2 w-screen h-[200px] shadow-lg z-40"
+                  className="absolute h-[200px] shadow-lg z-40"
                   style={{
                     backgroundColor: '#eaf3f9',
+                    left: '0',
+                    right: '0',
+                    width: '100vw',
                     marginLeft: '-50vw',
+                    left: '50%',
                     top: '100%'
                   }}
                 >
@@ -162,10 +166,14 @@ export default function Header() {
 
               {isRessourcenOpen && (
                 <div
-                  className="absolute left-1/2 transform -translate-x-1/2 w-screen h-[200px] shadow-lg z-40"
+                  className="absolute h-[200px] shadow-lg z-40"
                   style={{
                     backgroundColor: '#eaf3f9',
+                    left: '0',
+                    right: '0',
+                    width: '100vw',
                     marginLeft: '-50vw',
+                    left: '50%',
                     top: '100%'
                   }}
                 >
@@ -236,10 +244,14 @@ export default function Header() {
 
               {isKontaktOpen && (
                 <div
-                  className="absolute left-1/2 transform -translate-x-1/2 w-screen h-[200px] shadow-lg z-40"
+                  className="absolute h-[200px] shadow-lg z-40"
                   style={{
                     backgroundColor: '#eaf3f9',
+                    left: '0',
+                    right: '0',
+                    width: '100vw',
                     marginLeft: '-50vw',
+                    left: '50%',
                     top: '100%'
                   }}
                 >
