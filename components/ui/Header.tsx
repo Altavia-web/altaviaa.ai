@@ -18,9 +18,9 @@ export default function Header() {
             <Image
               src="/images/logo/AVA_Logo.png"
               alt="Alta Via Applications Logo"
-              width={200}
-              height={200}
-              className="h-20 w-auto"
+              width={240}
+              height={240}
+              className="h-24 w-auto"
               priority
               quality={100}
               style={{ imageRendering: 'crisp-edges' }}
