@@ -1,17 +1,12 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Titillium_Web } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/ui/Header";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const titilliumWeb = Titillium_Web({
+  variable: "--font-titillium",
   subsets: ["latin"],
-  display: "swap",
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+  weight: ["400", "600", "700"],
   display: "swap",
 });
 
@@ -64,7 +59,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${titilliumWeb.variable} antialiased`}
       >
         <a
           href="#main-content"
