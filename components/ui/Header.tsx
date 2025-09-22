@@ -18,10 +18,12 @@ export default function Header() {
             <Image
               src="/images/logo/AVA_Logo.png"
               alt="Alta Via Applications Logo"
-              width={120}
-              height={120}
-              className="h-16 w-auto"
+              width={200}
+              height={200}
+              className="h-20 w-auto"
               priority
+              quality={100}
+              style={{ imageRendering: 'crisp-edges' }}
             />
           </Link>
 
