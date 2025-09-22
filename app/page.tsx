@@ -2,22 +2,22 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white">
+      <section className="bg-gradient-dark-to-mid text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl">
               Welcome to{" "}
-              <span className="text-blue-200">Alta Via Applications</span>
+              <span className="text-skyBlue">Alta Via Applications</span>
             </h1>
-            <p className="mt-6 text-xl text-blue-100 max-w-3xl mx-auto">
+            <p className="mt-6 text-xl text-iceBlue max-w-3xl mx-auto">
               Delivering simplicity through innovative applications and digital solutions.
               We transform complex business challenges into elegant, user-friendly solutions.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-blue-600 px-8 py-3 rounded-md font-semibold hover:bg-blue-50 transition-colors">
+              <button className="bg-white text-darkBlue px-8 py-3 rounded-md font-semibold hover:bg-iceBlue transition-colors">
                 Explore Applications
               </button>
-              <button className="border border-blue-200 text-white px-8 py-3 rounded-md font-semibold hover:bg-blue-700 transition-colors">
+              <button className="border border-skyBlue text-white px-8 py-3 rounded-md font-semibold hover:bg-midBlue transition-colors">
                 Contact Us
               </button>
             </div>
@@ -39,8 +39,8 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 text-center">
-              <div className="h-16 w-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-6">
-                <div className="h-8 w-8 bg-blue-600 rounded"></div>
+              <div className="h-16 w-16 bg-iceBlue rounded-lg flex items-center justify-center mx-auto mb-6">
+                <div className="h-8 w-8 bg-midBlue rounded"></div>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Simple & Intuitive
@@ -51,8 +51,8 @@ export default function Home() {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 text-center">
-              <div className="h-16 w-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-6">
-                <div className="h-8 w-8 bg-blue-600 rounded"></div>
+              <div className="h-16 w-16 bg-iceBlue rounded-lg flex items-center justify-center mx-auto mb-6">
+                <div className="h-8 w-8 bg-midBlue rounded"></div>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Scalable Solutions
@@ -63,8 +63,8 @@ export default function Home() {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 text-center">
-              <div className="h-16 w-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-6">
-                <div className="h-8 w-8 bg-blue-600 rounded"></div>
+              <div className="h-16 w-16 bg-iceBlue rounded-lg flex items-center justify-center mx-auto mb-6">
+                <div className="h-8 w-8 bg-midBlue rounded"></div>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Expert Support
@@ -87,7 +87,7 @@ export default function Home() {
             Discover how Alta Via Applications can transform your business with our innovative solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-blue-600 text-white px-8 py-3 rounded-md font-semibold hover:bg-blue-700 transition-colors">
+            <button className="bg-darkBlue text-white px-8 py-3 rounded-md font-semibold hover:bg-midBlue transition-colors">
               View Applications
             </button>
             <button className="border border-gray-300 text-gray-700 px-8 py-3 rounded-md font-semibold hover:bg-gray-50 transition-colors">

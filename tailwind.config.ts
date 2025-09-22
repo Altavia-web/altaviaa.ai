@@ -45,6 +45,79 @@ const config: Config = {
         bold: '700',
       },
       colors: {
+        // Alta Via Applications Primary Colors
+        darkBlue: {
+          DEFAULT: '#002e64',
+          40: '#002e6466', // 40% opacity
+          70: '#002e64b3', // 70% opacity
+        },
+        skyBlue: {
+          DEFAULT: '#a8dcf4',
+          40: '#a8dcf466', // 40% opacity
+          70: '#a8dcf4b3', // 70% opacity
+        },
+        midBlue: {
+          DEFAULT: '#5095cb',
+          40: '#5095cb66', // 40% opacity
+          70: '#5095cbb3', // 70% opacity
+        },
+        iceBlue: {
+          DEFAULT: '#eaf3f9',
+          40: '#eaf3f966', // 40% opacity
+          70: '#eaf3f9b3', // 70% opacity
+        },
+
+        // Secondary Colors
+        orange: {
+          DEFAULT: '#f7a600',
+        },
+        sunnyYellow: {
+          DEFAULT: '#ffd700',
+        },
+
+        // Product Colors - DATEV
+        datev: {
+          primary: '#009b87',
+          secondary: '#78dc3c',
+        },
+
+        // Product Colors - Reisekosten
+        reisekosten: {
+          primary: '#7bcfc9',
+          secondary: '#d6ffff',
+        },
+
+        // Product Colors - Mahnwesen
+        mahnwesen: {
+          primary: '#980000',
+          secondary: '#ff4100',
+        },
+
+        // Product Colors - PeakShip
+        peakship: {
+          primary: '#ffba00',
+          secondary: '#ffebc5',
+        },
+
+        // Product Colors - Lokalisierung
+        lokalisierung: {
+          primary: '#003399',
+          secondary: '#00bfbf',
+        },
+
+        // Product Colors - Abwesenheit
+        abwesenheit: {
+          primary: '#00789e',
+          secondary: '#65ffe8',
+        },
+
+        // Product Colors - GSheet
+        gsheet: {
+          primary: '#005f32',
+          secondary: '#00b577',
+        },
+
+        // Legacy primary colors for backward compatibility
         primary: {
           50: '#eff6ff',
           100: '#dbeafe',
@@ -57,6 +130,12 @@ const config: Config = {
           800: '#1e40af',
           900: '#1e3a8a',
         },
+      },
+      backgroundImage: {
+        // Radial Gradients
+        'gradient-dark-to-mid': 'radial-gradient(50% 50% at 50% 50%, #5095cb 0%, #002e64 100%)',
+        'gradient-mid-to-sky': 'radial-gradient(50% 50% at 50% 50%, #a8dcf4 0%, #5095cb 100%)',
+        'gradient-orange-to-yellow': 'radial-gradient(50% 50% at 50% 50%, #ffd700 0%, #f7a600 100%)',
       }
     },
   },
