@@ -14,22 +14,15 @@ export default function Header() {
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo Section */}
-          <Link href="/" className="flex items-center space-x-4">
+          <Link href="/" className="flex items-center">
             <Image
               src="/images/logo/AVA_Logo.png"
               alt="Alta Via Applications Logo"
-              width={50}
-              height={50}
-              className="h-12 w-auto"
+              width={120}
+              height={120}
+              className="h-16 w-auto"
+              priority
             />
-            <div className="flex flex-col">
-              <span className="text-xl font-bold text-gray-900">
-                Alta Via Applications
-              </span>
-              <span className="text-sm text-dark-blue font-medium">
-                Delivering Simplicity
-              </span>
-            </div>
           </Link>
 
           {/* Navigation */}
