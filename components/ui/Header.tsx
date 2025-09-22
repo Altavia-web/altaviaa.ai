@@ -31,18 +31,21 @@ export default function Header() {
         </div>
 
         {/* Bottom Row - Logo and Navigation */}
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-end py-1">
           {/* Logo Section */}
-          <Link href="/" className="flex items-center">
+          <Link href="/" className="flex items-end">
             <Image
               src="/images/logo/AVA_Logo.png"
               alt="Alta Via Applications Logo"
-              width={240}
-              height={240}
-              className="h-[115px] w-auto"
+              width={320}
+              height={320}
+              className="h-32 w-auto"
               priority
               quality={100}
-              style={{ imageRendering: 'crisp-edges' }}
+              style={{
+                imageRendering: 'auto',
+                filter: 'contrast(1.1) saturate(1.1)'
+              }}
             />
           </Link>
 
@@ -58,9 +61,12 @@ export default function Header() {
                 }}
                 className={`flex items-center space-x-1 transition-colors duration-200 py-2 font-medium ${
                   isActive('/applications')
-                    ? 'text-darkBlue font-bold'
-                    : 'text-midBlue hover:text-darkBlue'
+                    ? 'font-bold'
+                    : ''
                 }`}
+                style={{
+                  color: '#002e64'
+                }}
               >
                 <span className="font-medium">Applications</span>
                 <svg
@@ -122,9 +128,12 @@ export default function Header() {
                 }}
                 className={`flex items-center space-x-1 transition-colors duration-200 py-2 font-medium ${
                   isActive('/ressourcen')
-                    ? 'text-darkBlue font-bold'
-                    : 'text-midBlue hover:text-darkBlue'
+                    ? 'font-bold'
+                    : ''
                 }`}
+                style={{
+                  color: '#002e64'
+                }}
               >
                 <span className="font-medium">Ressourcen</span>
                 <svg
@@ -186,9 +195,12 @@ export default function Header() {
                 }}
                 className={`flex items-center space-x-1 transition-colors duration-200 py-2 font-medium ${
                   isActive('/kontakt')
-                    ? 'text-darkBlue font-bold'
-                    : 'text-midBlue hover:text-darkBlue'
+                    ? 'font-bold'
+                    : ''
                 }`}
+                style={{
+                  color: '#002e64'
+                }}
               >
                 <span className="font-medium">Kontakt</span>
                 <svg
