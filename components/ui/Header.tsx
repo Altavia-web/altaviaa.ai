@@ -26,7 +26,7 @@ export default function Header() {
               <span className="text-xl font-bold text-gray-900">
                 Alta Via Applications
               </span>
-              <span className="text-sm text-darkBlue font-medium">
+              <span className="text-sm text-dark-blue font-medium">
                 Delivering Simplicity
               </span>
             </div>
@@ -42,7 +42,7 @@ export default function Header() {
                   setIsRessourcenOpen(false);
                   setIsKontaktOpen(false);
                 }}
-                className="flex items-center space-x-1 text-gray-700 hover:text-darkBlue transition-colors duration-200 py-2"
+                className="flex items-center space-x-1 text-gray-700 hover:text-dark-blue transition-colors duration-200 py-2"
               >
                 <span className="font-medium">Applications</span>
                 <svg
@@ -67,25 +67,25 @@ export default function Header() {
                   <div className="py-1">
                     <Link
                       href="/applications"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-ice-blue hover:text-dark-blue"
                     >
                       Applications Overview
                     </Link>
                     <Link
                       href="/applications#web"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-ice-blue hover:text-dark-blue"
                     >
                       Web Applications
                     </Link>
                     <Link
                       href="/applications#mobile"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-ice-blue hover:text-dark-blue"
                     >
                       Mobile Solutions
                     </Link>
                     <Link
                       href="/applications#enterprise"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-ice-blue hover:text-dark-blue"
                     >
                       Enterprise Systems
                     </Link>
@@ -102,7 +102,7 @@ export default function Header() {
                   setIsApplicationsOpen(false);
                   setIsKontaktOpen(false);
                 }}
-                className="flex items-center space-x-1 text-gray-700 hover:text-darkBlue transition-colors duration-200 py-2"
+                className="flex items-center space-x-1 text-gray-700 hover:text-dark-blue transition-colors duration-200 py-2"
               >
                 <span className="font-medium">Ressourcen</span>
                 <svg
@@ -127,25 +127,25 @@ export default function Header() {
                   <div className="py-1">
                     <Link
                       href="/ressourcen"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-ice-blue hover:text-dark-blue"
                     >
                       All Resources
                     </Link>
                     <Link
                       href="/ressourcen#documentation"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-ice-blue hover:text-dark-blue"
                     >
                       Documentation
                     </Link>
                     <Link
                       href="/ressourcen#guides"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-ice-blue hover:text-dark-blue"
                     >
                       Guides & Tutorials
                     </Link>
                     <Link
                       href="/ressourcen#support"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-ice-blue hover:text-dark-blue"
                     >
                       Support Center
                     </Link>
@@ -162,7 +162,7 @@ export default function Header() {
                   setIsApplicationsOpen(false);
                   setIsRessourcenOpen(false);
                 }}
-                className="flex items-center space-x-1 text-gray-700 hover:text-darkBlue transition-colors duration-200 py-2"
+                className="flex items-center space-x-1 text-gray-700 hover:text-dark-blue transition-colors duration-200 py-2"
               >
                 <span className="font-medium">Kontakt</span>
                 <svg
@@ -187,19 +187,19 @@ export default function Header() {
                   <div className="py-1">
                     <Link
                       href="/kontakt"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-ice-blue hover:text-dark-blue"
                     >
                       Contact Form
                     </Link>
                     <Link
                       href="/kontakt#support"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-ice-blue hover:text-dark-blue"
                     >
                       Support
                     </Link>
                     <Link
                       href="/kontakt#business"
-                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue"
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-ice-blue hover:text-dark-blue"
                     >
                       Business Inquiries
                     </Link>
@@ -209,14 +209,14 @@ export default function Header() {
             </div>
 
             {/* Language Switcher */}
-            <button className="px-3 py-1 text-sm font-medium text-gray-700 hover:text-darkBlue border border-gray-300 rounded-md hover:border-blue-300 transition-colors duration-200">
+            <button className="px-3 py-1 text-sm font-medium text-gray-700 hover:text-dark-blue border border-gray-300 rounded-md hover:border-blue-300 transition-colors duration-200">
               EN
             </button>
           </div>
 
           {/* Mobile Menu Button */}
           <div className="md:hidden">
-            <button className="p-2 rounded-md text-gray-700 hover:text-darkBlue hover:bg-gray-100">
+            <button className="p-2 rounded-md text-gray-700 hover:text-dark-blue hover:bg-gray-100">
               <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>

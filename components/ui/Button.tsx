@@ -46,17 +46,17 @@ const Button: React.FC<ButtonProps> = ({
     const colorMap = {
       midBlue: {
         filled: {
-          bg: 'bg-midBlue',
+          bg: 'bg-mid-blue',
           text: 'text-white',
-          hover: 'hover:bg-darkBlue',
-          focus: 'focus:ring-midBlue',
+          hover: 'hover:bg-dark-blue',
+          focus: 'focus:ring-mid-blue',
         },
         outlined: {
           bg: 'bg-transparent',
-          text: 'text-midBlue',
-          border: 'border-2 border-midBlue',
-          hover: 'hover:bg-midBlue hover:text-white',
-          focus: 'focus:ring-midBlue',
+          text: 'text-mid-blue',
+          border: 'border-2 border-mid-blue',
+          hover: 'hover:bg-mid-blue hover:text-white',
+          focus: 'focus:ring-mid-blue',
         },
       },
       orange: {

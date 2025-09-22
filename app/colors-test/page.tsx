@@ -26,24 +26,6 @@ function ColorSample({ name, className, hex, description }: ColorSampleProps) {
   );
 }
 
-interface GradientSampleProps {
-  name: string;
-  className: string;
-  description: string;
-}
-
-function GradientSample({ name, className, description }: GradientSampleProps) {
-  return (
-    <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
-      <div className={`h-32 w-full ${className}`}></div>
-      <div className="p-4">
-        <h4 className="font-semibold text-gray-900 mb-1">{name}</h4>
-        <p className="text-xs text-gray-500 mb-2">{className}</p>
-        <p className="text-xs text-gray-600">{description}</p>
-      </div>
-    </div>
-  );
-}
 
 interface ProductColorSectionProps {
   productName: string;
@@ -95,25 +77,25 @@ export default function ColorsTestPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
             <ColorSample
               name="Dark Blue"
-              className="bg-darkBlue"
+              className="bg-dark-blue"
               hex="#002e64"
               description="Main brand color, used for headers and primary elements"
             />
             <ColorSample
               name="Sky Blue"
-              className="bg-skyBlue"
+              className="bg-sky-blue"
               hex="#a8dcf4"
               description="Light accent color for highlights and secondary elements"
             />
             <ColorSample
               name="Mid Blue"
-              className="bg-midBlue"
+              className="bg-mid-blue"
               hex="#5095cb"
               description="Medium blue for balance and transitions"
             />
             <ColorSample
               name="Ice Blue"
-              className="bg-iceBlue"
+              className="bg-ice-blue"
               hex="#eaf3f9"
               description="Subtle background color and light elements"
             />
@@ -127,7 +109,7 @@ export default function ColorsTestPage() {
             <div>
               <h3 className="text-lg font-medium text-gray-800 mb-4">Dark Blue Alpha</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <ColorSample name="Dark Blue" className="bg-darkBlue" hex="#002e64" description="100% opacity" />
+                <ColorSample name="Dark Blue" className="bg-dark-blue" hex="#002e64" description="100% opacity" />
                 <ColorSample name="Dark Blue 70%" className="bg-darkBlue-70" hex="#002e64b3" description="70% opacity" />
                 <ColorSample name="Dark Blue 40%" className="bg-darkBlue-40" hex="#002e6466" description="40% opacity" />
               </div>
@@ -136,18 +118,18 @@ export default function ColorsTestPage() {
             <div>
               <h3 className="text-lg font-medium text-gray-800 mb-4">Sky Blue Alpha</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <ColorSample name="Sky Blue" className="bg-skyBlue" hex="#a8dcf4" description="100% opacity" />
-                <ColorSample name="Sky Blue 70%" className="bg-skyBlue-70" hex="#a8dcf4b3" description="70% opacity" />
-                <ColorSample name="Sky Blue 40%" className="bg-skyBlue-40" hex="#a8dcf466" description="40% opacity" />
+                <ColorSample name="Sky Blue" className="bg-sky-blue" hex="#a8dcf4" description="100% opacity" />
+                <ColorSample name="Sky Blue 70%" className="bg-sky-blue-70" hex="#a8dcf4b3" description="70% opacity" />
+                <ColorSample name="Sky Blue 40%" className="bg-sky-blue-40" hex="#a8dcf466" description="40% opacity" />
               </div>
             </div>
 
             <div>
               <h3 className="text-lg font-medium text-gray-800 mb-4">Mid Blue Alpha</h3>
               <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-                <ColorSample name="Mid Blue" className="bg-midBlue" hex="#5095cb" description="100% opacity" />
-                <ColorSample name="Mid Blue 70%" className="bg-midBlue-70" hex="#5095cbb3" description="70% opacity" />
-                <ColorSample name="Mid Blue 40%" className="bg-midBlue-40" hex="#5095cb66" description="40% opacity" />
+                <ColorSample name="Mid Blue" className="bg-mid-blue" hex="#5095cb" description="100% opacity" />
+                <ColorSample name="Mid Blue 70%" className="bg-mid-blue-70" hex="#5095cbb3" description="70% opacity" />
+                <ColorSample name="Mid Blue 40%" className="bg-mid-blue-40" hex="#5095cb66" description="40% opacity" />
               </div>
             </div>
           </div>
@@ -176,21 +158,30 @@ export default function ColorsTestPage() {
         <section className="mb-16">
           <h2 className="text-2xl font-semibold text-gray-900 mb-8">Gradient Definitions</h2>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-            <GradientSample
-              name="Dark to Mid Blue"
-              className="bg-gradient-dark-to-mid"
-              description="radial-gradient from Mid Blue (#5095cb) to Dark Blue (#002e64)"
-            />
-            <GradientSample
-              name="Mid to Sky Blue"
-              className="bg-gradient-mid-to-sky"
-              description="radial-gradient from Sky Blue (#a8dcf4) to Mid Blue (#5095cb)"
-            />
-            <GradientSample
-              name="Orange to Yellow"
-              className="bg-gradient-orange-to-yellow"
-              description="radial-gradient from Sunny Yellow (#ffd700) to Orange (#f7a600)"
-            />
+            <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
+              <div className="h-32 w-full" style={{ background: 'var(--gradient-dark-to-mid)' }}></div>
+              <div className="p-4">
+                <h4 className="font-semibold text-gray-900 mb-1">Dark to Mid Blue</h4>
+                <p className="text-xs text-gray-500 mb-2">style={`{{ background: 'var(--gradient-dark-to-mid)' }}`}</p>
+                <p className="text-xs text-gray-600">radial-gradient from Mid Blue (#5095cb) to Dark Blue (#002e64)</p>
+              </div>
+            </div>
+            <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
+              <div className="h-32 w-full" style={{ background: 'var(--gradient-mid-to-sky)' }}></div>
+              <div className="p-4">
+                <h4 className="font-semibold text-gray-900 mb-1">Mid to Sky Blue</h4>
+                <p className="text-xs text-gray-500 mb-2">style={`{{ background: 'var(--gradient-mid-to-sky)' }}`}</p>
+                <p className="text-xs text-gray-600">radial-gradient from Sky Blue (#a8dcf4) to Mid Blue (#5095cb)</p>
+              </div>
+            </div>
+            <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
+              <div className="h-32 w-full" style={{ background: 'var(--gradient-orange-to-yellow)' }}></div>
+              <div className="p-4">
+                <h4 className="font-semibold text-gray-900 mb-1">Orange to Yellow</h4>
+                <p className="text-xs text-gray-500 mb-2">style={`{{ background: 'var(--gradient-orange-to-yellow)' }}`}</p>
+                <p className="text-xs text-gray-600">radial-gradient from Sunny Yellow (#ffd700) to Orange (#f7a600)</p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -264,8 +255,8 @@ export default function ColorsTestPage() {
             <div className="bg-white rounded-lg border border-gray-200 p-6">
               <h3 className="text-lg font-medium text-gray-900 mb-4">Text Colors</h3>
               <div className="space-y-2">
-                <p className="text-darkBlue">Dark Blue text (text-darkBlue)</p>
-                <p className="text-skyBlue">Sky Blue text (text-skyBlue)</p>
+                <p className="text-dark-blue">Dark Blue text (text-dark-blue)</p>
+                <p className="text-sky-blue">Sky Blue text (text-sky-blue)</p>
                 <p className="text-midBlue">Mid Blue text (text-midBlue)</p>
                 <p className="text-orange">Orange text (text-orange)</p>
                 <p className="text-sunnyYellow">Sunny Yellow text (text-sunnyYellow)</p>
@@ -276,7 +267,7 @@ export default function ColorsTestPage() {
             <div className="bg-white rounded-lg border border-gray-200 p-6">
               <h3 className="text-lg font-medium text-gray-900 mb-4">Border Colors</h3>
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                <div className="border-2 border-darkBlue p-4 rounded text-center text-sm">border-darkBlue</div>
+                <div className="border-2 border-dark-blue p-4 rounded text-center text-sm">border-dark-blue</div>
                 <div className="border-2 border-skyBlue p-4 rounded text-center text-sm">border-skyBlue</div>
                 <div className="border-2 border-midBlue p-4 rounded text-center text-sm">border-midBlue</div>
                 <div className="border-2 border-orange p-4 rounded text-center text-sm">border-orange</div>
@@ -287,16 +278,16 @@ export default function ColorsTestPage() {
             <div className="bg-white rounded-lg border border-gray-200 p-6">
               <h3 className="text-lg font-medium text-gray-900 mb-4">Button Examples</h3>
               <div className="flex flex-wrap gap-4">
-                <button className="bg-darkBlue text-white px-6 py-2 rounded hover:bg-midBlue transition-colors">
+                <button className="bg-darkBlue text-white px-6 py-2 rounded hover:bg-mid-blue transition-colors">
                   Dark Blue Button
                 </button>
-                <button className="bg-skyBlue text-darkBlue px-6 py-2 rounded hover:bg-iceBlue transition-colors">
+                <button className="bg-sky-blue text-dark-blue px-6 py-2 rounded hover:bg-ice-blue transition-colors">
                   Sky Blue Button
                 </button>
                 <button className="bg-orange text-white px-6 py-2 rounded hover:bg-sunnyYellow hover:text-gray-800 transition-colors">
                   Orange Button
                 </button>
-                <button className="border-2 border-darkBlue text-darkBlue px-6 py-2 rounded hover:bg-darkBlue hover:text-white transition-colors">
+                <button className="border-2 border-dark-blue text-dark-blue px-6 py-2 rounded hover:bg-dark-blue hover:text-white transition-colors">
                   Outline Button
                 </button>
               </div>
@@ -312,9 +303,9 @@ export default function ColorsTestPage() {
             <div>
               <h3 className="text-lg font-medium text-gray-800 mb-4">Available Utilities</h3>
               <ul className="space-y-2 text-sm text-gray-600">
-                <li><strong>Background:</strong> bg-darkBlue, bg-skyBlue, bg-midBlue, etc.</li>
-                <li><strong>Text:</strong> text-darkBlue, text-skyBlue, text-midBlue, etc.</li>
-                <li><strong>Border:</strong> border-darkBlue, border-skyBlue, border-midBlue, etc.</li>
+                <li><strong>Background:</strong> bg-darkBlue, bg-sky-blue, bg-mid-blue, etc.</li>
+                <li><strong>Text:</strong> text-dark-blue, text-sky-blue, text-midBlue, etc.</li>
+                <li><strong>Border:</strong> border-dark-blue, border-skyBlue, border-midBlue, etc.</li>
                 <li><strong>Alpha variants:</strong> bg-darkBlue-40, bg-darkBlue-70, etc.</li>
                 <li><strong>Gradients:</strong> bg-gradient-dark-to-mid, bg-gradient-mid-to-sky, bg-gradient-orange-to-yellow</li>
                 <li><strong>Product colors:</strong> bg-datev-primary, text-peakship-secondary, etc.</li>

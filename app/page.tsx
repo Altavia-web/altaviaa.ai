@@ -4,14 +4,14 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="bg-gradient-dark-to-mid text-white">
+      <section style={{ background: 'var(--gradient-dark-to-mid)' }} className="text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
           <div className="text-center">
             <h1 className="text-4xl font-bold sm:text-5xl md:text-6xl">
               Welcome to{" "}
-              <span className="text-skyBlue">Alta Via Applications</span>
+              <span className="text-sky-blue">Alta Via Applications</span>
             </h1>
-            <p className="mt-6 text-xl text-iceBlue max-w-3xl mx-auto">
+            <p className="mt-6 text-xl text-ice-blue max-w-3xl mx-auto">
               Delivering simplicity through innovative applications and digital solutions.
               We transform complex business challenges into elegant, user-friendly solutions.
             </p>
@@ -50,8 +50,8 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 text-center">
-              <div className="h-16 w-16 bg-iceBlue rounded-lg flex items-center justify-center mx-auto mb-6">
-                <div className="h-8 w-8 bg-midBlue rounded"></div>
+              <div className="h-16 w-16 bg-ice-blue rounded-lg flex items-center justify-center mx-auto mb-6">
+                <div className="h-8 w-8 bg-mid-blue rounded"></div>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Simple & Intuitive
@@ -62,8 +62,8 @@ export default function Home() {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 text-center">
-              <div className="h-16 w-16 bg-iceBlue rounded-lg flex items-center justify-center mx-auto mb-6">
-                <div className="h-8 w-8 bg-midBlue rounded"></div>
+              <div className="h-16 w-16 bg-ice-blue rounded-lg flex items-center justify-center mx-auto mb-6">
+                <div className="h-8 w-8 bg-mid-blue rounded"></div>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Scalable Solutions
@@ -74,8 +74,8 @@ export default function Home() {
             </div>
 
             <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-8 text-center">
-              <div className="h-16 w-16 bg-iceBlue rounded-lg flex items-center justify-center mx-auto mb-6">
-                <div className="h-8 w-8 bg-midBlue rounded"></div>
+              <div className="h-16 w-16 bg-ice-blue rounded-lg flex items-center justify-center mx-auto mb-6">
+                <div className="h-8 w-8 bg-mid-blue rounded"></div>
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-4">
                 Expert Support

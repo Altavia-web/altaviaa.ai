@@ -15,6 +15,45 @@
   --font-sans: var(--font-titillium);
   --font-titillium: var(--font-titillium);
 
+  /* Alta Via Applications Colors */
+  --color-dark-blue: #002e64;
+  --color-dark-blue-40: #002e6466;
+  --color-dark-blue-70: #002e64b3;
+  --color-sky-blue: #a8dcf4;
+  --color-sky-blue-40: #a8dcf466;
+  --color-sky-blue-70: #a8dcf4b3;
+  --color-mid-blue: #5095cb;
+  --color-mid-blue-40: #5095cb66;
+  --color-mid-blue-70: #5095cbb3;
+  --color-ice-blue: #eaf3f9;
+  --color-ice-blue-40: #eaf3f966;
+  --color-ice-blue-70: #eaf3f9b3;
+
+  /* Secondary Colors */
+  --color-orange: #f7a600;
+  --color-sunny-yellow: #ffd700;
+
+  /* Product Colors */
+  --color-datev-primary: #009b87;
+  --color-datev-secondary: #78dc3c;
+  --color-reisekosten-primary: #7bcfc9;
+  --color-reisekosten-secondary: #d6ffff;
+  --color-mahnwesen-primary: #980000;
+  --color-mahnwesen-secondary: #ff4100;
+  --color-peakship-primary: #ffba00;
+  --color-peakship-secondary: #ffebc5;
+  --color-lokalisierung-primary: #003399;
+  --color-lokalisierung-secondary: #00bfbf;
+  --color-abwesenheit-primary: #00789e;
+  --color-abwesenheit-secondary: #65ffe8;
+  --color-gsheet-primary: #005f32;
+  --color-gsheet-secondary: #00b577;
+
+  /* Gradients */
+  --gradient-dark-to-mid: radial-gradient(50% 50% at 50% 50%, #5095cb 0%, #002e64 100%);
+  --gradient-mid-to-sky: radial-gradient(50% 50% at 50% 50%, #a8dcf4 0%, #5095cb 100%);
+  --gradient-orange-to-yellow: radial-gradient(50% 50% at 50% 50%, #ffd700 0%, #f7a600 100%);
+
   /* Typography scale with 1.125 ratio */
   --font-size-xs: 0.75rem;      /* 12px */
   --font-size-sm: 0.875rem;     /* 14px */
