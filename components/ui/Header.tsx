@@ -87,8 +87,8 @@ export default function Header() {
               </button>
 
               {isApplicationsOpen && (
-                <div className="absolute top-full left-0 mt-1 w-56 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
-                  <div className="py-2">
+                <div className="absolute top-full left-0 right-0 h-[200px] shadow-lg z-50 w-screen" style={{ backgroundColor: '#eaf3f9', marginLeft: 'calc(-50vw + 50%)' }}>
+                  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 h-full flex items-center">
                     <Link
                       href="/applications"
                       className="block px-4 py-3 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue transition-all duration-200 font-medium"
@@ -154,8 +154,8 @@ export default function Header() {
               </button>
 
               {isRessourcenOpen && (
-                <div className="absolute top-full left-0 mt-1 w-56 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
-                  <div className="py-2">
+                <div className="absolute top-full left-0 right-0 h-[200px] shadow-lg z-50 w-screen" style={{ backgroundColor: '#eaf3f9', marginLeft: 'calc(-50vw + 50%)' }}>
+                  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 h-full flex items-center">
                     <Link
                       href="/ressourcen"
                       className="block px-4 py-3 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue transition-all duration-200 font-medium"
@@ -221,8 +221,8 @@ export default function Header() {
               </button>
 
               {isKontaktOpen && (
-                <div className="absolute top-full left-0 mt-1 w-56 bg-white border border-gray-200 rounded-lg shadow-lg z-50">
-                  <div className="py-2">
+                <div className="absolute top-full left-0 right-0 h-[200px] shadow-lg z-50 w-screen" style={{ backgroundColor: '#eaf3f9', marginLeft: 'calc(-50vw + 50%)' }}>
+                  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 h-full flex items-center">
                     <Link
                       href="/kontakt"
                       className="block px-4 py-3 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue transition-all duration-200 font-medium"
