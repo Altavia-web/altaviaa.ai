@@ -1,3 +1,5 @@
+import Button from "@/components/ui/Button";
+
 export default function Home() {
   return (
     <div className="min-h-screen">
@@ -14,12 +16,21 @@ export default function Home() {
               We transform complex business challenges into elegant, user-friendly solutions.
             </p>
             <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-white text-darkBlue px-8 py-3 rounded-md font-semibold hover:bg-iceBlue transition-colors">
+              <Button
+                variant="filled"
+                color="orange"
+                size="lg"
+                showArrow={true}
+              >
                 Explore Applications
-              </button>
-              <button className="border border-skyBlue text-white px-8 py-3 rounded-md font-semibold hover:bg-midBlue transition-colors">
+              </Button>
+              <Button
+                variant="outlined"
+                color="midBlue"
+                size="lg"
+              >
                 Contact Us
-              </button>
+              </Button>
             </div>
           </div>
         </div>
@@ -87,12 +98,21 @@ export default function Home() {
             Discover how Alta Via Applications can transform your business with our innovative solutions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-darkBlue text-white px-8 py-3 rounded-md font-semibold hover:bg-midBlue transition-colors">
+            <Button
+              variant="filled"
+              color="midBlue"
+              size="md"
+              showArrow={true}
+            >
               View Applications
-            </button>
-            <button className="border border-gray-300 text-gray-700 px-8 py-3 rounded-md font-semibold hover:bg-gray-50 transition-colors">
+            </Button>
+            <Button
+              variant="outlined"
+              color="datev"
+              size="md"
+            >
               Browse Resources
-            </button>
+            </Button>
           </div>
         </div>
       </section>
