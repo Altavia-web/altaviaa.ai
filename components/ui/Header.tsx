@@ -21,6 +21,7 @@ export default function Header() {
   const isActive = (path: string) => pathname === path || pathname.startsWith(path + '/');
 
   return (
+    <div>
     <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Row - Language Switcher */}
@@ -86,42 +87,6 @@ export default function Header() {
                 </svg>
               </button>
 
-              {isApplicationsOpen && (
-                <div
-                  className="fixed left-0 w-screen h-[200px] shadow-lg z-40"
-                  style={{
-                    backgroundColor: '#eaf3f9',
-                    top: 'calc(100px)'
-                  }}
-                >
-                  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 h-full flex items-center">
-                    <Link
-                      href="/applications"
-                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue transition-all duration-200 font-medium"
-                    >
-                      Applications Overview
-                    </Link>
-                    <Link
-                      href="/applications#web"
-                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue transition-all duration-200"
-                    >
-                      Web Applications
-                    </Link>
-                    <Link
-                      href="/applications#mobile"
-                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue transition-all duration-200"
-                    >
-                      Mobile Solutions
-                    </Link>
-                    <Link
-                      href="/applications#enterprise"
-                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue transition-all duration-200"
-                    >
-                      Enterprise Systems
-                    </Link>
-                  </div>
-                </div>
-              )}
             </div>
 
             {/* Ressourcen Dropdown */}
@@ -159,42 +124,6 @@ export default function Header() {
                 </svg>
               </button>
 
-              {isRessourcenOpen && (
-                <div
-                  className="fixed left-0 w-screen h-[200px] shadow-lg z-40"
-                  style={{
-                    backgroundColor: '#eaf3f9',
-                    top: 'calc(100px)'
-                  }}
-                >
-                  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 h-full flex items-center">
-                    <Link
-                      href="/ressourcen"
-                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue transition-all duration-200 font-medium"
-                    >
-                      All Resources
-                    </Link>
-                    <Link
-                      href="/ressourcen#documentation"
-                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue transition-all duration-200"
-                    >
-                      Documentation
-                    </Link>
-                    <Link
-                      href="/ressourcen#guides"
-                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue transition-all duration-200"
-                    >
-                      Guides & Tutorials
-                    </Link>
-                    <Link
-                      href="/ressourcen#support"
-                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue transition-all duration-200"
-                    >
-                      Support Center
-                    </Link>
-                  </div>
-                </div>
-              )}
             </div>
 
             {/* Kontakt Dropdown */}
@@ -232,36 +161,6 @@ export default function Header() {
                 </svg>
               </button>
 
-              {isKontaktOpen && (
-                <div
-                  className="fixed left-0 w-screen h-[200px] shadow-lg z-40"
-                  style={{
-                    backgroundColor: '#eaf3f9',
-                    top: 'calc(100px)'
-                  }}
-                >
-                  <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 h-full flex items-center">
-                    <Link
-                      href="/kontakt"
-                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue transition-all duration-200 font-medium"
-                    >
-                      Contact Form
-                    </Link>
-                    <Link
-                      href="/kontakt#support"
-                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue transition-all duration-200"
-                    >
-                      Support
-                    </Link>
-                    <Link
-                      href="/kontakt#business"
-                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue transition-all duration-200"
-                    >
-                      Business Inquiries
-                    </Link>
-                  </div>
-                </div>
-              )}
             </div>
 
           </div>
@@ -473,5 +372,103 @@ export default function Header() {
         />
       )}
     </header>
+
+    {/* Dropdown Menus - Outside header for full width */}
+    {isApplicationsOpen && (
+      <div
+        className="w-screen h-[200px] shadow-lg z-40"
+        style={{ backgroundColor: '#eaf3f9' }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 h-full flex items-center">
+          <Link
+            href="/applications"
+            className="block px-4 py-3 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue transition-all duration-200 font-medium"
+          >
+            Applications Overview
+          </Link>
+          <Link
+            href="/applications#web"
+            className="block px-4 py-3 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue transition-all duration-200"
+          >
+            Web Applications
+          </Link>
+          <Link
+            href="/applications#mobile"
+            className="block px-4 py-3 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue transition-all duration-200"
+          >
+            Mobile Solutions
+          </Link>
+          <Link
+            href="/applications#enterprise"
+            className="block px-4 py-3 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue transition-all duration-200"
+          >
+            Enterprise Systems
+          </Link>
+        </div>
+      </div>
+    )}
+
+    {isRessourcenOpen && (
+      <div
+        className="w-screen h-[200px] shadow-lg z-40"
+        style={{ backgroundColor: '#eaf3f9' }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 h-full flex items-center">
+          <Link
+            href="/ressourcen"
+            className="block px-4 py-3 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue transition-all duration-200 font-medium"
+          >
+            All Resources
+          </Link>
+          <Link
+            href="/ressourcen#documentation"
+            className="block px-4 py-3 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue transition-all duration-200"
+          >
+            Documentation
+          </Link>
+          <Link
+            href="/ressourcen#guides"
+            className="block px-4 py-3 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue transition-all duration-200"
+          >
+            Guides & Tutorials
+          </Link>
+          <Link
+            href="/ressourcen#support"
+            className="block px-4 py-3 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue transition-all duration-200"
+          >
+            Support Center
+          </Link>
+        </div>
+      </div>
+    )}
+
+    {isKontaktOpen && (
+      <div
+        className="w-screen h-[200px] shadow-lg z-40"
+        style={{ backgroundColor: '#eaf3f9' }}
+      >
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 h-full flex items-center">
+          <Link
+            href="/kontakt"
+            className="block px-4 py-3 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue transition-all duration-200 font-medium"
+          >
+            Contact Form
+          </Link>
+          <Link
+            href="/kontakt#support"
+            className="block px-4 py-3 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue transition-all duration-200"
+          >
+            Support
+          </Link>
+          <Link
+            href="/kontakt#business"
+            className="block px-4 py-3 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue transition-all duration-200"
+          >
+            Business Inquiries
+          </Link>
+        </div>
+      </div>
+    )}
+    </div>
   );
 }
