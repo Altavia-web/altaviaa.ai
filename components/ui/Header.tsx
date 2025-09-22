@@ -3,12 +3,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [isApplicationsOpen, setIsApplicationsOpen] = useState(false);
   const [isRessourcenOpen, setIsRessourcenOpen] = useState(false);
   const [isKontaktOpen, setIsKontaktOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
 
   const closeAllDropdowns = () => {
     setIsApplicationsOpen(false);
@@ -16,12 +18,14 @@ export default function Header() {
     setIsKontaktOpen(false);
   };
 
+  const isActive = (path: string) => pathname === path || pathname.startsWith(path + '/');
+
   return (
     <header className="bg-white border-b border-gray-200 sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Top Row - Language Switcher */}
         <div className="flex justify-end py-2 border-b border-gray-100">
-          <button className="px-3 py-1 text-sm font-medium text-gray-700 hover:text-dark-blue border border-gray-300 rounded-md hover:border-blue-300 transition-colors duration-200">
+          <button className="px-3 py-1 text-sm font-medium text-gray-700 hover:text-darkBlue border border-gray-300 rounded-md hover:border-blue-300 transition-colors duration-200">
             EN
           </button>
         </div>
@@ -35,7 +39,7 @@ export default function Header() {
               alt="Alta Via Applications Logo"
               width={240}
               height={240}
-              className="h-24 w-auto"
+              className="h-[115px] w-auto"
               priority
               quality={100}
               style={{ imageRendering: 'crisp-edges' }}
@@ -52,7 +56,11 @@ export default function Header() {
                   setIsRessourcenOpen(false);
                   setIsKontaktOpen(false);
                 }}
-                className="flex items-center space-x-1 text-gray-700 hover:text-dark-blue transition-colors duration-200 py-2 font-medium"
+                className={`flex items-center space-x-1 transition-colors duration-200 py-2 font-medium ${
+                  isActive('/applications')
+                    ? 'text-darkBlue font-bold'
+                    : 'text-midBlue hover:text-darkBlue'
+                }`}
               >
                 <span className="font-medium">Applications</span>
                 <svg
@@ -77,25 +85,25 @@ export default function Header() {
                   <div className="py-2">
                     <Link
                       href="/applications"
-                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-ice-blue hover:text-dark-blue transition-all duration-200 font-medium"
+                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue transition-all duration-200 font-medium"
                     >
                       Applications Overview
                     </Link>
                     <Link
                       href="/applications#web"
-                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-ice-blue hover:text-dark-blue transition-all duration-200"
+                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue transition-all duration-200"
                     >
                       Web Applications
                     </Link>
                     <Link
                       href="/applications#mobile"
-                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-ice-blue hover:text-dark-blue transition-all duration-200"
+                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue transition-all duration-200"
                     >
                       Mobile Solutions
                     </Link>
                     <Link
                       href="/applications#enterprise"
-                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-ice-blue hover:text-dark-blue transition-all duration-200"
+                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue transition-all duration-200"
                     >
                       Enterprise Systems
                     </Link>
@@ -112,7 +120,11 @@ export default function Header() {
                   setIsApplicationsOpen(false);
                   setIsKontaktOpen(false);
                 }}
-                className="flex items-center space-x-1 text-gray-700 hover:text-dark-blue transition-colors duration-200 py-2"
+                className={`flex items-center space-x-1 transition-colors duration-200 py-2 font-medium ${
+                  isActive('/ressourcen')
+                    ? 'text-darkBlue font-bold'
+                    : 'text-midBlue hover:text-darkBlue'
+                }`}
               >
                 <span className="font-medium">Ressourcen</span>
                 <svg
@@ -137,25 +149,25 @@ export default function Header() {
                   <div className="py-2">
                     <Link
                       href="/ressourcen"
-                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-ice-blue hover:text-dark-blue transition-all duration-200 font-medium"
+                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue transition-all duration-200 font-medium"
                     >
                       All Resources
                     </Link>
                     <Link
                       href="/ressourcen#documentation"
-                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-ice-blue hover:text-dark-blue transition-all duration-200"
+                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue transition-all duration-200"
                     >
                       Documentation
                     </Link>
                     <Link
                       href="/ressourcen#guides"
-                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-ice-blue hover:text-dark-blue transition-all duration-200"
+                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue transition-all duration-200"
                     >
                       Guides & Tutorials
                     </Link>
                     <Link
                       href="/ressourcen#support"
-                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-ice-blue hover:text-dark-blue transition-all duration-200"
+                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue transition-all duration-200"
                     >
                       Support Center
                     </Link>
@@ -172,7 +184,11 @@ export default function Header() {
                   setIsApplicationsOpen(false);
                   setIsRessourcenOpen(false);
                 }}
-                className="flex items-center space-x-1 text-gray-700 hover:text-dark-blue transition-colors duration-200 py-2"
+                className={`flex items-center space-x-1 transition-colors duration-200 py-2 font-medium ${
+                  isActive('/kontakt')
+                    ? 'text-darkBlue font-bold'
+                    : 'text-midBlue hover:text-darkBlue'
+                }`}
               >
                 <span className="font-medium">Kontakt</span>
                 <svg
@@ -197,19 +213,19 @@ export default function Header() {
                   <div className="py-2">
                     <Link
                       href="/kontakt"
-                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-ice-blue hover:text-dark-blue transition-all duration-200 font-medium"
+                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue transition-all duration-200 font-medium"
                     >
                       Contact Form
                     </Link>
                     <Link
                       href="/kontakt#support"
-                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-ice-blue hover:text-dark-blue transition-all duration-200"
+                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue transition-all duration-200"
                     >
                       Support
                     </Link>
                     <Link
                       href="/kontakt#business"
-                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-ice-blue hover:text-dark-blue transition-all duration-200"
+                      className="block px-4 py-3 text-sm text-gray-700 hover:bg-iceBlue hover:text-darkBlue transition-all duration-200"
                     >
                       Business Inquiries
                     </Link>
@@ -224,7 +240,7 @@ export default function Header() {
           <div className="md:hidden">
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="p-2 rounded-md text-gray-700 hover:text-dark-blue hover:bg-ice-blue transition-colors duration-200"
+              className="p-2 rounded-md text-gray-700 hover:text-darkBlue hover:bg-iceBlue transition-colors duration-200"
             >
               <svg className="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 {isMobileMenuOpen ? (
@@ -244,7 +260,7 @@ export default function Header() {
           <div className="px-4 py-4 space-y-4">
             {/* Mobile Language Switcher */}
             <div className="flex justify-end pb-4 border-b border-gray-100">
-              <button className="px-3 py-1 text-sm font-medium text-gray-700 hover:text-dark-blue border border-gray-300 rounded-md hover:border-blue-300 transition-colors duration-200">
+              <button className="px-3 py-1 text-sm font-medium text-gray-700 hover:text-darkBlue border border-gray-300 rounded-md hover:border-blue-300 transition-colors duration-200">
                 EN
               </button>
             </div>
@@ -253,7 +269,7 @@ export default function Header() {
             <div>
               <button
                 onClick={() => setIsApplicationsOpen(!isApplicationsOpen)}
-                className="flex items-center justify-between w-full py-2 text-gray-700 hover:text-dark-blue font-medium"
+                className="flex items-center justify-between w-full py-2 text-midBlue hover:text-darkBlue font-medium"
               >
                 <span>Applications</span>
                 <svg
@@ -276,28 +292,28 @@ export default function Header() {
                 <div className="mt-2 ml-4 space-y-2">
                   <Link
                     href="/applications"
-                    className="block py-2 text-sm text-gray-600 hover:text-dark-blue hover:bg-ice-blue px-2 rounded transition-all duration-200 font-medium"
+                    className="block py-2 text-sm text-gray-600 hover:text-darkBlue hover:bg-iceBlue px-2 rounded transition-all duration-200 font-medium"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Applications Overview
                   </Link>
                   <Link
                     href="/applications#web"
-                    className="block py-2 text-sm text-gray-600 hover:text-dark-blue hover:bg-ice-blue px-2 rounded transition-all duration-200"
+                    className="block py-2 text-sm text-gray-600 hover:text-darkBlue hover:bg-iceBlue px-2 rounded transition-all duration-200"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Web Applications
                   </Link>
                   <Link
                     href="/applications#mobile"
-                    className="block py-2 text-sm text-gray-600 hover:text-dark-blue hover:bg-ice-blue px-2 rounded transition-all duration-200"
+                    className="block py-2 text-sm text-gray-600 hover:text-darkBlue hover:bg-iceBlue px-2 rounded transition-all duration-200"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Mobile Solutions
                   </Link>
                   <Link
                     href="/applications#enterprise"
-                    className="block py-2 text-sm text-gray-600 hover:text-dark-blue hover:bg-ice-blue px-2 rounded transition-all duration-200"
+                    className="block py-2 text-sm text-gray-600 hover:text-darkBlue hover:bg-iceBlue px-2 rounded transition-all duration-200"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Enterprise Systems
@@ -310,7 +326,7 @@ export default function Header() {
             <div>
               <button
                 onClick={() => setIsRessourcenOpen(!isRessourcenOpen)}
-                className="flex items-center justify-between w-full py-2 text-gray-700 hover:text-dark-blue font-medium"
+                className="flex items-center justify-between w-full py-2 text-midBlue hover:text-darkBlue font-medium"
               >
                 <span>Ressourcen</span>
                 <svg
@@ -333,28 +349,28 @@ export default function Header() {
                 <div className="mt-2 ml-4 space-y-2">
                   <Link
                     href="/ressourcen"
-                    className="block py-2 text-sm text-gray-600 hover:text-dark-blue hover:bg-ice-blue px-2 rounded transition-all duration-200"
+                    className="block py-2 text-sm text-gray-600 hover:text-darkBlue hover:bg-iceBlue px-2 rounded transition-all duration-200"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     All Resources
                   </Link>
                   <Link
                     href="/ressourcen#documentation"
-                    className="block py-2 text-sm text-gray-600 hover:text-dark-blue hover:bg-ice-blue px-2 rounded transition-all duration-200"
+                    className="block py-2 text-sm text-gray-600 hover:text-darkBlue hover:bg-iceBlue px-2 rounded transition-all duration-200"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Documentation
                   </Link>
                   <Link
                     href="/ressourcen#guides"
-                    className="block py-2 text-sm text-gray-600 hover:text-dark-blue hover:bg-ice-blue px-2 rounded transition-all duration-200"
+                    className="block py-2 text-sm text-gray-600 hover:text-darkBlue hover:bg-iceBlue px-2 rounded transition-all duration-200"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Guides & Tutorials
                   </Link>
                   <Link
                     href="/ressourcen#support"
-                    className="block py-2 text-sm text-gray-600 hover:text-dark-blue hover:bg-ice-blue px-2 rounded transition-all duration-200"
+                    className="block py-2 text-sm text-gray-600 hover:text-darkBlue hover:bg-iceBlue px-2 rounded transition-all duration-200"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Support Center
@@ -367,7 +383,7 @@ export default function Header() {
             <div>
               <button
                 onClick={() => setIsKontaktOpen(!isKontaktOpen)}
-                className="flex items-center justify-between w-full py-2 text-gray-700 hover:text-dark-blue font-medium"
+                className="flex items-center justify-between w-full py-2 text-midBlue hover:text-darkBlue font-medium"
               >
                 <span>Kontakt</span>
                 <svg
@@ -390,21 +406,21 @@ export default function Header() {
                 <div className="mt-2 ml-4 space-y-2">
                   <Link
                     href="/kontakt"
-                    className="block py-2 text-sm text-gray-600 hover:text-dark-blue hover:bg-ice-blue px-2 rounded transition-all duration-200"
+                    className="block py-2 text-sm text-gray-600 hover:text-darkBlue hover:bg-iceBlue px-2 rounded transition-all duration-200"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Contact Form
                   </Link>
                   <Link
                     href="/kontakt#support"
-                    className="block py-2 text-sm text-gray-600 hover:text-dark-blue hover:bg-ice-blue px-2 rounded transition-all duration-200"
+                    className="block py-2 text-sm text-gray-600 hover:text-darkBlue hover:bg-iceBlue px-2 rounded transition-all duration-200"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Support
                   </Link>
                   <Link
                     href="/kontakt#business"
-                    className="block py-2 text-sm text-gray-600 hover:text-dark-blue hover:bg-ice-blue px-2 rounded transition-all duration-200"
+                    className="block py-2 text-sm text-gray-600 hover:text-darkBlue hover:bg-iceBlue px-2 rounded transition-all duration-200"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     Business Inquiries
