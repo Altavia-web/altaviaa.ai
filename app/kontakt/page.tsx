@@ -14,7 +14,7 @@ export default function KontaktPage() {
             Kontakt
           </h1>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            We'd love to hear from you. Get in touch with our team for any inquiries or support needs.
+            We&apos;d love to hear from you. Get in touch with our team for any inquiries or support needs.
           </p>
         </div>
 
@@ -130,7 +130,7 @@ export default function KontaktPage() {
                 Business Inquiries
               </h3>
               <p className="text-blue-700 mb-4">
-                Interested in partnering with us or discussing a custom project? We'd love to explore opportunities together.
+                Interested in partnering with us or discussing a custom project? We&apos;d love to explore opportunities together.
               </p>
               <a
                 href="mailto:business@altaviaapplications.com"
