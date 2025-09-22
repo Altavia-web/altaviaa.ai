@@ -88,15 +88,10 @@ export default function Header() {
 
               {isApplicationsOpen && (
                 <div
-                  className="absolute h-[200px] shadow-lg z-40"
+                  className="fixed left-0 w-screen h-[200px] shadow-lg z-40"
                   style={{
                     backgroundColor: '#eaf3f9',
-                    left: '0',
-                    right: '0',
-                    width: '100vw',
-                    marginLeft: '-50vw',
-                    left: '50%',
-                    top: '100%'
+                    top: 'calc(100px)'
                   }}
                 >
                   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 h-full flex items-center">
@@ -166,15 +161,10 @@ export default function Header() {
 
               {isRessourcenOpen && (
                 <div
-                  className="absolute h-[200px] shadow-lg z-40"
+                  className="fixed left-0 w-screen h-[200px] shadow-lg z-40"
                   style={{
                     backgroundColor: '#eaf3f9',
-                    left: '0',
-                    right: '0',
-                    width: '100vw',
-                    marginLeft: '-50vw',
-                    left: '50%',
-                    top: '100%'
+                    top: 'calc(100px)'
                   }}
                 >
                   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 h-full flex items-center">
@@ -244,15 +234,10 @@ export default function Header() {
 
               {isKontaktOpen && (
                 <div
-                  className="absolute h-[200px] shadow-lg z-40"
+                  className="fixed left-0 w-screen h-[200px] shadow-lg z-40"
                   style={{
                     backgroundColor: '#eaf3f9',
-                    left: '0',
-                    right: '0',
-                    width: '100vw',
-                    marginLeft: '-50vw',
-                    left: '50%',
-                    top: '100%'
+                    top: 'calc(100px)'
                   }}
                 >
                   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 h-full flex items-center">
