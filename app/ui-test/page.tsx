@@ -1,6 +1,6 @@
 "use client";
 
-import Button from "@/components/ui/Button";
+import Button from "@/components/Button";
 
 const colors = ['midBlue', 'orange', 'datev', 'lokalisierung', 'mahnwesen'] as const;
 const sizes = ['sm', 'md', 'lg'] as const;
