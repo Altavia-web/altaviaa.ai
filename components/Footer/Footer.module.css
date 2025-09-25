@@ -1,5 +1,7 @@
 .footer {
   color: white;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Section 1: Full width image */
@@ -70,9 +72,8 @@
   height: auto;
 }
 
-/* Section 3 & 4 placeholders */
-.section3,
-.section4 {
+/* Section 3 placeholder */
+.section3 {
   width: 100%;
   min-height: 200px;
   background-color: #f8fafc;
