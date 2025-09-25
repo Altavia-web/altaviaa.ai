@@ -7,7 +7,7 @@ export default function HomeHero() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/images/home/home-hero.webp"
+          src="/images/home/home_hero.webp"
           alt="NetSuite Lokalisierung Deutschland Hero Background"
           fill
           className="object-cover"
@@ -27,7 +27,10 @@ export default function HomeHero() {
           Hier steht ein kurzer Einleitungstext von 1-2 Sätzen, unter diesen wird dann noch ein Button eingefügt.
           Klickt man diesen an, kann man die Produktbroschüre downloaden.
         </p>
-        <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 px-8 rounded-lg transition-colors duration-200 inline-flex items-center text-lg">
+        <button
+          className="text-white font-semibold py-4 px-8 rounded-lg transition-colors duration-200 inline-flex items-center text-lg hover:opacity-90"
+          style={{backgroundColor: 'var(--color-orange)'}}
+        >
           Download Produktbroschüre
           <svg
             className="ml-2 w-5 h-5"
