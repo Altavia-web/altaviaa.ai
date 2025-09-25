@@ -1,5 +1,6 @@
 import React from 'react';
 import Button from '@/components/Button';
+import FooterBottom from './FooterBottom';
 import styles from './Footer.module.css';
 
 export default function Footer() {
@@ -51,10 +52,8 @@ export default function Footer() {
         {/* Content for section 3 will be added in next step */}
       </div>
 
-      {/* Section 4: Placeholder */}
-      <div className={styles.section4}>
-        {/* Content for section 4 will be added in next step */}
-      </div>
+      {/* Section 4: Footer Bottom */}
+      <FooterBottom />
     </footer>
   );
 }
