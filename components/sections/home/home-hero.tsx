@@ -7,7 +7,7 @@ export default function HomeHero() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
-          src="/images/home/home_hero.webp"
+          src="/images/home/Home_hero.webp"
           alt="NetSuite Lokalisierung Deutschland Hero Background"
           fill
           className="object-cover"
