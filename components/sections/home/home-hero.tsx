@@ -22,7 +22,7 @@ export default function HomeHero() {
         </p>
         <Button
           variant="filled"
-          color="skyBlue"
+          color="midBlue"
           size="lg"
           showArrow={true}
           className="text-lg px-8 py-4"
