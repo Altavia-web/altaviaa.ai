@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Titillium_Web } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/ui/Header";
+import Header from "@/components/Header";
 
 const titilliumWeb = Titillium_Web({
   variable: "--font-titillium",

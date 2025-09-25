@@ -1,0 +1,151 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  border-radius: 0.5rem;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+}
+
+.button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.5), 0 0 0 4px rgba(59, 130, 246, 0.25);
+}
+
+.button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* Sizes */
+.sm {
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.md {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.lg {
+  padding: 1rem 2rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+/* Colors - Filled variants */
+.midBlueFilled {
+  background-color: #1e40af;
+  color: white;
+}
+
+.midBlueFilled:hover:not(:disabled) {
+  background-color: #1d4ed8;
+}
+
+.orangeFilled {
+  background-color: #f97316;
+  color: white;
+}
+
+.orangeFilled:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.datevFilled {
+  background-color: #dc2626;
+  color: white;
+}
+
+.datevFilled:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.lokalisierungFilled {
+  background-color: #059669;
+  color: white;
+}
+
+.lokalisierungFilled:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.mahnwesenFilled {
+  background-color: #7c3aed;
+  color: white;
+}
+
+.mahnwesenFilled:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+/* Colors - Outlined variants */
+.midBlueOutlined {
+  background-color: transparent;
+  color: #1e40af;
+  border: 2px solid #1e40af;
+}
+
+.midBlueOutlined:hover:not(:disabled) {
+  background-color: #1e40af;
+  color: white;
+}
+
+.orangeOutlined {
+  background-color: transparent;
+  color: #f97316;
+  border: 2px solid #f97316;
+}
+
+.orangeOutlined:hover:not(:disabled) {
+  background-color: #f97316;
+  color: white;
+}
+
+.datevOutlined {
+  background-color: transparent;
+  color: #dc2626;
+  border: 2px solid #dc2626;
+}
+
+.datevOutlined:hover:not(:disabled) {
+  background-color: #dc2626;
+  color: white;
+}
+
+.lokalisierungOutlined {
+  background-color: transparent;
+  color: #059669;
+  border: 2px solid #059669;
+}
+
+.lokalisierungOutlined:hover:not(:disabled) {
+  background-color: #059669;
+  color: white;
+}
+
+.mahnwesenOutlined {
+  background-color: transparent;
+  color: #7c3aed;
+  border: 2px solid #7c3aed;
+}
+
+.mahnwesenOutlined:hover:not(:disabled) {
+  background-color: #7c3aed;
+  color: white;
+}
+
+/* Arrow animation */
+.arrow {
+  transition: transform 0.2s ease-in-out;
+}
+
+.button:hover .arrow {
+  transform: translateX(0.125rem);
+}

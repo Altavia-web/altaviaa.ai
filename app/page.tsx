@@ -1,5 +1,5 @@
-import Button from "@/components/ui/Button";
-import Footer from "@/components/ui/Footer";
+import Button from "@/components/Button";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
