@@ -1,34 +1,43 @@
 import React from 'react';
-import Button from '@/components/Button';
+import Image from 'next/image';
 
 export default function HomeHero() {
   return (
-    <section
-      className="relative min-h-screen flex items-center justify-center text-white bg-cover bg-center bg-no-repeat"
-      style={{
-        backgroundImage: 'url(/images/home/hero-bg.jpg)',
-        backgroundColor: 'var(--color-dark-blue)',
-        backgroundBlendMode: 'overlay'
-      }}
-    >
-      <div className="absolute inset-0 bg-black/40"></div>
-      <div className="relative z-10 max-w-6xl mx-auto px-6 text-center">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+    <section className="relative min-h-screen flex items-center justify-center text-white">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <Image
+          src="/images/home/home-hero.webp"
+          alt="NetSuite Lokalisierung Deutschland Hero Background"
+          fill
+          className="object-cover"
+          priority
+          quality={90}
+        />
+        {/* Dark Overlay for better text readability */}
+        <div className="absolute inset-0 bg-black/20"></div>
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
+        <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-6 leading-tight">
           Lokalisierung Deutschland für NetSuite – Ihr Tool für den Aufstieg
         </h1>
-        <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed opacity-90">
-          Optimieren Sie NetSuite für den deutschen Markt mit präzisen Tools für Compliance,
-          Steuerberechnung und nahtlose DATEV-Integration. Entwickelt von Experten für deutsche Unternehmen.
+        <p className="text-lg md:text-xl mb-8 leading-relaxed opacity-90">
+          Hier steht ein kurzer Einleitungstext von 1-2 Sätzen, unter diesen wird dann noch ein Button eingefügt.
+          Klickt man diesen an, kann man die Produktbroschüre downloaden.
         </p>
-        <Button
-          variant="filled"
-          color="midBlue"
-          size="lg"
-          showArrow={true}
-          className="text-lg px-8 py-4"
-        >
+        <button className="bg-orange-500 hover:bg-orange-600 text-white font-semibold py-4 px-8 rounded-lg transition-colors duration-200 inline-flex items-center text-lg">
           Download Produktbroschüre
-        </Button>
+          <svg
+            className="ml-2 w-5 h-5"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+          </svg>
+        </button>
       </div>
     </section>
   );
