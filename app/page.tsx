@@ -1,4 +1,5 @@
 import Button from "@/components/ui/Button";
+import Footer from "@/components/ui/Footer";
 
 export default function Home() {
   return (
@@ -117,18 +118,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer */}
-      <footer className="bg-gray-800 text-white" role="contentinfo">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="text-center">
-            <h3 className="text-lg font-semibold mb-4">Alta Via Applications</h3>
-            <p className="text-gray-400 mb-4">Delivering Simplicity</p>
-            <p className="text-sm text-gray-500">
-              © 2024 Alta Via Applications. All rights reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }
