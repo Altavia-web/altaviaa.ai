@@ -88,9 +88,9 @@ export default function HomePartners() {
               </div>
             </div>
             <blockquote className="text-xl italic text-gray-700 mb-4">
-              "Die Zusammenarbeit mit Alta Via Applications hat uns ermöglicht, unseren Kunden
+              &ldquo;Die Zusammenarbeit mit Alta Via Applications hat uns ermöglicht, unseren Kunden
               eine vollständige deutsche NetSuite-Lokalisierung anzubieten. Die Tools sind robust,
-              die Dokumentation umfassend und der Support hervorragend."
+              die Dokumentation umfassend und der Support hervorragend.&rdquo;
             </blockquote>
             <cite className="text-gray-600 font-semibold">
               – Peter von Zimmermann, NetSuite Partner
