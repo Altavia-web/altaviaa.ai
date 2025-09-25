@@ -37,11 +37,9 @@ export default function Footer() {
 
             {/* Right: Image */}
             <div className={styles.imageContent}>
-              <Image
-                src="/components/Footer/images/AVA_Poles_Grad .svg"
+              <img
+                src="/images/AVA_Poles_Grad.svg"
                 alt="Alta Via Applications Poles Gradient"
-                width={400}
-                height={300}
                 className={styles.poleImage}
               />
             </div>
