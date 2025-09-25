@@ -47,12 +47,7 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Section 3: Placeholder */}
-      <div className={styles.section3}>
-        {/* Content for section 3 will be added in next step */}
-      </div>
-
-      {/* Section 4: Footer Bottom */}
+      {/* Section 3: Footer Bottom */}
       <FooterBottom />
     </footer>
   );
