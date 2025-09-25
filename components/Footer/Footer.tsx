@@ -1,99 +1,62 @@
 import React from 'react';
-import Link from 'next/link';
+import Image from 'next/image';
+import Button from '@/components/Button';
 import styles from './Footer.module.css';
 
 export default function Footer() {
   return (
     <footer className={styles.footer} role="contentinfo">
-      <div className={styles.container}>
-        <div className={styles.grid}>
+      {/* Section 1: Full width image only */}
+      <div className={styles.section1} />
 
-          {/* Logo & Firmenname (Links) */}
-          <div className={styles.column}>
-            <div className={styles.logoSection}>
-              <div className={styles.logoContainer}>
-                <div
-                  className={styles.logo}
-                  aria-hidden="true"
-                />
-                <span className={styles.srOnly}>Alta Via Applications Logo</span>
-              </div>
-              <h2 className={styles.companyName}>
-                Alta Via Applications
+      {/* Section 2: Light blue gradient with 2-column content */}
+      <div className={styles.section2}>
+        <div className={styles.section2Container}>
+          <div className={styles.section2Content}>
+            {/* Left: Text content */}
+            <div className={styles.textContent}>
+              <h2 className={styles.headline}>
+                Bereit für den nächsten Höhenmeter?
               </h2>
+              <h3 className={styles.subheadline}>
+                Partner werden:
+              </h3>
+              <p className={styles.description}>
+                Nutzen Sie unser Partnerprogramm – inklusive Vertriebsunterlagen,
+                Testzugängen und direktem Kontakt.
+              </p>
+              <Button
+                variant="filled"
+                color="midBlue"
+                size="lg"
+                showArrow={true}
+              >
+                Demo vereinbaren
+              </Button>
+            </div>
+
+            {/* Right: Image */}
+            <div className={styles.imageContent}>
+              <Image
+                src="/components/Footer/images/AVA_Poles_Grad .svg"
+                alt="Alta Via Applications Poles Gradient"
+                width={400}
+                height={300}
+                className={styles.poleImage}
+              />
             </div>
           </div>
-
-          {/* Firmenadresse (Links-Mitte) */}
-          <div className={styles.column}>
-            <h3 className={styles.sectionTitle}>Anschrift</h3>
-            <address className={styles.address}>
-              <div>Nadistr. 12</div>
-              <div>80809 München</div>
-            </address>
-          </div>
-
-          {/* Call-to-Action Bereich (Rechts-Mitte) */}
-          <div className={styles.column}>
-            <h3 className={styles.sectionTitle}>
-              App für NetSuite erwerben?
-            </h3>
-            <div className={styles.ctaSection}>
-              <div>
-                <a
-                  href="mailto:sales@altaviaa.ai"
-                  className={styles.contactLink}
-                  aria-label="E-Mail an sales@altaviaa.ai senden"
-                >
-                  sales@altaviaa.ai
-                </a>
-              </div>
-              <div>
-                <a
-                  href="tel:+493083790656"
-                  className={styles.contactLink}
-                  aria-label="Anrufen unter +49 30 83790656"
-                >
-                  +49 30 83790656
-                </a>
-              </div>
-            </div>
-          </div>
-
-          {/* Rechtliche Links (Rechts) */}
-          <div className={styles.column}>
-            <h3 className={styles.sectionTitle}>Rechtliches</h3>
-            <nav aria-label="Rechtliche Links">
-              <ul className={styles.legalNav}>
-                <li>
-                  <Link
-                    href="/datenschutz"
-                    className={styles.legalLink}
-                  >
-                    Datenschutz
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="/impressum"
-                    className={styles.legalLink}
-                  >
-                    Impressum
-                  </Link>
-                </li>
-              </ul>
-            </nav>
-          </div>
         </div>
+      </div>
 
-        {/* Copyright */}
-        <div className={styles.divider}>
-          <div className={styles.copyright}>
-            <p>
-              © {new Date().getFullYear()} Alta Via Applications. Alle Rechte vorbehalten.
-            </p>
-          </div>
-        </div>
+      {/* Section 3: Placeholder */}
+      <div className={styles.section3}>
+        {/* Content for section 3 will be added in next step */}
+      </div>
+
+      {/* Section 4: Placeholder */}
+      <div className={styles.section4}>
+        {/* Content for section 4 will be added in next step */}
       </div>
     </footer>
   );
