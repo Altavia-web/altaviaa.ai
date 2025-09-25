@@ -1,7 +1,6 @@
 import Footer from "@/components/Footer";
 import HomeHero from "@/components/sections/home/home-hero";
 import HomeMarketOptimization from "@/components/sections/home/home-market-optimization";
-import HomeWebinar from "@/components/sections/home/home-webinar";
 import HomeCompany from "@/components/sections/home/home-company";
 import HomeLocalization from "@/components/sections/home/home-localization";
 import HomeDatev from "@/components/sections/home/home-datev";
@@ -14,7 +13,6 @@ export default function Home() {
     <div className="min-h-screen">
       <HomeHero />
       <HomeMarketOptimization />
-      <HomeWebinar />
       <HomeCompany />
       <HomeLocalization />
       <HomeDatev />
