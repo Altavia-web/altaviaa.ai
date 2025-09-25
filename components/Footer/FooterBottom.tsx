@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default function FooterBottom() {
   return (
-    <div className="bg-white py-12 px-6">
+    <div className="bg-white px-6">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
           {/* Logo & Company Info (Left) */}

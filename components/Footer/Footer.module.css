@@ -18,7 +18,7 @@
 .section2 {
   width: 100%;
   background: var(--gradient-mid-to-sky);
-  padding: 4rem 0;
+  padding: 4rem 0 0 0;
 }
 
 .section2Container {
@@ -77,6 +77,8 @@
   width: 100%;
   min-height: 200px;
   background-color: #f8fafc;
+  margin: 0;
+  padding: 0;
 }
 
 /* Responsive */
