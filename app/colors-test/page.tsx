@@ -206,7 +206,7 @@ export default function ColorsTestPage() {
                 <div className="p-4">
                   <h4 className="font-semibold text-gray-900 mb-1">DATEV Gradient</h4>
                   <p className="text-xs text-gray-500 mb-2">style={`{{ background: 'var(--gradient-datev)' }}`}</p>
-                  <p className="text-xs text-gray-600">radial-gradient from #009b87 to #78dc3c</p>
+                  <p className="text-xs text-gray-600">radial-gradient from #78dc3c to #009b87</p>
                 </div>
               </div>
               <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
@@ -214,7 +214,7 @@ export default function ColorsTestPage() {
                 <div className="p-4">
                   <h4 className="font-semibold text-gray-900 mb-1">Reisekosten Gradient</h4>
                   <p className="text-xs text-gray-500 mb-2">style={`{{ background: 'var(--gradient-reisekosten)' }}`}</p>
-                  <p className="text-xs text-gray-600">radial-gradient from #7bcfc9 to #d6ffff</p>
+                  <p className="text-xs text-gray-600">radial-gradient from #d6ffff to #7bcfc9</p>
                 </div>
               </div>
               <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
@@ -222,7 +222,7 @@ export default function ColorsTestPage() {
                 <div className="p-4">
                   <h4 className="font-semibold text-gray-900 mb-1">Mahnwesen Gradient</h4>
                   <p className="text-xs text-gray-500 mb-2">style={`{{ background: 'var(--gradient-mahnwesen)' }}`}</p>
-                  <p className="text-xs text-gray-600">radial-gradient from #980000 to #ff4100</p>
+                  <p className="text-xs text-gray-600">radial-gradient from #ff4100 to #980000</p>
                 </div>
               </div>
               <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
@@ -230,7 +230,7 @@ export default function ColorsTestPage() {
                 <div className="p-4">
                   <h4 className="font-semibold text-gray-900 mb-1">Peak Ship Gradient</h4>
                   <p className="text-xs text-gray-500 mb-2">style={`{{ background: 'var(--gradient-peakship)' }}`}</p>
-                  <p className="text-xs text-gray-600">radial-gradient from #ffba00 to #ffebc5</p>
+                  <p className="text-xs text-gray-600">radial-gradient from #ffebc5 to #ffba00</p>
                 </div>
               </div>
               <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
@@ -238,7 +238,7 @@ export default function ColorsTestPage() {
                 <div className="p-4">
                   <h4 className="font-semibold text-gray-900 mb-1">Lokalisierung Gradient</h4>
                   <p className="text-xs text-gray-500 mb-2">style={`{{ background: 'var(--gradient-lokalisierung)' }}`}</p>
-                  <p className="text-xs text-gray-600">radial-gradient from #003399 to #00bfbf</p>
+                  <p className="text-xs text-gray-600">radial-gradient from #00bfbf to #003399</p>
                 </div>
               </div>
               <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
@@ -246,7 +246,7 @@ export default function ColorsTestPage() {
                 <div className="p-4">
                   <h4 className="font-semibold text-gray-900 mb-1">Abwesenheit Gradient</h4>
                   <p className="text-xs text-gray-500 mb-2">style={`{{ background: 'var(--gradient-abwesenheit)' }}`}</p>
-                  <p className="text-xs text-gray-600">radial-gradient from #00789e to #65ffe8</p>
+                  <p className="text-xs text-gray-600">radial-gradient from #65ffe8 to #00789e</p>
                 </div>
               </div>
               <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
@@ -254,7 +254,7 @@ export default function ColorsTestPage() {
                 <div className="p-4">
                   <h4 className="font-semibold text-gray-900 mb-1">GSheet Gradient</h4>
                   <p className="text-xs text-gray-500 mb-2">style={`{{ background: 'var(--gradient-gsheet)' }}`}</p>
-                  <p className="text-xs text-gray-600">radial-gradient from #005f32 to #00b577</p>
+                  <p className="text-xs text-gray-600">radial-gradient from #00b577 to #005f32</p>
                 </div>
               </div>
             </div>
