@@ -15,7 +15,7 @@ export default function HomeDatev() {
             </h2>
 
             <p className="text-lg leading-relaxed mb-8">
-              Mit der von DATEV-zertifizierten SuiteApp "DATEV Export für NetSuite" gelangen Ihre Buchungsdaten
+              Mit der von DATEV-zertifizierten SuiteApp &quot;DATEV Export für NetSuite&quot; gelangen Ihre Buchungsdaten
               sicher und strukturiert in die DATEV-Finanzbuchführung. Alle relevanten Informationen – von
               Stammdaten bis zu Transaktionen – werden im DATEV-Format exportiert und können direkt übernommen
               werden. Damit gelingt die Zusammenarbeit mit Steuerberatern ohne Umwege.
