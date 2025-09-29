@@ -3,7 +3,7 @@ import Button from '@/components/Button';
 
 export default function HomeCta() {
   return (
-    <section className="py-16 px-6" style={{background: 'var(--gradient-mid-to-sky)'}}>
+    <section className="py-16 px-6" style={{background: 'var(--gradient-sky-to-ice)'}}>
       <div className="max-w-6xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div style={{color: 'var(--color-mid-blue)'}}>

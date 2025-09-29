@@ -52,6 +52,7 @@
   /* Gradients */
   --gradient-dark-to-mid: radial-gradient(50% 50% at 50% 50%, #5095cb 0%, #002e64 100%);
   --gradient-mid-to-sky: radial-gradient(50% 50% at 50% 50%, #a8dcf4 0%, #5095cb 100%);
+  --gradient-sky-to-ice: radial-gradient(50% 50% at 50% 50%, #eaf3f9 0%, #a8dcf4 100%);
   --gradient-orange-to-yellow: radial-gradient(50% 50% at 50% 50%, #ffd700 0%, #f7a600 100%);
 
   /* Typography scale with 1.125 ratio */

@@ -2,7 +2,7 @@ import React from 'react';
 
 export default function HomeCompany() {
   return (
-    <section className="py-16 px-6" style={{ background: 'var(--gradient-mid-to-sky)' }}>
+    <section className="py-16 px-6" style={{ background: 'var(--gradient-sky-to-ice)' }}>
       <div className="mx-auto text-center" style={{width: '80%'}}>
         <h2 className="text-3xl lg:text-4xl font-bold mb-8 leading-tight" style={{color: '#1e40af'}}>
           Alta Via Applications: Produktentwicklung mit Weitblick
