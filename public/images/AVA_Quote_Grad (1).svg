@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Ebene_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="0 0 800 800">
+  <!-- Generator: Adobe Illustrator 29.5.1, SVG Export Plug-In . SVG Version: 2.1.0 Build 141)  -->
+  <defs>
+    <style>
+      .st0 {
+        fill: none;
+        stroke: url(#Unbenannter_Verlauf_4);
+        stroke-width: 5px;
+      }
+    </style>
+    <radialGradient id="Unbenannter_Verlauf_4" data-name="Unbenannter Verlauf 4" cx="400.5" cy="400" fx="400.5" fy="400" r="331.6" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="gold"/>
+      <stop offset="1" stop-color="#f7a600"/>
+    </radialGradient>
+  </defs>
+  <path class="st0" d="M49.1,448.6L213.7,95h137.7l-113.4,323.9h97.2v286.1H49.1v-256.4ZM448.6,448.6l164.7-353.6h137.7l-113.4,323.9h97.2v286.1h-286.1v-256.4Z"/>
+</svg>

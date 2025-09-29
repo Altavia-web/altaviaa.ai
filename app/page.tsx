@@ -6,6 +6,7 @@ import HomeLokalisierung from "@/components/sections/home/home-lokalisierung";
 import HomeDatev from "@/components/sections/home/home-datev";
 import HomeCompliance from "@/components/sections/home/home-compliance";
 import HomePartners from "@/components/sections/home/home-partners";
+import HomeTestimonial from "@/components/sections/home/home-testimonial";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <HomeDatev />
       <HomeCompliance />
       <HomePartners />
+      <HomeTestimonial />
       <Footer />
     </div>
   );
