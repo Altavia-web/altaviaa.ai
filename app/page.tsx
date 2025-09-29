@@ -5,6 +5,7 @@ import HomeCompany from "@/components/sections/home/home-company";
 import HomeLokalisierung from "@/components/sections/home/home-lokalisierung";
 import HomeDatev from "@/components/sections/home/home-datev";
 import HomeCompliance from "@/components/sections/home/home-compliance";
+import HomePartners from "@/components/sections/home/home-partners";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <HomeLokalisierung />
       <HomeDatev />
       <HomeCompliance />
+      <HomePartners />
       <Footer />
     </div>
   );
