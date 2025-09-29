@@ -55,6 +55,41 @@
   --gradient-sky-to-ice: radial-gradient(50% 50% at 50% 50%, #eaf3f9 0%, #a8dcf4 100%);
   --gradient-orange-to-yellow: radial-gradient(50% 50% at 50% 50%, #ffd700 0%, #f7a600 100%);
 
+  /* Product Colors - DATEV */
+  --datev-color-1: #009b87;
+  --datev-color-2: #78dc3c;
+  --gradient-datev: radial-gradient(circle at center, var(--datev-color-1) 0%, var(--datev-color-2) 100%);
+
+  /* Product Colors - Reisekosten */
+  --reisekosten-color-1: #7bcfc9;
+  --reisekosten-color-2: #d6ffff;
+  --gradient-reisekosten: radial-gradient(circle at center, var(--reisekosten-color-1) 0%, var(--reisekosten-color-2) 100%);
+
+  /* Product Colors - Mahnwesen */
+  --mahnwesen-color-1: #980000;
+  --mahnwesen-color-2: #ff4100;
+  --gradient-mahnwesen: radial-gradient(circle at center, var(--mahnwesen-color-1) 0%, var(--mahnwesen-color-2) 100%);
+
+  /* Product Colors - Peak Ship */
+  --peakship-color-1: #ffba00;
+  --peakship-color-2: #ffebc5;
+  --gradient-peakship: radial-gradient(circle at center, var(--peakship-color-1) 0%, var(--peakship-color-2) 100%);
+
+  /* Product Colors - Lokalisierung */
+  --lokalisierung-color-1: #003399;
+  --lokalisierung-color-2: #00bfbf;
+  --gradient-lokalisierung: radial-gradient(circle at center, var(--lokalisierung-color-1) 0%, var(--lokalisierung-color-2) 100%);
+
+  /* Product Colors - Abwesenheit */
+  --abwesenheit-color-1: #00789e;
+  --abwesenheit-color-2: #65ffe8;
+  --gradient-abwesenheit: radial-gradient(circle at center, var(--abwesenheit-color-1) 0%, var(--abwesenheit-color-2) 100%);
+
+  /* Product Colors - GSheet */
+  --gsheet-color-1: #005f32;
+  --gsheet-color-2: #00b577;
+  --gradient-gsheet: radial-gradient(circle at center, var(--gsheet-color-1) 0%, var(--gsheet-color-2) 100%);
+
   /* Typography scale with 1.125 ratio */
   --font-size-xs: 0.75rem;      /* 12px */
   --font-size-sm: 0.875rem;     /* 14px */
