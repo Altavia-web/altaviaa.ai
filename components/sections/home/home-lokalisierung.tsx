@@ -10,7 +10,7 @@ export default function HomeLokalisierung() {
           {/* Linke Spalte - Bild */}
           <div className="order-2 lg:order-1">
             <img
-              src="/images/produkte/lokalisierung.webp"
+              src="/images/produkte/AVA_LOKALISIERUNG_DE.webp"
               alt="Lokalisierung Deutschland für NetSuite"
               className="w-full h-auto rounded-lg shadow-lg"
             />
