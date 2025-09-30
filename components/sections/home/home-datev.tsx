@@ -35,9 +35,9 @@ export default function HomeDatev() {
             <Image
               src="/images/produkte/AVA_DATEV_DE.webp"
               alt="DATEV Export für NetSuite"
-              width={320}
-              height={256}
-              className="w-full h-auto rounded-lg shadow-lg"
+              width={500}
+              height={400}
+              className="w-4/5 h-auto rounded-lg shadow-lg mx-auto"
             />
           </div>
         </div>

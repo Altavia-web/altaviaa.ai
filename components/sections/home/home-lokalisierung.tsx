@@ -13,9 +13,9 @@ export default function HomeLokalisierung() {
             <Image
               src="/images/produkte/AVA_LOKALISIERUNG_DE.webp"
               alt="Lokalisierung Deutschland für NetSuite"
-              width={320}
-              height={256}
-              className="w-full h-auto rounded-lg shadow-lg"
+              width={500}
+              height={400}
+              className="w-4/5 h-auto rounded-lg shadow-lg mx-auto"
             />
           </div>
 
