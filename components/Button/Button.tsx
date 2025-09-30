@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useMemo } from 'react';
 import { ArrowRight } from 'lucide-react';
 import styles from './Button.module.css';
 
@@ -14,7 +14,14 @@ export interface ButtonProps {
   type?: 'button' | 'submit' | 'reset';
 }
 
-const Button: React.FC<ButtonProps> = ({
+// Pre-computed arrow sizes to avoid recreation
+const ARROW_SIZES = {
+  sm: 16,
+  md: 18,
+  lg: 20,
+} as const;
+
+const Button: React.FC<ButtonProps> = React.memo(({
   variant = 'filled',
   color = 'midBlue',
   size = 'md',
@@ -25,13 +32,8 @@ const Button: React.FC<ButtonProps> = ({
   className = '',
   type = 'button',
 }) => {
-  const arrowSizes = {
-    sm: 16,
-    md: 18,
-    lg: 20,
-  };
-
-  const getButtonClasses = () => {
+  // Memoize class name computation to prevent recalculation
+  const buttonClassName = useMemo(() => {
     const colorVariant = `${color}${variant.charAt(0).toUpperCase() + variant.slice(1)}`;
     const classes = [
       styles.button,
@@ -41,24 +43,29 @@ const Button: React.FC<ButtonProps> = ({
     ];
 
     return classes.filter(Boolean).join(' ');
-  };
+  }, [variant, color, size, className]);
+
+  // Memoize arrow size to prevent lookups
+  const arrowSize = useMemo(() => ARROW_SIZES[size], [size]);
 
   return (
     <button
       type={type}
       onClick={onClick}
       disabled={disabled}
-      className={getButtonClasses()}
+      className={buttonClassName}
     >
       <span>{children}</span>
       {showArrow && (
         <ArrowRight
-          size={arrowSizes[size]}
+          size={arrowSize}
           className={styles.arrow}
         />
       )}
     </button>
   );
-};
+});
+
+Button.displayName = 'Button';
 
 export default Button;

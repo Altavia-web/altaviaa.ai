@@ -4,7 +4,9 @@
   justify-content: center;
   gap: 0.5rem;
   border-radius: 0.5rem;
-  transition: all 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+  will-change: transform;
+  contain: layout;
   cursor: pointer;
   border: none;
   text-decoration: none;

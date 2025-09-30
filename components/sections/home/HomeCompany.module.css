@@ -1,0 +1,58 @@
+/* HomeCompany CSS Module - Optimized for performance */
+
+.section {
+  padding: 4rem 1.5rem;
+  background: var(--gradient-sky-to-ice);
+}
+
+.container {
+  margin: 0 auto;
+  text-align: center;
+  width: 80%;
+  max-width: 1200px;
+}
+
+.heading {
+  font-size: 1.875rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  line-height: 1.25;
+  color: #1e40af;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  max-width: 56rem;
+  margin: 0 auto;
+}
+
+.paragraph {
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: #1e40af;
+  margin: 0;
+}
+
+.companyName {
+  font-weight: 700;
+}
+
+/* Responsive design */
+@media (min-width: 1024px) {
+  .heading {
+    font-size: 2.25rem;
+  }
+}
+
+/* Performance optimizations */
+.section {
+  contain: layout style paint;
+  will-change: auto;
+}
+
+.heading,
+.paragraph {
+  contain: layout style;
+}
