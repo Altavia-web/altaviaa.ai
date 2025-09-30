@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export default function HomeTestimonial() {
   return (
@@ -6,11 +7,13 @@ export default function HomeTestimonial() {
       <div className="max-w-4xl mx-auto text-center">
 
         {/* Quote Icon */}
-        <div className="mb-8">
-          <img
+        <div className="mb-8 flex justify-center">
+          <Image
             src="/images/AVA_Quote_Grad.svg"
             alt="Zitat"
-            className="w-20 h-20 lg:w-28 lg:h-28 mx-auto"
+            width={80}
+            height={80}
+            className="w-20 h-20 lg:w-28 lg:h-28"
           />
         </div>
 
@@ -27,9 +30,11 @@ export default function HomeTestimonial() {
 
         {/* Profilbild */}
         <div className="flex justify-center">
-          <img
+          <Image
             src="/images/zimmermann.webp"
             alt="Peter von Zimmermann, Geschäftsführer Alta Via Applications GmbH"
+            width={192}
+            height={192}
             className="w-48 h-48 lg:w-64 lg:h-64 rounded-full object-cover shadow-xl"
           />
         </div>

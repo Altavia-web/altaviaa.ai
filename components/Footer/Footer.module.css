@@ -17,7 +17,7 @@
 /* Section 2: Light blue gradient with content */
 .section2 {
   width: 100%;
-  background: var(--gradient-mid-to-sky);
+  background: var(--gradient-sky-to-ice);
   padding: 4rem 0;
 }
 
