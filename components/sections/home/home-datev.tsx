@@ -37,7 +37,7 @@ export default function HomeDatev() {
               alt="DATEV Export für NetSuite"
               width={500}
               height={400}
-              className="w-3/5 h-auto rounded-lg shadow-lg mx-auto"
+              className="w-2/3 h-auto rounded-lg shadow-lg mx-auto"
             />
           </div>
         </div>

@@ -28,7 +28,7 @@ export default function HomeMarketOptimization() {
                 alt="Alta Via Lokalisierung Deutschland Map"
                 width={500}
                 height={400}
-                className="w-3/5 h-auto mx-auto"
+                className="w-2/3 h-auto mx-auto"
               />
             </div>
           </div>
