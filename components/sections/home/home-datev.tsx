@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 
@@ -31,9 +32,11 @@ export default function HomeDatev() {
 
           {/* Rechte Spalte - Bild */}
           <div className="order-1 lg:order-2">
-            <img
+            <Image
               src="/images/produkte/AVA_DATEV_DE.webp"
               alt="DATEV Export für NetSuite"
+              width={500}
+              height={400}
               className="w-full h-auto rounded-lg shadow-lg"
             />
           </div>

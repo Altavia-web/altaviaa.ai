@@ -1,17 +1,13 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Enable experimental optimizations
+  // Enable stable optimizations only
   experimental: {
-    optimizeCss: true,
     optimizePackageImports: ['lucide-react'],
   },
 
   // Compress responses
   compress: true,
-
-  // Enable SWC minifier for better performance
-  swcMinify: true,
 
   // Optimize images
   images: {

@@ -65,16 +65,17 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" crossOrigin="" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
 
-        {/* Inline critical CSS for instant render */}
-        <style dangerouslySetInnerHTML={{
-          __html: `
-            :root{--color-dark-blue:#002e64;--color-sky-blue:#a8dcf4;--color-mid-blue:#5095cb;--color-ice-blue:#eaf3f9;--gradient-mid-to-sky:radial-gradient(50% 50% at 50% 50%,#a8dcf4 0%,#5095cb 100%)}
-            html{font-family:system-ui,-apple-system,sans-serif;font-size:18px;line-height:1.4}
-            body{margin:0;padding:0;background:#fff;color:#171717;font-family:var(--font-titillium),system-ui,-apple-system,sans-serif}
-            .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
-            .sr-only:focus{position:static;width:auto;height:auto;padding:.5rem 1rem;margin:0;overflow:visible;clip:auto;white-space:normal}
-          `
-        }} />
+        {/* Critical styles to prevent FOUC */}
+        <style>{`
+          :root {
+            --color-dark-blue: #002e64;
+            --color-sky-blue: #a8dcf4;
+            --color-mid-blue: #5095cb;
+            --color-ice-blue: #eaf3f9;
+            --gradient-mid-to-sky: radial-gradient(50% 50% at 50% 50%, #a8dcf4 0%, #5095cb 100%);
+            --gradient-sky-to-ice: radial-gradient(50% 50% at 50% 50%, #eaf3f9 0%, #a8dcf4 100%);
+          }
+        `}</style>
 
         {/* Preload favicon */}
         <link

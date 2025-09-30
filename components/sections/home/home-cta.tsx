@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import Button from '@/components/Button';
 
 export default function HomeCta() {
@@ -32,9 +33,11 @@ export default function HomeCta() {
 
           <div className="flex justify-center">
             <div className="relative">
-              <img
+              <Image
                 src="/images/AVA_Poles_Grad.svg"
                 alt="Alta Via Applications Poles Gradient"
+                width={300}
+                height={400}
                 className="max-w-full h-auto max-h-96"
               />
             </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import { CheckCircle } from 'lucide-react';
 
 export default function HomeLokalisierung() {
@@ -9,9 +10,11 @@ export default function HomeLokalisierung() {
 
           {/* Linke Spalte - Bild */}
           <div className="order-2 lg:order-1">
-            <img
+            <Image
               src="/images/produkte/AVA_LOKALISIERUNG_DE.webp"
               alt="Lokalisierung Deutschland für NetSuite"
+              width={500}
+              height={400}
               className="w-full h-auto rounded-lg shadow-lg"
             />
           </div>

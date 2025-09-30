@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 
 export default function HomePartners() {
   return (
@@ -7,9 +8,11 @@ export default function HomePartners() {
 
         {/* SVG Icon */}
         <div className="mb-8">
-          <img
+          <Image
             src="/images/AVA_Sign_Grad.svg"
             alt="Wegweiser Icon"
+            width={80}
+            height={80}
             className="w-20 h-20 lg:w-24 lg:h-24 mx-auto"
           />
         </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import Image from 'next/image';
 import Button from '@/components/Button';
 import FooterBottom from './FooterBottom';
 import styles from './Footer.module.css';
@@ -37,10 +38,13 @@ export default function Footer() {
 
             {/* Right: Image */}
             <div className={styles.imageContent}>
-              <img
+              <Image
                 src="/images/AVA_Poles_Grad.svg"
                 alt="Alta Via Applications Poles Gradient"
+                width={300}
+                height={400}
                 className={styles.poleImage}
+                priority
               />
             </div>
           </div>
