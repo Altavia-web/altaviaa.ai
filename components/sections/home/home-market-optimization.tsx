@@ -26,8 +26,8 @@ export default function HomeMarketOptimization() {
               <Image
                 src="/images/home/Home_Localization_Map__Grad-1.svg"
                 alt="Alta Via Lokalisierung Deutschland Map"
-                width={400}
-                height={320}
+                width={320}
+                height={256}
                 className="w-full h-auto"
               />
             </div>
