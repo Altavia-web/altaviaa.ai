@@ -40,7 +40,7 @@ export default function DatevBuchhaltung() {
       {/* Image */}
       <div className="w-full mb-12">
         <Image
-          src="/images/datev/AVA_Solution_Datev.webp"
+          src="/images/DATEV/AVA_Solution_Datev.png"
           alt="DATEV Solution"
           width={2000}
           height={875}
@@ -66,7 +66,7 @@ export default function DatevBuchhaltung() {
         </h2>
 
         {/* Feature Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
           {features.map((feature) => (
             <div key={feature.id} className="text-left">
               <h3
@@ -97,6 +97,17 @@ export default function DatevBuchhaltung() {
             </div>
           ))}
         </div>
+      </div>
+
+      {/* Second Image */}
+      <div className="w-full mt-12">
+        <Image
+          src="/images/DATEV/AVA_DATEV_EN.webp"
+          alt="DATEV Export"
+          width={2000}
+          height={875}
+          className="w-full h-auto"
+        />
       </div>
     </section>
   );
