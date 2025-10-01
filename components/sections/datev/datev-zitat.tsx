@@ -32,18 +32,34 @@ export default function DatevZitat() {
 
       {/* Content */}
       <div className="relative z-10 mx-auto px-6 text-center" style={{ width: '80%' }}>
-        {/* Zitat Text - Placeholder */}
+        {/* Zitat Text */}
+        <p
+          className="mb-8"
+          style={{
+            fontFamily: 'Titillium Web',
+            fontWeight: 600,
+            fontSize: '24px',
+            lineHeight: '140%',
+            letterSpacing: '0',
+            color: '#002E64',
+            textAlign: 'center'
+          }}
+        >
+          Die SuiteApp &bdquo;DATEV Export for NetSuite&ldquo; von Alta Via Application war für uns unverzichtbar, da sie den Export von EXTF-Buchungsstapel-Dateien aus NetSuite ermöglichte, was für unsere DATEV-Abläufe von entscheidender Bedeutung war. Das Team von Alta Via Application leistete auch während unserer kritischen SKR-Kontenplanmigration außergewöhnliche Unterstützung und sorgte für einen reibungslosen und effizienten Übergang.
+        </p>
+        {/* Author */}
         <p
           style={{
             fontFamily: 'Titillium Web',
             fontWeight: 600,
-            fontSize: '28px',
+            fontSize: '24px',
             lineHeight: '140%',
             letterSpacing: '0',
-            color: '#002E64'
+            color: '#002E64',
+            textAlign: 'center'
           }}
         >
-          [Zitat Text folgt]
+          Steven Ratz, Geschäftsführer Dietz Group
         </p>
       </div>
     </section>
