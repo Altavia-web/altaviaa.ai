@@ -8,7 +8,7 @@ export default function HomeMarketOptimization() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content - Left Column */}
           <div>
-            <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight" style={{color: '#002e64'}}>
+            <h2 className="font-bold mb-6 leading-tight" style={{color: '#002e64', fontSize: 'clamp(2.625rem, 5vw, 3.15rem)'}}>
               Optimieren Sie NetSuite für den deutschen Markt – präzise, konform, einsatzbereit
             </h2>
             <p className="text-xl leading-relaxed" style={{color: '#000000'}}>
