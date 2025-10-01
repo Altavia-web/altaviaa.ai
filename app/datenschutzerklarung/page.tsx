@@ -34,7 +34,7 @@ export default function Datenschutzerklarung() {
             <h3 style={{fontWeight: 700, fontSize: '24px', lineHeight: '110%', color: '#002e64', marginBottom: '1rem', marginTop: '1.5rem'}}>Datenerfassung auf dieser Website</h3>
             <p style={{marginBottom: '1rem'}}>
               <strong>Wer ist verantwortlich für die Datenerfassung auf dieser Website?</strong><br /><br />
-              Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Abschnitt „Hinweis zur Verantwortlichen Stelle" in dieser Datenschutzerklärung entnehmen.
+              Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Abschnitt &bdquo;Hinweis zur Verantwortlichen Stelle&ldquo; in dieser Datenschutzerklärung entnehmen.
             </p>
 
             <p style={{marginBottom: '1rem'}}>
@@ -82,7 +82,7 @@ export default function Datenschutzerklarung() {
 
             <h3 style={{fontWeight: 700, fontSize: '24px', lineHeight: '110%', color: '#002e64', marginBottom: '1rem', marginTop: '1.5rem'}}>Strato</h3>
             <p style={{marginBottom: '1rem'}}>
-              Anbieter ist die Strato AG, Otto-Ostrowski-Straße 7, 10249 Berlin (nachfolgend „Strato"). Wenn Sie unsere Website besuchen, erfasst Strato verschiedene Logfiles inklusive Ihrer IP-Adressen. Weitere Informationen entnehmen Sie der Datenschutzerklärung von Strato: <a href="https://www.strato.de/datenschutz/" target="_blank" rel="noopener noreferrer" style={{color: '#002e64', textDecoration: 'underline'}}>https://www.strato.de/datenschutz/</a>.
+              Anbieter ist die Strato AG, Otto-Ostrowski-Straße 7, 10249 Berlin (nachfolgend &bdquo;Strato&ldquo;). Wenn Sie unsere Website besuchen, erfasst Strato verschiedene Logfiles inklusive Ihrer IP-Adressen. Weitere Informationen entnehmen Sie der Datenschutzerklärung von Strato: <a href="https://www.strato.de/datenschutz/" target="_blank" rel="noopener noreferrer" style={{color: '#002e64', textDecoration: 'underline'}}>https://www.strato.de/datenschutz/</a>.
             </p>
             <p style={{marginBottom: '1rem'}}>
               Die Verwendung von Strato erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Wir haben ein berechtigtes Interesse an einer möglichst zuverlässigen Darstellung unserer Website. Sofern eine entsprechende Einwilligung abgefragt wurde, erfolgt die Verarbeitung ausschließlich auf Grundlage von Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG, soweit die Einwilligung die Speicherung von Cookies oder den Zugriff auf Informationen im Endgerät des Nutzers (z. B. Device-Fingerprinting) im Sinne des TDDDG umfasst. Die Einwilligung ist jederzeit widerrufbar.
@@ -194,7 +194,7 @@ export default function Datenschutzerklarung() {
 
             <h3 style={{fontWeight: 700, fontSize: '24px', lineHeight: '110%', color: '#002e64', marginBottom: '1rem', marginTop: '1.5rem'}}>SSL- bzw. TLS-Verschlüsselung</h3>
             <p style={{marginBottom: '1rem'}}>
-              Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte, wie zum Beispiel Bestellungen oder Anfragen, die Sie an uns als Seitenbetreiber senden, eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von „http://" auf „https://" wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.
+              Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte, wie zum Beispiel Bestellungen oder Anfragen, die Sie an uns als Seitenbetreiber senden, eine SSL- bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von &bdquo;http://&ldquo; auf &bdquo;https://&ldquo; wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.
             </p>
             <p style={{marginBottom: '1rem'}}>
               Wenn die SSL- bzw. TLS-Verschlüsselung aktiviert ist, können die Daten, die Sie an uns übermitteln, nicht von Dritten mitgelesen werden.
@@ -211,7 +211,7 @@ export default function Datenschutzerklarung() {
 
             <h3 style={{fontWeight: 700, fontSize: '24px', lineHeight: '110%', color: '#002e64', marginBottom: '1rem', marginTop: '1.5rem'}}>Cookies</h3>
             <p style={{marginBottom: '1rem'}}>
-              Unsere Internetseiten verwenden so genannte „Cookies". Cookies sind kleine Datenpakete und richten auf Ihrem Endgerät keinen Schaden an. Sie werden entweder vorübergehend für die Dauer einer Sitzung (Session-Cookies) oder dauerhaft (permanente Cookies) auf Ihrem Endgerät gespeichert. Session-Cookies werden nach Ende Ihres Besuchs automatisch gelöscht. Permanente Cookies bleiben auf Ihrem Endgerät gespeichert, bis Sie diese selbst löschen oder eine automatische Löschung durch Ihren Webbrowser erfolgt.
+              Unsere Internetseiten verwenden so genannte &bdquo;Cookies&ldquo;. Cookies sind kleine Datenpakete und richten auf Ihrem Endgerät keinen Schaden an. Sie werden entweder vorübergehend für die Dauer einer Sitzung (Session-Cookies) oder dauerhaft (permanente Cookies) auf Ihrem Endgerät gespeichert. Session-Cookies werden nach Ende Ihres Besuchs automatisch gelöscht. Permanente Cookies bleiben auf Ihrem Endgerät gespeichert, bis Sie diese selbst löschen oder eine automatische Löschung durch Ihren Webbrowser erfolgt.
             </p>
             <p style={{marginBottom: '1rem'}}>
               Cookies können von uns (First-Party-Cookies) oder von Drittunternehmen stammen (sog. Third-Party-Cookies). Third-Party-Cookies ermöglichen die Einbindung bestimmter Dienstleistungen von Drittunternehmen innerhalb von Webseiten (z. B. Cookies zur Abwicklung von Zahlungsdienstleistungen).
@@ -286,7 +286,7 @@ export default function Datenschutzerklarung() {
               Diese Website nutzt Funktionen des Webanalysedienstes Google Analytics. Anbieter ist die Google Inc., 1600 Amphitheatre Parkway, Mountain View, CA 94043, USA.
             </p>
             <p style={{marginBottom: '1rem'}}>
-              Google Analytics verwendet so genannte „Cookies". Das sind Textdateien, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Sie ermöglichen. Die durch den Cookie erzeugten Informationen über Ihre Benutzung dieser Website werden in der Regel an einen Server von Google in den USA übertragen und dort gespeichert.
+              Google Analytics verwendet so genannte &bdquo;Cookies&ldquo;. Das sind Textdateien, die auf Ihrem Computer gespeichert werden und die eine Analyse der Benutzung der Website durch Sie ermöglichen. Die durch den Cookie erzeugten Informationen über Ihre Benutzung dieser Website werden in der Regel an einen Server von Google in den USA übertragen und dort gespeichert.
             </p>
             <p style={{marginBottom: '1rem'}}>
               Die Speicherung von Google-Analytics-Cookies erfolgt auf Grundlage von Art. 6 Abs. 1 lit. f DSGVO. Der Websitebetreiber hat ein berechtigtes Interesse an der Analyse des Nutzerverhaltens, um sowohl sein Webangebot als auch seine Werbung zu optimieren.
@@ -323,10 +323,10 @@ export default function Datenschutzerklarung() {
 
             <h3 style={{fontWeight: 700, fontSize: '24px', lineHeight: '110%', color: '#002e64', marginBottom: '1rem', marginTop: '1.5rem'}}>Demografische Merkmale bei Google Analytics</h3>
             <p style={{marginBottom: '1rem'}}>
-              Diese Website nutzt die Funktion „demografische Merkmale" von Google Analytics. Dadurch können Berichte erstellt werden, die Aussagen zu Alter, Geschlecht und Interessen der Seitenbesucher enthalten.
+              Diese Website nutzt die Funktion &bdquo;demografische Merkmale&ldquo; von Google Analytics. Dadurch können Berichte erstellt werden, die Aussagen zu Alter, Geschlecht und Interessen der Seitenbesucher enthalten.
             </p>
             <p style={{marginBottom: '1rem'}}>
-              Diese Daten stammen aus interessenbezogener Werbung von Google sowie aus Besucherdaten von Drittanbietern. Diese Daten können keiner bestimmten Person zugeordnet werden. Sie können diese Funktion jederzeit über die Anzeigeneinstellungen in Ihrem Google-Konto deaktivieren oder die Erfassung Ihrer Daten durch Google Analytics wie im Punkt „Widerspruch gegen Datenerfassung" dargestellt generell untersagen.
+              Diese Daten stammen aus interessenbezogener Werbung von Google sowie aus Besucherdaten von Drittanbietern. Diese Daten können keiner bestimmten Person zugeordnet werden. Sie können diese Funktion jederzeit über die Anzeigeneinstellungen in Ihrem Google-Konto deaktivieren oder die Erfassung Ihrer Daten durch Google Analytics wie im Punkt &bdquo;Widerspruch gegen Datenerfassung&ldquo; dargestellt generell untersagen.
             </p>
           </section>
 
