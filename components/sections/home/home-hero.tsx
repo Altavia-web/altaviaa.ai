@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export default function HomeHero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center text-white">
+    <section className="relative flex items-center justify-center text-white" style={{ minHeight: '80vh' }}>
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
@@ -20,7 +20,7 @@ export default function HomeHero() {
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-        <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-6 leading-tight">
+        <h1 className="text-4xl md:text-4xl lg:text-6xl font-bold mb-6 leading-tight">
           Lokalisierung Deutschland für NetSuite – Ihr Tool für den Aufstieg
         </h1>
         <p className="text-lg md:text-xl mb-8 leading-relaxed opacity-90">
