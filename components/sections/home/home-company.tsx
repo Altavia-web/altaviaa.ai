@@ -21,6 +21,13 @@ const HomeCompany = React.memo(() => {
             Wir konzentrieren uns auf das, was Sie für den nächsten Schritt brauchen: robuste Tools,
             präzise Ausrichtung und kontinuierliche Weiterentwicklung.
           </p>
+
+          <p className={styles.paragraph}>
+            Unsere NetSuite-Erweiterungen umfassen intelligente Automatisierungslösungen für Finanzprozesse,
+            maßgeschneiderte Compliance-Workflows und nahtlose Integrationen mit ERP- und CRM-Systemen.
+            Jede Entwicklung wird kontinuierlich optimiert und mit modernsten Technologien wie KI-gestützter
+            Datenanalyse erweitert – damit Ihre Prozesse nicht nur heute, sondern auch morgen effizient bleiben.
+          </p>
         </div>
       </div>
     </section>
