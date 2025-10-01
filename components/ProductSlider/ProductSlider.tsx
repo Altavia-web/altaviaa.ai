@@ -22,7 +22,7 @@ const products: Product[] = [
   {
     id: 'abwesenheitsverwaltung',
     name: 'Abwesenheitsverwaltung',
-    image: '/images/produkt/abwesenheitsverwaltung.png',
+    image: '/images/produkte/AVA_ABWESENHEIT_DE (1).webp',
     color: '#00789e',
     link: '/abwesenheitsverwaltung',
     description: 'Mit dem Bundle Urlaubs- und Einsatzplanung von Alta Via lassen sich die Abwesenheiten aller Mitarbeiter*innen in NetSuite verwalten...'
@@ -30,7 +30,7 @@ const products: Product[] = [
   {
     id: 'datev-export',
     name: 'DATEV Export',
-    image: '/images/produkt/datev-export.png',
+    image: '/images/produkte/AVA_DATEV_DE.webp',
     color: '#009b87',
     link: '/schnittstelle-datev',
     description: 'Die Buchhaltungssoftware der DATEV ist in Deutschland der Standard in der Steuerberatung und Wirtschaftsprüfung...'
@@ -38,7 +38,7 @@ const products: Product[] = [
   {
     id: 'lokalisierung',
     name: 'Lokalisierung Deutschland',
-    image: '/images/produkt/lokalisierung-deutschland.png',
+    image: '/images/produkte/AVA_LOKALISIERUNG_DE.webp',
     color: '#003399',
     link: '/localization-germany',
     description: 'In der Beratung von Alta Via haben sich über die Jahre einige Ergänzungen bewährt, die die Arbeit mit NetSuite in Deutschland verbessern...'
@@ -46,7 +46,7 @@ const products: Product[] = [
   {
     id: 'reisekosten',
     name: 'Reisekosten',
-    image: '/images/produkt/reisekosten.png',
+    image: '/images/produkte/AVA_REISEKOSTEN_DE (1).webp',
     color: '#7bcfc9',
     link: '/reisekosten',
     description: 'Erfassen und verwalten Sie Reisekosten effizient in NetSuite mit automatischer Spesenabrechnung und Genehmigungsworkflows...'
@@ -54,7 +54,7 @@ const products: Product[] = [
   {
     id: 'dunning',
     name: 'Mahnwesen (Dunning)',
-    image: '/images/produkt/dunning.png',
+    image: '/images/produkte/AVA_MAHNWESEN_DE (1).webp',
     color: '#980000',
     link: '/dunning',
     description: 'Automatisieren Sie Ihr Mahnwesen mit intelligenten Eskalationsstufen und rechtssicheren Mahnvorlagen für den deutschen Markt...'
@@ -62,7 +62,7 @@ const products: Product[] = [
   {
     id: 'peak-ship',
     name: 'Peak Ship',
-    image: '/images/produkt/peak-ship.png',
+    image: '/images/produkte/AVA_PEAK SHIP_DE (1).webp',
     color: '#ffba00',
     link: '/peak-ship',
     description: 'Peak Ship optimiert Ihre Versandprozesse in NetSuite mit Integration zu allen gängigen Versanddienstleistern...'
@@ -226,18 +226,22 @@ export default function ProductSlider({ autoPlaySpeed = 5000 }: ProductSliderPro
               {products.map((product) => (
                 <div
                   key={product.id}
-                  className="flex-shrink-0 bg-white border rounded-lg overflow-hidden shadow-sm hover:shadow-lg transition-shadow"
+                  className="flex-shrink-0 bg-white overflow-hidden shadow-md hover:shadow-xl transition-shadow"
                   style={{
                     width: `calc((100% - ${(itemsPerView - 1) * 1.5}rem) / ${itemsPerView})`,
-                    borderColor: '#e5e7eb'
+                    borderRadius: '12px',
+                    aspectRatio: '1 / 1.4'
                   }}
                 >
                   {/* Product Image with Color Overlay */}
                   <div
-                    className="relative h-48 flex items-center justify-center"
-                    style={{ backgroundColor: product.color }}
+                    className="relative flex items-center justify-center"
+                    style={{
+                      backgroundColor: product.color,
+                      aspectRatio: '1 / 1'
+                    }}
                   >
-                    <div className="relative w-full h-full p-6">
+                    <div className="relative w-full h-full p-4">
                       <Image
                         src={product.image}
                         alt={product.name}
