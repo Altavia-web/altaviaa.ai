@@ -39,13 +39,13 @@ export default function DatevBuchhaltung() {
     <section className="bg-white py-16">
       {/* Image */}
       <div className="w-full mb-12 flex justify-center">
-        <div className="w-full md:w-3/4 lg:w-1/2">
+        <div style={{ height: '170px' }}>
           <Image
             src="/images/DATEV/AVA_Solution_Datev.png"
             alt="DATEV Solution"
             width={1200}
             height={525}
-            className="w-full h-auto"
+            style={{ height: '170px', width: 'auto' }}
           />
         </div>
       </div>
@@ -103,13 +103,13 @@ export default function DatevBuchhaltung() {
 
       {/* Second Image */}
       <div className="w-full mt-12 flex justify-center">
-        <div style={{ width: '35%' }}>
+        <div style={{ height: '400px' }}>
           <Image
             src="/images/DATEV/AVA_DATEV_EN.webp"
             alt="DATEV Export"
             width={700}
             height={306}
-            className="w-full h-auto"
+            style={{ height: '400px', width: 'auto' }}
           />
         </div>
       </div>
