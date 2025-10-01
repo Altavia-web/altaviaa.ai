@@ -234,11 +234,10 @@ export default function ProductSlider({ autoPlaySpeed = 5000 }: ProductSliderPro
               {products.map((product) => (
                 <div
                   key={product.id}
-                  className="flex-shrink-0 bg-white overflow-hidden shadow-md hover:shadow-xl transition-shadow"
+                  className="flex-shrink-0 bg-white overflow-hidden shadow-md hover:shadow-xl transition-shadow flex flex-col"
                   style={{
-                    width: `calc((100% - ${(itemsPerView - 1) * 1.5}rem) / ${itemsPerView})`,
-                    borderRadius: '12px',
-                    aspectRatio: '1 / 1.4'
+                    width: `calc(((100% - ${(itemsPerView - 1) * 1.5}rem) / ${itemsPerView}) * 0.9)`,
+                    borderRadius: '12px'
                   }}
                 >
                   {/* Product Image with Color Overlay */}
@@ -261,7 +260,7 @@ export default function ProductSlider({ autoPlaySpeed = 5000 }: ProductSliderPro
                   </div>
 
                   {/* Product Content */}
-                  <div className="p-6">
+                  <div className="p-6 flex-1 flex flex-col pb-8">
                     <h3
                       className="font-bold mb-3"
                       style={{
@@ -274,7 +273,7 @@ export default function ProductSlider({ autoPlaySpeed = 5000 }: ProductSliderPro
                       {product.name}
                     </h3>
                     <p
-                      className="mb-4"
+                      className="mb-6 flex-1"
                       style={{
                         fontFamily: 'Titillium Web',
                         fontSize: '16px',
@@ -286,9 +285,10 @@ export default function ProductSlider({ autoPlaySpeed = 5000 }: ProductSliderPro
                     </p>
                     <Link
                       href={product.link}
-                      className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-white font-semibold transition-all hover:opacity-90"
+                      className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold transition-all hover:opacity-90"
                       style={{
                         backgroundColor: '#5095cb',
+                        color: '#ffffff',
                         fontFamily: 'Titillium Web',
                         fontSize: '16px'
                       }}
