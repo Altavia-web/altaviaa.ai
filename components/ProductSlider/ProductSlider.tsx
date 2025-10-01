@@ -199,20 +199,28 @@ export default function ProductSlider({ autoPlaySpeed = 5000 }: ProductSliderPro
           {/* Navigation Arrows */}
           <button
             onClick={goToPrevious}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 z-10 w-12 h-12 rounded-full flex items-center justify-center transition-all hover:scale-110"
-            style={{ backgroundColor: '#a8dcf4' }}
+            className="absolute top-1/2 -translate-y-1/2 z-10 w-14 h-14 rounded-full flex items-center justify-center transition-all hover:opacity-90"
+            style={{
+              backgroundColor: 'rgba(80, 149, 203, 0.7)',
+              left: '-10px',
+              transform: 'translateX(-100%) translateY(-50%)'
+            }}
             aria-label="Previous slide"
           >
-            <ChevronLeft className="w-6 h-6" style={{ color: '#002e64' }} />
+            <ChevronLeft className="w-7 h-7" style={{ color: '#000000' }} />
           </button>
 
           <button
             onClick={goToNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 z-10 w-12 h-12 rounded-full flex items-center justify-center transition-all hover:scale-110"
-            style={{ backgroundColor: '#a8dcf4' }}
+            className="absolute top-1/2 -translate-y-1/2 z-10 w-14 h-14 rounded-full flex items-center justify-center transition-all hover:opacity-90"
+            style={{
+              backgroundColor: 'rgba(80, 149, 203, 0.7)',
+              right: '-10px',
+              transform: 'translateX(100%) translateY(-50%)'
+            }}
             aria-label="Next slide"
           >
-            <ChevronRight className="w-6 h-6" style={{ color: '#002e64' }} />
+            <ChevronRight className="w-7 h-7" style={{ color: '#000000' }} />
           </button>
 
           {/* Product Cards */}
@@ -280,13 +288,13 @@ export default function ProductSlider({ autoPlaySpeed = 5000 }: ProductSliderPro
                       href={product.link}
                       className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-white font-semibold transition-all hover:opacity-90"
                       style={{
-                        backgroundColor: 'var(--mid-blue)',
+                        backgroundColor: '#5095cb',
                         fontFamily: 'Titillium Web',
                         fontSize: '16px'
                       }}
                     >
                       Mehr erfahren
-                      <ArrowRight className="w-4 h-4" />
+                      <ArrowRight className="w-5 h-5" />
                     </Link>
                   </div>
                 </div>
