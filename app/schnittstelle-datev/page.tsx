@@ -5,6 +5,7 @@ import DatevSchnittstelle from '@/components/sections/datev/datev-schnittstelle'
 import DatevQuestions from '@/components/sections/datev/datev-questions';
 import DatevBuchhaltung from '@/components/sections/datev/datev-buchhaltung';
 import DatevTeaser from '@/components/sections/datev/datev-teaser';
+import DatevZitat from '@/components/sections/datev/datev-zitat';
 
 export default function SchnittstelleDatev() {
   return (
@@ -14,6 +15,7 @@ export default function SchnittstelleDatev() {
       <DatevQuestions />
       <DatevBuchhaltung />
       <DatevTeaser />
+      <DatevZitat />
       <Footer />
     </div>
   );
