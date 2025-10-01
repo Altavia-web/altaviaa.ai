@@ -20,10 +20,10 @@ export default function HomeHero() {
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-6 leading-tight">
+        <h1 className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 leading-tight">
           Lokalisierung Deutschland für NetSuite – Ihr Tool für den Aufstieg
         </h1>
-        <p className="text-xl md:text-2xl mb-8 leading-relaxed opacity-90">
+        <p className="text-2xl md:text-3xl mb-8 leading-relaxed opacity-90">
           Hier steht ein kurzer Einleitungstext von 1-2 Sätzen, unter diesen wird dann noch ein Button eingefügt.
           Klickt man diesen an, kann man die Produktbroschüre downloaden.
         </p>
