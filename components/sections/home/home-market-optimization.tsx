@@ -8,10 +8,10 @@ export default function HomeMarketOptimization() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content - Left Column */}
           <div>
-            <h2 className="text-3xl lg:text-4xl font-bold mb-6 leading-tight" style={{color: '#1e40af'}}>
+            <h2 className="text-4xl lg:text-5xl font-bold mb-6 leading-tight" style={{color: '#002e64'}}>
               Optimieren Sie NetSuite für den deutschen Markt – präzise, konform, einsatzbereit
             </h2>
-            <p className="text-lg leading-relaxed" style={{color: '#1e40af'}}>
+            <p className="text-xl leading-relaxed" style={{color: '#000000'}}>
               Immer mehr deutsche Unternehmen und internationale Konzerne mit Niederlassungen in Deutschland
               setzen auf NetSuite als zentrale ERP- und Buchhaltungslösung. Für einen erfolgreichen Einsatz
               ist eine vollständige Anpassung an die lokalen Anforderungen unerlässlich. Mit der{' '}
@@ -26,9 +26,9 @@ export default function HomeMarketOptimization() {
               <Image
                 src="/images/home/Home_Localization_Map__Grad-1.svg"
                 alt="Alta Via Lokalisierung Deutschland Map"
-                width={500}
-                height={400}
-                className="w-2/3 h-auto mx-auto"
+                width={475}
+                height={380}
+                className="w-[63.5%] h-auto mx-auto"
               />
             </div>
           </div>
