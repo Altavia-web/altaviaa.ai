@@ -38,14 +38,16 @@ export default function DatevBuchhaltung() {
   return (
     <section className="bg-white py-16">
       {/* Image */}
-      <div className="w-full mb-12">
-        <Image
-          src="/images/DATEV/AVA_Solution_Datev.png"
-          alt="DATEV Solution"
-          width={2000}
-          height={875}
-          className="w-full h-auto"
-        />
+      <div className="w-full mb-12 flex justify-center">
+        <div style={{ width: '50%' }}>
+          <Image
+            src="/images/DATEV/AVA_Solution_Datev.png"
+            alt="DATEV Solution"
+            width={2000}
+            height={875}
+            className="w-full h-auto"
+          />
+        </div>
       </div>
 
       {/* Content Container */}
@@ -100,14 +102,16 @@ export default function DatevBuchhaltung() {
       </div>
 
       {/* Second Image */}
-      <div className="w-full mt-12">
-        <Image
-          src="/images/DATEV/AVA_DATEV_EN.webp"
-          alt="DATEV Export"
-          width={2000}
-          height={875}
-          className="w-full h-auto"
-        />
+      <div className="w-full mt-12 flex justify-center">
+        <div style={{ width: '20%' }}>
+          <Image
+            src="/images/DATEV/AVA_DATEV_EN.webp"
+            alt="DATEV Export"
+            width={2000}
+            height={875}
+            className="w-full h-auto"
+          />
+        </div>
       </div>
     </section>
   );
