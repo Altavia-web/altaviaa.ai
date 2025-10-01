@@ -1,22 +1,60 @@
 import React from 'react';
+import Image from 'next/image';
 
 export default function DatevHero() {
   return (
     <section
-      className="relative flex items-center justify-center text-white"
+      className="relative flex items-center justify-center"
       style={{
         minHeight: '72vh',
         background: 'var(--gradient-datev)'
       }}
     >
       {/* Content */}
-      <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-        <h1 className="font-bold mb-6 text-center" style={{fontSize: '69px', lineHeight: '110%', letterSpacing: '0'}}>
-          DATEV Schnittstelle für NetSuite
-        </h1>
-        <p className="mb-8 leading-relaxed opacity-90" style={{fontSize: '1.224rem', lineHeight: '1.75'}}>
-          Nahtlose Integration zwischen NetSuite und DATEV<br />für effiziente Buchhaltungsprozesse.
-        </p>
+      <div className="relative z-10 mx-auto px-6" style={{ width: '80%' }}>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Text Content - Left */}
+          <div className="text-left">
+            <h1
+              className="mb-6"
+              style={{
+                fontFamily: 'Titillium Web',
+                fontWeight: 700,
+                fontSize: '69px',
+                lineHeight: '110%',
+                letterSpacing: '0',
+                color: '#ffffff'
+              }}
+            >
+              Schnittstelle DATEV
+            </h1>
+            <h2
+              style={{
+                fontFamily: 'Titillium Web',
+                fontWeight: 700,
+                fontSize: '55px',
+                lineHeight: '110%',
+                letterSpacing: '0',
+                color: '#ffffff'
+              }}
+            >
+              NetSuite und DATEV: Ein Dreamteam deutscher Buchhaltung dank Schnittstelle DATEV.
+            </h2>
+          </div>
+
+          {/* Image - Right */}
+          <div className="flex justify-end">
+            <div className="relative w-full max-w-lg">
+              <Image
+                src="/images/DATEV/AVA_Compass_DATEV-WHITE.webp"
+                alt="DATEV Compass"
+                width={500}
+                height={500}
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
