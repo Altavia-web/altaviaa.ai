@@ -1,10 +1,12 @@
 import React from 'react';
+import Footer from '@/components/Footer';
+import DatevHero from '@/components/sections/datev/datev-hero';
 
 export default function SchnittstelleDatev() {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-8">Schnittstelle DATEV</h1>
-      <p>Schnittstelle DATEV für Alta Via Applications</p>
+    <div className="min-h-screen">
+      <DatevHero />
+      <Footer />
     </div>
   );
 }
