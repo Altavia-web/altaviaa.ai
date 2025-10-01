@@ -21,10 +21,10 @@ export default function ProductsHero() {
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <h1 className="font-bold mb-6 text-center" style={{fontSize: '69px', lineHeight: '110%', letterSpacing: '0'}}>
-          Perfekt ausgerüstet. Bis ins Detail.
+          Perfekt ausgerüstet.<br />Bis ins Detail.
         </h1>
-        <p className="text-xl md:text-2xl mb-8 leading-relaxed opacity-90">
-          Mit den von Alta Via entwickelten Apps für NetSuite kommen Sie noch effektiver voran.
+        <p className="mb-8 leading-relaxed opacity-90" style={{fontSize: '1.224rem', lineHeight: '1.75'}}>
+          Mit den von Alta Via entwickelten Apps für NetSuite<br />kommen Sie noch effektiver voran.
         </p>
       </div>
     </section>
