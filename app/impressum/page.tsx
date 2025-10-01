@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Footer from '@/components/Footer';
 
 export default function Impressum() {
   return (
@@ -112,6 +113,7 @@ export default function Impressum() {
 
         </div>
       </div>
+      <Footer />
     </div>
   );
 }

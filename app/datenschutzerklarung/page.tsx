@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
+import Footer from '@/components/Footer';
 
 export default function Datenschutzerklarung() {
   return (
@@ -358,6 +359,7 @@ export default function Datenschutzerklarung() {
 
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
