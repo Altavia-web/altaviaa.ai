@@ -58,7 +58,7 @@
   /* Product Colors - DATEV */
   --datev-color-1: #009b87;
   --datev-color-2: #78dc3c;
-  --gradient-datev: radial-gradient(circle at center, var(--datev-color-2) 0%, var(--datev-color-1) 100%);
+  --gradient-datev: radial-gradient(circle at center, var(--datev-color-2) 0%, var(--datev-color-2) 15%, var(--datev-color-1) 60%);
 
   /* Product Colors - Reisekosten */
   --reisekosten-color-1: #7bcfc9;
