@@ -136,11 +136,15 @@ export default function ProductSlider({ autoPlaySpeed = 5000 }: ProductSliderPro
 
   // Touch handlers for mobile swipe
   const handleTouchStart = (e: React.TouchEvent) => {
-    setTouchStart(e.targetTouches[0].clientX);
+    if (e.targetTouches[0]) {
+      setTouchStart(e.targetTouches[0].clientX);
+    }
   };
 
   const handleTouchMove = (e: React.TouchEvent) => {
-    setTouchEnd(e.targetTouches[0].clientX);
+    if (e.targetTouches[0]) {
+      setTouchEnd(e.targetTouches[0].clientX);
+    }
   };
 
   const handleTouchEnd = () => {
@@ -151,12 +155,6 @@ export default function ProductSlider({ autoPlaySpeed = 5000 }: ProductSliderPro
     if (touchStart - touchEnd < -75) {
       goToPrevious();
     }
-  };
-
-  // Get visible products for current slide
-  const getVisibleProducts = () => {
-    const startIndex = currentIndex * itemsPerView;
-    return products.slice(startIndex, startIndex + itemsPerView);
   };
 
   return (
