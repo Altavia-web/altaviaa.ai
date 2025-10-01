@@ -103,13 +103,13 @@ export default function DatevBuchhaltung() {
 
       {/* Second Image */}
       <div className="w-full mt-12 flex justify-center">
-        <div style={{ height: '400px' }}>
+        <div className="w-full px-6 md:px-0 md:w-auto" style={{ maxHeight: '400px' }}>
           <Image
             src="/images/DATEV/AVA_DATEV_EN.webp"
             alt="DATEV Export"
             width={700}
             height={306}
-            style={{ height: '400px', width: 'auto' }}
+            className="w-full h-auto md:w-auto md:h-[400px]"
           />
         </div>
       </div>
