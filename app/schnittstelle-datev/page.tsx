@@ -3,6 +3,7 @@ import Footer from '@/components/Footer';
 import DatevHero from '@/components/sections/datev/datev-hero';
 import DatevSchnittstelle from '@/components/sections/datev/datev-schnittstelle';
 import DatevQuestions from '@/components/sections/datev/datev-questions';
+import DatevBuchhaltung from '@/components/sections/datev/datev-buchhaltung';
 
 export default function SchnittstelleDatev() {
   return (
@@ -10,6 +11,7 @@ export default function SchnittstelleDatev() {
       <DatevHero />
       <DatevSchnittstelle />
       <DatevQuestions />
+      <DatevBuchhaltung />
       <Footer />
     </div>
   );
