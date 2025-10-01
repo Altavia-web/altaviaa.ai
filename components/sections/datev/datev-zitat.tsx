@@ -10,12 +10,12 @@ export default function DatevZitat() {
         background: 'var(--gradient-datev-intro)'
       }}
     >
-      {/* Opening Quote Icon - Top Left */}
+      {/* Opening Quote Icon - Centered */}
       <div
-        className="absolute"
+        className="absolute left-1/2"
         style={{
           top: '84.21px',
-          left: '675.27px',
+          transform: 'translateX(-50%)',
           width: '89.46px',
           height: '77.87px',
           opacity: 1
