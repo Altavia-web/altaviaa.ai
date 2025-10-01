@@ -1,9 +1,26 @@
 import React from 'react';
+import Image from 'next/image';
 
 export default function Impressum() {
   return (
-    <div className="container mx-auto px-4 py-8 max-w-4xl">
-      <h1 className="text-3xl font-bold mb-8">Impressum</h1>
+    <div>
+      {/* Hero Section */}
+      <section className="relative w-full h-64 flex items-center justify-center">
+        <Image
+          src="/images/AVA_Header_Imprint_2000x416.webp"
+          alt="Impressum Header"
+          fill
+          className="object-cover"
+          priority
+          quality={90}
+        />
+        <h1 className="relative z-10 text-white font-bold text-center" style={{fontSize: '69px', lineHeight: '110%', letterSpacing: '0'}}>
+          Impressum
+        </h1>
+      </section>
+
+      {/* Content Section */}
+      <div className="container mx-auto px-4 py-8 max-w-4xl">
 
       <div className="space-y-6">
         <section>
@@ -70,6 +87,7 @@ export default function Impressum() {
           </p>
         </section>
       </div>
+    </div>
     </div>
   );
 }
