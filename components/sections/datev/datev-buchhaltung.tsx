@@ -39,7 +39,7 @@ export default function DatevBuchhaltung() {
     <section className="bg-white py-16">
       {/* Image */}
       <div className="w-full mb-12 flex justify-center">
-        <div style={{ width: '60%' }}>
+        <div className="w-full md:w-3/4 lg:w-1/2">
           <Image
             src="/images/DATEV/AVA_Solution_Datev.png"
             alt="DATEV Solution"
