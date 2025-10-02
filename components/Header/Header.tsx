@@ -12,6 +12,7 @@ export default function Header() {
   const [isKontaktOpen, setIsKontaktOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
+  // Updated product navigation links
 
   const closeAllDropdowns = () => {
     setIsApplicationsOpen(false);
