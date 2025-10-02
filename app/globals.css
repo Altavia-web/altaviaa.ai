@@ -128,9 +128,12 @@ body {
 
 /* Heading styles with responsive sizing */
 h1, .h1 {
-  font-size: var(--font-size-4xl); /* Mobile default */
-  line-height: 1.2;
+  font-family: 'Titillium Web', var(--font-titillium), system-ui, sans-serif;
+  font-size: 36px; /* Mobile: 36px */
+  line-height: 110%;
   font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0%;
   margin: 0 0 1rem;
 }
 
