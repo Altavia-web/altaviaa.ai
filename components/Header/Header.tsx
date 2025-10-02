@@ -342,20 +342,19 @@ export default function Header() {
             </div>
           </div>
         )}
-
-        {/* Click outside to close dropdowns */}
-        {(isApplicationsOpen || isRessourcenOpen || isKontaktOpen || isMobileMenuOpen) && (
-          <div
-            className={styles.overlay}
-            onClick={() => {
-              closeAllDropdowns();
-              setIsMobileMenuOpen(false);
-            }}
-          />
-        )}
       </header>
 
       {/* Dropdown Menus - Outside header for full width */}
+      {/* Click outside to close dropdowns */}
+      {(isApplicationsOpen || isRessourcenOpen || isKontaktOpen || isMobileMenuOpen) && (
+        <div
+          className={styles.overlay}
+          onClick={() => {
+            closeAllDropdowns();
+            setIsMobileMenuOpen(false);
+          }}
+        />
+      )}
       {isApplicationsOpen && (
         <div className={styles.desktopDropdown}>
           <div className={styles.desktopDropdownContent}>
