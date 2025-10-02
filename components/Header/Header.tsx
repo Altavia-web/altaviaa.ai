@@ -66,17 +66,20 @@ export default function Header() {
             {/* Navigation */}
             <div className={styles.nav}>
               {/* Applications Dropdown */}
-              <div className={styles.dropdown}>
-                <button
-                  onClick={() => {
-                    setIsApplicationsOpen(!isApplicationsOpen);
-                    setIsRessourcenOpen(false);
-                    setIsKontaktOpen(false);
-                  }}
+              <div
+                className={styles.dropdown}
+                onMouseEnter={() => {
+                  setIsApplicationsOpen(true);
+                  setIsRessourcenOpen(false);
+                  setIsKontaktOpen(false);
+                }}
+                onMouseLeave={() => setIsApplicationsOpen(false)}
+              >
+                <Link
+                  href="/products"
                   className={`${styles.dropdownButton} ${isActive('/products') || isActive('/abwesenheitsverwaltung') || isActive('/schnittstelle-datev') || isActive('/localization-germany') || isActive('/reisekosten') || isActive('/dunning') || isActive('/peak-ship') ? styles.active : ''}`}
-                  aria-expanded={isApplicationsOpen}
                   aria-haspopup="true"
-                  aria-label="Applications menu"
+                  aria-label="Applications"
                 >
                   <span>Applications</span>
                   <svg
@@ -93,21 +96,24 @@ export default function Header() {
                       d="M19 9l-7 7-7-7"
                     />
                   </svg>
-                </button>
+                </Link>
               </div>
 
               {/* Ressourcen Dropdown */}
-              <div className={styles.dropdown}>
-                <button
-                  onClick={() => {
-                    setIsRessourcenOpen(!isRessourcenOpen);
-                    setIsApplicationsOpen(false);
-                    setIsKontaktOpen(false);
-                  }}
+              <div
+                className={styles.dropdown}
+                onMouseEnter={() => {
+                  setIsRessourcenOpen(true);
+                  setIsApplicationsOpen(false);
+                  setIsKontaktOpen(false);
+                }}
+                onMouseLeave={() => setIsRessourcenOpen(false)}
+              >
+                <Link
+                  href="/ressourcen"
                   className={`${styles.dropdownButton} ${isActive('/ressourcen') ? styles.active : ''}`}
-                  aria-expanded={isRessourcenOpen}
                   aria-haspopup="true"
-                  aria-label="Ressourcen menu"
+                  aria-label="Ressourcen"
                 >
                   <span>Ressourcen</span>
                   <svg
@@ -124,21 +130,24 @@ export default function Header() {
                       d="M19 9l-7 7-7-7"
                     />
                   </svg>
-                </button>
+                </Link>
               </div>
 
               {/* Kontakt Dropdown */}
-              <div className={styles.dropdown}>
-                <button
-                  onClick={() => {
-                    setIsKontaktOpen(!isKontaktOpen);
-                    setIsApplicationsOpen(false);
-                    setIsRessourcenOpen(false);
-                  }}
+              <div
+                className={styles.dropdown}
+                onMouseEnter={() => {
+                  setIsKontaktOpen(true);
+                  setIsApplicationsOpen(false);
+                  setIsRessourcenOpen(false);
+                }}
+                onMouseLeave={() => setIsKontaktOpen(false)}
+              >
+                <Link
+                  href="/kontakt"
                   className={`${styles.dropdownButton} ${isActive('/kontakt') ? styles.active : ''}`}
-                  aria-expanded={isKontaktOpen}
                   aria-haspopup="true"
-                  aria-label="Kontakt menu"
+                  aria-label="Kontakt"
                 >
                   <span>Kontakt</span>
                   <svg
@@ -155,7 +164,7 @@ export default function Header() {
                       d="M19 9l-7 7-7-7"
                     />
                   </svg>
-                </button>
+                </Link>
               </div>
             </div>
 
@@ -372,33 +381,16 @@ export default function Header() {
       </header>
 
       {/* Dropdown Menus - Outside header for full width */}
-      {/* Click outside to close dropdowns */}
-      {(isApplicationsOpen || isRessourcenOpen || isKontaktOpen || isMobileMenuOpen) && (
-        <div
-          className={styles.overlay}
-          onClick={() => {
-            closeAllDropdowns();
-            setIsMobileMenuOpen(false);
-          }}
-        />
-      )}
       {isApplicationsOpen && (
-        <div className={styles.megaMenu} role="menu" aria-label="Applications navigation">
+        <div
+          className={styles.megaMenu}
+          role="menu"
+          aria-label="Applications navigation"
+          onMouseEnter={() => setIsApplicationsOpen(true)}
+          onMouseLeave={() => setIsApplicationsOpen(false)}
+        >
           {/* Produkt-Grid */}
           <div className={styles.produktGrid}>
-            <Link
-              href="/products"
-              className={styles.produktCard}
-              onClick={closeAllDropdowns}
-              role="menuitem"
-            >
-              <div className={styles.iconWrapper}>
-                <Grid3x3 size={48} />
-              </div>
-              <h3>Alle Produkte</h3>
-              <p>Komplette Übersicht</p>
-            </Link>
-
             <Link
               href="/schnittstelle-datev"
               className={styles.produktCard}
@@ -516,16 +508,14 @@ export default function Header() {
       )}
 
       {isRessourcenOpen && (
-        <div className={styles.desktopDropdown} role="menu" aria-label="Ressourcen navigation">
+        <div
+          className={styles.desktopDropdown}
+          role="menu"
+          aria-label="Ressourcen navigation"
+          onMouseEnter={() => setIsRessourcenOpen(true)}
+          onMouseLeave={() => setIsRessourcenOpen(false)}
+        >
           <div className={styles.desktopDropdownContent}>
-            <Link
-              href="/ressourcen"
-              className={styles.featured}
-              onClick={closeAllDropdowns}
-              role="menuitem"
-            >
-              All Resources
-            </Link>
             <Link
               href="/ressourcen#documentation"
               onClick={closeAllDropdowns}
@@ -552,16 +542,14 @@ export default function Header() {
       )}
 
       {isKontaktOpen && (
-        <div className={styles.desktopDropdown} role="menu" aria-label="Kontakt navigation">
+        <div
+          className={styles.desktopDropdown}
+          role="menu"
+          aria-label="Kontakt navigation"
+          onMouseEnter={() => setIsKontaktOpen(true)}
+          onMouseLeave={() => setIsKontaktOpen(false)}
+        >
           <div className={styles.desktopDropdownContent}>
-            <Link
-              href="/kontakt"
-              className={styles.featured}
-              onClick={closeAllDropdowns}
-              role="menuitem"
-            >
-              Contact Form
-            </Link>
             <Link
               href="/kontakt#support"
               onClick={closeAllDropdowns}
