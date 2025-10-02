@@ -362,36 +362,43 @@ export default function Header() {
             <Link
               href="/products"
               className={styles.featured}
+              onClick={closeAllDropdowns}
             >
               Alle Produkte
             </Link>
             <Link
               href="/abwesenheitsverwaltung"
+              onClick={closeAllDropdowns}
             >
               Abwesenheitsverwaltung
             </Link>
             <Link
               href="/schnittstelle-datev"
+              onClick={closeAllDropdowns}
             >
               DATEV Export
             </Link>
             <Link
               href="/localization-germany"
+              onClick={closeAllDropdowns}
             >
               Lokalisierung Deutschland
             </Link>
             <Link
               href="/reisekosten"
+              onClick={closeAllDropdowns}
             >
               Reisekosten
             </Link>
             <Link
               href="/dunning"
+              onClick={closeAllDropdowns}
             >
               Mahnwesen (Dunning)
             </Link>
             <Link
               href="/peak-ship"
+              onClick={closeAllDropdowns}
             >
               Peak Ship
             </Link>
@@ -405,21 +412,25 @@ export default function Header() {
             <Link
               href="/ressourcen"
               className={styles.featured}
+              onClick={closeAllDropdowns}
             >
               All Resources
             </Link>
             <Link
               href="/ressourcen#documentation"
+              onClick={closeAllDropdowns}
             >
               Documentation
             </Link>
             <Link
               href="/ressourcen#guides"
+              onClick={closeAllDropdowns}
             >
               Guides & Tutorials
             </Link>
             <Link
               href="/ressourcen#support"
+              onClick={closeAllDropdowns}
             >
               Support Center
             </Link>
@@ -433,16 +444,19 @@ export default function Header() {
             <Link
               href="/kontakt"
               className={styles.featured}
+              onClick={closeAllDropdowns}
             >
               Contact Form
             </Link>
             <Link
               href="/kontakt#support"
+              onClick={closeAllDropdowns}
             >
               Support
             </Link>
             <Link
               href="/kontakt#business"
+              onClick={closeAllDropdowns}
             >
               Business Inquiries
             </Link>
