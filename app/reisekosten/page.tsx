@@ -1,10 +1,12 @@
 import React from 'react';
+import Footer from '@/components/Footer';
+import ReisekostenHero from '@/components/sections/reisekosten/reisekosten-hero';
 
 export default function Reisekosten() {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-8">Reisekosten</h1>
-      <p>Reisekosten für Alta Via Applications</p>
+    <div className="min-h-screen">
+      <ReisekostenHero />
+      <Footer />
     </div>
   );
 }

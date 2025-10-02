@@ -1,10 +1,12 @@
 import React from 'react';
+import Footer from '@/components/Footer';
+import AbwesenheitsverwaltungHero from '@/components/sections/abwesenheitsverwaltung/abwesenheitsverwaltung-hero';
 
 export default function Abwesenheitsverwaltung() {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-8">Abwesenheitsverwaltung</h1>
-      <p>Abwesenheitsverwaltung für Alta Via Applications</p>
+    <div className="min-h-screen">
+      <AbwesenheitsverwaltungHero />
+      <Footer />
     </div>
   );
 }
