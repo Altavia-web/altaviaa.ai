@@ -20,7 +20,7 @@ export default function ProductsHero() {
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-        <h1 className="font-bold mb-6 text-center" style={{fontSize: '69px', lineHeight: '110%', letterSpacing: '0'}}>
+        <h1 className="font-bold mb-6 text-center">
           Perfekt ausgerüstet.<br />Bis ins Detail.
         </h1>
         <p className="mb-8 leading-relaxed opacity-90" style={{fontSize: '1.224rem', lineHeight: '1.75'}}>

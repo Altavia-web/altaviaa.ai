@@ -20,7 +20,7 @@ export default function HomeHero() {
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
-        <h1 className="font-bold mb-6 text-center" style={{fontSize: '69px', lineHeight: '110%', letterSpacing: '0'}}>
+        <h1 className="font-bold mb-6 text-center">
           Lokalisierung Deutschland für NetSuite – Ihr Tool für den Aufstieg
         </h1>
         <p className="text-2xl md:text-3xl mb-8 leading-relaxed opacity-90">

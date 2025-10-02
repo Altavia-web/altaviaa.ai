@@ -15,29 +15,10 @@ export default function DatevHero() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Text Content - Left */}
           <div className="text-left">
-            <h1
-              className="mb-6"
-              style={{
-                fontFamily: 'Titillium Web',
-                fontWeight: 700,
-                fontSize: '69px',
-                lineHeight: '110%',
-                letterSpacing: '0',
-                color: '#ffffff'
-              }}
-            >
+            <h1 className="mb-6 text-white">
               Schnittstelle DATEV
             </h1>
-            <h2
-              style={{
-                fontFamily: 'Titillium Web',
-                fontWeight: 700,
-                fontSize: '55px',
-                lineHeight: '110%',
-                letterSpacing: '0',
-                color: '#ffffff'
-              }}
-            >
+            <h2 className="text-white">
               NetSuite und DATEV: Ein Dreamteam deutscher Buchhaltung dank Schnittstelle DATEV.
             </h2>
           </div>
