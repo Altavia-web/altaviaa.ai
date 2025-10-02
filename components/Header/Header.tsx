@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import styles from './Header.module.css';
 
@@ -21,6 +21,20 @@ export default function Header() {
   };
 
   const isActive = (path: string) => pathname === path || pathname.startsWith(path + '/');
+
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // ESC key closes all dropdowns
+      if (e.key === 'Escape') {
+        closeAllDropdowns();
+        setIsMobileMenuOpen(false);
+      }
+    };
+
+    document.addEventListener('keydown', handleKeyDown);
+    return () => document.removeEventListener('keydown', handleKeyDown);
+  }, []);
 
   return (
     <div>
@@ -59,6 +73,9 @@ export default function Header() {
                     setIsKontaktOpen(false);
                   }}
                   className={`${styles.dropdownButton} ${isActive('/products') || isActive('/abwesenheitsverwaltung') || isActive('/schnittstelle-datev') || isActive('/localization-germany') || isActive('/reisekosten') || isActive('/dunning') || isActive('/peak-ship') ? styles.active : ''}`}
+                  aria-expanded={isApplicationsOpen}
+                  aria-haspopup="true"
+                  aria-label="Applications menu"
                 >
                   <span>Applications</span>
                   <svg
@@ -66,6 +83,7 @@ export default function Header() {
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
+                    aria-hidden="true"
                   >
                     <path
                       strokeLinecap="round"
@@ -86,6 +104,9 @@ export default function Header() {
                     setIsKontaktOpen(false);
                   }}
                   className={`${styles.dropdownButton} ${isActive('/ressourcen') ? styles.active : ''}`}
+                  aria-expanded={isRessourcenOpen}
+                  aria-haspopup="true"
+                  aria-label="Ressourcen menu"
                 >
                   <span>Ressourcen</span>
                   <svg
@@ -93,6 +114,7 @@ export default function Header() {
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
+                    aria-hidden="true"
                   >
                     <path
                       strokeLinecap="round"
@@ -113,6 +135,9 @@ export default function Header() {
                     setIsRessourcenOpen(false);
                   }}
                   className={`${styles.dropdownButton} ${isActive('/kontakt') ? styles.active : ''}`}
+                  aria-expanded={isKontaktOpen}
+                  aria-haspopup="true"
+                  aria-label="Kontakt menu"
                 >
                   <span>Kontakt</span>
                   <svg
@@ -120,6 +145,7 @@ export default function Header() {
                     fill="none"
                     stroke="currentColor"
                     viewBox="0 0 24 24"
+                    aria-hidden="true"
                   >
                     <path
                       strokeLinecap="round"
@@ -356,48 +382,55 @@ export default function Header() {
         />
       )}
       {isApplicationsOpen && (
-        <div className={styles.desktopDropdown}>
+        <div className={styles.desktopDropdown} role="menu" aria-label="Applications navigation">
           <div className={styles.desktopDropdownContent}>
             <Link
               href="/products"
               className={styles.featured}
               onClick={closeAllDropdowns}
+              role="menuitem"
             >
               Alle Produkte
             </Link>
             <Link
               href="/abwesenheitsverwaltung"
               onClick={closeAllDropdowns}
+              role="menuitem"
             >
               Abwesenheitsverwaltung
             </Link>
             <Link
               href="/schnittstelle-datev"
               onClick={closeAllDropdowns}
+              role="menuitem"
             >
               DATEV Export
             </Link>
             <Link
               href="/localization-germany"
               onClick={closeAllDropdowns}
+              role="menuitem"
             >
               Lokalisierung Deutschland
             </Link>
             <Link
               href="/reisekosten"
               onClick={closeAllDropdowns}
+              role="menuitem"
             >
               Reisekosten
             </Link>
             <Link
               href="/dunning"
               onClick={closeAllDropdowns}
+              role="menuitem"
             >
               Mahnwesen (Dunning)
             </Link>
             <Link
               href="/peak-ship"
               onClick={closeAllDropdowns}
+              role="menuitem"
             >
               Peak Ship
             </Link>
@@ -406,30 +439,34 @@ export default function Header() {
       )}
 
       {isRessourcenOpen && (
-        <div className={styles.desktopDropdown}>
+        <div className={styles.desktopDropdown} role="menu" aria-label="Ressourcen navigation">
           <div className={styles.desktopDropdownContent}>
             <Link
               href="/ressourcen"
               className={styles.featured}
               onClick={closeAllDropdowns}
+              role="menuitem"
             >
               All Resources
             </Link>
             <Link
               href="/ressourcen#documentation"
               onClick={closeAllDropdowns}
+              role="menuitem"
             >
               Documentation
             </Link>
             <Link
               href="/ressourcen#guides"
               onClick={closeAllDropdowns}
+              role="menuitem"
             >
               Guides & Tutorials
             </Link>
             <Link
               href="/ressourcen#support"
               onClick={closeAllDropdowns}
+              role="menuitem"
             >
               Support Center
             </Link>
@@ -438,24 +475,27 @@ export default function Header() {
       )}
 
       {isKontaktOpen && (
-        <div className={styles.desktopDropdown}>
+        <div className={styles.desktopDropdown} role="menu" aria-label="Kontakt navigation">
           <div className={styles.desktopDropdownContent}>
             <Link
               href="/kontakt"
               className={styles.featured}
               onClick={closeAllDropdowns}
+              role="menuitem"
             >
               Contact Form
             </Link>
             <Link
               href="/kontakt#support"
               onClick={closeAllDropdowns}
+              role="menuitem"
             >
               Support
             </Link>
             <Link
               href="/kontakt#business"
               onClick={closeAllDropdowns}
+              role="menuitem"
             >
               Business Inquiries
             </Link>
