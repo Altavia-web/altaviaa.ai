@@ -57,7 +57,7 @@ export default function Header() {
                     setIsRessourcenOpen(false);
                     setIsKontaktOpen(false);
                   }}
-                  className={`${styles.dropdownButton} ${isActive('/applications') ? styles.active : ''}`}
+                  className={`${styles.dropdownButton} ${isActive('/products') || isActive('/abwesenheitsverwaltung') || isActive('/schnittstelle-datev') || isActive('/localization-germany') || isActive('/reisekosten') || isActive('/dunning') || isActive('/peak-ship') ? styles.active : ''}`}
                 >
                   <span>Applications</span>
                   <svg
@@ -184,32 +184,53 @@ export default function Header() {
                 {isApplicationsOpen && (
                   <div className={styles.mobileDropdownContent}>
                     <Link
-                      href="/applications"
+                      href="/products"
                       className={`${styles.mobileDropdownLink} ${styles.featured}`}
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
-                      Applications Overview
+                      Alle Produkte
                     </Link>
                     <Link
-                      href="/applications#web"
+                      href="/abwesenheitsverwaltung"
                       className={styles.mobileDropdownLink}
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
-                      Web Applications
+                      Abwesenheitsverwaltung
                     </Link>
                     <Link
-                      href="/applications#mobile"
+                      href="/schnittstelle-datev"
                       className={styles.mobileDropdownLink}
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
-                      Mobile Solutions
+                      DATEV Export
                     </Link>
                     <Link
-                      href="/applications#enterprise"
+                      href="/localization-germany"
                       className={styles.mobileDropdownLink}
                       onClick={() => setIsMobileMenuOpen(false)}
                     >
-                      Enterprise Systems
+                      Lokalisierung Deutschland
+                    </Link>
+                    <Link
+                      href="/reisekosten"
+                      className={styles.mobileDropdownLink}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Reisekosten
+                    </Link>
+                    <Link
+                      href="/dunning"
+                      className={styles.mobileDropdownLink}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Mahnwesen (Dunning)
+                    </Link>
+                    <Link
+                      href="/peak-ship"
+                      className={styles.mobileDropdownLink}
+                      onClick={() => setIsMobileMenuOpen(false)}
+                    >
+                      Peak Ship
                     </Link>
                   </div>
                 )}
@@ -338,25 +359,40 @@ export default function Header() {
         <div className={styles.desktopDropdown}>
           <div className={styles.desktopDropdownContent}>
             <Link
-              href="/applications"
+              href="/products"
               className={styles.featured}
             >
-              Applications Overview
+              Alle Produkte
             </Link>
             <Link
-              href="/applications#web"
+              href="/abwesenheitsverwaltung"
             >
-              Web Applications
+              Abwesenheitsverwaltung
             </Link>
             <Link
-              href="/applications#mobile"
+              href="/schnittstelle-datev"
             >
-              Mobile Solutions
+              DATEV Export
             </Link>
             <Link
-              href="/applications#enterprise"
+              href="/localization-germany"
             >
-              Enterprise Systems
+              Lokalisierung Deutschland
+            </Link>
+            <Link
+              href="/reisekosten"
+            >
+              Reisekosten
+            </Link>
+            <Link
+              href="/dunning"
+            >
+              Mahnwesen (Dunning)
+            </Link>
+            <Link
+              href="/peak-ship"
+            >
+              Peak Ship
             </Link>
           </div>
         </div>
