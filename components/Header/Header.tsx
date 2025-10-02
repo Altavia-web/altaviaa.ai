@@ -189,193 +189,62 @@ export default function Header() {
         {/* Mobile Navigation Menu */}
         {isMobileMenuOpen && (
           <div className={styles.mobileMenu}>
-            <div className={styles.mobileMenuContent}>
-              {/* Mobile Language Switcher */}
-              <div className={styles.mobileLanguage}>
-                <button className={styles.languageButton}>
-                  EN
-                </button>
-              </div>
-
-              {/* Mobile Applications */}
-              <div className={styles.mobileDropdown}>
-                <button
-                  onClick={() => setIsApplicationsOpen(!isApplicationsOpen)}
-                  className={styles.mobileDropdownButton}
-                >
-                  <span>Applications</span>
-                  <svg
-                    className={`${styles.dropdownIcon} ${isApplicationsOpen ? styles.open : ''}`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </button>
-                {isApplicationsOpen && (
-                  <div className={styles.mobileDropdownContent}>
-                    <Link
-                      href="/products"
-                      className={`${styles.mobileDropdownLink} ${styles.featured}`}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Alle Produkte
-                    </Link>
-                    <Link
-                      href="/abwesenheitsverwaltung"
-                      className={styles.mobileDropdownLink}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Abwesenheitsverwaltung
-                    </Link>
-                    <Link
-                      href="/schnittstelle-datev"
-                      className={styles.mobileDropdownLink}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      DATEV Export
-                    </Link>
-                    <Link
-                      href="/localization-germany"
-                      className={styles.mobileDropdownLink}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Lokalisierung Deutschland
-                    </Link>
-                    <Link
-                      href="/reisekosten"
-                      className={styles.mobileDropdownLink}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Reisekosten
-                    </Link>
-                    <Link
-                      href="/dunning"
-                      className={styles.mobileDropdownLink}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Mahnwesen (Dunning)
-                    </Link>
-                    <Link
-                      href="/peak-ship"
-                      className={styles.mobileDropdownLink}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Peak Ship
-                    </Link>
-                  </div>
-                )}
-              </div>
-
-              {/* Mobile Ressourcen */}
-              <div className={styles.mobileDropdown}>
-                <button
-                  onClick={() => setIsRessourcenOpen(!isRessourcenOpen)}
-                  className={styles.mobileDropdownButton}
-                >
-                  <span>Ressourcen</span>
-                  <svg
-                    className={`${styles.dropdownIcon} ${isRessourcenOpen ? styles.open : ''}`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </button>
-                {isRessourcenOpen && (
-                  <div className={styles.mobileDropdownContent}>
-                    <Link
-                      href="/ressourcen"
-                      className={`${styles.mobileDropdownLink} ${styles.featured}`}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      All Resources
-                    </Link>
-                    <Link
-                      href="/ressourcen#documentation"
-                      className={styles.mobileDropdownLink}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Documentation
-                    </Link>
-                    <Link
-                      href="/ressourcen#guides"
-                      className={styles.mobileDropdownLink}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Guides & Tutorials
-                    </Link>
-                    <Link
-                      href="/ressourcen#support"
-                      className={styles.mobileDropdownLink}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Support Center
-                    </Link>
-                  </div>
-                )}
-              </div>
-
-              {/* Mobile Kontakt */}
-              <div className={styles.mobileDropdown}>
-                <button
-                  onClick={() => setIsKontaktOpen(!isKontaktOpen)}
-                  className={styles.mobileDropdownButton}
-                >
-                  <span>Kontakt</span>
-                  <svg
-                    className={`${styles.dropdownIcon} ${isKontaktOpen ? styles.open : ''}`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </button>
-                {isKontaktOpen && (
-                  <div className={styles.mobileDropdownContent}>
-                    <Link
-                      href="/kontakt"
-                      className={`${styles.mobileDropdownLink} ${styles.featured}`}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Contact Form
-                    </Link>
-                    <Link
-                      href="/kontakt#support"
-                      className={styles.mobileDropdownLink}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Support
-                    </Link>
-                    <Link
-                      href="/kontakt#business"
-                      className={styles.mobileDropdownLink}
-                      onClick={() => setIsMobileMenuOpen(false)}
-                    >
-                      Business Inquiries
-                    </Link>
-                  </div>
-                )}
-              </div>
+            {/* Applications Link + Dropdown */}
+            <Link
+              href="/products"
+              className={styles.mobileMainLink}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Applications
+            </Link>
+            <div className={styles.mobileProductList}>
+              <Link href="/schnittstelle-datev" className={styles.mobileProductLink} onClick={() => setIsMobileMenuOpen(false)}>
+                <span>DATEV Schnittstelle für NetSuite</span>
+                <Database size={24} />
+              </Link>
+              <Link href="/localization-germany" className={styles.mobileProductLink} onClick={() => setIsMobileMenuOpen(false)}>
+                <span>Lokalisierung Deutschland für NetSuite</span>
+                <MapPin size={24} />
+              </Link>
+              <Link href="/localization-austria" className={styles.mobileProductLink} onClick={() => setIsMobileMenuOpen(false)}>
+                <span>Lokalisierung Österreich für NetSuite</span>
+                <MapPin size={24} />
+              </Link>
+              <Link href="/dunning" className={styles.mobileProductLink} onClick={() => setIsMobileMenuOpen(false)}>
+                <span>Mahnwesen für NetSuite</span>
+                <AlertCircle size={24} />
+              </Link>
+              <Link href="/peak-ship" className={styles.mobileProductLink} onClick={() => setIsMobileMenuOpen(false)}>
+                <span>PeakShip für NetSuite</span>
+                <Truck size={24} />
+              </Link>
+              <Link href="/reisekosten" className={styles.mobileProductLink} onClick={() => setIsMobileMenuOpen(false)}>
+                <span>Reisekostenverwaltung für NetSuite</span>
+                <Briefcase size={24} />
+              </Link>
+              <Link href="/abwesenheitsverwaltung" className={styles.mobileProductLink} onClick={() => setIsMobileMenuOpen(false)}>
+                <span>Urlaubsplanung für NetSuite</span>
+                <Calendar size={24} />
+              </Link>
             </div>
+
+            {/* Ressourcen Link */}
+            <Link
+              href="/ressourcen"
+              className={styles.mobileMainLink}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Ressourcen
+            </Link>
+
+            {/* Kontakt Link */}
+            <Link
+              href="/kontakt"
+              className={styles.mobileMainLink}
+              onClick={() => setIsMobileMenuOpen(false)}
+            >
+              Kontakt
+            </Link>
           </div>
         )}
       </header>
