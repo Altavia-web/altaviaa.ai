@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
+import { Grid3x3, Database, MapPin, AlertCircle, Truck, Briefcase, Calendar, Download, Video, Linkedin, Youtube } from "lucide-react";
 import styles from './Header.module.css';
 
 export default function Header() {
@@ -382,58 +383,134 @@ export default function Header() {
         />
       )}
       {isApplicationsOpen && (
-        <div className={styles.desktopDropdown} role="menu" aria-label="Applications navigation">
-          <div className={styles.desktopDropdownContent}>
+        <div className={styles.megaMenu} role="menu" aria-label="Applications navigation">
+          {/* Produkt-Grid */}
+          <div className={styles.produktGrid}>
             <Link
               href="/products"
-              className={styles.featured}
+              className={styles.produktCard}
               onClick={closeAllDropdowns}
               role="menuitem"
             >
-              Alle Produkte
+              <div className={styles.iconWrapper}>
+                <Grid3x3 size={48} />
+              </div>
+              <h3>Alle Produkte</h3>
+              <p>Komplette Übersicht</p>
             </Link>
-            <Link
-              href="/abwesenheitsverwaltung"
-              onClick={closeAllDropdowns}
-              role="menuitem"
-            >
-              Abwesenheitsverwaltung
-            </Link>
+
             <Link
               href="/schnittstelle-datev"
+              className={styles.produktCard}
               onClick={closeAllDropdowns}
               role="menuitem"
             >
-              DATEV Export
+              <div className={styles.iconWrapper}>
+                <Database size={48} />
+              </div>
+              <h3>DATEV Schnittstelle für NetSuite</h3>
+              <p>Finanzdaten exportieren nach DATEV</p>
             </Link>
+
             <Link
               href="/localization-germany"
+              className={styles.produktCard}
               onClick={closeAllDropdowns}
               role="menuitem"
             >
-              Lokalisierung Deutschland
+              <div className={styles.iconWrapper}>
+                <MapPin size={48} />
+              </div>
+              <h3>Lokalisierung Deutschland für NetSuite</h3>
+              <p>NetSuite Lokalisierung für DE-Compliance</p>
             </Link>
+
             <Link
-              href="/reisekosten"
+              href="/localization-austria"
+              className={styles.produktCard}
               onClick={closeAllDropdowns}
               role="menuitem"
             >
-              Reisekosten
+              <div className={styles.iconWrapper}>
+                <MapPin size={48} />
+              </div>
+              <h3>Lokalisierung Österreich für NetSuite</h3>
+              <p>NetSuite Lokalisierung für AT-Compliance</p>
             </Link>
+
             <Link
               href="/dunning"
+              className={styles.produktCard}
               onClick={closeAllDropdowns}
               role="menuitem"
             >
-              Mahnwesen (Dunning)
+              <div className={styles.iconWrapper}>
+                <AlertCircle size={48} />
+              </div>
+              <h3>Mahnwesen für NetSuite</h3>
+              <p>NetSuite automatisierte Mahnungen für Forderungen</p>
             </Link>
+
             <Link
               href="/peak-ship"
+              className={styles.produktCard}
               onClick={closeAllDropdowns}
               role="menuitem"
             >
-              Peak Ship
+              <div className={styles.iconWrapper}>
+                <Truck size={48} />
+              </div>
+              <h3>PeakShip für NetSuite</h3>
+              <p>NetSuite-Integration für Speditionsautomatisierung</p>
             </Link>
+
+            <Link
+              href="/reisekosten"
+              className={styles.produktCard}
+              onClick={closeAllDropdowns}
+              role="menuitem"
+            >
+              <div className={styles.iconWrapper}>
+                <Briefcase size={48} />
+              </div>
+              <h3>Reisekostenverwaltung für NetSuite</h3>
+              <p>NetSuite-konforme Reisekostenerstattung</p>
+            </Link>
+
+            <Link
+              href="/abwesenheitsverwaltung"
+              className={styles.produktCard}
+              onClick={closeAllDropdowns}
+              role="menuitem"
+            >
+              <div className={styles.iconWrapper}>
+                <Calendar size={48} />
+              </div>
+              <h3>Urlaubsplanung für NetSuite</h3>
+              <p>Subline steht hier und beinhaltet sicherlich NetSuite</p>
+            </Link>
+          </div>
+
+          {/* Footer-Section */}
+          <div className={styles.footerSection}>
+            <div className={styles.footerContent}>
+              <a href="/download-broschuere" className={styles.footerLink}>
+                <Download size={20} />
+                <span>Download Produktbroschüre</span>
+              </a>
+              <a href="/webinare" className={styles.footerLink}>
+                <Video size={20} />
+                <span>Webinare</span>
+              </a>
+              <div className={styles.socialLinks}>
+                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">
+                  <Linkedin size={20} />
+                </a>
+                <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer">
+                  <Youtube size={20} />
+                </a>
+              </div>
+            </div>
           </div>
         </div>
       )}
