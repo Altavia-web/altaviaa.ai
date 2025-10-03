@@ -38,7 +38,13 @@ export default function Header() {
   }, []);
 
   return (
-    <div>
+    <div
+      onMouseLeave={() => {
+        setIsApplicationsOpen(false);
+        setIsRessourcenOpen(false);
+        setIsKontaktOpen(false);
+      }}
+    >
       <header className={styles.header}>
         <div className={styles.container}>
           {/* Top Row - Language Switcher */}
@@ -73,7 +79,9 @@ export default function Header() {
                   setIsRessourcenOpen(false);
                   setIsKontaktOpen(false);
                 }}
-                onMouseLeave={() => setIsApplicationsOpen(false)}
+                onMouseLeave={() => {
+                  // Don't close here - handled by parent container
+                }}
               >
                 <Link
                   href="/products"
@@ -256,7 +264,6 @@ export default function Header() {
           role="menu"
           aria-label="Applications navigation"
           onMouseEnter={() => setIsApplicationsOpen(true)}
-          onMouseLeave={() => setIsApplicationsOpen(false)}
         >
           {/* Produkt-Grid */}
           <div className={styles.produktGrid}>
