@@ -206,9 +206,9 @@ export default function Header() {
                 <span>Lokalisierung Deutschland für NetSuite</span>
                 <MapPin size={24} />
               </Link>
-              <Link href="/localization-austria" className={styles.mobileProductLink} onClick={() => setIsMobileMenuOpen(false)}>
-                <span>Lokalisierung Österreich für NetSuite</span>
-                <MapPin size={24} />
+              <Link href="/abwesenheitsverwaltung" className={styles.mobileProductLink} onClick={() => setIsMobileMenuOpen(false)}>
+                <span>Abwesenheitsverwaltung für NetSuite</span>
+                <Calendar size={24} />
               </Link>
               <Link href="/dunning" className={styles.mobileProductLink} onClick={() => setIsMobileMenuOpen(false)}>
                 <span>Mahnwesen für NetSuite</span>
@@ -287,16 +287,16 @@ export default function Header() {
             </Link>
 
             <Link
-              href="/localization-austria"
+              href="/abwesenheitsverwaltung"
               className={styles.produktCard}
               onClick={closeAllDropdowns}
               role="menuitem"
             >
               <div className={styles.iconWrapper}>
-                <MapPin size={48} />
+                <Calendar size={48} />
               </div>
-              <h3>Lokalisierung Österreich für NetSuite</h3>
-              <p>NetSuite Lokalisierung für AT-Compliance</p>
+              <h3>Abwesenheitsverwaltung für NetSuite</h3>
+              <p>Abwesenheitsmanagement und Urlaubsverwaltung</p>
             </Link>
 
             <Link
