@@ -198,7 +198,13 @@ export default function Header() {
               role="menuitem"
             >
               <div className={styles.iconWrapper}>
-                <Database size={48} />
+                <Image
+                  src="/images/produkte/AVA_DATEV_DE.webp"
+                  alt="DATEV Schnittstelle"
+                  width={80}
+                  height={80}
+                  className="w-full h-full object-contain"
+                />
               </div>
               <h3>DATEV Schnittstelle für NetSuite</h3>
               <p>Finanzdaten exportieren nach DATEV</p>
@@ -211,7 +217,13 @@ export default function Header() {
               role="menuitem"
             >
               <div className={styles.iconWrapper}>
-                <MapPin size={48} />
+                <Image
+                  src="/images/produkte/AVA_LOKALISIERUNG_DE.webp"
+                  alt="Lokalisierung Deutschland"
+                  width={80}
+                  height={80}
+                  className="w-full h-full object-contain"
+                />
               </div>
               <h3>Lokalisierung Deutschland für NetSuite</h3>
               <p>NetSuite Lokalisierung für DE-Compliance</p>
@@ -224,7 +236,13 @@ export default function Header() {
               role="menuitem"
             >
               <div className={styles.iconWrapper}>
-                <Calendar size={48} />
+                <Image
+                  src="/images/produkte/AVA_ABWESENHEIT_DE (1).webp"
+                  alt="Abwesenheitsverwaltung"
+                  width={80}
+                  height={80}
+                  className="w-full h-full object-contain"
+                />
               </div>
               <h3>Abwesenheitsverwaltung für NetSuite</h3>
               <p>Abwesenheitsmanagement und Urlaubsverwaltung</p>
@@ -237,7 +255,13 @@ export default function Header() {
               role="menuitem"
             >
               <div className={styles.iconWrapper}>
-                <AlertCircle size={48} />
+                <Image
+                  src="/images/produkte/AVA_MAHNWESEN_DE (1).webp"
+                  alt="Mahnwesen"
+                  width={80}
+                  height={80}
+                  className="w-full h-full object-contain"
+                />
               </div>
               <h3>Mahnwesen für NetSuite</h3>
               <p>NetSuite automatisierte Mahnungen für Forderungen</p>
@@ -250,7 +274,13 @@ export default function Header() {
               role="menuitem"
             >
               <div className={styles.iconWrapper}>
-                <Truck size={48} />
+                <Image
+                  src="/images/produkte/AVA_PEAK SHIP_DE (1).webp"
+                  alt="PeakShip"
+                  width={80}
+                  height={80}
+                  className="w-full h-full object-contain"
+                />
               </div>
               <h3>PeakShip für NetSuite</h3>
               <p>NetSuite-Integration für Speditionsautomatisierung</p>
@@ -263,7 +293,13 @@ export default function Header() {
               role="menuitem"
             >
               <div className={styles.iconWrapper}>
-                <Briefcase size={48} />
+                <Image
+                  src="/images/produkte/AVA_REISEKOSTEN_DE (1).webp"
+                  alt="Reisekostenverwaltung"
+                  width={80}
+                  height={80}
+                  className="w-full h-full object-contain"
+                />
               </div>
               <h3>Reisekostenverwaltung für NetSuite</h3>
               <p>NetSuite-konforme Reisekostenerstattung</p>
@@ -276,7 +312,13 @@ export default function Header() {
               role="menuitem"
             >
               <div className={styles.iconWrapper}>
-                <Calendar size={48} />
+                <Image
+                  src="/images/produkte/AVA_ABWESENHEIT_DE (1).webp"
+                  alt="Urlaubsplanung"
+                  width={80}
+                  height={80}
+                  className="w-full h-full object-contain"
+                />
               </div>
               <h3>Urlaubsplanung für NetSuite</h3>
               <p>Subline steht hier und beinhaltet sicherlich NetSuite</p>
