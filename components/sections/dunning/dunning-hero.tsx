@@ -27,8 +27,8 @@ export default function DunningHero() {
           <div className="flex justify-end">
             <div className="relative w-full max-w-lg">
               <Image
-                src="/images/dunning/compass.webp"
-                alt="Mahnwesen Compass"
+                src="/images/DUNNING/AVA_Carabiner_Dunning-WHITE.webp"
+                alt="Mahnwesen Carabiner"
                 width={500}
                 height={500}
                 className="w-full h-auto"
