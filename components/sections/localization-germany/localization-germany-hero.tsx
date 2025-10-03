@@ -16,10 +16,10 @@ export default function LocalizationGermanyHero() {
           {/* Text Content - Left */}
           <div className="text-left">
             <h1 className="mb-6 text-white">
-              Lokalisierung Deutschland für NetSuite
+              Lokalisierung Deutschland
             </h1>
             <h2 className="text-white">
-              NetSuite Lokalisierung für DE-Compliance
+              Erobern Sie die deutsche Compliance
             </h2>
           </div>
 
@@ -27,7 +27,7 @@ export default function LocalizationGermanyHero() {
           <div className="flex justify-end">
             <div className="relative w-full max-w-lg">
               <Image
-                src="/images/localization-germany/compass.webp"
+                src="/images/LOCALIZATION/._AVA_Map_Localization_WHITE.webp"
                 alt="Lokalisierung Deutschland Compass"
                 width={500}
                 height={500}
