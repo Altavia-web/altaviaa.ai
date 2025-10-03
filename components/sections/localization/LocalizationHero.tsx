@@ -8,7 +8,7 @@ export default function LocalizationHero() {
       style={{ backgroundColor: 'rgba(80, 149, 203, 0.4)' }}
     >
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-[60%_40%] gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-[60%_40%] gap-12 items-center mb-12">
 
           {/* Left Column - Text Content */}
           <div style={{ color: 'var(--color-dark-blue)' }}>
@@ -41,6 +41,25 @@ export default function LocalizationHero() {
           </div>
 
         </div>
+
+        {/* YouTube Video Embed */}
+        <div className="flex justify-center">
+          <div className="w-full max-w-3xl">
+            <div className="relative" style={{ paddingBottom: '56.25%' }}>
+              <iframe
+                src="https://www.youtube-nocookie.com/embed/_wGbvwAB1E0"
+                title="Lokalisierung Deutschland für NetSuite - Video"
+                width="100%"
+                height="100%"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowFullScreen
+                className="absolute top-0 left-0 w-full h-full rounded-lg shadow-lg"
+              />
+            </div>
+          </div>
+        </div>
+
       </div>
     </section>
   );
