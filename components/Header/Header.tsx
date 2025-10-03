@@ -199,7 +199,7 @@ export default function Header() {
             >
               <div className={styles.iconWrapper}>
                 <Image
-                  src="/images/produkte/AVA_DATEV_DE.webp"
+                  src="/images/DATEV/AVA_Compass_DATEV.webp"
                   alt="DATEV Schnittstelle"
                   width={80}
                   height={80}
@@ -218,7 +218,7 @@ export default function Header() {
             >
               <div className={styles.iconWrapper}>
                 <Image
-                  src="/images/produkte/AVA_LOKALISIERUNG_DE.webp"
+                  src="/images/LOCALIZATION/AVA_Map_Localization.webp"
                   alt="Lokalisierung Deutschland"
                   width={80}
                   height={80}
@@ -237,7 +237,7 @@ export default function Header() {
             >
               <div className={styles.iconWrapper}>
                 <Image
-                  src="/images/produkte/AVA_ABWESENHEIT_DE (1).webp"
+                  src="/images/ABWESENHEITSVERWALTUNG/AVA_Tent_Abwesenheit.webp"
                   alt="Abwesenheitsverwaltung"
                   width={80}
                   height={80}
@@ -256,7 +256,7 @@ export default function Header() {
             >
               <div className={styles.iconWrapper}>
                 <Image
-                  src="/images/produkte/AVA_MAHNWESEN_DE (1).webp"
+                  src="/images/DUNNING/AVA_Carabiner_Dunning.webp"
                   alt="Mahnwesen"
                   width={80}
                   height={80}
@@ -275,7 +275,7 @@ export default function Header() {
             >
               <div className={styles.iconWrapper}>
                 <Image
-                  src="/images/produkte/AVA_PEAK SHIP_DE (1).webp"
+                  src="/images/PEAKSHIP/AVA_Rope_PeakShip.webp"
                   alt="PeakShip"
                   width={80}
                   height={80}
@@ -294,7 +294,7 @@ export default function Header() {
             >
               <div className={styles.iconWrapper}>
                 <Image
-                  src="/images/produkte/AVA_REISEKOSTEN_DE (1).webp"
+                  src="/images/REISEKOSTEN/AVA_Backpack_Reisekosten.webp"
                   alt="Reisekostenverwaltung"
                   width={80}
                   height={80}
@@ -313,7 +313,7 @@ export default function Header() {
             >
               <div className={styles.iconWrapper}>
                 <Image
-                  src="/images/produkte/AVA_ABWESENHEIT_DE (1).webp"
+                  src="/images/ABWESENHEITSVERWALTUNG/AVA_Tent_Abwesenheit.webp"
                   alt="Urlaubsplanung"
                   width={80}
                   height={80}
