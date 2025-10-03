@@ -50,7 +50,7 @@ export default function LocalizationComparison() {
                   Funktionsvergleich
                 </th>
                 <th className="text-center py-5 px-6 text-white font-semibold text-base lg:text-lg">
-                  NetSuite's Deutschland Lokalisierung
+                  NetSuite&apos;s Deutschland Lokalisierung
                 </th>
                 <th className="text-center py-5 px-6 text-white font-semibold text-base lg:text-lg">
                   Alta Via Lokalisierung Deutschland für NetSuite
