@@ -9,16 +9,12 @@ import styles from './Header.module.css';
 
 export default function Header() {
   const [isApplicationsOpen, setIsApplicationsOpen] = useState(false);
-  const [isRessourcenOpen, setIsRessourcenOpen] = useState(false);
-  const [isKontaktOpen, setIsKontaktOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
   // Updated product navigation links
 
   const closeAllDropdowns = () => {
     setIsApplicationsOpen(false);
-    setIsRessourcenOpen(false);
-    setIsKontaktOpen(false);
   };
 
   const isActive = (path: string) => pathname === path || pathname.startsWith(path + '/');
@@ -41,8 +37,6 @@ export default function Header() {
     <div
       onMouseLeave={() => {
         setIsApplicationsOpen(false);
-        setIsRessourcenOpen(false);
-        setIsKontaktOpen(false);
       }}
     >
       <header className={styles.header}>
@@ -76,8 +70,6 @@ export default function Header() {
                 className={styles.dropdown}
                 onMouseEnter={() => {
                   setIsApplicationsOpen(true);
-                  setIsRessourcenOpen(false);
-                  setIsKontaktOpen(false);
                 }}
                 onMouseLeave={() => {
                   // Don't close here - handled by parent container
@@ -107,73 +99,14 @@ export default function Header() {
                 </Link>
               </div>
 
-              {/* Ressourcen Dropdown */}
-              <div
-                className={styles.dropdown}
-                onMouseEnter={() => {
-                  setIsRessourcenOpen(true);
-                  setIsApplicationsOpen(false);
-                  setIsKontaktOpen(false);
-                }}
-                onMouseLeave={() => setIsRessourcenOpen(false)}
+              {/* Kontakt Link (no dropdown) */}
+              <Link
+                href="/kontakt"
+                className={`${styles.dropdownButton} ${isActive('/kontakt') ? styles.active : ''}`}
+                aria-label="Kontakt"
               >
-                <Link
-                  href="/ressourcen"
-                  className={`${styles.dropdownButton} ${isActive('/ressourcen') ? styles.active : ''}`}
-                  aria-haspopup="true"
-                  aria-label="Ressourcen"
-                >
-                  <span>Ressourcen</span>
-                  <svg
-                    className={`${styles.dropdownIcon} ${isRessourcenOpen ? styles.open : ''}`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </Link>
-              </div>
-
-              {/* Kontakt Dropdown */}
-              <div
-                className={styles.dropdown}
-                onMouseEnter={() => {
-                  setIsKontaktOpen(true);
-                  setIsApplicationsOpen(false);
-                  setIsRessourcenOpen(false);
-                }}
-                onMouseLeave={() => setIsKontaktOpen(false)}
-              >
-                <Link
-                  href="/kontakt"
-                  className={`${styles.dropdownButton} ${isActive('/kontakt') ? styles.active : ''}`}
-                  aria-haspopup="true"
-                  aria-label="Kontakt"
-                >
-                  <span>Kontakt</span>
-                  <svg
-                    className={`${styles.dropdownIcon} ${isKontaktOpen ? styles.open : ''}`}
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    aria-hidden="true"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M19 9l-7 7-7-7"
-                    />
-                  </svg>
-                </Link>
-              </div>
+                <span>Kontakt</span>
+              </Link>
             </div>
 
             {/* Mobile Menu Button */}
@@ -235,15 +168,6 @@ export default function Header() {
                 <Calendar size={24} />
               </Link>
             </div>
-
-            {/* Ressourcen Link */}
-            <Link
-              href="/ressourcen"
-              className={styles.mobileMainLink}
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Ressourcen
-            </Link>
 
             {/* Kontakt Link */}
             <Link
@@ -379,67 +303,6 @@ export default function Header() {
                 </a>
               </div>
             </div>
-          </div>
-        </div>
-      )}
-
-      {isRessourcenOpen && (
-        <div
-          className={styles.desktopDropdown}
-          role="menu"
-          aria-label="Ressourcen navigation"
-          onMouseEnter={() => setIsRessourcenOpen(true)}
-          onMouseLeave={() => setIsRessourcenOpen(false)}
-        >
-          <div className={styles.desktopDropdownContent}>
-            <Link
-              href="/ressourcen#documentation"
-              onClick={closeAllDropdowns}
-              role="menuitem"
-            >
-              Documentation
-            </Link>
-            <Link
-              href="/ressourcen#guides"
-              onClick={closeAllDropdowns}
-              role="menuitem"
-            >
-              Guides & Tutorials
-            </Link>
-            <Link
-              href="/ressourcen#support"
-              onClick={closeAllDropdowns}
-              role="menuitem"
-            >
-              Support Center
-            </Link>
-          </div>
-        </div>
-      )}
-
-      {isKontaktOpen && (
-        <div
-          className={styles.desktopDropdown}
-          role="menu"
-          aria-label="Kontakt navigation"
-          onMouseEnter={() => setIsKontaktOpen(true)}
-          onMouseLeave={() => setIsKontaktOpen(false)}
-        >
-          <div className={styles.desktopDropdownContent}>
-            <Link
-              href="/kontakt#support"
-              onClick={closeAllDropdowns}
-              role="menuitem"
-            >
-              Support
-            </Link>
-            <Link
-              href="/kontakt#business"
-              onClick={closeAllDropdowns}
-              role="menuitem"
-            >
-              Business Inquiries
-            </Link>
           </div>
         </div>
       )}
