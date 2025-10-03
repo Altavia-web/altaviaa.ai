@@ -27,8 +27,8 @@ export default function PeakShipHero() {
           <div className="flex justify-end">
             <div className="relative w-full max-w-lg">
               <Image
-                src="/images/peak-ship/compass.webp"
-                alt="PeakShip Compass"
+                src="/images/PEAKSHIP/AVA_Rope_PeakShip.webp"
+                alt="PeakShip Rope"
                 width={500}
                 height={500}
                 className="w-full h-auto"

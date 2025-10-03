@@ -27,8 +27,8 @@ export default function ReisekostenHero() {
           <div className="flex justify-end">
             <div className="relative w-full max-w-lg">
               <Image
-                src="/images/reisekosten/compass.webp"
-                alt="Reisekosten Compass"
+                src="/images/REISEKOSTEN/AVA_Backpack_Reisekosten.webp"
+                alt="Reisekosten Backpack"
                 width={500}
                 height={500}
                 className="w-full h-auto"
