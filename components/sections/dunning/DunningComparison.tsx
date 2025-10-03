@@ -3,7 +3,7 @@
 import React, { useState } from 'react';
 import { CheckCircle2, XCircle, ChevronDown } from 'lucide-react';
 
-export default function AbwesenheitComparison() {
+export default function DunningComparison() {
   const [expandedCategories, setExpandedCategories] = useState({
     mapping: true,
     funktionen: false,
@@ -43,7 +43,7 @@ export default function AbwesenheitComparison() {
             {/* Sticky Header */}
             <thead
               className="sticky top-0 z-10"
-              style={{ backgroundColor: 'var(--color-abwesenheit-primary)' }}
+              style={{ backgroundColor: 'var(--color-mahnwesen-primary)' }}
             >
               <tr>
                 <th className="text-left py-5 px-6 text-white font-semibold text-base lg:text-lg">
@@ -53,7 +53,7 @@ export default function AbwesenheitComparison() {
                   NetSuite Standard
                 </th>
                 <th className="text-center py-5 px-6 text-white font-semibold text-base lg:text-lg">
-                  Alta Via Abwesenheitsverwaltung
+                  Alta Via Mahnwesen
                 </th>
               </tr>
             </thead>
@@ -73,10 +73,10 @@ export default function AbwesenheitComparison() {
                     style={{
                       backgroundColor: '#f0f0f0',
                       color: 'var(--color-dark-blue)',
-                      borderTop: '2px solid var(--color-abwesenheit-secondary)'
+                      borderTop: '2px solid var(--color-mahnwesen-secondary)'
                     }}
                   >
-                    <CheckCircle2 size={20} style={{ color: 'var(--color-abwesenheit-primary)' }} />
+                    <CheckCircle2 size={20} style={{ color: 'var(--color-mahnwesen-primary)' }} />
                     <span className="font-semibold text-base lg:text-lg">Lorem ipsum</span>
                     <ChevronDown
                       size={20}
@@ -91,24 +91,24 @@ export default function AbwesenheitComparison() {
               {expandedCategories.mapping && (
                 <>
                   <tr className="bg-white">
-                    <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-abwesenheit-secondary)' }}>
+                    <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
                       Lorem ipsum dolor sit amet
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-abwesenheit-secondary)' }}>
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
                       <XCircle size={28} className="inline-block" style={{ color: '#ef4444' }} />
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-abwesenheit-secondary)' }}>
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
                       <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
                     </td>
                   </tr>
                   <tr className="bg-gray-50">
-                    <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-abwesenheit-secondary)' }}>
+                    <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
                       Consectetur adipiscing elit
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-abwesenheit-secondary)' }}>
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
                       <XCircle size={28} className="inline-block" style={{ color: '#ef4444' }} />
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-abwesenheit-secondary)' }}>
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
                       <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
                     </td>
                   </tr>
@@ -128,10 +128,10 @@ export default function AbwesenheitComparison() {
                     style={{
                       backgroundColor: '#f0f0f0',
                       color: 'var(--color-dark-blue)',
-                      borderTop: '2px solid var(--color-abwesenheit-secondary)'
+                      borderTop: '2px solid var(--color-mahnwesen-secondary)'
                     }}
                   >
-                    <CheckCircle2 size={20} style={{ color: 'var(--color-abwesenheit-primary)' }} />
+                    <CheckCircle2 size={20} style={{ color: 'var(--color-mahnwesen-primary)' }} />
                     <span className="font-semibold text-base lg:text-lg">Funktionen</span>
                     <ChevronDown
                       size={20}
@@ -146,24 +146,24 @@ export default function AbwesenheitComparison() {
               {expandedCategories.funktionen && (
                 <>
                   <tr className="bg-white">
-                    <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-abwesenheit-secondary)' }}>
+                    <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
                       Sed do eiusmod tempor
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-abwesenheit-secondary)', color: 'var(--color-dark-blue)', opacity: 0.7 }}>
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', opacity: 0.7 }}>
                       begrenzt
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-abwesenheit-secondary)' }}>
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
                       <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
                     </td>
                   </tr>
                   <tr className="bg-gray-50">
-                    <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-abwesenheit-secondary)' }}>
+                    <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
                       Incididunt ut labore
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-abwesenheit-secondary)' }}>
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
                       <XCircle size={28} className="inline-block" style={{ color: '#ef4444' }} />
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-abwesenheit-secondary)' }}>
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
                       <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
                     </td>
                   </tr>
@@ -183,10 +183,10 @@ export default function AbwesenheitComparison() {
                     style={{
                       backgroundColor: '#f0f0f0',
                       color: 'var(--color-dark-blue)',
-                      borderTop: '2px solid var(--color-abwesenheit-secondary)'
+                      borderTop: '2px solid var(--color-mahnwesen-secondary)'
                     }}
                   >
-                    <CheckCircle2 size={20} style={{ color: 'var(--color-abwesenheit-primary)' }} />
+                    <CheckCircle2 size={20} style={{ color: 'var(--color-mahnwesen-primary)' }} />
                     <span className="font-semibold text-base lg:text-lg">Installation</span>
                     <ChevronDown
                       size={20}
@@ -200,13 +200,13 @@ export default function AbwesenheitComparison() {
               </tr>
               {expandedCategories.installation && (
                 <tr className="bg-white">
-                  <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-abwesenheit-secondary)' }}>
+                  <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
                     Direkte Installation über SuiteBundle
                   </td>
-                  <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-abwesenheit-secondary)' }}>
+                  <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
                     <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
                   </td>
-                  <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-abwesenheit-secondary)' }}>
+                  <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
                     <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
                   </td>
                 </tr>
