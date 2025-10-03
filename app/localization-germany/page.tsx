@@ -5,6 +5,7 @@ import LocalizationHero from '@/components/sections/localization/LocalizationHer
 import LocalizationChallenges from '@/components/sections/localization/LocalizationChallenges';
 import LocalizationSolutions from '@/components/sections/localization/LocalizationSolutions';
 import LocalizationTeaser from '@/components/sections/localization/LocalizationTeaser';
+import LocalizationTestimonial from '@/components/sections/localization/LocalizationTestimonial';
 
 export default function LocalizationGermany() {
   return (
@@ -14,6 +15,7 @@ export default function LocalizationGermany() {
       <LocalizationChallenges />
       <LocalizationSolutions />
       <LocalizationTeaser />
+      <LocalizationTestimonial />
       <Footer />
     </div>
   );
