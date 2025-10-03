@@ -3,6 +3,7 @@ import Footer from '@/components/Footer';
 import LocalizationGermanyHero from '@/components/sections/localization-germany/localization-germany-hero';
 import LocalizationHero from '@/components/sections/localization/LocalizationHero';
 import LocalizationChallenges from '@/components/sections/localization/LocalizationChallenges';
+import LocalizationSolutions from '@/components/sections/localization/LocalizationSolutions';
 
 export default function LocalizationGermany() {
   return (
@@ -10,6 +11,7 @@ export default function LocalizationGermany() {
       <LocalizationGermanyHero />
       <LocalizationHero />
       <LocalizationChallenges />
+      <LocalizationSolutions />
       <Footer />
     </div>
   );
