@@ -102,9 +102,9 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <div className="max-w-[800px] mx-auto px-4 py-16 md:py-20">
+      <div className="max-w-[800px] px-4 py-16 md:py-20">
         {/* Header */}
-        <div className="text-center mb-12">
+        <div className="mb-12">
           <h2 className="text-4xl md:text-5xl font-bold text-[#002e64] mb-4 leading-tight">
             Kontaktieren Sie uns
           </h2>
@@ -276,7 +276,7 @@ export default function ContactPage() {
             <button
               type="submit"
               disabled={isSubmitting}
-              className="w-full md:w-auto bg-gradient-to-r from-[#ffd700] to-[#f7a600] text-white font-bold px-8 py-4 rounded-lg hover:scale-[1.02] hover:opacity-95 disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center justify-center gap-2"
+              className="w-full md:w-auto bg-[#5095cb] text-white font-bold px-8 py-4 rounded-lg hover:bg-[#002e64] disabled:opacity-50 disabled:cursor-not-allowed transition-all flex items-center justify-center gap-2"
             >
               {isSubmitting ? (
                 <>
