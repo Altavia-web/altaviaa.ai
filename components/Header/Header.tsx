@@ -141,31 +141,73 @@ export default function Header() {
             <div className={styles.mobileProductList}>
               <Link href="/schnittstelle-datev" className={styles.mobileProductLink} onClick={() => setIsMobileMenuOpen(false)}>
                 <span>DATEV Schnittstelle für NetSuite</span>
-                <Database size={24} />
+                <Image
+                  src="/images/DATEV/AVA_Compass_DATEV.webp"
+                  alt="DATEV"
+                  width={24}
+                  height={24}
+                  className="flex-shrink-0"
+                />
               </Link>
               <Link href="/localization-germany" className={styles.mobileProductLink} onClick={() => setIsMobileMenuOpen(false)}>
                 <span>Lokalisierung Deutschland für NetSuite</span>
-                <MapPin size={24} />
+                <Image
+                  src="/images/LOCALIZATION/AVA_Map_Localization.webp"
+                  alt="Lokalisierung"
+                  width={24}
+                  height={24}
+                  className="flex-shrink-0"
+                />
               </Link>
               <Link href="/abwesenheitsverwaltung" className={styles.mobileProductLink} onClick={() => setIsMobileMenuOpen(false)}>
                 <span>Abwesenheitsverwaltung für NetSuite</span>
-                <Calendar size={24} />
+                <Image
+                  src="/images/ABWESENHEITSVERWALTUNG/AVA_Tent_Abwesenheit.webp"
+                  alt="Abwesenheit"
+                  width={24}
+                  height={24}
+                  className="flex-shrink-0"
+                />
               </Link>
               <Link href="/dunning" className={styles.mobileProductLink} onClick={() => setIsMobileMenuOpen(false)}>
                 <span>Mahnwesen für NetSuite</span>
-                <AlertCircle size={24} />
+                <Image
+                  src="/images/DUNNING/AVA_Carabiner_Dunning.webp"
+                  alt="Mahnwesen"
+                  width={24}
+                  height={24}
+                  className="flex-shrink-0"
+                />
               </Link>
               <Link href="/peak-ship" className={styles.mobileProductLink} onClick={() => setIsMobileMenuOpen(false)}>
                 <span>PeakShip für NetSuite</span>
-                <Truck size={24} />
+                <Image
+                  src="/images/PEAKSHIP/AVA_Rope_PeakShip.webp"
+                  alt="PeakShip"
+                  width={24}
+                  height={24}
+                  className="flex-shrink-0"
+                />
               </Link>
               <Link href="/reisekosten" className={styles.mobileProductLink} onClick={() => setIsMobileMenuOpen(false)}>
                 <span>Reisekostenverwaltung für NetSuite</span>
-                <Briefcase size={24} />
+                <Image
+                  src="/images/REISEKOSTEN/AVA_Backpack_Reisekosten.webp"
+                  alt="Reisekosten"
+                  width={24}
+                  height={24}
+                  className="flex-shrink-0"
+                />
               </Link>
               <Link href="/abwesenheitsverwaltung" className={styles.mobileProductLink} onClick={() => setIsMobileMenuOpen(false)}>
                 <span>Urlaubsplanung für NetSuite</span>
-                <Calendar size={24} />
+                <Image
+                  src="/images/ABWESENHEITSVERWALTUNG/AVA_Tent_Abwesenheit.webp"
+                  alt="Urlaubsplanung"
+                  width={24}
+                  height={24}
+                  className="flex-shrink-0"
+                />
               </Link>
             </div>
 
