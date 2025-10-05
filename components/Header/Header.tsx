@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { Database, MapPin, AlertCircle, Truck, Briefcase, Calendar, Download, Video, Linkedin, Youtube } from "lucide-react";
+import { Download, Video, Linkedin, Youtube } from "lucide-react";
 import styles from './Header.module.css';
 
 export default function Header() {
