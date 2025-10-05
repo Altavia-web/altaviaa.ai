@@ -102,9 +102,9 @@ export default function ContactPage() {
 
   return (
     <div className="min-h-screen bg-white">
-      <div className="max-w-[800px] px-4 py-16 md:py-20">
+      <div className="w-[95%] md:w-[90%] lg:w-[80%] mx-auto px-4 py-16 md:py-20">
         {/* Header */}
-        <div className="mb-12">
+        <div className="mb-12 text-center lg:text-left">
           <h2 className="text-4xl md:text-5xl font-bold text-[#002e64] mb-4 leading-tight">
             Kontaktieren Sie uns
           </h2>
@@ -118,7 +118,7 @@ export default function ContactPage() {
           onSubmit={handleSubmit}
           aria-label="Kontaktformular"
           noValidate
-          className="space-y-6"
+          className="space-y-6 max-w-2xl mx-auto lg:mx-0"
         >
           {/* Name Field */}
           <div>
