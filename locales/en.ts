@@ -1,5 +1,3 @@
-import type { TranslationKeys } from './de';
-
 export const en = {
   nav: {
     home: 'Home',
