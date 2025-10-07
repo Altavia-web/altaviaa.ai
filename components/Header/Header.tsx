@@ -7,7 +7,7 @@ import { usePathname } from "next/navigation";
 import { Download, Video, Linkedin, Youtube } from "lucide-react";
 import styles from './Header.module.css';
 import LanguageSwitch from './LanguageSwitch';
-import type { Locale } from '@/locales';
+import { useTranslations, type Locale } from '@/lib/i18n';
 
 interface HeaderProps {
   locale?: Locale;
@@ -17,13 +17,27 @@ export default function Header({ locale = 'de' }: HeaderProps) {
   const [isApplicationsOpen, setIsApplicationsOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
-  // Updated product navigation links
+  const t = useTranslations(locale);
 
   const closeAllDropdowns = () => {
     setIsApplicationsOpen(false);
   };
 
   const isActive = (path: string) => pathname === path || pathname.startsWith(path + '/');
+
+  // Generate locale-aware URLs
+  const baseUrl = locale === 'en' ? '/en' : '';
+  const contactUrl = locale === 'en' ? '/en/contact' : '/kontakt';
+  const productsUrl = locale === 'en' ? '/en/applications' : '/products';
+
+  const productUrls = {
+    datev: locale === 'en' ? '/en/datev-interface' : '/schnittstelle-datev',
+    localization: locale === 'en' ? '/en/localization-germany' : '/localization-germany',
+    absence: locale === 'en' ? '/en/absence-management' : '/abwesenheitsverwaltung',
+    dunning: locale === 'en' ? '/en/dunning' : '/dunning',
+    peakship: locale === 'en' ? '/en/peak-ship' : '/peak-ship',
+    travel: locale === 'en' ? '/en/travel-expenses' : '/reisekosten',
+  };
 
   // Keyboard navigation
   useEffect(() => {
@@ -80,12 +94,12 @@ export default function Header({ locale = 'de' }: HeaderProps) {
                 }}
               >
                 <Link
-                  href="/products"
-                  className={`${styles.dropdownButton} ${isActive('/products') || isActive('/abwesenheitsverwaltung') || isActive('/schnittstelle-datev') || isActive('/localization-germany') || isActive('/reisekosten') || isActive('/dunning') || isActive('/peak-ship') ? styles.active : ''}`}
+                  href={productsUrl}
+                  className={`${styles.dropdownButton} ${isActive('/products') || isActive('/en/applications') || isActive('/abwesenheitsverwaltung') || isActive('/schnittstelle-datev') || isActive('/localization-germany') || isActive('/reisekosten') || isActive('/dunning') || isActive('/peak-ship') ? styles.active : ''}`}
                   aria-haspopup="true"
-                  aria-label="Applications"
+                  aria-label={t.nav.productsMenu.title}
                 >
-                  <span>Applications</span>
+                  <span>{t.nav.productsMenu.title}</span>
                   <svg
                     className={`${styles.dropdownIcon} ${isApplicationsOpen ? styles.open : ''}`}
                     fill="none"
@@ -105,11 +119,11 @@ export default function Header({ locale = 'de' }: HeaderProps) {
 
               {/* Kontakt Link (no dropdown) */}
               <Link
-                href="/kontakt"
-                className={`${styles.dropdownButton} ${isActive('/kontakt') ? styles.active : ''}`}
-                aria-label="Kontakt"
+                href={contactUrl}
+                className={`${styles.dropdownButton} ${isActive('/kontakt') || isActive('/en/contact') ? styles.active : ''}`}
+                aria-label={t.nav.contact}
               >
-                <span>Kontakt</span>
+                <span>{t.nav.contact}</span>
               </Link>
             </div>
 
@@ -136,78 +150,78 @@ export default function Header({ locale = 'de' }: HeaderProps) {
           <div className={styles.mobileMenu}>
             {/* Applications Link + Dropdown */}
             <Link
-              href="/products"
+              href={productsUrl}
               className={styles.mobileMainLink}
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Applications
+              {t.nav.productsMenu.title}
             </Link>
             <div className={styles.mobileProductList}>
-              <Link href="/schnittstelle-datev" className={styles.mobileProductLink} onClick={() => setIsMobileMenuOpen(false)}>
-                <span>DATEV Schnittstelle für NetSuite</span>
+              <Link href={productUrls.datev} className={styles.mobileProductLink} onClick={() => setIsMobileMenuOpen(false)}>
+                <span>{t.nav.productsMenu.datev.title}</span>
                 <Image
                   src="/images/DATEV/AVA_Compass_DATEV.webp"
-                  alt="DATEV"
+                  alt={t.nav.productsMenu.datev.short}
                   width={24}
                   height={24}
                   className="flex-shrink-0"
                 />
               </Link>
-              <Link href="/localization-germany" className={styles.mobileProductLink} onClick={() => setIsMobileMenuOpen(false)}>
-                <span>Lokalisierung Deutschland für NetSuite</span>
+              <Link href={productUrls.localization} className={styles.mobileProductLink} onClick={() => setIsMobileMenuOpen(false)}>
+                <span>{t.nav.productsMenu.localization.title}</span>
                 <Image
                   src="/images/LOCALIZATION/AVA_Map_Localization.webp"
-                  alt="Lokalisierung"
+                  alt={t.nav.productsMenu.localization.short}
                   width={24}
                   height={24}
                   className="flex-shrink-0"
                 />
               </Link>
-              <Link href="/abwesenheitsverwaltung" className={styles.mobileProductLink} onClick={() => setIsMobileMenuOpen(false)}>
-                <span>Abwesenheitsverwaltung für NetSuite</span>
+              <Link href={productUrls.absence} className={styles.mobileProductLink} onClick={() => setIsMobileMenuOpen(false)}>
+                <span>{t.nav.productsMenu.absence.title}</span>
                 <Image
                   src="/images/ABWESENHEITSVERWALTUNG/AVA_Tent_Abwesenheit.webp"
-                  alt="Abwesenheit"
+                  alt={t.nav.productsMenu.absence.short}
                   width={24}
                   height={24}
                   className="flex-shrink-0"
                 />
               </Link>
-              <Link href="/dunning" className={styles.mobileProductLink} onClick={() => setIsMobileMenuOpen(false)}>
-                <span>Mahnwesen für NetSuite</span>
+              <Link href={productUrls.dunning} className={styles.mobileProductLink} onClick={() => setIsMobileMenuOpen(false)}>
+                <span>{t.nav.productsMenu.dunning.title}</span>
                 <Image
                   src="/images/DUNNING/AVA_Carabiner_Dunning.webp"
-                  alt="Mahnwesen"
+                  alt={t.nav.productsMenu.dunning.short}
                   width={24}
                   height={24}
                   className="flex-shrink-0"
                 />
               </Link>
-              <Link href="/peak-ship" className={styles.mobileProductLink} onClick={() => setIsMobileMenuOpen(false)}>
-                <span>PeakShip für NetSuite</span>
+              <Link href={productUrls.peakship} className={styles.mobileProductLink} onClick={() => setIsMobileMenuOpen(false)}>
+                <span>{t.nav.productsMenu.peakship.title}</span>
                 <Image
                   src="/images/PEAKSHIP/AVA_Rope_PeakShip.webp"
-                  alt="PeakShip"
+                  alt={t.nav.productsMenu.peakship.short}
                   width={24}
                   height={24}
                   className="flex-shrink-0"
                 />
               </Link>
-              <Link href="/reisekosten" className={styles.mobileProductLink} onClick={() => setIsMobileMenuOpen(false)}>
-                <span>Reisekostenverwaltung für NetSuite</span>
+              <Link href={productUrls.travel} className={styles.mobileProductLink} onClick={() => setIsMobileMenuOpen(false)}>
+                <span>{t.nav.productsMenu.travel.title}</span>
                 <Image
                   src="/images/REISEKOSTEN/AVA_Backpack_Reisekosten.webp"
-                  alt="Reisekosten"
+                  alt={t.nav.productsMenu.travel.short}
                   width={24}
                   height={24}
                   className="flex-shrink-0"
                 />
               </Link>
-              <Link href="/abwesenheitsverwaltung" className={styles.mobileProductLink} onClick={() => setIsMobileMenuOpen(false)}>
-                <span>Urlaubsplanung für NetSuite</span>
+              <Link href={productUrls.absence} className={styles.mobileProductLink} onClick={() => setIsMobileMenuOpen(false)}>
+                <span>{t.nav.productsMenu.absence.title}</span>
                 <Image
                   src="/images/ABWESENHEITSVERWALTUNG/AVA_Tent_Abwesenheit.webp"
-                  alt="Urlaubsplanung"
+                  alt={t.nav.productsMenu.absence.short}
                   width={24}
                   height={24}
                   className="flex-shrink-0"
@@ -217,11 +231,11 @@ export default function Header({ locale = 'de' }: HeaderProps) {
 
             {/* Kontakt Link */}
             <Link
-              href="/kontakt"
+              href={contactUrl}
               className={styles.mobileMainLink}
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              Kontakt
+              {t.nav.contact}
             </Link>
           </div>
         )}
@@ -238,7 +252,7 @@ export default function Header({ locale = 'de' }: HeaderProps) {
           {/* Produkt-Grid */}
           <div className={styles.produktGrid}>
             <Link
-              href="/schnittstelle-datev"
+              href={productUrls.datev}
               className={styles.produktCard}
               onClick={closeAllDropdowns}
               role="menuitem"
@@ -246,18 +260,18 @@ export default function Header({ locale = 'de' }: HeaderProps) {
               <div className={styles.iconWrapper}>
                 <Image
                   src="/images/DATEV/AVA_Compass_DATEV.webp"
-                  alt="DATEV Schnittstelle"
+                  alt={t.nav.productsMenu.datev.short}
                   width={80}
                   height={80}
                   className="w-full h-full object-contain"
                 />
               </div>
-              <h3>DATEV Schnittstelle für NetSuite</h3>
-              <p>Finanzdaten exportieren nach DATEV</p>
+              <h3>{t.nav.productsMenu.datev.title}</h3>
+              <p>{t.nav.productsMenu.datev.description}</p>
             </Link>
 
             <Link
-              href="/localization-germany"
+              href={productUrls.localization}
               className={styles.produktCard}
               onClick={closeAllDropdowns}
               role="menuitem"
@@ -265,18 +279,18 @@ export default function Header({ locale = 'de' }: HeaderProps) {
               <div className={styles.iconWrapper}>
                 <Image
                   src="/images/LOCALIZATION/AVA_Map_Localization.webp"
-                  alt="Lokalisierung Deutschland"
+                  alt={t.nav.productsMenu.localization.short}
                   width={80}
                   height={80}
                   className="w-full h-full object-contain"
                 />
               </div>
-              <h3>Lokalisierung Deutschland für NetSuite</h3>
-              <p>NetSuite Lokalisierung für DE-Compliance</p>
+              <h3>{t.nav.productsMenu.localization.title}</h3>
+              <p>{t.nav.productsMenu.localization.description}</p>
             </Link>
 
             <Link
-              href="/abwesenheitsverwaltung"
+              href={productUrls.absence}
               className={styles.produktCard}
               onClick={closeAllDropdowns}
               role="menuitem"
@@ -284,18 +298,18 @@ export default function Header({ locale = 'de' }: HeaderProps) {
               <div className={styles.iconWrapper}>
                 <Image
                   src="/images/ABWESENHEITSVERWALTUNG/AVA_Tent_Abwesenheit.webp"
-                  alt="Abwesenheitsverwaltung"
+                  alt={t.nav.productsMenu.absence.short}
                   width={80}
                   height={80}
                   className="w-full h-full object-contain"
                 />
               </div>
-              <h3>Abwesenheitsverwaltung für NetSuite</h3>
-              <p>Abwesenheitsmanagement und Urlaubsverwaltung</p>
+              <h3>{t.nav.productsMenu.absence.title}</h3>
+              <p>{t.nav.productsMenu.absence.description}</p>
             </Link>
 
             <Link
-              href="/dunning"
+              href={productUrls.dunning}
               className={styles.produktCard}
               onClick={closeAllDropdowns}
               role="menuitem"
@@ -303,18 +317,18 @@ export default function Header({ locale = 'de' }: HeaderProps) {
               <div className={styles.iconWrapper}>
                 <Image
                   src="/images/DUNNING/AVA_Carabiner_Dunning.webp"
-                  alt="Mahnwesen"
+                  alt={t.nav.productsMenu.dunning.short}
                   width={80}
                   height={80}
                   className="w-full h-full object-contain"
                 />
               </div>
-              <h3>Mahnwesen für NetSuite</h3>
-              <p>NetSuite automatisierte Mahnungen für Forderungen</p>
+              <h3>{t.nav.productsMenu.dunning.title}</h3>
+              <p>{t.nav.productsMenu.dunning.description}</p>
             </Link>
 
             <Link
-              href="/peak-ship"
+              href={productUrls.peakship}
               className={styles.produktCard}
               onClick={closeAllDropdowns}
               role="menuitem"
@@ -322,18 +336,18 @@ export default function Header({ locale = 'de' }: HeaderProps) {
               <div className={styles.iconWrapper}>
                 <Image
                   src="/images/PEAKSHIP/AVA_Rope_PeakShip.webp"
-                  alt="PeakShip"
+                  alt={t.nav.productsMenu.peakship.short}
                   width={80}
                   height={80}
                   className="w-full h-full object-contain"
                 />
               </div>
-              <h3>PeakShip für NetSuite</h3>
-              <p>NetSuite-Integration für Speditionsautomatisierung</p>
+              <h3>{t.nav.productsMenu.peakship.title}</h3>
+              <p>{t.nav.productsMenu.peakship.description}</p>
             </Link>
 
             <Link
-              href="/reisekosten"
+              href={productUrls.travel}
               className={styles.produktCard}
               onClick={closeAllDropdowns}
               role="menuitem"
@@ -341,18 +355,18 @@ export default function Header({ locale = 'de' }: HeaderProps) {
               <div className={styles.iconWrapper}>
                 <Image
                   src="/images/REISEKOSTEN/AVA_Backpack_Reisekosten.webp"
-                  alt="Reisekostenverwaltung"
+                  alt={t.nav.productsMenu.travel.short}
                   width={80}
                   height={80}
                   className="w-full h-full object-contain"
                 />
               </div>
-              <h3>Reisekostenverwaltung für NetSuite</h3>
-              <p>NetSuite-konforme Reisekostenerstattung</p>
+              <h3>{t.nav.productsMenu.travel.title}</h3>
+              <p>{t.nav.productsMenu.travel.description}</p>
             </Link>
 
             <Link
-              href="/abwesenheitsverwaltung"
+              href={productUrls.absence}
               className={styles.produktCard}
               onClick={closeAllDropdowns}
               role="menuitem"
@@ -360,27 +374,27 @@ export default function Header({ locale = 'de' }: HeaderProps) {
               <div className={styles.iconWrapper}>
                 <Image
                   src="/images/ABWESENHEITSVERWALTUNG/AVA_Tent_Abwesenheit.webp"
-                  alt="Urlaubsplanung"
+                  alt={t.nav.productsMenu.absence.short}
                   width={80}
                   height={80}
                   className="w-full h-full object-contain"
                 />
               </div>
-              <h3>Urlaubsplanung für NetSuite</h3>
-              <p>Subline steht hier und beinhaltet sicherlich NetSuite</p>
+              <h3>{t.nav.productsMenu.absence.title}</h3>
+              <p>{t.nav.productsMenu.absence.description}</p>
             </Link>
           </div>
 
           {/* Footer-Section */}
           <div className={styles.footerSection}>
             <div className={styles.footerContent}>
-              <a href="/download-broschuere" className={styles.footerLink}>
+              <a href={`${baseUrl}/download-broschuere`} className={styles.footerLink}>
                 <Download size={20} />
-                <span>Download Produktbroschüre</span>
+                <span>{t.nav.downloadBrochure}</span>
               </a>
-              <a href="/webinare" className={styles.footerLink}>
+              <a href={`${baseUrl}/webinare`} className={styles.footerLink}>
                 <Video size={20} />
-                <span>Webinare</span>
+                <span>{t.nav.webinars}</span>
               </a>
               <div className={styles.socialLinks}>
                 <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">

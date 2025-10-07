@@ -8,6 +8,41 @@ export const en = {
     privacy: 'Privacy Policy',
     language: 'Language',
     resources: 'Resources',
+    downloadBrochure: 'Download Product Brochure',
+    webinars: 'Webinars',
+    productsMenu: {
+      title: 'Applications',
+      datev: {
+        title: 'DATEV Interface for NetSuite',
+        short: 'DATEV Interface',
+        description: 'Seamless integration between NetSuite and DATEV',
+      },
+      localization: {
+        title: 'Localization Germany for NetSuite',
+        short: 'Localization Germany',
+        description: 'NetSuite optimized for the German market',
+      },
+      absence: {
+        title: 'Absence Management for NetSuite',
+        short: 'Absence Management',
+        description: 'Leave management in NetSuite',
+      },
+      dunning: {
+        title: 'Dunning Management for NetSuite',
+        short: 'Dunning',
+        description: 'Automated receivables management',
+      },
+      peakship: {
+        title: 'PeakShip for NetSuite',
+        short: 'PeakShip',
+        description: 'Shipping management for NetSuite',
+      },
+      travel: {
+        title: 'Travel Expense Management for NetSuite',
+        short: 'Travel Expenses',
+        description: 'Travel expense accounting in NetSuite',
+      },
+    },
   },
   common: {
     learnMore: 'Learn more',

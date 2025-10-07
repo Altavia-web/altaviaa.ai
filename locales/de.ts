@@ -8,6 +8,41 @@ export const de = {
     privacy: 'Datenschutz',
     language: 'Sprache',
     resources: 'Ressourcen',
+    downloadBrochure: 'Download Produktbroschüre',
+    webinars: 'Webinare',
+    productsMenu: {
+      title: 'Applications',
+      datev: {
+        title: 'DATEV Schnittstelle für NetSuite',
+        short: 'DATEV Schnittstelle',
+        description: 'Nahtlose Integration zwischen NetSuite und DATEV',
+      },
+      localization: {
+        title: 'Lokalisierung Deutschland für NetSuite',
+        short: 'Lokalisierung Deutschland',
+        description: 'NetSuite für den deutschen Markt optimiert',
+      },
+      absence: {
+        title: 'Abwesenheitsverwaltung für NetSuite',
+        short: 'Abwesenheitsverwaltung',
+        description: 'Urlaubsverwaltung in NetSuite',
+      },
+      dunning: {
+        title: 'Mahnwesen für NetSuite',
+        short: 'Mahnwesen',
+        description: 'Automatisiertes Forderungsmanagement',
+      },
+      peakship: {
+        title: 'PeakShip für NetSuite',
+        short: 'PeakShip',
+        description: 'Versandmanagement für NetSuite',
+      },
+      travel: {
+        title: 'Reisekostenverwaltung für NetSuite',
+        short: 'Reisekosten',
+        description: 'Reisekostenabrechnung in NetSuite',
+      },
+    },
   },
   common: {
     learnMore: 'Mehr erfahren',
