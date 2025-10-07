@@ -10,7 +10,7 @@ import HomeTestimonial from "@/components/sections/home/home-testimonial";
 
 export default function EnglishHome() {
   return (
-    <div className="min-h-screen">
+    <div id="main-content" className="min-h-screen">
       <HomeHero locale="en" />
       <HomeMarketOptimization locale="en" />
       <HomeCompany locale="en" />

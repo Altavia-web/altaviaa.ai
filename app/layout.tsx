@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Titillium_Web } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/Header";
+import HeaderWrapper from "./HeaderWrapper";
 
 const titilliumWeb = Titillium_Web({
   variable: "--font-titillium",
@@ -163,10 +163,8 @@ export default function RootLayout({
         >
           Skip to main content
         </a>
-        <Header locale="de" />
-        <div id="main-content">
-          {children}
-        </div>
+        <HeaderWrapper />
+        {children}
       </body>
     </html>
   );
