@@ -1,7 +1,20 @@
 import React from 'react';
 import Link from 'next/link';
+import { type Locale } from '@/lib/i18n';
 
-export default function FooterBottom() {
+interface FooterBottomProps {
+  locale?: Locale;
+}
+
+export default function FooterBottom({ locale = 'de' }: FooterBottomProps) {
+  const isEnglish = locale === 'en';
+  const privacyLink = isEnglish ? '/en/privacy' : '/datenschutzerklarung';
+  const imprintLink = isEnglish ? '/en/imprint' : '/impressum';
+  const privacyLabel = isEnglish ? 'Privacy Policy' : 'Datenschutz';
+  const imprintLabel = isEnglish ? 'Imprint' : 'Impressum';
+  const ctaText = isEnglish ? 'Acquire NetSuite App?' : 'App für NetSuite erwerben?';
+  const ariaLegalNav = isEnglish ? 'Legal links' : 'Rechtliche Links';
+
   return (
     <div className="px-6" style={{backgroundColor: 'var(--color-ice-blue)', color: '#000'}}>
       <div className="mx-auto" style={{width: '80%'}}>
@@ -37,14 +50,14 @@ export default function FooterBottom() {
           {/* Contact & CTA (Center) */}
           <div className="flex flex-col items-start md:items-center">
             <h3 className="text-lg font-semibold mb-4">
-              App für NetSuite erwerben?
+              {ctaText}
             </h3>
             <div className="space-y-2">
               <div>
                 <a
                   href="mailto:sales@altaviaa.ai"
                   className="text-blue-600 hover:text-blue-800 transition-colors duration-200 text-sm"
-                  aria-label="E-Mail an sales@altaviaa.ai senden"
+                  aria-label={isEnglish ? 'Email sales@altaviaa.ai' : 'E-Mail an sales@altaviaa.ai senden'}
                 >
                   sales@altaviaa.ai
                 </a>
@@ -53,7 +66,7 @@ export default function FooterBottom() {
                 <a
                   href="tel:+4930837906556"
                   className="text-blue-600 hover:text-blue-800 transition-colors duration-200 text-sm"
-                  aria-label="Anrufen unter +49 30 83790656"
+                  aria-label={isEnglish ? 'Call +49 30 83790656' : 'Anrufen unter +49 30 83790656'}
                 >
                   +49 30 83790656
                 </a>
@@ -63,21 +76,21 @@ export default function FooterBottom() {
 
           {/* Legal Links (Right) */}
           <div className="flex flex-col items-start md:items-end">
-            <nav aria-label="Rechtliche Links" className="space-y-2">
+            <nav aria-label={ariaLegalNav} className="space-y-2">
               <div>
                 <Link
-                  href="/datenschutzerklarung"
+                  href={privacyLink}
                   className="text-sm opacity-80 hover:opacity-100 transition-opacity duration-200"
                 >
-                  Datenschutz
+                  {privacyLabel}
                 </Link>
               </div>
               <div>
                 <Link
-                  href="/impressum"
+                  href={imprintLink}
                   className="text-sm opacity-80 hover:opacity-100 transition-opacity duration-200"
                 >
-                  Impressum
+                  {imprintLabel}
                 </Link>
               </div>
             </nav>

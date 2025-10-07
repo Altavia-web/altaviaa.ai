@@ -1,32 +1,34 @@
 import React from 'react';
 import styles from './HomeCompany.module.css';
+import { useTranslations, type Locale } from '@/lib/i18n';
 
-const HomeCompany = React.memo(() => {
+interface HomeCompanyProps {
+  locale?: Locale;
+}
+
+const HomeCompany = React.memo(({ locale = 'de' }: HomeCompanyProps) => {
+  const t = useTranslations(locale);
+
   return (
     <section className={styles.section}>
       <div className={styles.container}>
         <h2 className={styles.heading}>
-          Alta Via Applications: Produktentwicklung mit Weitblick
+          {t.home.company.heading}
         </h2>
 
         <div className={styles.content}>
           <p className={styles.paragraph}>
-            Die <span className={styles.companyName}>Alta Via Applications GmbH</span> ist aus der Beratungserfahrung der Alta Via Consulting
-            hervorgegangen – als eigenständige Produktgesellschaft mit klarem Fokus auf NetSuite-Erweiterungen.
-            Was wir entwickeln, entsteht direkt aus dem Gelände unserer Kunden – konkret, anwenderfreundlich
-            und mit Blick auf die gesamte Route.
+            {t.home.company.paragraph1.split('Alta Via Applications GmbH')[0]}
+            <span className={styles.companyName}>{t.home.company.companyName}</span>
+            {t.home.company.paragraph1.split('Alta Via Applications GmbH')[1]}
           </p>
 
           <p className={styles.paragraph}>
-            Wir konzentrieren uns auf das, was Sie für den nächsten Schritt brauchen: robuste Tools,
-            präzise Ausrichtung und kontinuierliche Weiterentwicklung.
+            {t.home.company.paragraph2}
           </p>
 
           <p className={styles.paragraph}>
-            Unsere NetSuite-Erweiterungen umfassen intelligente Automatisierungslösungen für Finanzprozesse,
-            maßgeschneiderte Compliance-Workflows und nahtlose Integrationen mit ERP- und CRM-Systemen.
-            Jede Entwicklung wird kontinuierlich optimiert und mit modernsten Technologien wie KI-gestützter
-            Datenanalyse erweitert – damit Ihre Prozesse nicht nur heute, sondern auch morgen effizient bleiben.
+            {t.home.company.paragraph3}
           </p>
         </div>
       </div>

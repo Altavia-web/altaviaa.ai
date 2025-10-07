@@ -1,14 +1,21 @@
 import React from 'react';
 import Image from 'next/image';
+import { useTranslations, type Locale } from '@/lib/i18n';
 
-export default function HomeHero() {
+interface HomeHeroProps {
+  locale?: Locale;
+}
+
+export default function HomeHero({ locale = 'de' }: HomeHeroProps) {
+  const t = useTranslations(locale);
+
   return (
     <section className="relative flex items-center justify-center text-white" style={{ minHeight: '72vh' }}>
       {/* Background Image */}
       <div className="absolute inset-0">
         <Image
           src="/images/home/Home_hero.webp"
-          alt="NetSuite Lokalisierung Deutschland Hero Background"
+          alt={t.home.hero.altImage}
           fill
           className="object-cover"
           priority
@@ -21,17 +28,16 @@ export default function HomeHero() {
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <h1 className="font-bold mb-6 text-center">
-          Lokalisierung Deutschland für NetSuite – Ihr Tool für den Aufstieg
+          {t.home.hero.title}
         </h1>
         <p className="text-2xl md:text-3xl mb-8 leading-relaxed opacity-90">
-          Hier steht ein kurzer Einleitungstext von 1-2 Sätzen, unter diesen wird dann noch ein Button eingefügt.
-          Klickt man diesen an, kann man die Produktbroschüre downloaden.
+          {t.home.hero.subtitle}
         </p>
         <button
           className="text-white font-semibold py-4 px-8 rounded-lg transition-colors duration-200 inline-flex items-center text-lg hover:opacity-90"
           style={{backgroundColor: 'var(--color-orange)'}}
         >
-          Download Produktbroschüre
+          {t.home.hero.cta}
           <svg
             className="ml-2 w-5 h-5"
             fill="none"

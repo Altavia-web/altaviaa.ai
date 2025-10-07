@@ -1,8 +1,15 @@
 import React from 'react';
 import Image from 'next/image';
 import { CheckCircle } from 'lucide-react';
+import { useTranslations, type Locale } from '@/lib/i18n';
 
-export default function HomeLokalisierung() {
+interface HomeLokalisierungProps {
+  locale?: Locale;
+}
+
+export default function HomeLokalisierung({ locale = 'de' }: HomeLokalisierungProps) {
+  const t = useTranslations(locale);
+
   return (
     <section className="py-16 lg:py-20 px-6" style={{ background: 'var(--gradient-lokalisierung)' }}>
       <div className="max-w-7xl mx-auto">
@@ -12,7 +19,7 @@ export default function HomeLokalisierung() {
           <div className="order-2 lg:order-1">
             <Image
               src="/images/produkte/AVA_LOKALISIERUNG_DE.webp"
-              alt="Lokalisierung Deutschland für NetSuite"
+              alt={t.home.localization.altImage}
               width={500}
               height={400}
               className="w-2/3 h-auto rounded-lg shadow-lg mx-auto"
@@ -22,56 +29,22 @@ export default function HomeLokalisierung() {
           {/* Rechte Spalte - Content */}
           <div className="order-1 lg:order-2 text-white">
             <h2 className="text-3xl lg:text-4xl font-bold mb-8 leading-tight">
-              Lokalisierung Deutschland – Ausgestattet mit dem richtigen Equipment für Ihr ERP-Gelände
+              {t.home.localization.heading}
             </h2>
 
             <ul className="space-y-4 mb-8">
-              <li className="flex items-start gap-3">
-                <CheckCircle className="w-6 h-6 text-white flex-shrink-0 mt-1" />
-                <span className="text-lg leading-relaxed">
-                  Umsatzsteuer-ID-Prüfung für EU-Geschäfte
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <CheckCircle className="w-6 h-6 text-white flex-shrink-0 mt-1" />
-                <span className="text-lg leading-relaxed">
-                  Skontoberechnung mit korrekter Steueranpassung
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <CheckCircle className="w-6 h-6 text-white flex-shrink-0 mt-1" />
-                <span className="text-lg leading-relaxed">
-                  Sichere Umsatzsteuerübermittlung über die ELSTER-Schnittstelle
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <CheckCircle className="w-6 h-6 text-white flex-shrink-0 mt-1" />
-                <span className="text-lg leading-relaxed">
-                  GoBD-konforme Buchungslogik
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <CheckCircle className="w-6 h-6 text-white flex-shrink-0 mt-1" />
-                <span className="text-lg leading-relaxed">
-                  xRechnung-Erstellung für die neue E-Rechnungspflicht
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <CheckCircle className="w-6 h-6 text-white flex-shrink-0 mt-1" />
-                <span className="text-lg leading-relaxed">
-                  Automatisierte DATEV-Exportschnittstelle
-                </span>
-              </li>
-              <li className="flex items-start gap-3">
-                <CheckCircle className="w-6 h-6 text-white flex-shrink-0 mt-1" />
-                <span className="text-lg leading-relaxed">
-                  SuiteTax-kompatible Funktionen
-                </span>
-              </li>
+              {t.home.localization.features.map((feature, index) => (
+                <li key={index} className="flex items-start gap-3">
+                  <CheckCircle className="w-6 h-6 text-white flex-shrink-0 mt-1" />
+                  <span className="text-lg leading-relaxed">
+                    {feature}
+                  </span>
+                </li>
+              ))}
             </ul>
 
             <p className="text-xl leading-relaxed">
-              Das Ergebnis: mehr Compliance, weniger manueller Aufwand, klare Prozesse.
+              {t.home.localization.result}
             </p>
           </div>
         </div>

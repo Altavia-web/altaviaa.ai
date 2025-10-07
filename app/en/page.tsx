@@ -1,0 +1,25 @@
+import Footer from "@/components/Footer";
+import HomeHero from "@/components/sections/home/home-hero";
+import HomeMarketOptimization from "@/components/sections/home/home-market-optimization";
+import HomeCompany from "@/components/sections/home/home-company";
+import HomeLokalisierung from "@/components/sections/home/home-lokalisierung";
+import HomeDatev from "@/components/sections/home/home-datev";
+import HomeCompliance from "@/components/sections/home/home-compliance";
+import HomePartners from "@/components/sections/home/home-partners";
+import HomeTestimonial from "@/components/sections/home/home-testimonial";
+
+export default function EnglishHome() {
+  return (
+    <div className="min-h-screen">
+      <HomeHero locale="en" />
+      <HomeMarketOptimization locale="en" />
+      <HomeCompany locale="en" />
+      <HomeLokalisierung locale="en" />
+      <HomeDatev locale="en" />
+      <HomeCompliance locale="en" />
+      <HomePartners locale="en" />
+      <HomeTestimonial locale="en" />
+      <Footer locale="en" />
+    </div>
+  );
+}

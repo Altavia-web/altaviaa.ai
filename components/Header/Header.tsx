@@ -6,8 +6,14 @@ import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
 import { Download, Video, Linkedin, Youtube } from "lucide-react";
 import styles from './Header.module.css';
+import LanguageSwitch from './LanguageSwitch';
+import type { Locale } from '@/locales';
 
-export default function Header() {
+interface HeaderProps {
+  locale?: Locale;
+}
+
+export default function Header({ locale = 'de' }: HeaderProps) {
   const [isApplicationsOpen, setIsApplicationsOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
@@ -43,9 +49,7 @@ export default function Header() {
         <div className={styles.container}>
           {/* Top Row - Language Switcher */}
           <div className={styles.topRow}>
-            <button className={styles.languageButton}>
-              EN
-            </button>
+            <LanguageSwitch currentLocale={locale} />
           </div>
 
           {/* Bottom Row - Logo and Navigation */}

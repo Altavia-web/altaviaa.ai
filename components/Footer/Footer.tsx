@@ -3,8 +3,15 @@ import Image from 'next/image';
 import Button from '@/components/Button';
 import FooterBottom from './FooterBottom';
 import styles from './Footer.module.css';
+import { useTranslations, type Locale } from '@/lib/i18n';
 
-export default function Footer() {
+interface FooterProps {
+  locale?: Locale;
+}
+
+export default function Footer({ locale = 'de' }: FooterProps) {
+  const t = useTranslations(locale);
+
   return (
     <footer className={styles.footer} role="contentinfo">
       {/* Section 1: Full width image only */}
@@ -17,14 +24,13 @@ export default function Footer() {
             {/* Left: Text content */}
             <div className={styles.textContent}>
               <h2 className={styles.headline}>
-                Bereit für den nächsten Höhenmeter?
+                {t.footer.heading}
               </h2>
               <h3 className={styles.subheadline}>
-                Partner werden:
+                {t.footer.subheading}
               </h3>
               <p className={styles.description}>
-                Nutzen Sie unser Partnerprogramm – inklusive Vertriebsunterlagen,
-                Testzugängen und direktem Kontakt.
+                {t.footer.description}
               </p>
               <Button
                 variant="filled"
@@ -32,7 +38,7 @@ export default function Footer() {
                 size="lg"
                 showArrow={true}
               >
-                Demo vereinbaren
+                {t.footer.cta}
               </Button>
             </div>
 
@@ -40,7 +46,7 @@ export default function Footer() {
             <div className={styles.imageContent}>
               <Image
                 src="/images/AVA_Poles_Grad.svg"
-                alt="Alta Via Applications Poles Gradient"
+                alt={t.footer.altImage}
                 width={300}
                 height={400}
                 className={styles.poleImage}
@@ -52,7 +58,7 @@ export default function Footer() {
       </div>
 
       {/* Section 3: Footer Bottom */}
-      <FooterBottom />
+      <FooterBottom locale={locale} />
     </footer>
   );
 }

@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Titillium_Web } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 import Header from "@/components/Header";
 
 const titilliumWeb = Titillium_Web({
@@ -22,13 +22,13 @@ export const metadata: Metadata = {
     default: "Alta Via Applications",
     template: "%s | Alta Via Applications",
   },
-  description: "Alta Via Applications - NetSuite-Erweiterungen für den deutschen Markt",
+  description: "Alta Via Applications - NetSuite extensions for the German market",
   keywords: ["Alta Via Applications", "NetSuite", "German localization", "DATEV", "ERP"],
   authors: [{ name: "Alta Via Applications" }],
   creator: "Alta Via Applications",
   metadataBase: new URL("https://altaviaapplications.com"),
   alternates: {
-    canonical: '/',
+    canonical: '/en',
     languages: {
       'de-DE': 'https://altaviaapplications.com',
       'en': 'https://altaviaapplications.com/en',
@@ -36,17 +36,17 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: "website",
-    locale: "de_DE",
-    alternateLocale: ["en_US"],
+    locale: "en_US",
+    alternateLocale: ["de_DE"],
     title: "Alta Via Applications",
-    description: "NetSuite-Erweiterungen für den deutschen Markt",
+    description: "NetSuite extensions for the German market",
     siteName: "Alta Via Applications",
-    url: "https://altaviaapplications.com",
+    url: "https://altaviaapplications.com/en",
   },
   twitter: {
     card: "summary_large_image",
     title: "Alta Via Applications",
-    description: "NetSuite-Erweiterungen für den deutschen Markt",
+    description: "NetSuite extensions for the German market",
   },
   robots: {
     index: true,
@@ -61,13 +61,13 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default function EnglishLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="de" className="scroll-smooth">
+    <html lang="en" className="scroll-smooth">
       <head>
         {/* DNS prefetch for external resources */}
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
@@ -163,7 +163,7 @@ export default function RootLayout({
         >
           Skip to main content
         </a>
-        <Header locale="de" />
+        <Header locale="en" />
         <div id="main-content">
           {children}
         </div>

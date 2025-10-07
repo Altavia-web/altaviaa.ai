@@ -1,7 +1,14 @@
 import React from 'react';
 import Image from 'next/image';
+import { useTranslations, type Locale } from '@/lib/i18n';
 
-export default function HomeMarketOptimization() {
+interface HomeMarketOptimizationProps {
+  locale?: Locale;
+}
+
+export default function HomeMarketOptimization({ locale = 'de' }: HomeMarketOptimizationProps) {
+  const t = useTranslations(locale);
+
   return (
     <section className="py-16 px-6 bg-white">
       <div className="mx-auto" style={{width: '80%'}}>
@@ -9,14 +16,12 @@ export default function HomeMarketOptimization() {
           {/* Content - Left Column */}
           <div>
             <h2 className="font-bold mb-6 leading-tight" style={{color: '#002e64', fontSize: 'clamp(2.625rem, 5vw, 3.15rem)'}}>
-              Optimieren Sie NetSuite für den deutschen Markt – präzise, konform, einsatzbereit
+              {t.home.marketOptimization.heading}
             </h2>
             <p className="text-xl leading-relaxed" style={{color: '#000000'}}>
-              Immer mehr deutsche Unternehmen und internationale Konzerne mit Niederlassungen in Deutschland
-              setzen auf NetSuite als zentrale ERP- und Buchhaltungslösung. Für einen erfolgreichen Einsatz
-              ist eine vollständige Anpassung an die lokalen Anforderungen unerlässlich. Mit der{' '}
-              <strong>Alta Via Lokalisierung Deutschland</strong> erweitern Sie den NetSuite-Standard um genau
-              die Funktionen, die in Deutschland gesetzlich und praktisch erforderlich sind.
+              {t.home.marketOptimization.paragraph.split('Alta Via Lokalisierung Deutschland')[0]}
+              <strong>{t.home.marketOptimization.altaViaLocalization}</strong>
+              {t.home.marketOptimization.paragraph.split('Alta Via Lokalisierung Deutschland')[1]}
             </p>
           </div>
 
@@ -25,7 +30,7 @@ export default function HomeMarketOptimization() {
             <div className="relative w-full max-w-lg">
               <Image
                 src="/images/home/Home_Localization_Map__Grad-1.svg"
-                alt="Alta Via Lokalisierung Deutschland Map"
+                alt={t.home.marketOptimization.altImage}
                 width={475}
                 height={380}
                 className="w-[63.5%] h-auto mx-auto"
