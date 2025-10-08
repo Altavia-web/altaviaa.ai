@@ -19,30 +19,30 @@ const categories: Category[] = [
   {
     name: 'Setup',
     features: [
-      { id: 1, feature: '[Feature 1 - Text to follow]', netsuite: '[Text to follow]', altaVia: '[Text to follow]' },
-      { id: 2, feature: '[Feature 2 - Text to follow]', netsuite: '[Text to follow]', altaVia: '[Text to follow]' }
+      { id: 1, feature: 'Support for initial setup', netsuite: 'no', altaVia: 'yes' },
+      { id: 2, feature: 'Individual settings and dashboards for each subsidiary', netsuite: 'no', altaVia: 'yes' }
     ]
   },
   {
     name: 'Functions',
     features: [
-      { id: 3, feature: '[Feature 3 - Text to follow]', netsuite: '[Text to follow]', altaVia: '[Text to follow]' },
-      { id: 4, feature: '[Feature 4 - Text to follow]', netsuite: '[Text to follow]', altaVia: '[Text to follow]' },
-      { id: 5, feature: '[Feature 5 - Text to follow]', netsuite: '[Text to follow]', altaVia: '[Text to follow]' },
-      { id: 6, feature: '[Feature 6 - Text to follow]', netsuite: '[Text to follow]', altaVia: '[Text to follow]' },
-      { id: 7, feature: '[Feature 7 - Text to follow]', netsuite: '[Text to follow]', altaVia: '[Text to follow]' },
-      { id: 8, feature: '[Feature 8 - Text to follow]', netsuite: '[Text to follow]', altaVia: '[Text to follow]' },
-      { id: 9, feature: '[Feature 9 - Text to follow]', netsuite: '[Text to follow]', altaVia: '[Text to follow]' },
-      { id: 10, feature: '[Feature 10 - Text to follow]', netsuite: '[Text to follow]', altaVia: '[Text to follow]' },
-      { id: 11, feature: '[Feature 11 - Text to follow]', netsuite: '[Text to follow]', altaVia: '[Text to follow]' },
-      { id: 12, feature: '[Feature 12 - Text to follow]', netsuite: '[Text to follow]', altaVia: '[Text to follow]' },
-      { id: 13, feature: '[Feature 13 - Text to follow]', netsuite: '[Text to follow]', altaVia: '[Text to follow]' }
+      { id: 3, feature: 'German Reporting Requirements', netsuite: 'limited', altaVia: 'yes' },
+      { id: 4, feature: 'Account Sheet', netsuite: 'limited', altaVia: 'yes' },
+      { id: 5, feature: 'VAT Refund', netsuite: 'limited', altaVia: 'yes' },
+      { id: 6, feature: 'VAT ID Verification', netsuite: 'limited', altaVia: 'yes' },
+      { id: 7, feature: 'General EU Tax', netsuite: 'no', altaVia: 'yes' },
+      { id: 8, feature: 'PDF Texts/Tax Texts', netsuite: 'no', altaVia: 'yes' },
+      { id: 9, feature: 'Tax Point Date', netsuite: 'no', altaVia: 'yes' },
+      { id: 10, feature: 'xRechnung', netsuite: 'no', altaVia: 'yes' },
+      { id: 11, feature: 'Immutability of Postings', netsuite: 'limited', altaVia: 'yes' },
+      { id: 12, feature: 'Accruals', netsuite: 'no', altaVia: 'yes' },
+      { id: 13, feature: 'ELSTER Integration', netsuite: 'limited', altaVia: 'yes' }
     ]
   },
   {
     name: 'Installation / Documentation',
     features: [
-      { id: 14, feature: '[Feature 14 - Text to follow]', netsuite: '[Text to follow]', altaVia: '[Text to follow]' }
+      { id: 14, feature: 'Direct Installation via SuiteBundle', netsuite: 'yes', altaVia: 'yes' }
     ]
   }
 ];
@@ -94,7 +94,7 @@ export default function LocalizationComparisonEN() {
             className="text-3xl lg:text-4xl font-semibold text-center mb-12 leading-tight"
             style={{ color: 'var(--color-dark-blue)' }}
           >
-            [English Comparison Table Heading - Text to follow]
+            How Localization Germany for NetSuite complements the NetSuite-native solution
           </h2>
 
           {/* Comparison Table */}
@@ -182,10 +182,10 @@ export default function LocalizationComparisonEN() {
       >
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-2xl lg:text-3xl font-semibold mb-6 text-white leading-tight">
-            [English Version Update Heading - Text to follow]
+            Constantly evolving. Always up to date.
           </h3>
           <p className="text-lg lg:text-xl text-white leading-relaxed">
-            [English Version Update Text - Text to follow]
+            Version 3.0 brings SuiteTax compatibility, import of transaction files from DATEV to NetSuite, and CSV override directly in NetSuite. This eliminates manual rework and keeps you flexible for special cases.
           </p>
         </div>
       </div>
