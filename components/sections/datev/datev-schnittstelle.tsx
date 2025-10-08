@@ -26,18 +26,8 @@ export default function DatevSchnittstelle() {
                 color: '#002E64'
               }}
             >
-              [H3 Text folgt - kann mehrzeilig sein]
+              Die Buchhaltungssoftware der DATEV eG ist in Deutschland der Standard bei Steuerberatern und Wirtschaftsprüfern. Mit der von DATEV zertifizierten SuiteApp „Schnittstelle DATEV für NetSuite" können Sie auf einfache Weise sämtliche Buchungsdaten aus Ihrem NetSuite-ERP-System zur Weiterverarbeitung bzw. zum Buchungsabschluss nach DATEV überführen.
             </h3>
-            <p style={{
-              fontFamily: 'Titillium Web',
-              fontWeight: 600,
-              fontSize: '24px',
-              lineHeight: '140%',
-              letterSpacing: '0',
-              color: '#000000'
-            }}>
-              Wenn Ihr Unternehmen als deutsche Tochtergesellschaft umfangreiche Finanzberichtspflichten in Deutschland hat und DATEV Unternehmen online für die Buchhaltung nutzt, ist DATEV Export für NetSuite die richtige Wahl.
-            </p>
           </div>
 
           {/* Image - Right */}

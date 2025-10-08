@@ -4,33 +4,43 @@ import Image from 'next/image';
 const features = [
   {
     id: 1,
-    title: 'Belegübernahme',
-    description: 'Erfassen Sie Belege direkt in NetSuite und übertragen Sie diese nahtlos in DATEV. Alle relevanten Informationen werden automatisch synchronisiert.'
+    title: 'Datenübertragung zwischen NetSuite und DATEV',
+    description: 'Stammdaten (z. B. Kontenbeschriftungen, Debitoren/Kreditoren) und buchungsrelevante Transaktionen lassen sich zwischen NetSuite und DATEV importieren und exportieren – Version 3.0 schließt den Loop.'
   },
   {
     id: 2,
-    title: 'Datenübertragung',
-    description: 'Automatisierte Übertragung von Buchungsdaten aus NetSuite in DATEV Unternehmen online. Kein manueller Export mehr nötig.'
+    title: 'SuiteTax-Kompatibilität',
+    description: 'Die SuiteApp unterstützt sowohl Legacy Tax als auch SuiteTax – Funktionen stehen damit auch bei Mandanten mit SuiteTax-Setup zur Verfügung.'
   },
   {
     id: 3,
-    title: 'Personenkonten',
-    description: 'Kunden- und Lieferantendaten werden automatisch abgeglichen und in den entsprechenden Personenkonten in DATEV abgebildet.'
+    title: 'Automatische Personenkonten-Zuordnung',
+    description: 'Forderungen und Verbindlichkeiten aus LuL in NetSuite werden auf entsprechende DATEV-Personenkonto gebucht.'
   },
   {
     id: 4,
     title: 'Umsatzsteuer-Buchung',
-    description: 'Korrekte Zuordnung und Buchung aller umsatzsteuerrelevanten Vorgänge gemäß deutschen Steuervorschriften.'
+    description: 'Die NetSuite-Mehrwertsteuerlogik wird für DATEV in eine Bruttobuchung überführt.'
   },
   {
     id: 5,
-    title: 'Abstimmung je Transaktion',
-    description: 'Jede einzelne Transaktion ist nachvollziehbar und kann zwischen NetSuite und DATEV abgestimmt werden.'
+    title: 'Erlösrealisierung & Multibook',
+    description: 'Die Lösung unterstützt Erlösrealisierungen und parallele Bewertungen.'
   },
   {
     id: 6,
-    title: 'Erlösrealisierung & Multibook',
-    description: 'Unterstützung für unterschiedliche Rechnungslegungsstandards und parallele Buchführung in NetSuite und DATEV.'
+    title: 'Abstimmung je Transaktion',
+    description: 'In NetSuite können Sie direkt zu jeder Transaktion die entsprechende DATEV-Buchung analysieren, was die Abstimmung vereinfacht.'
+  },
+  {
+    id: 7,
+    title: 'Belegübernahme',
+    description: 'Belege können direkt an DATEV Unternehmen online übertragen werden, um Belegbilder in DATEV zu den Vorgängen und zu Archivierungszwecken anzuzeigen.'
+  },
+  {
+    id: 8,
+    title: 'Überschreiben von CSV-Dateien',
+    description: 'Das Überschreiben von CSV-Dateien wird direkt in NetSuite über die benutzerdefinierte Datensatz-Benutzeroberfläche abgewickelt.'
   }
 ];
 
@@ -64,7 +74,7 @@ export default function DatevBuchhaltung() {
             color: '#002E64'
           }}
         >
-          Ihr direkter Pfad zur Buchhaltung mit DATEV
+          Was die DATEV Schnittstelle 3.0 für Sie leistet
         </h2>
 
         {/* Feature Grid */}

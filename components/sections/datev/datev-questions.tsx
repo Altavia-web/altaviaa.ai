@@ -5,11 +5,15 @@ import React, { useState, useEffect } from 'react';
 const questions = [
   {
     id: 1,
-    text: 'Verbringen Sie zu viel Zeit mit doppelter Dateneingabe oder der Pflege zweier separater Systeme für die Finanzberichterstattung?'
+    text: 'Exportieren Sie Buchungen noch manuell aus NetSuite nach DATEV – mit Risiko für Fehler und Nacharbeit?'
   },
   {
     id: 2,
-    text: '[Frage 2 Text folgt]'
+    text: 'Müssen Zahlungen oder Payroll-Daten aus DATEV in NetSuite nachgepflegt werden?'
+  },
+  {
+    id: 3,
+    text: 'Fehlt Ihnen die saubere Abstimmung je Transaktion direkt in NetSuite?'
   }
 ];
 

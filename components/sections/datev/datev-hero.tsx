@@ -16,10 +16,10 @@ export default function DatevHero() {
           {/* Text Content - Left */}
           <div className="text-left">
             <h1 className="mb-6 text-white">
-              Schnittstelle DATEV
+              Schnittstelle DATEV 3.0 für NetSuite
             </h1>
             <h2 className="text-white">
-              NetSuite und DATEV: Ein Dreamteam deutscher Buchhaltung dank Schnittstelle DATEV.
+              Der direkte Pfad zur Buchhaltung mit DATEV
             </h2>
           </div>
 
