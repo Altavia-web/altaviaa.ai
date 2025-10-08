@@ -1,10 +1,18 @@
 import React from 'react';
+import Footer from '@/components/Footer';
+import ProductsHero from '@/components/sections/products/products-hero';
+import ProductSlider from '@/components/ProductSlider/ProductSlider';
+import ProductsTeaser from '@/components/sections/products/products-teaser';
+import ProductsTestimonial from '@/components/sections/products/products-testimonial';
 
 export default function Produktuebersicht() {
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-3xl font-bold mb-8">Produktübersicht</h1>
-      <p>Produktübersicht für Alta Via Applications</p>
+    <div className="min-h-screen">
+      <ProductsHero />
+      <ProductSlider />
+      <ProductsTeaser />
+      <ProductsTestimonial />
+      <Footer />
     </div>
   );
 }
