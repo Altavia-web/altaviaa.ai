@@ -1,22 +1,24 @@
-import type { Metadata } from 'next';
-
-export const metadata: Metadata = {
-  title: 'DATEV Interface',
-  description: 'Seamless integration between NetSuite and DATEV',
-};
+import React from 'react';
+import Footer from '@/components/Footer';
+import DatevHeroEN from '@/components/sections/datev/datev-hero-en';
+import DatevSchnittstelleEN from '@/components/sections/datev/datev-schnittstelle-en';
+import DatevQuestionsEN from '@/components/sections/datev/datev-questions-en';
+import DatevBuchhaltungEN from '@/components/sections/datev/datev-buchhaltung-en';
+import DatevTeaserEN from '@/components/sections/datev/datev-teaser-en';
+import DatevZitatEN from '@/components/sections/datev/datev-zitat-en';
+import DatevComparisonTableEN from '@/components/sections/datev/datev-comparison-table-en';
 
 export default function DatevInterfacePage() {
   return (
-    <div className="min-h-screen bg-white py-16 px-6">
-      <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl lg:text-5xl font-bold mb-8" style={{ color: '#002e64' }}>
-          DATEV Interface for NetSuite
-        </h1>
-        <p className="text-lg leading-relaxed mb-8">
-          Export your NetSuite booking data directly to DATEV financial accounting with our DATEV-certified SuiteApp.
-        </p>
-        {/* TODO: Add full DATEV product page content */}
-      </div>
+    <div className="min-h-screen">
+      <DatevHeroEN />
+      <DatevSchnittstelleEN />
+      <DatevQuestionsEN />
+      <DatevBuchhaltungEN />
+      <DatevTeaserEN />
+      <DatevZitatEN />
+      <DatevComparisonTableEN />
+      <Footer />
     </div>
   );
 }
