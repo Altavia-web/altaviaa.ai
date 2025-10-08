@@ -54,23 +54,23 @@ export const de = {
   },
   home: {
     hero: {
-      title: 'Lokalisierung Deutschland für NetSuite – Ihr Tool für den Aufstieg',
-      subtitle: 'Hier steht ein kurzer Einleitungstext von 1-2 Sätzen, unter diesen wird dann noch ein Button eingefügt. Klickt man diesen an, kann man die Produktbroschüre downloaden.',
+      title: 'Ist Ihr NetSuite-System bereit für Deutschland?',
+      subtitle: 'Alta Via Applications ist Ihr Kompass zu den höchsten Gipfeln von NetSuite. Broschüre herunterladen: Kompakter Überblick & Entscheidungshilfe.',
       cta: 'Download Produktbroschüre',
       altImage: 'NetSuite Lokalisierung Deutschland Hero Background',
     },
     marketOptimization: {
-      heading: 'Optimieren Sie NetSuite für den deutschen Markt – präzise, konform, einsatzbereit',
-      paragraph: 'Immer mehr deutsche Unternehmen und internationale Konzerne mit Niederlassungen in Deutschland setzen auf NetSuite als zentrale ERP- und Buchhaltungslösung. Für einen erfolgreichen Einsatz ist eine vollständige Anpassung an die lokalen Anforderungen unerlässlich. Mit der Alta Via Lokalisierung Deutschland erweitern Sie den NetSuite-Standard um genau die Funktionen, die in Deutschland gesetzlich und praktisch erforderlich sind.',
-      altaViaLocalization: 'Alta Via Lokalisierung Deutschland',
+      heading: 'Ihr Kompass für NetSuite im DACH-Gebiet',
+      paragraph: 'NetSuite ist ein starker Wegbegleiter für Ihr Unternehmen. Doch der Pfad durch das "DACH-Gelände" kann komplex sein, besonders wenn es um lokale Compliance geht. Alta Via Applications ist Ihr verlässlicher Kompass: Wir entwickeln unsere Lokalisierungen und anderen Bundles kontinuierlich weiter und passen sie umgehend an gesetzliche Änderungen an. So bleiben Sie auf dem Weg nach oben stets auf dem neuesten Stand.',
+      altaViaLocalization: 'Alta Via Applications',
       altImage: 'Alta Via Lokalisierung Deutschland Map',
     },
     company: {
-      heading: 'Alta Via Applications: Produktentwicklung mit Weitblick',
-      companyName: 'Alta Via Applications GmbH',
-      paragraph1: 'Die Alta Via Applications GmbH ist aus der Beratungserfahrung der Alta Via Consulting hervorgegangen – als eigenständige Produktgesellschaft mit klarem Fokus auf NetSuite-Erweiterungen. Was wir entwickeln, entsteht direkt aus dem Gelände unserer Kunden – konkret, anwenderfreundlich und mit Blick auf die gesamte Route.',
+      heading: 'Alta Via Applications: Innovation und DACH-Compliance für NetSuite-Anwender',
+      companyName: 'Alta Via Applications',
+      paragraph1: 'Alta Via Applications  ist aus der Beratungserfahrung der Alta Via Consulting hervorgegangen – als eigenständige Produktfirma mit klarem Fokus auf NetSuite-Erweiterungen. Was wir entwickeln, entsteht direkt aus dem Gelände unserer Kunden – konkret, anwenderfreundlich und mit Blick auf Ihre gesamte Route.',
       paragraph2: 'Wir konzentrieren uns auf das, was Sie für den nächsten Schritt brauchen: robuste Tools, präzise Ausrichtung und kontinuierliche Weiterentwicklung.',
-      paragraph3: 'Unsere NetSuite-Erweiterungen umfassen intelligente Automatisierungslösungen für Finanzprozesse, maßgeschneiderte Compliance-Workflows und nahtlose Integrationen mit ERP- und CRM-Systemen. Jede Entwicklung wird kontinuierlich optimiert und mit modernsten Technologien wie KI-gestützter Datenanalyse erweitert – damit Ihre Prozesse nicht nur heute, sondern auch morgen effizient bleiben.',
+      paragraph3: '',
     },
     localization: {
       heading: 'Lokalisierung Deutschland – Ausgestattet mit dem richtigen Equipment für Ihr ERP-Gelände',
@@ -99,12 +99,12 @@ export const de = {
     partners: {
       heading: 'Für NetSuite-User und Partner – gemeinsam nach oben',
       users: {
-        title: 'Für NetSuite-Nutzer:',
-        paragraph: 'Kürzere Release-Zyklen, praxisnahe Funktionalität und eine klare Produktstrategie machen unsere Lösungen zum zuverlässigen Wegbegleiter – ob Lokalisierung, DATEV Export oder spezialisierte Tools wie Mahnwesen, Reisekosten und Versandabwicklung.',
+        title: 'Für NetSuite-Nutzer',
+        paragraph: 'Kürzere Release-Zyklen, praxisnahe Funktionalität und eine klare Produktstrategie machen unsere Lösungen zum zuverlässigen Wegbegleiter – ob Lokalisierung, Schnittstelle DATEV oder spezialisierte Tools wie Mahnwesen, Reisekosten und Versandabwicklung.',
       },
       partners: {
-        title: 'Für NetSuite-Partner:',
-        paragraph: 'Als reiner Produktanbieter verzichtet Alta Via Applications auf Beratung und Implementierung – und ergänzt Ihre Lösung, ohne mit Ihnen zu konkurrieren.',
+        title: 'Für NetSuite-Partner',
+        paragraph: 'Als reiner Produktanbieter verzichtet Alta Via Applications auf Beratung und Implementierung – und ergänzt Ihre Lösung, ohne mit Ihnen zu konkurrieren',
       },
       altImage: 'Wegweiser Icon',
     },
@@ -116,10 +116,10 @@ export const de = {
     },
   },
   footer: {
-    heading: 'Bereit für den nächsten Höhenmeter?',
+    heading: 'Bereit für die nächsten Höhenmeter?',
     subheading: 'Partner werden:',
-    description: 'Nutzen Sie unser Partnerprogramm – inklusive Vertriebsunterlagen, Testzugängen und direktem Kontakt.',
-    cta: 'Demo vereinbaren',
+    description: 'Nutzen Sie unser Partnerprogramm – inklusive Vertriebsunterlagen, Testzugängen und direktem Kontakt',
+    cta: 'Demo vereinbaren: sales@altaviaa.ai',
     company: 'Alta Via Applications GmbH',
     tagline: 'NetSuite-Erweiterungen für den deutschen Markt',
     altImage: 'Alta Via Applications Poles Gradient',
