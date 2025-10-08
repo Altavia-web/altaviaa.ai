@@ -31,7 +31,7 @@ const categories: Category[] = [
       { id: 7, feature: 'Datentransfer: DATEV->NetSuite', netsuite: 'ja', altaVia: 'ja' },
       { id: 8, feature: 'Automatische Zuweisung von Personenkontos in NetSuite', netsuite: 'ja', altaVia: 'nein' },
       { id: 9, feature: 'API zwischen den Systemen', netsuite: 'ja', altaVia: 'ja' },
-      { id: 10, feature: 'Übertragung von Beleglink und PDF an Datev', netsuite: 'nein', altaVia: 'ja' },
+      { id: 10, feature: 'Übertragung von Beleglink und PDF an DATEV', netsuite: 'nein', altaVia: 'ja' },
       { id: 11, feature: 'Integration in DATEV Unternehmen Online', netsuite: 'nein', altaVia: 'ja' },
       { id: 12, feature: 'Multibook-Unterstützung', netsuite: 'ja', altaVia: 'ja' },
       { id: 13, feature: 'Import historischer Daten', netsuite: 'ja', altaVia: 'ja' },
