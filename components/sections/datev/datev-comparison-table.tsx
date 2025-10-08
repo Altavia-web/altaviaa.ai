@@ -18,7 +18,7 @@ const categories: Category[] = [
     name: 'Mapping',
     features: [
       { id: 1, feature: 'Zuordnung von NetSuite-Konten zu DATEV', netsuite: 'check', altaVia: 'check' },
-      { id: 2, feature: 'Zuordnung von Steuerkennzeichen', netsuite: 'check', altaVia: 'check' },
+      { id: 2, feature: 'Zuordnung von Steuerkennzeichen', netsuite: 'check', altaVia: 'ja (Legacy Tax)' },
       { id: 3, feature: 'Zuordnung von automatischen Konten', netsuite: 'check', altaVia: 'check' },
       { id: 4, feature: 'Zuordnung von DATEV - Personenkonto', netsuite: 'check', altaVia: 'check' },
       { id: 5, feature: 'Zuordnung von Kostenstellen', netsuite: 'check', altaVia: 'check' }
@@ -27,21 +27,23 @@ const categories: Category[] = [
   {
     name: 'Funktionen',
     features: [
-      { id: 6, feature: 'Datentransfer: NetSuite->Datev', netsuite: 'check', altaVia: 'check' },
-      { id: 7, feature: 'Datentransfer: Datev->NetSuite', netsuite: 'check', altaVia: 'x' },
+      { id: 6, feature: 'Datentransfer: NetSuite->DATEV', netsuite: 'check', altaVia: 'check' },
+      { id: 7, feature: 'Datentransfer: DATEV->NetSuite', netsuite: 'check', altaVia: 'check' },
       { id: 8, feature: 'Automatische Zuweisung von Personenkontos in NetSuite', netsuite: 'check', altaVia: 'x' },
       { id: 9, feature: 'API zwischen den Systemen', netsuite: 'check', altaVia: 'check' },
       { id: 10, feature: 'Übertragung von Beleglink und PDF an Datev', netsuite: 'x', altaVia: 'check' },
       { id: 11, feature: 'Integration in DATEV Unternehmen Online', netsuite: 'x', altaVia: 'check' },
       { id: 12, feature: 'Multibook-Unterstützung', netsuite: 'check', altaVia: 'check' },
-      { id: 13, feature: 'Import historischer Daten', netsuite: 'check', altaVia: 'check' }
+      { id: 13, feature: 'Import historischer Daten', netsuite: 'check', altaVia: 'check' },
+      { id: 14, feature: 'Überschreiben von CSV-Dateien', netsuite: 'x', altaVia: 'check' }
     ]
   },
   {
-    name: 'Installation',
+    name: 'Installation / Dokumentation',
     features: [
-      { id: 14, feature: 'Installationszeit', netsuite: '+20 Std.', altaVia: '2 Std.' },
-      { id: 15, feature: 'Nutzung ohne separaten Nutzer-Account/ohne separate Nutzer-Lizenz möglich', netsuite: 'x', altaVia: 'check' }
+      { id: 15, feature: 'Installationszeit', netsuite: '+20 Std.', altaVia: '2 Std.' },
+      { id: 16, feature: 'Nur Bundle-Installation', netsuite: 'x', altaVia: 'check' },
+      { id: 17, feature: 'Nutzung ohne separaten Nutzer-Account/ohne separate Nutzer-Lizenz möglich', netsuite: 'x', altaVia: 'check' }
     ]
   }
 ];
@@ -86,7 +88,7 @@ export default function DatevComparisonTable() {
             color: '#002e64'
           }}
         >
-          Von NetSuite zu DATEV – Wie wir die Brücke schlagen
+          Wie die DATEV Schnittstelle 3.0 für NetSuite die NetSuite-native Lösung ergänzt
         </h2>
 
         {/* Table */}
@@ -117,7 +119,7 @@ export default function DatevComparisonTable() {
                     color: '#ffffff'
                   }}
                 >
-                  NetSuite DATEV Connector
+                  NetSuite DATEV
                 </th>
                 <th
                   className="py-4 px-4 text-center"
@@ -129,7 +131,7 @@ export default function DatevComparisonTable() {
                     color: '#ffffff'
                   }}
                 >
-                  Alta Via DATEV Export für NetSuite
+                  AVA DATEV Schnittstelle 3.0 für NetSuite
                 </th>
               </tr>
             </thead>
