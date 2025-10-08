@@ -171,7 +171,7 @@ export default function ProductSlider({ autoPlaySpeed = 5000 }: ProductSliderPro
               color: '#002e64'
             }}
           >
-            Wir liefern Lösungen
+            Wir liefern Lösungen, mit denen Sie die höchsten Gipfel von NetSuite erreichen
           </h2>
           <p
             className="mx-auto"
@@ -183,7 +183,7 @@ export default function ProductSlider({ autoPlaySpeed = 5000 }: ProductSliderPro
               maxWidth: '800px'
             }}
           >
-            Folgende Zusatzprodukte (Bundles) haben wir auf Basis von NetSuite® entwickelt:
+            Entdecken Sie unsere Anwendungen und machen Sie Ihr NetSuite-System fit für den DACH-Markt:
           </p>
         </div>
 

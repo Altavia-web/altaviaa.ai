@@ -21,10 +21,13 @@ export default function ProductsHero() {
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <h1 className="font-bold mb-6 text-center">
-          Perfekt ausgerüstet.<br />Bis ins Detail.
+          Perfekt ausgerüstet. Bis ins letzte Detail.
         </h1>
-        <p className="mb-8 leading-relaxed opacity-90" style={{fontSize: '1.224rem', lineHeight: '1.75'}}>
-          Mit den von Alta Via entwickelten Apps für NetSuite<br />kommen Sie noch effektiver voran.
+        <h2 className="mb-8 leading-relaxed opacity-90 text-2xl md:text-3xl font-semibold">
+          Die Apps von Alta Via Applications machen NetSuite zum zentralen Werkzeug für Ihre Geschäftsprozesse.
+        </h2>
+        <p className="mb-8 leading-relaxed opacity-90 text-lg md:text-xl">
+          Unsere Lokalisierung für Deutschland und Österreich sowie unsere Schnittstelle für DATEV und BMD oder auch unsere Suite-App "Reisekosten für NetSuite" – alle Lösungen sind schnell einsatzbereit, nahtlos integriert und auf den deutschsprachigen Markt abgestimmt. So sparen Sie Zeit, reduzieren manuellen Aufwand und holen mehr aus Ihrem ERP-System heraus.
         </p>
       </div>
     </section>
