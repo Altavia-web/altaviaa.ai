@@ -320,16 +320,21 @@ export default function LocalizationComparison() {
           </table>
         </div>
 
-        {/* Final Text Section */}
-        <div className="mt-16 max-w-4xl mx-auto text-center">
-          <h3 className="text-2xl lg:text-3xl font-semibold mb-6 leading-tight" style={{ color: 'var(--color-dark-blue)' }}>
+      </div>
+
+      {/* Final Text Section with Gradient Background */}
+      <div
+        className="mt-16 py-16 lg:py-20 px-6"
+        style={{ background: 'var(--gradient-lokalisierung)' }}
+      >
+        <div className="max-w-4xl mx-auto text-center">
+          <h3 className="text-2xl lg:text-3xl font-semibold mb-6 text-white leading-tight">
             Ständig in Bewegung. Stets up to date.
           </h3>
-          <p className="text-lg leading-relaxed" style={{ color: 'var(--color-dark-blue)', opacity: 0.85 }}>
+          <p className="text-lg lg:text-xl text-white leading-relaxed">
             Version 3.0 bringt SuiteTax-Kompatibilität, den Import von Transaktionsdateien aus DATEV nach NetSuite sowie das CSV-Override direkt in NetSuite. Damit entfällt manuelles Nacharbeiten und Sie bleiben flexibel bei Sonderfällen.
           </p>
         </div>
-
       </div>
     </section>
   );
