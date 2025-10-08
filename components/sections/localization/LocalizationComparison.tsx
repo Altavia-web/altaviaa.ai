@@ -321,12 +321,12 @@ export default function LocalizationComparison() {
         </div>
 
         {/* Final Text Section */}
-        <div className="mt-16 max-w-4xl mx-auto">
+        <div className="mt-16 max-w-4xl mx-auto text-center">
           <h3 className="text-2xl lg:text-3xl font-semibold mb-6 leading-tight" style={{ color: 'var(--color-dark-blue)' }}>
             Ständig in Bewegung. Stets up to date.
           </h3>
           <p className="text-lg leading-relaxed" style={{ color: 'var(--color-dark-blue)', opacity: 0.85 }}>
-            Mit der zunehmenden Präsenz von NetSuite auch in Deutschland und den kontinuierlichen Investitionen von Oracle entwickelt sich auch die NetSuite-Standard-Lokalisierung immer weiter. Doch die tägliche Zusammenarbeit mit unseren Kunden und die schnelle Reaktion auf gesetzliche Änderungen stellen sicher, dass unsere Lokalisierung nicht nur stets aktuell, sondern auch relevant und praxiserprobt für Unternehmen in Deutschland bleibt.
+            Version 3.0 bringt SuiteTax-Kompatibilität, den Import von Transaktionsdateien aus DATEV nach NetSuite sowie das CSV-Override direkt in NetSuite. Damit entfällt manuelles Nacharbeiten und Sie bleiben flexibel bei Sonderfällen.
           </p>
         </div>
 
