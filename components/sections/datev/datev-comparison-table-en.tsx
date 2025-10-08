@@ -17,33 +17,33 @@ const categories: Category[] = [
   {
     name: 'Mapping',
     features: [
-      { id: 1, feature: '[English Feature 1 - Text to follow]', netsuite: 'yes', altaVia: 'yes' },
-      { id: 2, feature: '[English Feature 2 - Text to follow]', netsuite: 'yes', altaVia: 'yes (Legacy Tax)' },
-      { id: 3, feature: '[English Feature 3 - Text to follow]', netsuite: 'yes', altaVia: 'yes' },
-      { id: 4, feature: '[English Feature 4 - Text to follow]', netsuite: 'yes', altaVia: 'yes' },
-      { id: 5, feature: '[English Feature 5 - Text to follow]', netsuite: 'yes', altaVia: 'yes' }
+      { id: 1, feature: 'Mapping of NetSuite accounts to DATEV', netsuite: 'yes', altaVia: 'yes' },
+      { id: 2, feature: 'Mapping of tax codes', netsuite: 'yes', altaVia: 'yes (Legacy Tax)' },
+      { id: 3, feature: 'Mapping of automatic accounts', netsuite: 'yes', altaVia: 'yes' },
+      { id: 4, feature: 'Mapping of DATEV - personal account', netsuite: 'yes', altaVia: 'yes' },
+      { id: 5, feature: 'Mapping of cost centers', netsuite: 'yes', altaVia: 'yes' }
     ]
   },
   {
     name: 'Functions',
     features: [
-      { id: 6, feature: '[English Feature 6 - Text to follow]', netsuite: 'yes', altaVia: 'yes' },
-      { id: 7, feature: '[English Feature 7 - Text to follow]', netsuite: 'yes', altaVia: 'yes' },
-      { id: 8, feature: '[English Feature 8 - Text to follow]', netsuite: 'yes', altaVia: 'no' },
-      { id: 9, feature: '[English Feature 9 - Text to follow]', netsuite: 'yes', altaVia: 'yes' },
-      { id: 10, feature: '[English Feature 10 - Text to follow]', netsuite: 'no', altaVia: 'yes' },
-      { id: 11, feature: '[English Feature 11 - Text to follow]', netsuite: 'no', altaVia: 'yes' },
-      { id: 12, feature: '[English Feature 12 - Text to follow]', netsuite: 'yes', altaVia: 'yes' },
-      { id: 13, feature: '[English Feature 13 - Text to follow]', netsuite: 'yes', altaVia: 'yes' },
-      { id: 14, feature: '[English Feature 14 - Text to follow]', netsuite: 'no', altaVia: 'yes' }
+      { id: 6, feature: 'Data transfer: NetSuite->DATEV', netsuite: 'yes', altaVia: 'yes' },
+      { id: 7, feature: 'Data transfer: DATEV->NetSuite', netsuite: 'yes', altaVia: 'yes' },
+      { id: 8, feature: 'Automatic assignment of personal accounts in NetSuite', netsuite: 'yes', altaVia: 'no' },
+      { id: 9, feature: 'API between systems', netsuite: 'yes', altaVia: 'yes' },
+      { id: 10, feature: 'Transfer of document link and PDF to DATEV', netsuite: 'no', altaVia: 'yes' },
+      { id: 11, feature: 'Integration in DATEV Unternehmen Online', netsuite: 'no', altaVia: 'yes' },
+      { id: 12, feature: 'Multibook support', netsuite: 'yes', altaVia: 'yes' },
+      { id: 13, feature: 'Import of historical data', netsuite: 'yes', altaVia: 'yes' },
+      { id: 14, feature: 'Overwriting CSV files', netsuite: 'no', altaVia: 'yes' }
     ]
   },
   {
     name: 'Installation / Documentation',
     features: [
-      { id: 15, feature: '[English Feature 15 - Text to follow]', netsuite: '+20 hrs.', altaVia: '2 hrs.' },
-      { id: 16, feature: '[English Feature 16 - Text to follow]', netsuite: 'no', altaVia: 'yes' },
-      { id: 17, feature: '[English Feature 17 - Text to follow]', netsuite: 'no', altaVia: 'yes' }
+      { id: 15, feature: 'Installation time', netsuite: '+20 hrs.', altaVia: '2 hrs.' },
+      { id: 16, feature: 'Bundle-only installation', netsuite: 'no', altaVia: 'yes' },
+      { id: 17, feature: 'Usage without separate user account/without separate user license possible', netsuite: 'no', altaVia: 'yes' }
     ]
   }
 ];
@@ -88,7 +88,7 @@ export default function DatevComparisonTableEN() {
             color: '#002e64'
           }}
         >
-          [English H2 - Text to follow]
+          How the DATEV Interface 3.0 for NetSuite complements the NetSuite-native solution
         </h2>
 
         {/* Table */}
@@ -107,7 +107,7 @@ export default function DatevComparisonTableEN() {
                     color: '#ffffff'
                   }}
                 >
-                  [English Header 1 - Text to follow]
+                  Feature comparison
                 </th>
                 <th
                   className="py-4 px-4 text-center"
@@ -202,10 +202,10 @@ export default function DatevComparisonTableEN() {
       >
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-2xl lg:text-3xl font-semibold mb-6 text-white leading-tight">
-            [English H3 - Text to follow]
+            Constantly evolving. Always up to date.
           </h3>
           <p className="text-lg lg:text-xl text-white leading-relaxed">
-            [English Version 3.0 Text - Text to follow]
+            Version 3.0 brings SuiteTax compatibility, the import of transaction files from DATEV to NetSuite, and CSV override directly in NetSuite. This eliminates manual rework and keeps you flexible for special cases.
           </p>
         </div>
       </div>

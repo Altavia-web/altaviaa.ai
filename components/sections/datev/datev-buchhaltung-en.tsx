@@ -4,43 +4,43 @@ import Image from 'next/image';
 const features = [
   {
     id: 1,
-    title: '[English Feature 1 Title - Text to follow]',
-    description: '[English Feature 1 Description - Text to follow]'
+    title: 'Data transfer between NetSuite and DATEV',
+    description: 'Master data (e.g., account labels, debtors/creditors) and booking-relevant transactions can be imported and exported between NetSuite and DATEV – version 3.0 closes the loop.'
   },
   {
     id: 2,
-    title: '[English Feature 2 Title - Text to follow]',
-    description: '[English Feature 2 Description - Text to follow]'
+    title: 'SuiteTax compatibility',
+    description: 'The SuiteApp supports both Legacy Tax and SuiteTax, meaning that functions are also available to clients with a SuiteTax setup.'
   },
   {
     id: 3,
-    title: '[English Feature 3 Title - Text to follow]',
-    description: '[English Feature 3 Description - Text to follow]'
+    title: 'Automatic personal account assignment',
+    description: 'Receivables and payables from LuL in NetSuite are posted to the corresponding DATEV personal account.'
   },
   {
     id: 4,
-    title: '[English Feature 4 Title - Text to follow]',
-    description: '[English Feature 4 Description - Text to follow]'
+    title: 'Sales tax posting',
+    description: 'The NetSuite VAT logic is converted into a gross posting for DATEV.'
   },
   {
     id: 5,
-    title: '[English Feature 5 Title - Text to follow]',
-    description: '[English Feature 5 Description - Text to follow]'
+    title: 'Revenue recognition & multibook',
+    description: 'The solution supports revenue recognition and parallel valuations.'
   },
   {
     id: 6,
-    title: '[English Feature 6 Title - Text to follow]',
-    description: '[English Feature 6 Description - Text to follow]'
+    title: 'Reconciliation per transaction',
+    description: 'In NetSuite, you can analyze the corresponding DATEV posting directly for each transaction, which simplifies reconciliation.'
   },
   {
     id: 7,
-    title: '[English Feature 7 Title - Text to follow]',
-    description: '[English Feature 7 Description - Text to follow]'
+    title: 'Document transfer',
+    description: 'Documents can be transferred directly to DATEV Unternehmen online to display document images in DATEV for transaction and archiving purposes.'
   },
   {
     id: 8,
-    title: '[English Feature 8 Title - Text to follow]',
-    description: '[English Feature 8 Description - Text to follow]'
+    title: 'Overwriting CSV files',
+    description: 'CSV files are overwritten directly in NetSuite via the custom record user interface.'
   }
 ];
 
@@ -74,7 +74,7 @@ export default function DatevBuchhaltungEN() {
             color: '#002E64'
           }}
         >
-          [English H2 - Text to follow]
+          What the DATEV Interface 3.0 does for you
         </h2>
 
         {/* Feature Grid */}

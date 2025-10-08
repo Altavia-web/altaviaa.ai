@@ -5,15 +5,15 @@ import React, { useState, useEffect } from 'react';
 const questions = [
   {
     id: 1,
-    text: '[English Question 1 - Text to follow]'
+    text: 'Do you still export postings manually from NetSuite to DATEV—with the risk of errors and rework?'
   },
   {
     id: 2,
-    text: '[English Question 2 - Text to follow]'
+    text: 'Do payments or payroll data from DATEV have to be maintained in NetSuite?'
   },
   {
     id: 3,
-    text: '[English Question 3 - Text to follow]'
+    text: 'Are you missing clean reconciliation for each transaction directly in NetSuite?'
   }
 ];
 

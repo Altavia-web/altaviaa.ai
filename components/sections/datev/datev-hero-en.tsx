@@ -16,10 +16,10 @@ export default function DatevHeroEN() {
           {/* Text Content - Left */}
           <div className="text-left">
             <h1 className="mb-6 text-white">
-              [English H1 - Text to follow]
+              DATEV Interface 3.0 for NetSuite
             </h1>
             <h2 className="text-white">
-              [English H2 - Text to follow]
+              The direct path to accounting with DATEV
             </h2>
           </div>
 

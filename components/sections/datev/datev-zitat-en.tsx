@@ -45,7 +45,7 @@ export default function DatevZitatEN() {
             textAlign: 'center'
           }}
         >
-          [English Quote - Text to follow]
+          The SuiteApp &bdquo;DATEV Interface for NetSuite&ldquo; from Alta Via Application was indispensable for us, as it enabled the export of EXTF batch posting files from NetSuite, which was crucial for our DATEV processes. The Alta Via Application team also provided exceptional support during our critical SKR chart of accounts migration, ensuring a smooth and efficient transition.
         </p>
         {/* Author */}
         <p
@@ -59,7 +59,7 @@ export default function DatevZitatEN() {
             textAlign: 'center'
           }}
         >
-          [English Author - Text to follow]
+          Steven Ratz, Managing Director, Dietz Group
         </p>
       </div>
     </section>
