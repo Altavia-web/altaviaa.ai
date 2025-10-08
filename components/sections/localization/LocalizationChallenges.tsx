@@ -10,15 +10,15 @@ export default function LocalizationChallenges() {
   const slides = [
     {
       icon: "/images/00_ALLGEMEINES/Questionmark/AVA_Questionmark_white.png",
-      heading: "Benötigen Sie ein ordnungsgemäßes Kontenblatt oder eine Summen- und Saldenliste für Audits oder die interne Berichterstattung?"
+      heading: "Sie benötigen ein ordnungsgemäßes Kontenblatt oder eine Summen- und Saldenliste für Audits oder die interne Berichterstattung aus NetSuite?"
     },
     {
       icon: "/images/00_ALLGEMEINES/Questionmark/AVA_Questionmark_white.png",
-      heading: "Benötigen Sie ein ordnungsgemäßes Kontenblatt oder eine Summen- und Saldenliste für Audits oder die interne Berichterstattung?"
+      heading: "Sie fragen sich, wie Sie die deutschen und EU-Mehrwertsteuerverfahren mit NetSuite bewältigen können?"
     },
     {
       icon: "/images/00_ALLGEMEINES/Questionmark/AVA_Questionmark_white.png",
-      heading: "Benötigen Sie ein ordnungsgemäßes Kontenblatt oder eine Summen- und Saldenliste für Audits oder die interne Berichterstattung?"
+      heading: "Sie möchten konforme Dateien für die E-Rechnung erstellen?"
     }
   ];
 
