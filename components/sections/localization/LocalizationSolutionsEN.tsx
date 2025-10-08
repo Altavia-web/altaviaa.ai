@@ -4,40 +4,40 @@ import Image from 'next/image';
 export default function LocalizationSolutionsEN() {
   const features = [
     {
-      title: "[Feature Title 1 - Text to follow]",
-      description: "[Feature Description 1 - Text to follow]"
+      title: "Immutability of postings (GoBD)",
+      description: "Financial transactions are tamper-proof and comply with the legal GoBD requirements for proper electronic accounting in Germany."
     },
     {
-      title: "[Feature Title 2 - Text to follow]",
-      description: "[Feature Description 2 - Text to follow]"
+      title: "HGB-compliant reports",
+      description: "Create balance sheets and profit and loss statements in accordance with German standards. Important financial reports such as account sheets and summary and balance lists are included for audits and internal controls."
     },
     {
-      title: "[Feature Title 3 - Text to follow]",
-      description: "[Feature Description 3 - Text to follow]"
+      title: "Sales tax return via ELSTER integration",
+      description: "Submit sales tax returns directly and automatically to the German tax authorities. This saves time, reduces errors, and ensures compliance with regulations."
     },
     {
-      title: "[Feature Title 4 - Text to follow]",
-      description: "[Feature Description 4 - Text to follow]"
+      title: "xRechnung",
+      description: "Effortlessly create the required xRechnung files from your invoices and credit notes at the touch of a button, thereby complying with the legal e-invoicing requirements in Germany."
     },
     {
-      title: "[Feature Title 5 - Text to follow]",
-      description: "[Feature Description 5 - Text to follow]"
+      title: "VAT recalculation (discount)",
+      description: "Ensure the correct reduction of pro-rata VAT for discount deductions through automatic journal entries and remain compliant with German tax law."
     },
     {
-      title: "[Feature Title 6 - Text to follow]",
-      description: "[Feature Description 6 - Text to follow]"
+      title: "Flexible Tax Date",
+      description: "Record the document date, posting date, and tax point date separately. This enables accurate period allocation and compliance with tax regulations."
     },
     {
-      title: "[Feature Title 7 - Text to follow]",
-      description: "[Feature Description 7 - Text to follow]"
+      title: "VAT ID Check",
+      description: "Optimize cross-border transactions within the EU with our VAT ID verification and ensure a smooth verification process for trading partners' VAT IDs."
     },
     {
-      title: "[Feature Title 8 - Text to follow]",
-      description: "[Feature Description 8 - Text to follow]"
+      title: "EU sales tax",
+      description: "Taxes on sales transactions are checked and corrected if necessary. This closes gaps in the NetSuite standard."
     },
     {
-      title: "[Feature Title 9 - Text to follow]",
-      description: "[Feature Description 9 - Text to follow]"
+      title: "Accruals",
+      description: "Simplify the creation of accruals for unapproved invoices and support smooth monthly, quarterly, or annual closings."
     }
   ];
 
@@ -61,7 +61,7 @@ export default function LocalizationSolutionsEN() {
           className="text-3xl lg:text-4xl font-semibold text-center mb-16 leading-tight mx-auto"
           style={{ color: 'var(--color-dark-blue)', maxWidth: '800px' }}
         >
-          [English Solutions Heading - Text to follow]
+          Conquer German compliance
         </h2>
 
         {/* Features Grid - 3 columns */}

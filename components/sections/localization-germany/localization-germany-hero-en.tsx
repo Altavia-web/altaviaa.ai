@@ -16,7 +16,7 @@ export default function LocalizationGermanyHeroEN() {
           {/* Text Content - Left */}
           <div className="text-left">
             <h1 className="mb-6 text-white">
-              [English Hero Title - Text to follow]
+              Localization for Germany for NetSuite
             </h1>
           </div>
 

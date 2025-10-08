@@ -29,7 +29,7 @@ export default function LocalizationTestimonialEN() {
             margin: '0 auto 2rem'
           }}
         >
-          &ldquo;[English Testimonial Quote - Text to follow]&rdquo;
+          &ldquo;We quickly realized that Netsuite&apos;s standard system, while powerful, was reaching its limits when it came to our German reporting requirements, especially with regard to the German Commercial Code (HGB) and local tax regulations. The reporting functionalities did not fully meet the specific formats and data requirements to ensure compliance in Germany. Alta Via&apos;s localization app delivers the reports required by the tax authorities.&rdquo;
         </blockquote>
 
         {/* Author Information */}
@@ -37,7 +37,7 @@ export default function LocalizationTestimonialEN() {
           className="text-base lg:text-lg font-normal not-italic mb-10 block"
           style={{ color: 'var(--color-dark-blue)', opacity: 0.8 }}
         >
-          [Author Name, Title, Company - Text to follow]
+          Daniela Rey, Senior Financial Accountant, vivenu GmbH
         </cite>
 
         {/* Profile Image Placeholder */}

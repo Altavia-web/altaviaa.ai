@@ -10,15 +10,15 @@ export default function LocalizationChallengesEN() {
   const slides = [
     {
       icon: "/images/00_ALLGEMEINES/Questionmark/AVA_Questionmark_white.png",
-      heading: "[English Challenge Question 1 - Text to follow]"
+      heading: "Do you need a proper account sheet or a trial balance for audits or internal reporting from NetSuite?"
     },
     {
       icon: "/images/00_ALLGEMEINES/Questionmark/AVA_Questionmark_white.png",
-      heading: "[English Challenge Question 2 - Text to follow]"
+      heading: "Are you wondering how to handle German and EU VAT procedures with NetSuite?"
     },
     {
       icon: "/images/00_ALLGEMEINES/Questionmark/AVA_Questionmark_white.png",
-      heading: "[English Challenge Question 3 - Text to follow]"
+      heading: "Would you like to create compliant files for e-invoicing?"
     }
   ];
 

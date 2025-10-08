@@ -13,11 +13,11 @@ export default function LocalizationHeroEN() {
           {/* Left Column - Text Content */}
           <div style={{ color: 'var(--color-dark-blue)' }}>
             <h2 className="text-2xl lg:text-3xl font-semibold mb-6 leading-tight">
-              [English H2 - Text to follow]
+              Optimize NetSuite for the German market – precise, compliant, ready to use
             </h2>
 
             <h3 className="text-lg leading-relaxed">
-              [English H3 - Text to follow]
+              The German business world places special demands on accounting and compliance. NetSuite is the foundation, but only with localization for Germany will your system truly be GoBD and HGB compliant. We add all the features German companies need for audit-proof and efficient financial management.
             </h3>
           </div>
 
