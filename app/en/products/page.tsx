@@ -7,11 +7,11 @@ import ProductsTeaser from '@/components/sections/products/products-teaser';
 import ProductsTestimonial from '@/components/sections/products/products-testimonial';
 
 export const metadata: Metadata = {
-  title: 'Applications',
+  title: 'Products - Alta Via Applications',
   description: 'Discover our NetSuite extensions for the German market',
 };
 
-export default function ApplicationsPage() {
+export default function ProductsPageEN() {
   return (
     <div className="min-h-screen">
       <ProductsHeroEN />
