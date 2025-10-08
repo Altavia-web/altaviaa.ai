@@ -42,7 +42,7 @@ export default function LocalizationTestimonial() {
           className="text-base lg:text-lg font-normal not-italic mb-10 block"
           style={{ color: 'var(--color-dark-blue)', opacity: 0.8 }}
         >
-          Daniela Rey, Senior Financial Accountant, vivenu
+          Daniela Rey, Senior Financial Accountant, vivenu GmbH
         </cite>
 
         {/* Profile Image Placeholder */}
