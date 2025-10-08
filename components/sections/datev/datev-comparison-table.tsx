@@ -17,33 +17,33 @@ const categories: Category[] = [
   {
     name: 'Mapping',
     features: [
-      { id: 1, feature: 'Zuordnung von NetSuite-Konten zu DATEV', netsuite: 'check', altaVia: 'check' },
-      { id: 2, feature: 'Zuordnung von Steuerkennzeichen', netsuite: 'check', altaVia: 'ja (Legacy Tax)' },
-      { id: 3, feature: 'Zuordnung von automatischen Konten', netsuite: 'check', altaVia: 'check' },
-      { id: 4, feature: 'Zuordnung von DATEV - Personenkonto', netsuite: 'check', altaVia: 'check' },
-      { id: 5, feature: 'Zuordnung von Kostenstellen', netsuite: 'check', altaVia: 'check' }
+      { id: 1, feature: 'Zuordnung von NetSuite-Konten zu DATEV', netsuite: 'ja', altaVia: 'ja' },
+      { id: 2, feature: 'Zuordnung von Steuerkennzeichen', netsuite: 'ja', altaVia: 'ja (Legacy Tax)' },
+      { id: 3, feature: 'Zuordnung von automatischen Konten', netsuite: 'ja', altaVia: 'ja' },
+      { id: 4, feature: 'Zuordnung von DATEV - Personenkonto', netsuite: 'ja', altaVia: 'ja' },
+      { id: 5, feature: 'Zuordnung von Kostenstellen', netsuite: 'ja', altaVia: 'ja' }
     ]
   },
   {
     name: 'Funktionen',
     features: [
-      { id: 6, feature: 'Datentransfer: NetSuite->DATEV', netsuite: 'check', altaVia: 'check' },
-      { id: 7, feature: 'Datentransfer: DATEV->NetSuite', netsuite: 'check', altaVia: 'check' },
-      { id: 8, feature: 'Automatische Zuweisung von Personenkontos in NetSuite', netsuite: 'check', altaVia: 'x' },
-      { id: 9, feature: 'API zwischen den Systemen', netsuite: 'check', altaVia: 'check' },
-      { id: 10, feature: 'Übertragung von Beleglink und PDF an Datev', netsuite: 'x', altaVia: 'check' },
-      { id: 11, feature: 'Integration in DATEV Unternehmen Online', netsuite: 'x', altaVia: 'check' },
-      { id: 12, feature: 'Multibook-Unterstützung', netsuite: 'check', altaVia: 'check' },
-      { id: 13, feature: 'Import historischer Daten', netsuite: 'check', altaVia: 'check' },
-      { id: 14, feature: 'Überschreiben von CSV-Dateien', netsuite: 'x', altaVia: 'check' }
+      { id: 6, feature: 'Datentransfer: NetSuite->DATEV', netsuite: 'ja', altaVia: 'ja' },
+      { id: 7, feature: 'Datentransfer: DATEV->NetSuite', netsuite: 'ja', altaVia: 'ja' },
+      { id: 8, feature: 'Automatische Zuweisung von Personenkontos in NetSuite', netsuite: 'ja', altaVia: 'nein' },
+      { id: 9, feature: 'API zwischen den Systemen', netsuite: 'ja', altaVia: 'ja' },
+      { id: 10, feature: 'Übertragung von Beleglink und PDF an Datev', netsuite: 'nein', altaVia: 'ja' },
+      { id: 11, feature: 'Integration in DATEV Unternehmen Online', netsuite: 'nein', altaVia: 'ja' },
+      { id: 12, feature: 'Multibook-Unterstützung', netsuite: 'ja', altaVia: 'ja' },
+      { id: 13, feature: 'Import historischer Daten', netsuite: 'ja', altaVia: 'ja' },
+      { id: 14, feature: 'Überschreiben von CSV-Dateien', netsuite: 'nein', altaVia: 'ja' }
     ]
   },
   {
     name: 'Installation / Dokumentation',
     features: [
       { id: 15, feature: 'Installationszeit', netsuite: '+20 Std.', altaVia: '2 Std.' },
-      { id: 16, feature: 'Nur Bundle-Installation', netsuite: 'x', altaVia: 'check' },
-      { id: 17, feature: 'Nutzung ohne separaten Nutzer-Account/ohne separate Nutzer-Lizenz möglich', netsuite: 'x', altaVia: 'check' }
+      { id: 16, feature: 'Nur Bundle-Installation', netsuite: 'nein', altaVia: 'ja' },
+      { id: 17, feature: 'Nutzung ohne separaten Nutzer-Account/ohne separate Nutzer-Lizenz möglich', netsuite: 'nein', altaVia: 'ja' }
     ]
   }
 ];
