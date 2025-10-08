@@ -1,13 +1,57 @@
 "use client";
 
 import React, { useState } from 'react';
-import { CheckCircle2, XCircle, ChevronDown } from 'lucide-react';
+import { CheckCircle2, ChevronDown } from 'lucide-react';
+
+interface FeatureRow {
+  id: number;
+  feature: string;
+  netsuite: string;
+  altaVia: string;
+}
+
+interface Category {
+  name: string;
+  features: FeatureRow[];
+}
+
+const categories: Category[] = [
+  {
+    name: 'Setup',
+    features: [
+      { id: 1, feature: 'Unterstützung bei der Ersteinrichtung', netsuite: 'nein', altaVia: 'ja' },
+      { id: 2, feature: 'Individuelle Einstellungen und Dashboards für jede Tochtergesellschaft', netsuite: 'nein', altaVia: 'ja' }
+    ]
+  },
+  {
+    name: 'Funktionen',
+    features: [
+      { id: 3, feature: 'German Reporting Requirements/Deutsche Berichtsanforderungen', netsuite: 'begrenzt', altaVia: 'ja' },
+      { id: 4, feature: 'Kontenblatt', netsuite: 'begrenzt', altaVia: 'ja' },
+      { id: 5, feature: 'Mehrwertsteuerrückerstattung', netsuite: 'begrenzt', altaVia: 'ja' },
+      { id: 6, feature: 'Verprobung USt-ID', netsuite: 'begrenzt', altaVia: 'ja' },
+      { id: 7, feature: 'Allgemeine EU-Steuer', netsuite: 'nein', altaVia: 'ja' },
+      { id: 8, feature: 'PDF Texte/Steuertexte', netsuite: 'nein', altaVia: 'ja' },
+      { id: 9, feature: 'Steuerstichtag', netsuite: 'nein', altaVia: 'ja' },
+      { id: 10, feature: 'xRechnung', netsuite: 'nein', altaVia: 'ja' },
+      { id: 11, feature: 'Unveränderlichkeit von Buchungen', netsuite: 'begrenzt', altaVia: 'ja' },
+      { id: 12, feature: 'Rechnungsabgrenzungsposten', netsuite: 'nein', altaVia: 'ja' },
+      { id: 13, feature: 'Elster Integration', netsuite: 'begrenzt', altaVia: 'ja' }
+    ]
+  },
+  {
+    name: 'Installation / Dokumentation',
+    features: [
+      { id: 14, feature: 'Direkte Installation über SuiteBundle', netsuite: 'ja', altaVia: 'ja' }
+    ]
+  }
+];
 
 export default function LocalizationComparison() {
   const [expandedCategories, setExpandedCategories] = useState({
     setup: true,
-    funktionen: false,
-    installation: false
+    funktionen: true,
+    installation: true
   });
 
   const toggleCategory = (category: keyof typeof expandedCategories) => {
@@ -22,6 +66,22 @@ export default function LocalizationComparison() {
       e.preventDefault();
       toggleCategory(category);
     }
+  };
+
+  const getCategoryKey = (categoryName: string): keyof typeof expandedCategories => {
+    if (categoryName === 'Setup') return 'setup';
+    if (categoryName === 'Funktionen') return 'funktionen';
+    return 'installation';
+  };
+
+  const renderCell = (value: string) => {
+    return (
+      <div className="flex justify-center">
+        <span className="text-base" style={{ color: 'var(--color-dark-blue)' }}>
+          {value}
+        </span>
+      </div>
+    );
   };
 
   return (
@@ -60,262 +120,53 @@ export default function LocalizationComparison() {
             </thead>
 
             <tbody>
+              {categories.map((category) => {
+                const categoryKey = getCategoryKey(category.name);
+                return (
+                  <React.Fragment key={category.name}>
+                    {/* Category Header */}
+                    <tr>
+                      <td colSpan={3} className="p-0">
+                        <div
+                          role="button"
+                          tabIndex={0}
+                          aria-expanded={expandedCategories[categoryKey]}
+                          onClick={() => toggleCategory(categoryKey)}
+                          onKeyDown={(e) => handleKeyDown(e, categoryKey)}
+                          className="flex items-center gap-3 py-4 px-6 cursor-pointer transition-colors"
+                          style={{
+                            backgroundColor: '#f0f0f0',
+                            color: 'var(--color-dark-blue)',
+                            borderTop: '2px solid var(--color-sky-blue)'
+                          }}
+                        >
+                          <CheckCircle2 size={20} style={{ color: 'var(--color-mid-blue)' }} />
+                          <span className="font-semibold text-base lg:text-lg">{category.name}</span>
+                          <ChevronDown
+                            size={20}
+                            className={`ml-auto transition-transform ${expandedCategories[categoryKey] ? 'rotate-180' : ''}`}
+                          />
+                        </div>
+                      </td>
+                    </tr>
 
-              {/* CATEGORY 1: SETUP */}
-              <tr>
-                <td colSpan={3} className="p-0">
-                  <div
-                    role="button"
-                    tabIndex={0}
-                    aria-expanded={expandedCategories.setup}
-                    onClick={() => toggleCategory('setup')}
-                    onKeyDown={(e) => handleKeyDown(e, 'setup')}
-                    className="flex items-center gap-3 py-4 px-6 cursor-pointer transition-colors"
-                    style={{
-                      backgroundColor: '#f0f0f0',
-                      color: 'var(--color-dark-blue)',
-                      borderTop: '2px solid var(--color-sky-blue)'
-                    }}
-                  >
-                    <CheckCircle2 size={20} style={{ color: 'var(--color-mid-blue)' }} />
-                    <span className="font-semibold text-base lg:text-lg">Setup</span>
-                    <ChevronDown
-                      size={20}
-                      className={`ml-auto transition-transform ${expandedCategories.setup ? 'rotate-180' : ''}`}
-                    />
-                  </div>
-                </td>
-              </tr>
-
-              {expandedCategories.setup && (
-                <>
-                  <tr style={{ backgroundColor: '#fafafa' }}>
-                    <td className="py-4 px-6 text-base" style={{ color: 'var(--color-dark-blue)' }}>
-                      Unterstützung bei der Ersteinrichtung
-                    </td>
-                    <td className="py-4 px-6 text-center">
-                      <XCircle size={24} className="inline-block text-red-500" />
-                    </td>
-                    <td className="py-4 px-6 text-center">
-                      <CheckCircle2 size={24} className="inline-block" style={{ color: 'var(--color-mid-blue)' }} />
-                    </td>
-                  </tr>
-
-                  <tr style={{ backgroundColor: '#ffffff' }}>
-                    <td className="py-4 px-6 text-base" style={{ color: 'var(--color-dark-blue)' }}>
-                      Individuelle Einstellungen und Dashboards für jede Tochtergesellschaft
-                    </td>
-                    <td className="py-4 px-6 text-center">
-                      <XCircle size={24} className="inline-block text-red-500" />
-                    </td>
-                    <td className="py-4 px-6 text-center">
-                      <CheckCircle2 size={24} className="inline-block" style={{ color: 'var(--color-mid-blue)' }} />
-                    </td>
-                  </tr>
-                </>
-              )}
-
-              {/* CATEGORY 2: FUNKTIONEN */}
-              <tr>
-                <td colSpan={3} className="p-0">
-                  <div
-                    role="button"
-                    tabIndex={0}
-                    aria-expanded={expandedCategories.funktionen}
-                    onClick={() => toggleCategory('funktionen')}
-                    onKeyDown={(e) => handleKeyDown(e, 'funktionen')}
-                    className="flex items-center gap-3 py-4 px-6 cursor-pointer transition-colors"
-                    style={{
-                      backgroundColor: '#f0f0f0',
-                      color: 'var(--color-dark-blue)',
-                      borderTop: '2px solid var(--color-sky-blue)'
-                    }}
-                  >
-                    <CheckCircle2 size={20} style={{ color: 'var(--color-mid-blue)' }} />
-                    <span className="font-semibold text-base lg:text-lg">Funktionen</span>
-                    <ChevronDown
-                      size={20}
-                      className={`ml-auto transition-transform ${expandedCategories.funktionen ? 'rotate-180' : ''}`}
-                    />
-                  </div>
-                </td>
-              </tr>
-
-              {expandedCategories.funktionen && (
-                <>
-                  <tr style={{ backgroundColor: '#fafafa' }}>
-                    <td className="py-4 px-6 text-base" style={{ color: 'var(--color-dark-blue)' }}>
-                      German Reporting Requirements/Deutsche Berichtsanforderungen
-                    </td>
-                    <td className="py-4 px-6 text-center text-sm" style={{ color: 'var(--color-dark-blue)' }}>
-                      begrenzt
-                    </td>
-                    <td className="py-4 px-6 text-center">
-                      <CheckCircle2 size={24} className="inline-block" style={{ color: 'var(--color-mid-blue)' }} />
-                    </td>
-                  </tr>
-
-                  <tr style={{ backgroundColor: '#ffffff' }}>
-                    <td className="py-4 px-6 text-base" style={{ color: 'var(--color-dark-blue)' }}>
-                      Kontenblatt
-                    </td>
-                    <td className="py-4 px-6 text-center text-sm" style={{ color: 'var(--color-dark-blue)' }}>
-                      begrenzt
-                    </td>
-                    <td className="py-4 px-6 text-center">
-                      <CheckCircle2 size={24} className="inline-block" style={{ color: 'var(--color-mid-blue)' }} />
-                    </td>
-                  </tr>
-
-                  <tr style={{ backgroundColor: '#fafafa' }}>
-                    <td className="py-4 px-6 text-base" style={{ color: 'var(--color-dark-blue)' }}>
-                      Mehrwertsteuerrückerstattung
-                    </td>
-                    <td className="py-4 px-6 text-center text-sm" style={{ color: 'var(--color-dark-blue)' }}>
-                      begrenzt
-                    </td>
-                    <td className="py-4 px-6 text-center">
-                      <CheckCircle2 size={24} className="inline-block" style={{ color: 'var(--color-mid-blue)' }} />
-                    </td>
-                  </tr>
-
-                  <tr style={{ backgroundColor: '#ffffff' }}>
-                    <td className="py-4 px-6 text-base" style={{ color: 'var(--color-dark-blue)' }}>
-                      Verprobung USt-ID
-                    </td>
-                    <td className="py-4 px-6 text-center text-sm" style={{ color: 'var(--color-dark-blue)' }}>
-                      begrenzt
-                    </td>
-                    <td className="py-4 px-6 text-center">
-                      <CheckCircle2 size={24} className="inline-block" style={{ color: 'var(--color-mid-blue)' }} />
-                    </td>
-                  </tr>
-
-                  <tr style={{ backgroundColor: '#fafafa' }}>
-                    <td className="py-4 px-6 text-base" style={{ color: 'var(--color-dark-blue)' }}>
-                      Allgemeine EU-Steuer
-                    </td>
-                    <td className="py-4 px-6 text-center">
-                      <XCircle size={24} className="inline-block text-red-500" />
-                    </td>
-                    <td className="py-4 px-6 text-center">
-                      <CheckCircle2 size={24} className="inline-block" style={{ color: 'var(--color-mid-blue)' }} />
-                    </td>
-                  </tr>
-
-                  <tr style={{ backgroundColor: '#ffffff' }}>
-                    <td className="py-4 px-6 text-base" style={{ color: 'var(--color-dark-blue)' }}>
-                      PDF Texte/Steuertexte
-                    </td>
-                    <td className="py-4 px-6 text-center">
-                      <XCircle size={24} className="inline-block text-red-500" />
-                    </td>
-                    <td className="py-4 px-6 text-center">
-                      <CheckCircle2 size={24} className="inline-block" style={{ color: 'var(--color-mid-blue)' }} />
-                    </td>
-                  </tr>
-
-                  <tr style={{ backgroundColor: '#fafafa' }}>
-                    <td className="py-4 px-6 text-base" style={{ color: 'var(--color-dark-blue)' }}>
-                      Steuerstichtag
-                    </td>
-                    <td className="py-4 px-6 text-center">
-                      <XCircle size={24} className="inline-block text-red-500" />
-                    </td>
-                    <td className="py-4 px-6 text-center">
-                      <CheckCircle2 size={24} className="inline-block" style={{ color: 'var(--color-mid-blue)' }} />
-                    </td>
-                  </tr>
-
-                  <tr style={{ backgroundColor: '#ffffff' }}>
-                    <td className="py-4 px-6 text-base" style={{ color: 'var(--color-dark-blue)' }}>
-                      xRechnung
-                    </td>
-                    <td className="py-4 px-6 text-center">
-                      <XCircle size={24} className="inline-block text-red-500" />
-                    </td>
-                    <td className="py-4 px-6 text-center">
-                      <CheckCircle2 size={24} className="inline-block" style={{ color: 'var(--color-mid-blue)' }} />
-                    </td>
-                  </tr>
-
-                  <tr style={{ backgroundColor: '#fafafa' }}>
-                    <td className="py-4 px-6 text-base" style={{ color: 'var(--color-dark-blue)' }}>
-                      Unveränderlichkeit von Buchungen
-                    </td>
-                    <td className="py-4 px-6 text-center text-sm" style={{ color: 'var(--color-dark-blue)' }}>
-                      begrenzt
-                    </td>
-                    <td className="py-4 px-6 text-center">
-                      <CheckCircle2 size={24} className="inline-block" style={{ color: 'var(--color-mid-blue)' }} />
-                    </td>
-                  </tr>
-
-                  <tr style={{ backgroundColor: '#ffffff' }}>
-                    <td className="py-4 px-6 text-base" style={{ color: 'var(--color-dark-blue)' }}>
-                      Rechnungsabgrenzungsposten
-                    </td>
-                    <td className="py-4 px-6 text-center">
-                      <XCircle size={24} className="inline-block text-red-500" />
-                    </td>
-                    <td className="py-4 px-6 text-center">
-                      <CheckCircle2 size={24} className="inline-block" style={{ color: 'var(--color-mid-blue)' }} />
-                    </td>
-                  </tr>
-
-                  <tr style={{ backgroundColor: '#fafafa' }}>
-                    <td className="py-4 px-6 text-base" style={{ color: 'var(--color-dark-blue)' }}>
-                      Elster Integration
-                    </td>
-                    <td className="py-4 px-6 text-center text-sm" style={{ color: 'var(--color-dark-blue)' }}>
-                      begrenzt
-                    </td>
-                    <td className="py-4 px-6 text-center">
-                      <CheckCircle2 size={24} className="inline-block" style={{ color: 'var(--color-mid-blue)' }} />
-                    </td>
-                  </tr>
-                </>
-              )}
-
-              {/* CATEGORY 3: INSTALLATION / DOKUMENTATION */}
-              <tr>
-                <td colSpan={3} className="p-0">
-                  <div
-                    role="button"
-                    tabIndex={0}
-                    aria-expanded={expandedCategories.installation}
-                    onClick={() => toggleCategory('installation')}
-                    onKeyDown={(e) => handleKeyDown(e, 'installation')}
-                    className="flex items-center gap-3 py-4 px-6 cursor-pointer transition-colors"
-                    style={{
-                      backgroundColor: '#f0f0f0',
-                      color: 'var(--color-dark-blue)',
-                      borderTop: '2px solid var(--color-sky-blue)'
-                    }}
-                  >
-                    <CheckCircle2 size={20} style={{ color: 'var(--color-mid-blue)' }} />
-                    <span className="font-semibold text-base lg:text-lg">Installation / Dokumentation</span>
-                    <ChevronDown
-                      size={20}
-                      className={`ml-auto transition-transform ${expandedCategories.installation ? 'rotate-180' : ''}`}
-                    />
-                  </div>
-                </td>
-              </tr>
-
-              {expandedCategories.installation && (
-                <tr style={{ backgroundColor: '#fafafa' }}>
-                  <td className="py-4 px-6 text-base" style={{ color: 'var(--color-dark-blue)' }}>
-                    Direkte Installation über SuiteBundle
-                  </td>
-                  <td className="py-4 px-6 text-center">
-                    <CheckCircle2 size={24} className="inline-block" style={{ color: 'var(--color-mid-blue)' }} />
-                  </td>
-                  <td className="py-4 px-6 text-center">
-                    <CheckCircle2 size={24} className="inline-block" style={{ color: 'var(--color-mid-blue)' }} />
-                  </td>
-                </tr>
-              )}
+                    {/* Feature Rows */}
+                    {expandedCategories[categoryKey] && category.features.map((feature, index) => (
+                      <tr key={feature.id} style={{ backgroundColor: index % 2 === 0 ? '#fafafa' : '#ffffff' }}>
+                        <td className="py-4 px-6 text-base" style={{ color: 'var(--color-dark-blue)' }}>
+                          {feature.feature}
+                        </td>
+                        <td className="py-4 px-6 text-center">
+                          {renderCell(feature.netsuite)}
+                        </td>
+                        <td className="py-4 px-6 text-center">
+                          {renderCell(feature.altaVia)}
+                        </td>
+                      </tr>
+                    ))}
+                  </React.Fragment>
+                );
+              })}
 
             </tbody>
           </table>
