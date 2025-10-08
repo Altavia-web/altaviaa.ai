@@ -1,4 +1,10 @@
+import React from 'react';
 import type { Metadata } from 'next';
+import Footer from '@/components/Footer';
+import ProductsHeroEN from '@/components/sections/products/products-hero-en';
+import ProductSliderEN from '@/components/ProductSlider/ProductSliderEN';
+import ProductsTeaser from '@/components/sections/products/products-teaser';
+import ProductsTestimonial from '@/components/sections/products/products-testimonial';
 
 export const metadata: Metadata = {
   title: 'Applications',
@@ -7,16 +13,12 @@ export const metadata: Metadata = {
 
 export default function ApplicationsPage() {
   return (
-    <div className="min-h-screen bg-white py-16 px-6">
-      <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl lg:text-5xl font-bold mb-8 text-center" style={{ color: '#002e64' }}>
-          Our NetSuite Applications
-        </h1>
-        <p className="text-lg leading-relaxed text-center max-w-3xl mx-auto mb-12">
-          Explore our suite of NetSuite extensions designed specifically for the German market.
-        </p>
-        {/* TODO: Add product grid/list here */}
-      </div>
+    <div className="min-h-screen">
+      <ProductsHeroEN />
+      <ProductSliderEN />
+      <ProductsTeaser />
+      <ProductsTestimonial />
+      <Footer />
     </div>
   );
 }
