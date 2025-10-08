@@ -4,24 +4,32 @@ import Image from 'next/image';
 export default function DunningSolutions() {
   const features = [
     {
-      title: "Lorem ipsum dolor",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+      title: "Schnellstart in 60 Minuten möglich",
+      description: "Nach der Installation wählen Sie nur Filiale und Bankdaten – schon ist das Mahnwesen einsatzbereit. Je nach Umfang kann das System schon in 60 Minuten startklar sein."
     },
     {
-      title: "Consectetur adipiscing",
-      description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex."
+      title: "Individuelle Mahnprozesse",
+      description: "Beliebig viele Mahnstufen, pro Filiale konfigurierbar – flexibel an Ihre Anforderungen angepasst."
     },
     {
-      title: "Sed do eiusmod",
-      description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat."
+      title: "Finanzielle Präzision",
+      description: "Mahngebühren und Verzugszinsen werden automatisch berechnet und verbucht."
     },
     {
-      title: "Tempor incididunt",
-      description: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit."
+      title: "Standardisierte Vorlagen",
+      description: "Jede Mahnstufe nutzt vordefinierte Templates – für konsistente und professionelle Schreiben."
     },
     {
-      title: "Ullamco laboris",
-      description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque."
+      title: "Zentrale Steuerung und Überblick",
+      description: "Alle aktuellen und vergangenen Mahnläufe im Blick – von offenen Posten bis zu abgeschlossenen Vorgängen, ergänzt durch flexible Auswertungen und Reporting."
+    },
+    {
+      title: "Automatisierte Kommunikation",
+      description: "Mahnungen werden auf Wunsch automatisch per E-Mail verschickt – mit angehängten Rechnungen und Benachrichtigung relevanter Teams."
+    },
+    {
+      title: "Nahtlose NetSuite-Integration",
+      description: "Der gesamte Prozess läuft innerhalb von NetSuite – ohne externe Tools oder manuelle Zwischenschritte."
     }
   ];
 
@@ -45,32 +53,12 @@ export default function DunningSolutions() {
           className="text-3xl lg:text-4xl font-semibold text-center mb-16 leading-tight mx-auto"
           style={{ color: 'var(--color-dark-blue)', maxWidth: '800px' }}
         >
-          Lorem ipsum dolor sit amet consectetur
+          Mahnungen automatisiert und im Griff
         </h2>
 
         {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-12 gap-y-12 mb-12">
-          {features.slice(0, 2).map((feature, index) => (
-            <div key={index} className="text-left">
-              <h3
-                className="text-xl lg:text-2xl font-semibold mb-3"
-                style={{ color: 'var(--color-dark-blue)' }}
-              >
-                {feature.title}
-              </h3>
-              <p
-                className="text-lg leading-relaxed"
-                style={{ color: 'var(--color-dark-blue)', opacity: 0.85 }}
-              >
-                {feature.description}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        {/* Second row - 3 columns */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-12">
-          {features.slice(2).map((feature, index) => (
+          {features.map((feature, index) => (
             <div key={index} className="text-left">
               <h3
                 className="text-xl lg:text-2xl font-semibold mb-3"

@@ -13,14 +13,8 @@ export default function DunningHero() {
           {/* Left Column - Text Content */}
           <div style={{ color: 'var(--color-dark-blue)' }}>
             <h3 className="text-2xl lg:text-3xl font-semibold mb-6 leading-tight">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+              Zeit ist Geld: Mit Mahnwesen für NetSuite von Alta Via Applications automatisieren Sie Ihr Forderungsmanagement und verhindern Zahlungsausfälle. Mit Version 4.0 ist der Einstieg so einfach wie nie: In nur 60 Minuten ist das Mahnwesen startklar – ohne komplexe Einrichtung. Sie wählen die Filiale, hinterlegen die Bankdaten, und schon laufen Mahnungen automatisiert, transparent und zuverlässig direkt aus Ihrem ERP-System. So sparen Sie wertvolle Zeit, entlasten Ihr Team und sichern dauerhaft Ihre Liquidität.
             </h3>
-
-            <p className="text-lg leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-            </p>
           </div>
 
           {/* Right Column - Product Image */}

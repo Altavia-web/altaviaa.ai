@@ -10,15 +10,15 @@ export default function DunningChallenges() {
   const slides = [
     {
       icon: "/images/00_ALLGEMEINES/Questionmark/AVA_Questionmark_white.png",
-      heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore?"
+      heading: "Wie behalten Sie den Überblick über offene Rechnungen und Mahnstufen – ohne manuellen Aufwand?"
     },
     {
       icon: "/images/00_ALLGEMEINES/Questionmark/AVA_Questionmark_white.png",
-      heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore?"
+      heading: "Möchten Sie Ihre Liquidität sichern, indem Mahnungen schneller und automatisch verschickt werden?"
     },
     {
       icon: "/images/00_ALLGEMEINES/Questionmark/AVA_Questionmark_white.png",
-      heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore?"
+      heading: "Wünschen Sie sich eine Lösung, die in NetSuite sofort einsatzbereit ist – ohne tagelange Einrichtung?"
     }
   ];
 

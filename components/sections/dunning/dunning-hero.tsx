@@ -19,7 +19,7 @@ export default function DunningHero() {
               Mahnwesen für NetSuite
             </h1>
             <h2 className="text-white">
-              NetSuite automatisierte Mahnungen für Forderungen
+              Mahnungen leicht gemacht – automatisiert, transparent, zuverlässig
             </h2>
           </div>
 
