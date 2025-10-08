@@ -26,7 +26,7 @@ export default function DatevSchnittstelleEN() {
                 color: '#002E64'
               }}
             >
-              DATEV eG's accounting software is the standard for tax advisors and auditors in Germany. With the DATEV-certified SuiteApp "Interface DATEV for NetSuite," you can easily transfer all accounting data from your NetSuite ERP system to DATEV for further processing or closing.
+              DATEV eG&apos;s accounting software is the standard for tax advisors and auditors in Germany. With the DATEV-certified SuiteApp &ldquo;Interface DATEV for NetSuite,&rdquo; you can easily transfer all accounting data from your NetSuite ERP system to DATEV for further processing or closing.
             </h3>
           </div>
 

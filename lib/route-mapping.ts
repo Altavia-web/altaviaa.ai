@@ -35,7 +35,7 @@ export function getAlternateUrl(currentPath: string, targetLocale: Locale): stri
     : currentPath;
 
   // Helper function to search through nested route objects
-  const findRoute = (obj: any): string | null => {
+  const findRoute = (obj: Record<string, unknown>): string | null => {
     for (const key in obj) {
       const value = obj[key];
       if (typeof value === 'object' && 'de' in value && 'en' in value) {
@@ -68,7 +68,7 @@ export function getRouteMapping(currentPath: string): { de: string; en: string }
     ? currentPath.slice(0, -1)
     : currentPath;
 
-  const findRoute = (obj: any): { de: string; en: string } | null => {
+  const findRoute = (obj: Record<string, unknown>): { de: string; en: string } | null => {
     for (const key in obj) {
       const value = obj[key];
       if (typeof value === 'object' && 'de' in value && 'en' in value) {
@@ -94,7 +94,7 @@ export function getRouteMapping(currentPath: string): { de: string; en: string }
 export function isLocalizedRoute(path: string): boolean {
   const cleanPath = path.endsWith('/') && path !== '/' ? path.slice(0, -1) : path;
 
-  const checkRoute = (obj: any): boolean => {
+  const checkRoute = (obj: Record<string, unknown>): boolean => {
     for (const key in obj) {
       const value = obj[key];
       if (typeof value === 'object' && 'de' in value && 'en' in value) {

@@ -26,7 +26,7 @@ export default function DatevSchnittstelle() {
                 color: '#002E64'
               }}
             >
-              Die Buchhaltungssoftware der DATEV eG ist in Deutschland der Standard bei Steuerberatern und Wirtschaftsprüfern. Mit der von DATEV zertifizierten SuiteApp „Schnittstelle DATEV für NetSuite" können Sie auf einfache Weise sämtliche Buchungsdaten aus Ihrem NetSuite-ERP-System zur Weiterverarbeitung bzw. zum Buchungsabschluss nach DATEV überführen.
+              Die Buchhaltungssoftware der DATEV eG ist in Deutschland der Standard bei Steuerberatern und Wirtschaftsprüfern. Mit der von DATEV zertifizierten SuiteApp &bdquo;Schnittstelle DATEV für NetSuite&ldquo; können Sie auf einfache Weise sämtliche Buchungsdaten aus Ihrem NetSuite-ERP-System zur Weiterverarbeitung bzw. zum Buchungsabschluss nach DATEV überführen.
             </h3>
           </div>
 

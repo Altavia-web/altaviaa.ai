@@ -27,7 +27,7 @@ export default function ProductsHero() {
           Die Apps von Alta Via Applications machen NetSuite zum zentralen Werkzeug für Ihre Geschäftsprozesse.
         </h2>
         <p className="mb-8 leading-relaxed opacity-90 text-lg md:text-xl">
-          Unsere Lokalisierung für Deutschland und Österreich sowie unsere Schnittstelle für DATEV und BMD oder auch unsere Suite-App "Reisekosten für NetSuite" – alle Lösungen sind schnell einsatzbereit, nahtlos integriert und auf den deutschsprachigen Markt abgestimmt. So sparen Sie Zeit, reduzieren manuellen Aufwand und holen mehr aus Ihrem ERP-System heraus.
+          Unsere Lokalisierung für Deutschland und Österreich sowie unsere Schnittstelle für DATEV und BMD oder auch unsere Suite-App &bdquo;Reisekosten für NetSuite&ldquo; – alle Lösungen sind schnell einsatzbereit, nahtlos integriert und auf den deutschsprachigen Markt abgestimmt. So sparen Sie Zeit, reduzieren manuellen Aufwand und holen mehr aus Ihrem ERP-System heraus.
         </p>
       </div>
     </section>
