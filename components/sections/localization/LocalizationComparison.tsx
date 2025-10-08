@@ -25,19 +25,20 @@ export default function LocalizationComparison() {
   };
 
   return (
-    <section className="py-20 lg:py-24 px-8 lg:px-12 bg-white">
-      <div className="max-w-7xl mx-auto">
+    <section className="bg-white">
+      <div className="py-20 lg:py-24 px-8 lg:px-12">
+        <div className="max-w-7xl mx-auto">
 
-        {/* Main Heading */}
-        <h2
-          className="text-3xl lg:text-4xl font-semibold text-center mb-12 leading-tight"
-          style={{ color: 'var(--color-dark-blue)' }}
-        >
-          Wie Lokalisierung Deutschland für NetSuite die NetSuite-native Lösung ergänzt
-        </h2>
+          {/* Main Heading */}
+          <h2
+            className="text-3xl lg:text-4xl font-semibold text-center mb-12 leading-tight"
+            style={{ color: 'var(--color-dark-blue)' }}
+          >
+            Wie Lokalisierung Deutschland für NetSuite die NetSuite-native Lösung ergänzt
+          </h2>
 
-        {/* Comparison Table */}
-        <div className="overflow-x-auto shadow-lg rounded-lg">
+          {/* Comparison Table */}
+          <div className="overflow-x-auto shadow-lg rounded-lg">
           <table className="w-full border-collapse">
 
             {/* Sticky Header */}
@@ -320,11 +321,12 @@ export default function LocalizationComparison() {
           </table>
         </div>
 
+        </div>
       </div>
 
       {/* Final Text Section with Gradient Background */}
       <div
-        className="mt-16 py-16 lg:py-20 px-6"
+        className="w-full py-16 lg:py-20 px-6"
         style={{ background: 'var(--gradient-lokalisierung)' }}
       >
         <div className="max-w-4xl mx-auto text-center">
