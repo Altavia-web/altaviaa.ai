@@ -38,14 +38,15 @@ export function getAlternateUrl(currentPath: string, targetLocale: Locale): stri
   const findRoute = (obj: Record<string, unknown>): string | null => {
     for (const key in obj) {
       const value = obj[key];
-      if (typeof value === 'object' && 'de' in value && 'en' in value) {
+      if (typeof value === 'object' && value !== null && 'de' in value && 'en' in value) {
         // Check if current path matches either language
-        if (value.de === path || value.en === path) {
-          return value[targetLocale];
+        const route = value as { de: string; en: string };
+        if (route.de === path || route.en === path) {
+          return route[targetLocale] as string;
         }
-      } else if (typeof value === 'object') {
+      } else if (typeof value === 'object' && value !== null) {
         // Recurse into nested objects
-        const found = findRoute(value);
+        const found = findRoute(value as Record<string, unknown>);
         if (found) return found;
       }
     }
@@ -71,12 +72,13 @@ export function getRouteMapping(currentPath: string): { de: string; en: string }
   const findRoute = (obj: Record<string, unknown>): { de: string; en: string } | null => {
     for (const key in obj) {
       const value = obj[key];
-      if (typeof value === 'object' && 'de' in value && 'en' in value) {
-        if (value.de === path || value.en === path) {
-          return { de: value.de, en: value.en };
+      if (typeof value === 'object' && value !== null && 'de' in value && 'en' in value) {
+        const route = value as { de: string; en: string };
+        if (route.de === path || route.en === path) {
+          return { de: route.de, en: route.en };
         }
-      } else if (typeof value === 'object') {
-        const found = findRoute(value);
+      } else if (typeof value === 'object' && value !== null) {
+        const found = findRoute(value as Record<string, unknown>);
         if (found) return found;
       }
     }
@@ -97,12 +99,13 @@ export function isLocalizedRoute(path: string): boolean {
   const checkRoute = (obj: Record<string, unknown>): boolean => {
     for (const key in obj) {
       const value = obj[key];
-      if (typeof value === 'object' && 'de' in value && 'en' in value) {
-        if (value.de === cleanPath || value.en === cleanPath) {
+      if (typeof value === 'object' && value !== null && 'de' in value && 'en' in value) {
+        const route = value as { de: string; en: string };
+        if (route.de === cleanPath || route.en === cleanPath) {
           return true;
         }
-      } else if (typeof value === 'object') {
-        if (checkRoute(value)) return true;
+      } else if (typeof value === 'object' && value !== null) {
+        if (checkRoute(value as Record<string, unknown>)) return true;
       }
     }
     return false;
