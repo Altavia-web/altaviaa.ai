@@ -74,8 +74,8 @@ export default function DatevComparisonTable() {
   };
 
   return (
-    <section className="bg-white py-16">
-      <div className="max-w-6xl mx-auto px-6">
+    <section className="bg-white">
+      <div className="py-16 max-w-6xl mx-auto px-6">
         {/* Heading */}
         <h2
           className="text-center mb-8"
@@ -197,7 +197,7 @@ export default function DatevComparisonTable() {
 
       {/* Version 3.0 Text Section with Gradient Background */}
       <div
-        className="w-full py-16 lg:py-20 px-6"
+        className="w-full py-12 lg:py-16 px-6"
         style={{ background: 'var(--gradient-datev)' }}
       >
         <div className="max-w-4xl mx-auto text-center">
