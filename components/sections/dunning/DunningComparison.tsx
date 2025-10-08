@@ -33,7 +33,7 @@ export default function DunningComparison() {
           className="text-3xl lg:text-4xl font-semibold text-center mb-12 leading-tight"
           style={{ color: 'var(--color-dark-blue)' }}
         >
-          Lorem ipsum dolor sit amet consectetur adipiscing elit
+          Warum Mahnwesen für Netsuite von Alta Via Applications mehr kann als das NetSuite Standard
         </h2>
 
         {/* Comparison Table */}
