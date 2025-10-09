@@ -28,12 +28,28 @@ const products: Product[] = [
     description: 'Die Buchhaltungssoftware der DATEV ist in Deutschland der Standard in der Steuerberatung und Wirtschaftsprüfung...'
   },
   {
+    id: 'bmd-export',
+    name: 'BMD Export',
+    image: '/images/DE/WebP/AVA_BMD_DE.webp',
+    color: '#ff6120',
+    link: '/schnittstelle-bmd',
+    description: 'Dummy Text für BMD Schnittstelle...'
+  },
+  {
     id: 'lokalisierung',
     name: 'Lokalisierung Deutschland',
     image: '/images/DE/WebP/AVA_LOKALISIERUNG_DE_DE.webp',
     color: '#003399',
     link: '/localization-germany',
     description: 'In der Beratung von Alta Via haben sich über die Jahre einige Ergänzungen bewährt, die die Arbeit mit NetSuite in Deutschland verbessern...'
+  },
+  {
+    id: 'lokalisierung-at',
+    name: 'Lokalisierung Österreich',
+    image: '/images/DE/WebP/AVA_LOKALISIERUNG_AT_DE.webp',
+    color: '#003399',
+    link: '/lokalisierung-oesterreich',
+    description: 'Dummy Text für Lokalisierung Österreich...'
   },
   {
     id: 'reisekosten',
