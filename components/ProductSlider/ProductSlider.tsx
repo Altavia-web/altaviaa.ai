@@ -84,8 +84,11 @@ export default function ProductSlider({ autoPlaySpeed = 5000 }: ProductSliderPro
   const [touchStart, setTouchStart] = useState(0);
   const [touchEnd, setTouchEnd] = useState(0);
 
+  // Duplicate products for infinite loop
+  const duplicatedProducts = [...products, ...products];
+
   // Calculate total slides based on items per view
-  const totalSlides = Math.ceil(products.length / itemsPerView);
+  const totalSlides = products.length;
 
   // Handle responsive items per view
   useEffect(() => {
@@ -104,11 +107,15 @@ export default function ProductSlider({ autoPlaySpeed = 5000 }: ProductSliderPro
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Auto-play functionality
+  // Auto-play functionality with infinite loop
   useEffect(() => {
     if (!isHovered && autoPlaySpeed > 0) {
       const interval = setInterval(() => {
-        setCurrentIndex((prev) => (prev + 1) % totalSlides);
+        setCurrentIndex((prev) => {
+          const next = prev + 1;
+          // Reset to 0 when reaching the end of original products
+          return next >= totalSlides ? 0 : next;
+        });
       }, autoPlaySpeed);
 
       return () => clearInterval(interval);
@@ -236,12 +243,12 @@ export default function ProductSlider({ autoPlaySpeed = 5000 }: ProductSliderPro
             <div
               className="flex gap-6 transition-transform duration-500 ease-in-out"
               style={{
-                transform: `translateX(-${currentIndex * 100}%)`
+                transform: `translateX(-${currentIndex * (100 / itemsPerView)}%)`
               }}
             >
-              {products.map((product) => (
+              {duplicatedProducts.map((product, index) => (
                 <div
-                  key={product.id}
+                  key={`${product.id}-${index}`}
                   className="flex-shrink-0 bg-white overflow-hidden flex flex-col"
                   style={{
                     width: `calc((100% - ${(itemsPerView - 1) * 1.5}rem) / ${itemsPerView})`,
