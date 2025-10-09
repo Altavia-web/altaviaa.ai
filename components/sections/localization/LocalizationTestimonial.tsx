@@ -45,15 +45,14 @@ export default function LocalizationTestimonial() {
           Daniela Rey, Senior Financial Accountant, vivenu GmbH
         </cite>
 
-        {/* Profile Image Placeholder */}
+        {/* Profile Image */}
         <div className="flex justify-center mt-10">
-          <div
-            className="rounded-full bg-gray-200"
-            style={{
-              width: '150px',
-              height: '150px'
-            }}
-            aria-label="Profilbild Platzhalter"
+          <Image
+            src="/images/Daniela-Rey_Vivenu_Circle.webp"
+            alt="Daniela Rey, Senior Financial Accountant, vivenu GmbH"
+            width={150}
+            height={150}
+            className="rounded-full"
           />
         </div>
 
