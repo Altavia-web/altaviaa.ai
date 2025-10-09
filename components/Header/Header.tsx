@@ -4,7 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { usePathname } from "next/navigation";
-import { Download, Video, Linkedin, Youtube } from "lucide-react";
+import { Download, Linkedin, Youtube } from "lucide-react";
 import styles from './Header.module.css';
 import LanguageSwitch from './LanguageSwitch';
 import { useTranslations, type Locale } from '@/lib/i18n';
@@ -392,10 +392,6 @@ export default function Header({ locale = 'de' }: HeaderProps) {
               <a href={`${baseUrl}/download-broschuere`} className={styles.footerLink}>
                 <Download size={20} />
                 <span>{t.nav.downloadBrochure}</span>
-              </a>
-              <a href={`${baseUrl}/webinare`} className={styles.footerLink}>
-                <Video size={20} />
-                <span>{t.nav.webinars}</span>
               </a>
               <div className={styles.socialLinks}>
                 <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">
