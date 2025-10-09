@@ -4,6 +4,7 @@ import PeakShipHero from '@/components/sections/peak-ship/peak-ship-hero';
 import PeakShipChallenges from '@/components/sections/peakship/PeakShipChallenges';
 import PeakShipSolutions from '@/components/sections/peakship/PeakShipSolutions';
 import PeakShipTeaser from '@/components/sections/peakship/PeakShipTeaser';
+import PeakShipTestimonial from '@/components/sections/peakship/PeakShipTestimonial';
 import PeakShipComparison from '@/components/sections/peakship/PeakShipComparison';
 
 export default function PeakShip() {
@@ -13,6 +14,7 @@ export default function PeakShip() {
       <PeakShipChallenges />
       <PeakShipSolutions />
       <PeakShipTeaser />
+      <PeakShipTestimonial />
       <PeakShipComparison />
       <Footer />
     </div>
