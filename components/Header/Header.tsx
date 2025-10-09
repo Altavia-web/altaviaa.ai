@@ -171,7 +171,7 @@ export default function Header({ locale = 'de' }: HeaderProps) {
               <Link href={productUrls.bmd} className={styles.mobileProductLink} onClick={() => setIsMobileMenuOpen(false)}>
                 <span>{t.nav.productsMenu.bmd.title}</span>
                 <Image
-                  src="/images/BMD/AVA_Compass_BMD.webp"
+                  src="/images/DATEV/AVA_Compass_DATEV.webp"
                   alt={t.nav.productsMenu.bmd.short}
                   width={24}
                   height={24}
@@ -279,7 +279,7 @@ export default function Header({ locale = 'de' }: HeaderProps) {
             >
               <div className={styles.iconWrapper}>
                 <Image
-                  src="/images/BMD/AVA_Compass_BMD.webp"
+                  src="/images/DATEV/AVA_Compass_DATEV.webp"
                   alt={t.nav.productsMenu.bmd.short}
                   width={80}
                   height={80}
