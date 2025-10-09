@@ -7,7 +7,7 @@ import LocalizationSolutions from '@/components/sections/localization/Localizati
 import LocalizationTeaser from '@/components/sections/localization/LocalizationTeaser';
 import LocalizationTestimonial from '@/components/sections/localization/LocalizationTestimonial';
 import LocalizationComparison from '@/components/sections/localization/LocalizationComparison';
-import ProductsWeitereLosungen from '@/components/sections/products/products-weitere-loesungen';
+import ProductSlider from '@/components/ProductSlider/ProductSlider';
 
 export default function LocalizationGermany() {
   return (
@@ -19,7 +19,7 @@ export default function LocalizationGermany() {
       <LocalizationTeaser />
       <LocalizationTestimonial />
       <LocalizationComparison />
-      <ProductsWeitereLosungen />
+      <ProductSlider currentProductSlug="localization-germany" />
       <Footer />
     </div>
   );

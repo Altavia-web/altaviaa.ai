@@ -7,7 +7,7 @@ import ReisekostenSolutions from '@/components/sections/reisekosten/ReisekostenS
 import ReisekostenTeaser from '@/components/sections/reisekosten/ReisekostenTeaser';
 import ReisekostenComparison from '@/components/sections/reisekosten/ReisekostenComparison';
 import ReisekostenGrowth from '@/components/sections/reisekosten/ReisekostenGrowth';
-import ProductsWeitereLosungen from '@/components/sections/products/products-weitere-loesungen';
+import ProductSlider from '@/components/ProductSlider/ProductSlider';
 
 export default function Reisekosten() {
   return (
@@ -19,7 +19,7 @@ export default function Reisekosten() {
       <ReisekostenTeaser />
       <ReisekostenComparison />
       <ReisekostenGrowth />
-      <ProductsWeitereLosungen />
+      <ProductSlider currentProductSlug="reisekosten" />
       <Footer />
     </div>
   );

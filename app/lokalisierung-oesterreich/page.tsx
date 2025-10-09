@@ -7,7 +7,7 @@ import LocalizationAustriaSolutions from '@/components/sections/localization-aus
 import LocalizationTeaser from '@/components/sections/localization/LocalizationTeaser';
 import LocalizationAustriaComparison from '@/components/sections/localization-austria/LocalizationAustriaComparison';
 import LocalizationAustriaGrowth from '@/components/sections/localization-austria/LocalizationAustriaGrowth';
-import ProductsWeitereLosungen from '@/components/sections/products/products-weitere-loesungen';
+import ProductSlider from '@/components/ProductSlider/ProductSlider';
 
 export default function LocalizationAustria() {
   return (
@@ -19,7 +19,7 @@ export default function LocalizationAustria() {
       <LocalizationTeaser />
       <LocalizationAustriaComparison />
       <LocalizationAustriaGrowth />
-      <ProductsWeitereLosungen />
+      <ProductSlider currentProductSlug="lokalisierung-oesterreich" />
       <Footer />
     </div>
   );

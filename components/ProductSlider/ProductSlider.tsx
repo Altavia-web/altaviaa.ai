@@ -16,6 +16,7 @@ interface Product {
 
 interface ProductSliderProps {
   autoPlaySpeed?: number;
+  currentProductSlug?: string;
 }
 
 const products: Product[] = [
@@ -77,7 +78,7 @@ const products: Product[] = [
   }
 ];
 
-export default function ProductSlider({ autoPlaySpeed = 5000 }: ProductSliderProps) {
+export default function ProductSlider({ autoPlaySpeed = 5000, currentProductSlug }: ProductSliderProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const [itemsPerView, setItemsPerView] = useState(3);
@@ -85,11 +86,16 @@ export default function ProductSlider({ autoPlaySpeed = 5000 }: ProductSliderPro
   const [touchEnd, setTouchEnd] = useState(0);
   const [isTransitioning, setIsTransitioning] = useState(true);
 
-  // Duplicate products for infinite loop
-  const duplicatedProducts = [...products, ...products];
+  // Filter out current product if specified
+  const filteredProducts = currentProductSlug
+    ? products.filter(p => !p.link.includes(currentProductSlug))
+    : products;
 
-  // Calculate total slides based on items per view
-  const totalSlides = products.length;
+  // Duplicate products for infinite loop
+  const duplicatedProducts = [...filteredProducts, ...filteredProducts];
+
+  // Calculate total slides based on filtered products
+  const totalSlides = filteredProducts.length;
 
   // Handle responsive items per view
   useEffect(() => {
