@@ -16,11 +16,8 @@ export default function ReisekostenHero() {
           {/* Text Content - Left */}
           <div className="text-left">
             <h1 className="mb-6 text-white">
-              Reisekostenverwaltung für NetSuite
+              Reisekosten für NetSuite
             </h1>
-            <h2 className="text-white">
-              NetSuite-konforme Reisekostenerstattung
-            </h2>
           </div>
 
           {/* Image - Right */}

@@ -4,24 +4,28 @@ import Image from 'next/image';
 export default function ReisekostenSolutions() {
   const features = [
     {
-      title: "Lorem ipsum dolor",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+      title: "Automatische Pauschalen",
+      description: "Verpflegungs- und Übernachtungspauschalen werden nach deutschem Recht automatisch berechnet – korrekt, aktuell und ohne Handarbeit."
     },
     {
-      title: "Consectetur adipiscing",
-      description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex."
+      title: "Reisen einfach erfassen",
+      description: "Start, Ziel, Zeiten und Kilometer eingeben – das Modul erstellt die passenden Reiseposten und berücksichtigt Übernachtungen automatisch."
     },
     {
-      title: "Sed do eiusmod",
-      description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat."
+      title: "Multi-Currency & Belege",
+      description: "Erfassen Sie Ausgaben in verschiedenen Währungen und hängen Sie Belege direkt an – transparent und revisionssicher."
     },
     {
-      title: "Tempor incididunt",
-      description: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit."
+      title: "Individuelle Genehmigungs-Workflows",
+      description: "Berichte laufen durch den integrierten Workflow – schnelle Freigaben, klare Verantwortlichkeiten, volle Kontrolle."
     },
     {
-      title: "Ullamco laboris",
-      description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque."
+      title: "Jährlich aktualisierte Sätze",
+      description: "Die Pauschalen werden jährlich von Alta Via aktualisiert – Sie bleiben compliant, ohne eigenen Aufwand."
+    },
+    {
+      title: "Nahtlose NetSuite-Integration",
+      description: "Alle Prozesse laufen in NetSuite – keine externen Tools, keine Systembrüche."
     }
   ];
 
@@ -45,32 +49,12 @@ export default function ReisekostenSolutions() {
           className="text-3xl lg:text-4xl font-semibold text-center mb-16 leading-tight mx-auto"
           style={{ color: 'var(--color-dark-blue)', maxWidth: '800px' }}
         >
-          Lorem ipsum dolor sit amet consectetur
+          Reisekosten einfach gemanagt
         </h2>
 
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-12 gap-y-12 mb-12">
-          {features.slice(0, 2).map((feature, index) => (
-            <div key={index} className="text-left">
-              <h3
-                className="text-xl lg:text-2xl font-semibold mb-3"
-                style={{ color: 'var(--color-dark-blue)' }}
-              >
-                {feature.title}
-              </h3>
-              <p
-                className="text-lg leading-relaxed"
-                style={{ color: 'var(--color-dark-blue)', opacity: 0.85 }}
-              >
-                {feature.description}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        {/* Second row - 3 columns */}
+        {/* Features Grid - All features in responsive grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-12">
-          {features.slice(2).map((feature, index) => (
+          {features.map((feature, index) => (
             <div key={index} className="text-left">
               <h3
                 className="text-xl lg:text-2xl font-semibold mb-3"

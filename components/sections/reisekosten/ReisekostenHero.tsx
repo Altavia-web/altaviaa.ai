@@ -12,14 +12,12 @@ export default function ReisekostenHero() {
 
           {/* Left Column - Text Content */}
           <div style={{ color: 'var(--color-dark-blue)' }}>
-            <h3 className="text-2xl lg:text-3xl font-semibold mb-6 leading-tight">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </h3>
+            <h2 className="text-2xl lg:text-3xl font-semibold mb-6 leading-tight">
+              Reisekosten abrechnen – einfach, schnell, compliant
+            </h2>
 
             <p className="text-lg leading-relaxed">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+              Mit Reisekosten für NetSuite von Alta Via Applications automatisieren Sie Pauschalen, vereinfachen Genehmigungen und beschleunigen Erstattungen. Ob Inland, Ausland oder mehrere Währungen: Das Modul macht Schluss mit manuellen Berechnungen und Tabellen – und sorgt für transparente, prüfungssichere Prozesse direkt in Ihrem ERP.
             </p>
           </div>
 

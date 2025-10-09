@@ -10,15 +10,15 @@ export default function ReisekostenChallenges() {
   const slides = [
     {
       icon: "/images/00_ALLGEMEINES/Questionmark/AVA_Questionmark_darkblue.webp",
-      heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore?"
+      heading: "Möchten Sie Reisekostenabrechnungen ohne manuelle Berechnungen und Excel-Listen erledigen?"
     },
     {
       icon: "/images/00_ALLGEMEINES/Questionmark/AVA_Questionmark_darkblue.webp",
-      heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore?"
+      heading: "Soll Ihr Team Auslandsreisen, Pauschalen und Fremdwährungen direkt in NetSuite abrechnen – einfach und fehlerfrei?"
     },
     {
       icon: "/images/00_ALLGEMEINES/Questionmark/AVA_Questionmark_darkblue.webp",
-      heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore?"
+      heading: "Suchen Sie eine Lösung, die Genehmigungen beschleunigt und prüfungs­sichere Reports automatisch erstellt?"
     }
   ];
 
