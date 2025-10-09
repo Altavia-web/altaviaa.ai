@@ -1,22 +1,26 @@
-import type { Metadata } from 'next';
+import React from 'react';
+import Footer from '@/components/Footer';
+import PeakShipHeroEN from '@/components/sections/peak-ship/peak-ship-hero-en';
+import PeakShipHeroContentEN from '@/components/sections/peakship/PeakShipHeroContentEN';
+import PeakShipChallengesEN from '@/components/sections/peakship/PeakShipChallengesEN';
+import PeakShipSolutionsEN from '@/components/sections/peakship/PeakShipSolutionsEN';
+import PeakShipTeaserEN from '@/components/sections/peakship/PeakShipTeaserEN';
+import PeakShipTestimonialEN from '@/components/sections/peakship/PeakShipTestimonialEN';
+import PeakShipComparisonEN from '@/components/sections/peakship/PeakShipComparisonEN';
+import PeakShipGrowthEN from '@/components/sections/peakship/PeakShipGrowthEN';
 
-export const metadata: Metadata = {
-  title: 'Peak Ship',
-  description: 'Shipping management for NetSuite',
-};
-
-export default function PeakShipPage() {
+export default function PeakShipPageEN() {
   return (
-    <div className="min-h-screen bg-white py-16 px-6">
-      <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl lg:text-5xl font-bold mb-8" style={{ color: '#002e64' }}>
-          Peak Ship for NetSuite
-        </h1>
-        <p className="text-lg leading-relaxed mb-8">
-          Integrated logistics and shipping management directly in NetSuite.
-        </p>
-        {/* TODO: Add full Peak Ship product page content */}
-      </div>
+    <div className="min-h-screen">
+      <PeakShipHeroEN />
+      <PeakShipHeroContentEN />
+      <PeakShipChallengesEN />
+      <PeakShipSolutionsEN />
+      <PeakShipTeaserEN />
+      <PeakShipTestimonialEN />
+      <PeakShipComparisonEN />
+      <PeakShipGrowthEN />
+      <Footer />
     </div>
   );
 }
