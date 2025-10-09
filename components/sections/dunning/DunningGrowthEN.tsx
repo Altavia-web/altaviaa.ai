@@ -15,7 +15,7 @@ export default function DunningGrowthEN() {
           className="text-lg leading-relaxed"
           style={{ color: 'var(--color-dark-blue)' }}
         >
-          Your customers' payment behavior is constantly changing – and every NetSuite update brings new possibilities. That's why we continuously develop Dunning for NetSuite: inspired by customer feedback, aligned with NetSuite releases, and optimized for day-to-day receivables management.
+          Your customers&apos; payment behavior is constantly changing – and every NetSuite update brings new possibilities. That&apos;s why we continuously develop Dunning for NetSuite: inspired by customer feedback, aligned with NetSuite releases, and optimized for day-to-day receivables management.
         </p>
       </div>
     </section>
