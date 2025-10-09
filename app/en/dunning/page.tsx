@@ -1,22 +1,24 @@
-import type { Metadata } from 'next';
+import React from 'react';
+import Footer from '@/components/Footer';
+import DunningHeroEN from '@/components/sections/dunning/dunning-hero-en';
+import DunningHeroContentEN from '@/components/sections/dunning/DunningHeroEN';
+import DunningChallengesEN from '@/components/sections/dunning/DunningChallengesEN';
+import DunningSolutionsEN from '@/components/sections/dunning/DunningSolutionsEN';
+import DunningTeaserEN from '@/components/sections/dunning/DunningTeaserEN';
+import DunningTestimonialEN from '@/components/sections/dunning/DunningTestimonialEN';
+import DunningComparisonEN from '@/components/sections/dunning/DunningComparisonEN';
 
-export const metadata: Metadata = {
-  title: 'Dunning Management',
-  description: 'Automated receivables management for NetSuite',
-};
-
-export default function DunningPage() {
+export default function DunningPageEN() {
   return (
-    <div className="min-h-screen bg-white py-16 px-6">
-      <div className="max-w-7xl mx-auto">
-        <h1 className="text-4xl lg:text-5xl font-bold mb-8" style={{ color: '#002e64' }}>
-          Dunning Management for NetSuite
-        </h1>
-        <p className="text-lg leading-relaxed mb-8">
-          Efficient dunning processes directly in NetSuite with automated workflows.
-        </p>
-        {/* TODO: Add full dunning product page content */}
-      </div>
+    <div className="min-h-screen">
+      <DunningHeroEN />
+      <DunningHeroContentEN />
+      <DunningChallengesEN />
+      <DunningSolutionsEN />
+      <DunningTeaserEN />
+      <DunningTestimonialEN />
+      <DunningComparisonEN />
+      <Footer />
     </div>
   );
 }
