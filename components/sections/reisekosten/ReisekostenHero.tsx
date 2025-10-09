@@ -28,7 +28,7 @@ export default function ReisekostenHero() {
               style={{ borderColor: 'var(--color-reisekosten-secondary)' }}
             >
               <Image
-                src="/images/produkte/AVA_REISEKOSTEN_DE (1).webp"
+                src="/images/DE/WebP/AVA_REISEKOSTEN_DE.webp"
                 alt="Reisekosten für NetSuite"
                 width={400}
                 height={400}

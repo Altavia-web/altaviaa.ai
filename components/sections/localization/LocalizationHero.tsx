@@ -28,7 +28,7 @@ export default function LocalizationHero() {
               style={{ borderColor: 'var(--color-sky-blue)' }}
             >
               <Image
-                src="/images/produkte/AVA_LOKALISIERUNG_DE.webp"
+                src="/images/DE/WebP/AVA_LOKALISIERUNG_DE_DE.webp"
                 alt="Lokalisierung Deutschland für NetSuite"
                 width={400}
                 height={400}

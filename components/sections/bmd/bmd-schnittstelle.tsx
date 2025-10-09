@@ -34,7 +34,7 @@ export default function BmdSchnittstelle() {
           <div className="flex justify-end">
             <div className="relative w-full max-w-lg">
               <Image
-                src="/images/produkte/AVA_BMD_DE.webp"
+                src="/images/DE/WebP/AVA_BMD_DE.webp"
                 alt="BMD Schnittstelle"
                 width={500}
                 height={500}

@@ -28,7 +28,7 @@ export default function PeakShipHeroContent() {
               style={{ borderColor: 'var(--color-peakship-primary)' }}
             >
               <Image
-                src="/images/produkte/AVA_PEAK SHIP_DE (1).webp"
+                src="/images/DE/WebP/AVA_PEAK SHIP_DE.webp"
                 alt="PeakShip für NetSuite"
                 width={400}
                 height={400}

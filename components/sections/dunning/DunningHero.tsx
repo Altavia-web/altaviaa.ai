@@ -24,7 +24,7 @@ export default function DunningHero() {
               style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}
             >
               <Image
-                src="/images/produkte/AVA_MAHNWESEN_DE (1).webp"
+                src="/images/DE/WebP/AVA_MAHNWESEN_DE.webp"
                 alt="Mahnwesen für NetSuite"
                 width={400}
                 height={400}
