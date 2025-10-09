@@ -1,13 +1,13 @@
 "use client";
 
 import React, { useState } from 'react';
-import { CheckCircle2, XCircle, ChevronDown } from 'lucide-react';
+import { CheckCircle2, ChevronDown } from 'lucide-react';
 
 export default function PeakShipComparison() {
   const [expandedCategories, setExpandedCategories] = useState({
-    mapping: true,
+    setup: true,
     funktionen: false,
-    installation: false
+    wartung: false
   });
 
   const toggleCategory = (category: keyof typeof expandedCategories) => {
@@ -33,7 +33,7 @@ export default function PeakShipComparison() {
           className="text-3xl lg:text-4xl font-semibold text-center mb-12 leading-tight"
           style={{ color: 'var(--color-dark-blue)' }}
         >
-          Lorem ipsum dolor sit amet consectetur adipiscing elit
+          PeakShip für NetSuite im Vergleich
         </h2>
 
         {/* Comparison Table */}
@@ -53,22 +53,22 @@ export default function PeakShipComparison() {
                   NetSuite Standard
                 </th>
                 <th className="text-center py-5 px-6 text-white font-semibold text-base lg:text-lg">
-                  Alta Via PeakShip
+                  PeakShip für NetSuite von Alta Via Applications
                 </th>
               </tr>
             </thead>
 
             <tbody>
 
-              {/* CATEGORY 1: MAPPING */}
+              {/* CATEGORY 1: SETUP */}
               <tr>
                 <td colSpan={3} className="p-0">
                   <div
                     role="button"
                     tabIndex={0}
-                    aria-expanded={expandedCategories.mapping}
-                    onClick={() => toggleCategory('mapping')}
-                    onKeyDown={(e) => handleKeyDown(e, 'mapping')}
+                    aria-expanded={expandedCategories.setup}
+                    onClick={() => toggleCategory('setup')}
+                    onKeyDown={(e) => handleKeyDown(e, 'setup')}
                     className="flex items-center gap-3 py-4 px-6 cursor-pointer transition-colors"
                     style={{
                       backgroundColor: '#f0f0f0',
@@ -77,39 +77,39 @@ export default function PeakShipComparison() {
                     }}
                   >
                     <CheckCircle2 size={20} style={{ color: 'var(--color-peakship-primary)' }} />
-                    <span className="font-semibold text-base lg:text-lg">Lorem ipsum</span>
+                    <span className="font-semibold text-base lg:text-lg">Setup</span>
                     <ChevronDown
                       size={20}
                       className="ml-auto transition-transform duration-300"
                       style={{
-                        transform: expandedCategories.mapping ? 'rotate(180deg)' : 'rotate(0deg)'
+                        transform: expandedCategories.setup ? 'rotate(180deg)' : 'rotate(0deg)'
                       }}
                     />
                   </div>
                 </td>
               </tr>
-              {expandedCategories.mapping && (
+              {expandedCategories.setup && (
                 <>
                   <tr className="bg-white">
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
-                      Lorem ipsum dolor sit amet
+                      Einrichtung von Carrier-Konten direkt in NetSuite
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
-                      <XCircle size={28} className="inline-block" style={{ color: '#ef4444' }} />
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
+                      nein
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
-                      <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
+                      ja
                     </td>
                   </tr>
                   <tr className="bg-gray-50">
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
-                      Consectetur adipiscing elit
+                      Eigenständiges Bundle, einfache Installation
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
-                      <XCircle size={28} className="inline-block" style={{ color: '#ef4444' }} />
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
+                      nein
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
-                      <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
+                      ja
                     </td>
                   </tr>
                 </>
@@ -147,38 +147,82 @@ export default function PeakShipComparison() {
                 <>
                   <tr className="bg-white">
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
-                      Sed do eiusmod tempor
+                      Versandaufträge direkt in NetSuite erstellen
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)', color: 'var(--color-dark-blue)', opacity: 0.7 }}>
                       begrenzt
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
-                      <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
+                      ja
                     </td>
                   </tr>
                   <tr className="bg-gray-50">
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
-                      Incididunt ut labore
+                      Automatische Erstellung & Druck von Versandetiketten (PDF & Zebra-Format)
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
-                      <XCircle size={28} className="inline-block" style={{ color: '#ef4444' }} />
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
+                      nein
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
-                      <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
+                      ja
+                    </td>
+                  </tr>
+                  <tr className="bg-white">
+                    <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                      Automatisierte Tracking-Nummern und -Status
+                    </td>
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
+                      nein
+                    </td>
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
+                      ja
+                    </td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                      Automatische Erstellung von Zollerklärungen (bei internationalen Sendungen)
+                    </td>
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
+                      nein
+                    </td>
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
+                      ja
+                    </td>
+                  </tr>
+                  <tr className="bg-white">
+                    <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                      Unterstützung mehrerer Konten pro Carrier & mehrere Pakete pro Lieferung
+                    </td>
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
+                      nein
+                    </td>
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
+                      ja
+                    </td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                      Breite Auswahl an integrierten Carriern (DHL, DPD, UPS, GLS, FedEx …)
+                    </td>
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
+                      nein
+                    </td>
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
+                      ja
                     </td>
                   </tr>
                 </>
               )}
 
-              {/* CATEGORY 3: INSTALLATION */}
+              {/* CATEGORY 3: WARTUNG & UPDATES */}
               <tr>
                 <td colSpan={3} className="p-0">
                   <div
                     role="button"
                     tabIndex={0}
-                    aria-expanded={expandedCategories.installation}
-                    onClick={() => toggleCategory('installation')}
-                    onKeyDown={(e) => handleKeyDown(e, 'installation')}
+                    aria-expanded={expandedCategories.wartung}
+                    onClick={() => toggleCategory('wartung')}
+                    onKeyDown={(e) => handleKeyDown(e, 'wartung')}
                     className="flex items-center gap-3 py-4 px-6 cursor-pointer transition-colors hover:bg-gray-200"
                     style={{
                       backgroundColor: '#f0f0f0',
@@ -187,29 +231,42 @@ export default function PeakShipComparison() {
                     }}
                   >
                     <CheckCircle2 size={20} style={{ color: 'var(--color-peakship-primary)' }} />
-                    <span className="font-semibold text-base lg:text-lg">Installation</span>
+                    <span className="font-semibold text-base lg:text-lg">Wartung & Updates</span>
                     <ChevronDown
                       size={20}
                       className="ml-auto transition-transform duration-300"
                       style={{
-                        transform: expandedCategories.installation ? 'rotate(180deg)' : 'rotate(0deg)'
+                        transform: expandedCategories.wartung ? 'rotate(180deg)' : 'rotate(0deg)'
                       }}
                     />
                   </div>
                 </td>
               </tr>
-              {expandedCategories.installation && (
-                <tr className="bg-white">
-                  <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
-                    Direkte Installation über SuiteBundle
-                  </td>
-                  <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
-                    <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
-                  </td>
-                  <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
-                    <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
-                  </td>
-                </tr>
+              {expandedCategories.wartung && (
+                <>
+                  <tr className="bg-white">
+                    <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                      Regelmäßige Updates (NetSuite-Releases + neue Carrier)
+                    </td>
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)', color: 'var(--color-dark-blue)', opacity: 0.7 }}>
+                      begrenzt
+                    </td>
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
+                      ja
+                    </td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                      Erweiterung um zusätzliche Carrier auf Kundenwunsch
+                    </td>
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
+                      nein
+                    </td>
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
+                      ja
+                    </td>
+                  </tr>
+                </>
               )}
 
             </tbody>
