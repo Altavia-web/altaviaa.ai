@@ -17,6 +17,11 @@ export const en = {
         short: 'DATEV Interface',
         description: 'Seamless integration between NetSuite and DATEV',
       },
+      bmd: {
+        title: 'BMD Interface for NetSuite',
+        short: 'BMD Interface',
+        description: 'Seamless integration between NetSuite and BMD',
+      },
       localization: {
         title: 'Localization Germany for NetSuite',
         short: 'Localization Germany',

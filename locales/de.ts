@@ -17,6 +17,11 @@ export const de = {
         short: 'DATEV Schnittstelle',
         description: 'Nahtlose Integration zwischen NetSuite und DATEV',
       },
+      bmd: {
+        title: 'BMD Schnittstelle für NetSuite',
+        short: 'BMD Schnittstelle',
+        description: 'Nahtlose Integration zwischen NetSuite und BMD',
+      },
       localization: {
         title: 'Lokalisierung Deutschland für NetSuite',
         short: 'Lokalisierung Deutschland',
