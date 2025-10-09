@@ -83,6 +83,7 @@ export default function ProductSlider({ autoPlaySpeed = 5000 }: ProductSliderPro
   const [itemsPerView, setItemsPerView] = useState(3);
   const [touchStart, setTouchStart] = useState(0);
   const [touchEnd, setTouchEnd] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(true);
 
   // Duplicate products for infinite loop
   const duplicatedProducts = [...products, ...products];
@@ -111,16 +112,25 @@ export default function ProductSlider({ autoPlaySpeed = 5000 }: ProductSliderPro
   useEffect(() => {
     if (!isHovered && autoPlaySpeed > 0) {
       const interval = setInterval(() => {
-        setCurrentIndex((prev) => {
-          const next = prev + 1;
-          // Reset to 0 when reaching the end of original products
-          return next >= totalSlides ? 0 : next;
-        });
+        setCurrentIndex((prev) => prev + 1);
       }, autoPlaySpeed);
 
       return () => clearInterval(interval);
     }
-  }, [isHovered, autoPlaySpeed, totalSlides]);
+  }, [isHovered, autoPlaySpeed]);
+
+  // Reset to start seamlessly when reaching the end
+  useEffect(() => {
+    if (currentIndex >= totalSlides) {
+      setTimeout(() => {
+        setIsTransitioning(false);
+        setCurrentIndex(0);
+        setTimeout(() => {
+          setIsTransitioning(true);
+        }, 50);
+      }, 500);
+    }
+  }, [currentIndex, totalSlides]);
 
   // Navigation handlers
   const goToSlide = useCallback((index: number) => {
@@ -241,9 +251,10 @@ export default function ProductSlider({ autoPlaySpeed = 5000 }: ProductSliderPro
           {/* Product Cards */}
           <div className="overflow-hidden">
             <div
-              className="flex gap-6 transition-transform duration-500 ease-in-out"
+              className="flex gap-6"
               style={{
-                transform: `translateX(calc(-${currentIndex} * (calc(${100 / itemsPerView}% - ${(itemsPerView - 1) * 1.5 / itemsPerView}rem) + 1.5rem)))`
+                transform: `translateX(calc(-${currentIndex} * (calc(${100 / itemsPerView}% - ${(itemsPerView - 1) * 1.5 / itemsPerView}rem) + 1.5rem)))`,
+                transition: isTransitioning ? 'transform 500ms ease-in-out' : 'none'
               }}
             >
               {duplicatedProducts.map((product, index) => (
