@@ -244,7 +244,7 @@ export default function ProductSlider({ autoPlaySpeed = 5000 }: ProductSliderPro
                   key={product.id}
                   className="flex-shrink-0 bg-white overflow-hidden flex flex-col"
                   style={{
-                    width: `calc(((100% - ${(itemsPerView - 1) * 1.5}rem) / ${itemsPerView}) * 0.9)`,
+                    width: `calc((100% - ${(itemsPerView - 1) * 1.5}rem) / ${itemsPerView})`,
                     borderRadius: '12px'
                   }}
                 >
