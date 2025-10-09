@@ -37,3 +37,4 @@
 09:47:21.580 info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/app/api-reference/config/eslint#disabling-rules
 09:47:21.625 Error: Command "npm run build" exited with 1
 - hh
+- manche bilder werden nicht geladen

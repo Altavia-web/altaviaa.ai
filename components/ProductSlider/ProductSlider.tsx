@@ -22,7 +22,7 @@ const products: Product[] = [
   {
     id: 'datev-export',
     name: 'DATEV Export',
-    image: '/images/DE/WebP/AVA_DATEV_DE.webp',
+    image: '/images/DE/WebP/AVA_DATEV-Schnittstelle_DE.webp',
     color: '#009b87',
     link: '/schnittstelle-datev',
     description: 'Die Buchhaltungssoftware der DATEV ist in Deutschland der Standard in der Steuerberatung und Wirtschaftsprüfung...'
@@ -30,7 +30,7 @@ const products: Product[] = [
   {
     id: 'lokalisierung',
     name: 'Lokalisierung Deutschland',
-    image: '/images/DE/WebP/AVA_LOKALISIERUNG_DE.webp',
+    image: '/images/DE/WebP/AVA_LOKALISIERUNG_DE_DE.webp',
     color: '#003399',
     link: '/localization-germany',
     description: 'In der Beratung von Alta Via haben sich über die Jahre einige Ergänzungen bewährt, die die Arbeit mit NetSuite in Deutschland verbessern...'
