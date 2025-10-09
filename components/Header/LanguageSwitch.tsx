@@ -19,15 +19,15 @@ export default function LanguageSwitch({ currentLocale = 'de' }: LanguageSwitchP
     <div className="flex items-center gap-2">
       <Link
         href="/"
-        className="flex items-center justify-center"
+        className="flex items-center justify-center w-6 h-6"
         aria-label="Home"
       >
         <Image
           src="/images/AVA-Globe.png"
           alt="Alta Via Globe"
-          width={24}
-          height={24}
-          className="object-contain"
+          width={32}
+          height={32}
+          className="w-full h-full object-contain"
         />
       </Link>
       <Link
