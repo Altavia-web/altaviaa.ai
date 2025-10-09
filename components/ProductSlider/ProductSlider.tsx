@@ -20,17 +20,9 @@ interface ProductSliderProps {
 
 const products: Product[] = [
   {
-    id: 'abwesenheitsverwaltung',
-    name: 'Abwesenheitsverwaltung',
-    image: '/images/produkte/AVA_ABWESENHEIT_DE (1).webp',
-    color: '#00789e',
-    link: '/abwesenheitsverwaltung',
-    description: 'Mit dem Bundle Urlaubs- und Einsatzplanung von Alta Via lassen sich die Abwesenheiten aller Mitarbeiter*innen in NetSuite verwalten...'
-  },
-  {
     id: 'datev-export',
     name: 'DATEV Export',
-    image: '/images/produkte/AVA_DATEV_DE.webp',
+    image: '/images/DE/WebP/AVA_DATEV_DE.webp',
     color: '#009b87',
     link: '/schnittstelle-datev',
     description: 'Die Buchhaltungssoftware der DATEV ist in Deutschland der Standard in der Steuerberatung und Wirtschaftsprüfung...'
@@ -38,7 +30,7 @@ const products: Product[] = [
   {
     id: 'lokalisierung',
     name: 'Lokalisierung Deutschland',
-    image: '/images/produkte/AVA_LOKALISIERUNG_DE.webp',
+    image: '/images/DE/WebP/AVA_LOKALISIERUNG_DE.webp',
     color: '#003399',
     link: '/localization-germany',
     description: 'In der Beratung von Alta Via haben sich über die Jahre einige Ergänzungen bewährt, die die Arbeit mit NetSuite in Deutschland verbessern...'
@@ -46,7 +38,7 @@ const products: Product[] = [
   {
     id: 'reisekosten',
     name: 'Reisekosten',
-    image: '/images/produkte/AVA_REISEKOSTEN_DE (1).webp',
+    image: '/images/DE/WebP/AVA_REISEKOSTEN_DE.webp',
     color: '#7bcfc9',
     link: '/reisekosten',
     description: 'Erfassen und verwalten Sie Reisekosten effizient in NetSuite mit automatischer Spesenabrechnung und Genehmigungsworkflows...'
@@ -54,7 +46,7 @@ const products: Product[] = [
   {
     id: 'dunning',
     name: 'Mahnwesen (Dunning)',
-    image: '/images/produkte/AVA_MAHNWESEN_DE (1).webp',
+    image: '/images/DE/WebP/AVA_MAHNWESEN_DE.webp',
     color: '#980000',
     link: '/dunning',
     description: 'Automatisieren Sie Ihr Mahnwesen mit intelligenten Eskalationsstufen und rechtssicheren Mahnvorlagen für den deutschen Markt...'
@@ -62,7 +54,7 @@ const products: Product[] = [
   {
     id: 'peak-ship',
     name: 'Peak Ship',
-    image: '/images/produkte/AVA_PEAK SHIP_DE (1).webp',
+    image: '/images/DE/WebP/AVA_PEAK SHIP_DE.webp',
     color: '#ffba00',
     link: '/peak-ship',
     description: 'Peak Ship optimiert Ihre Versandprozesse in NetSuite mit Integration zu allen gängigen Versanddienstleistern...'
