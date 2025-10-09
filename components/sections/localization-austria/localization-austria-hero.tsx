@@ -1,24 +1,38 @@
 import React from 'react';
+import Image from 'next/image';
 
 export default function LocalizationAustriaHero() {
   return (
     <section
       className="relative flex items-center justify-center"
       style={{
-        minHeight: '100vh',
+        minHeight: '72vh',
         background: 'var(--gradient-lokalisierung)'
       }}
     >
-      <div className="text-center px-6">
-        <h1
-          className="font-bold leading-tight"
-          style={{
-            fontSize: 'clamp(2.5rem, 8vw, 6rem)',
-            color: 'var(--color-dark-blue)'
-          }}
-        >
-          Lokalisierung Österreich für NetSuite
-        </h1>
+      {/* Content */}
+      <div className="relative z-10 mx-auto px-6" style={{ width: '80%' }}>
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          {/* Text Content - Left */}
+          <div className="text-left">
+            <h1 className="mb-6 text-white">
+              Lokalisierung Österreich für NetSuite
+            </h1>
+          </div>
+
+          {/* Image - Right */}
+          <div className="flex justify-end">
+            <div className="relative w-full max-w-lg">
+              <Image
+                src="/images/LOCALIZATION/AVA_Map_Localization_WHITE.webp"
+                alt="Lokalisierung Österreich Compass"
+                width={500}
+                height={500}
+                className="w-full h-auto"
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );
