@@ -4,32 +4,32 @@ import Image from 'next/image';
 export default function PeakShipSolutionsEN() {
   const features = [
     {
-      title: "Easy carrier setup",
-      description: "Set up carrier accounts directly in NetSuite – without external tools."
+      title: "Easy Carrier Setup",
+      description: "Create carrier accounts directly in NetSuite – no external tools needed."
     },
     {
-      title: "Create shipping orders directly",
-      description: "Orders are created effortlessly in NetSuite – transfer errors are a thing of the past."
+      title: "Create Shipments Directly",
+      description: "Generate shipping orders effortlessly in NetSuite – transmission errors are a thing of the past."
     },
     {
-      title: "Automatic labels",
-      description: "Shipping labels are automatically generated and can be printed directly in the warehouse."
+      title: "Automatic Labels",
+      description: "Shipping labels are generated automatically and can be printed directly in the warehouse."
     },
     {
-      title: "Tracking numbers included",
-      description: "Shipments automatically receive tracking codes that you can share with your customers immediately."
+      title: "Tracking Numbers Included",
+      description: "Shipments automatically receive tracking codes that you can share with your customers right away."
     },
     {
-      title: "Status and customs under control",
-      description: "Track shipment status directly in NetSuite and create customs declarations automatically when needed."
+      title: "Status and Customs Under Control",
+      description: "Track shipment status directly in NetSuite and generate customs declarations automatically when needed."
     },
     {
-      title: "Wide carrier selection",
-      description: "DHL, DPD, UPS, GLS, FedEx and more are integrated – additional carriers can be added at any time."
+      title: "Wide Carrier Selection",
+      description: "DHL, DPD, UPS, GLS, FedEx, and more are integrated – additional carriers can be added at any time."
     },
     {
-      title: "Seamless in NetSuite",
-      description: "Everything runs within NetSuite – fast, reliable, and without system breaks."
+      title: "Seamlessly in NetSuite",
+      description: "Everything runs inside NetSuite – fast, reliable, and without system breaks."
     }
   ];
 
@@ -53,7 +53,7 @@ export default function PeakShipSolutionsEN() {
           className="text-3xl lg:text-4xl font-semibold text-center mb-16 leading-tight mx-auto"
           style={{ color: 'var(--color-dark-blue)', maxWidth: '800px' }}
         >
-          Shipping made simple and integrated
+          Shipping Made Simple – Fully Integrated
         </h2>
 
         {/* Features Grid - All features in responsive grid */}

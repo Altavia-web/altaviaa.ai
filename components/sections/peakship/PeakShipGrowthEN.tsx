@@ -9,13 +9,13 @@ export default function PeakShipGrowthEN() {
           className="text-3xl lg:text-4xl font-bold mb-6"
           style={{ color: 'white' }}
         >
-          Flexible in shipping. Ready for any growth.
+          Flexible Shipping. Ready to Grow.
         </h2>
         <p
           className="text-lg leading-relaxed"
           style={{ color: 'white' }}
         >
-          New carriers, additional markets, increasing shipment volumes – with PeakShip you remain flexible. The module is continuously expanded and adapted to NetSuite releases. This way, your shipping solution evolves step by step with your company.
+          New carriers, additional markets, increasing shipment volumes – with Peak Ship, you stay flexible. The module is continuously enhanced and aligned with NetSuite releases. This way, your shipping solution evolves step by step with your business.
         </p>
       </div>
     </section>

@@ -13,11 +13,11 @@ export default function PeakShipHeroContentEN() {
           {/* Left Column - Text Content */}
           <div style={{ color: 'var(--color-dark-blue)' }}>
             <h2 className="text-2xl lg:text-3xl font-semibold mb-6 leading-tight">
-              Efficient shipping – directly from your ERP
+              Ship Efficiently – Directly from Your ERP
             </h2>
 
             <p className="text-lg leading-relaxed">
-              With PeakShip for NetSuite, you make your shipping processes easier than ever: labels, tracking, customs documents – everything runs directly from your ERP. No copying back and forth, no risk of transfer errors, just a seamless process from order to delivery.
+              With Peak Ship for NetSuite, shipping has never been easier: labels, tracking, customs documents – everything runs directly from your ERP. No copy-pasting between systems, no risk of transfer errors – just a seamless flow from order to delivery.
             </p>
           </div>
 

@@ -10,15 +10,15 @@ export default function PeakShipChallengesEN() {
   const slides = [
     {
       icon: "/images/00_ALLGEMEINES/Questionmark/AVA_Questionmark_darkblue.png",
-      heading: "Should your shipping process run smoothly, error-free, and be easily expandable – with all common carriers integrated?"
+      heading: "Do you want your shipping process to run smoothly, error-free, and always scalable – with all major carriers integrated?"
     },
     {
       icon: "/images/00_ALLGEMEINES/Questionmark/AVA_Questionmark_darkblue.png",
-      heading: "Do your shipping orders currently have to be manually copied back and forth between NetSuite and carrier tools?"
+      heading: "Are your shipping orders still copied manually back and forth between NetSuite and carrier tools?"
     },
     {
       icon: "/images/00_ALLGEMEINES/Questionmark/AVA_Questionmark_darkblue.png",
-      heading: "Should your shipping labels and tracking numbers be created directly in the warehouse – without detours?"
+      heading: "You'd like your labels and tracking numbers to be generated in the warehouse – without detours?"
     }
   ];
 

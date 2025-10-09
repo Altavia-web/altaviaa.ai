@@ -33,7 +33,7 @@ export default function PeakShipComparisonEN() {
           className="text-3xl lg:text-4xl font-semibold text-center mb-12 leading-tight"
           style={{ color: 'var(--color-dark-blue)' }}
         >
-          PeakShip for NetSuite in comparison
+          Feature Comparison: Shipping with Peak Ship
         </h2>
 
         {/* Comparison Table */}

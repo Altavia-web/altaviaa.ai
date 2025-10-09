@@ -16,7 +16,7 @@ export default function PeakShipHeroEN() {
           {/* Text Content - Left */}
           <div className="text-left">
             <h1 className="mb-6 text-white">
-              PeakShip for NetSuite
+              Peak Ship for NetSuite
             </h1>
           </div>
 
