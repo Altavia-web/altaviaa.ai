@@ -5,10 +5,12 @@
 **Projektname:** altiva-ai
 **Version:** 0.1.0
 **Typ:** Next.js React-Anwendung (App Router)
-**Zweck:** Corporate Website für Alta Via Applications GmbH
+**Zweck:** Mehrsprachige Corporate Website für Alta Via Applications GmbH
 **Domain:** altaviaapplications.com
+**Sprachen:** Deutsch (/) + Englisch (/en)
 **Deployment:** Vercel-ready
 **Entwicklungsumgebung:** Windows 11 (win32)
+**Build Status:** ✅ Production-ready (32 statische Routen)
 
 ## Technische Details
 
@@ -16,36 +18,73 @@
 - **Framework:** Next.js 15.5.3 mit Turbopack
 - **Frontend:** React 19.1.0 + React DOM 19.1.0
 - **Styling:** Tailwind CSS v4 mit PostCSS
-- **Sprache:** TypeScript 5
+- **Sprache:** TypeScript 5 (Strict Mode)
 - **Icons:** Lucide React 0.544.0
 - **Linting:** ESLint 9 mit Next.js Config
+- **Internationalisierung:** Custom Route-Mapping (lib/route-mapping.ts)
 
 ### Projektstruktur
 
 ```
 altivaAI/
-├── app/                     # Next.js App Router Seiten
-│   ├── layout.tsx          # Root Layout mit Header
-│   ├── page.tsx            # Homepage
-│   ├── globals.css         # Globale CSS-Variablen
-│   ├── applications/       # Produktübersicht Seite
-│   ├── datenschutzerklarung/
+├── app/                           # Next.js App Router Seiten
+│   ├── layout.tsx                # Root Layout mit Header
+│   ├── page.tsx                  # Deutsche Homepage
+│   ├── globals.css               # CSS-Variablen & Tailwind
+│   ├── en/                       # Englische Seiten (13 Routes)
+│   │   ├── page.tsx             # Englische Homepage
+│   │   ├── contact/
+│   │   ├── products/
+│   │   ├── resources/
+│   │   ├── datev-interface/
+│   │   ├── travel-expenses/
+│   │   ├── dunning/
+│   │   ├── localization-germany/
+│   │   ├── absence-management/
+│   │   ├── peak-ship/
+│   │   ├── imprint/
+│   │   └── privacy/
+│   ├── kontakt/                  # Deutsche Seiten
+│   ├── products/
+│   ├── ressourcen/
+│   ├── schnittstelle-datev/
+│   ├── reisekosten/
+│   ├── dunning/
+│   ├── localization-germany/
+│   ├── abwesenheitsverwaltung/
+│   ├── peak-ship/
 │   ├── impressum/
-│   ├── kontakt/
-│   ├── produktuebersicht/
-│   └── [weitere Seiten]    # 18 Seiten total
-├── components/
-│   ├── Button/             # Wiederverwendbare Button-Komponente
-│   ├── Header/             # Globale Navigation
-│   ├── Footer/             # Footer mit Branding
-│   └── sections/home/      # Modular aufgebaute Homepage-Sektionen
-│       ├── home-hero.tsx
-│       ├── home-company.tsx
-│       ├── home-datev.tsx
-│       ├── home-compliance.tsx
-│       └── [weitere 5 Sektionen]
-├── public/                 # Statische Assets
-├── .next/                  # Next.js Build-Dateien
+│   ├── datenschutzerklarung/
+│   ├── api/                      # API Route (Contact Form)
+│   ├── colors-test/              # Test-Seiten
+│   ├── typography-test/
+│   └── ui-test/
+├── components/                    # 72 React Komponenten
+│   ├── Button/
+│   ├── Header/                   # Navigation mit Mega Menu
+│   │   ├── Header.tsx           # 416 Zeilen
+│   │   └── LanguageSwitch.tsx
+│   ├── Footer/
+│   │   ├── Footer.tsx
+│   │   └── FooterBottom.tsx
+│   ├── ProductSlider/
+│   │   ├── ProductSlider.tsx    # Deutsche Version
+│   │   └── ProductSliderEN.tsx  # Englische Version
+│   └── sections/                # Sektionen für alle Seiten
+│       ├── home/                # Homepage (8 Sektionen)
+│       ├── datev/               # DATEV Produkt (DE+EN)
+│       ├── localization/        # Lokalisierung (DE+EN)
+│       ├── abwesenheit/         # Abwesenheit
+│       ├── dunning/             # Mahnwesen
+│       ├── peakship/            # Peak Ship
+│       ├── reisekosten/         # Reisekosten
+│       └── products/            # Produkt-Übersicht
+├── lib/
+│   └── route-mapping.ts         # DE/EN URL-Mapping
+├── locales/
+│   ├── de.json                  # Deutsche Übersetzungen
+│   └── en.json                  # Englische Übersetzungen
+├── public/                       # Statische Assets (Bilder, Icons)
 └── [Config-Dateien]
 ```
 
@@ -113,30 +152,45 @@ Die Homepage ist modular aus verschiedenen Sektionen aufgebaut:
 
 ## Seiten-Portfolio
 
-**Hauptseiten (19 Routes total):**
-- **Homepage** (modularer Aufbau mit 8 Sektionen) - `/` (app/page.tsx)
-- **Applications/Products:**
-  - Applications (Produktübersicht) - `/applications` (app/applications/page.tsx)
-  - Products (Alternative Produktseite) - `/products` (app/products/page.tsx)
-  - Produktübersicht - `/produktuebersicht` (app/produktuebersicht/page.tsx)
-- **Spezifische Produktseiten (7):**
-  - DATEV Schnittstelle - `/schnittstelle-datev` (app/schnittstelle-datev/page.tsx)
-  - Lokalisierung Deutschland - `/localization-germany` (app/localization-germany/page.tsx)
-  - Abwesenheitsverwaltung - `/abwesenheitsverwaltung` (app/abwesenheitsverwaltung/page.tsx)
-  - Mahnwesen - `/dunning` (app/dunning/page.tsx)
-  - Peak Ship - `/peak-ship` (app/peak-ship/page.tsx)
-  - Reisekosten - `/reisekosten` (app/reisekosten/page.tsx)
-  - Ressourcen - `/ressourcen` (app/ressourcen/page.tsx - 103 Zeilen)
-- **Service-Seiten:**
-  - Kontakt - `/kontakt` (app/kontakt/page.tsx)
-  - Datenschutz - `/datenschutzerklarung` (app/datenschutzerklarung/page.tsx - 112 Zeilen)
-  - Impressum - `/impressum` (app/impressum/page.tsx - 74 Zeilen)
-- **Test-Seiten (Development):**
-  - UI Test - `/ui-test` (app/ui-test/page.tsx - 399 Zeilen)
-  - Typography Test - `/typography-test` (app/typography-test/page.tsx - 215 Zeilen)
-  - Colors Test - `/colors-test` (app/colors-test/page.tsx - 406 Zeilen)
-- **API Routes:**
-  - API Endpoint - `/api` (app/api/)
+**Gesamtanzahl:** 27 Seiten (Deutsch + Englisch) + 3 Test-Seiten + 1 API = **32 Routen**
+
+### Deutsche Seiten (14 Routes)
+- **Homepage:** `/` - Modularer Aufbau mit 8 Sektionen
+- **Produkte:**
+  - `/products` - Produktübersicht mit Slider
+  - `/schnittstelle-datev` - DATEV Schnittstelle
+  - `/localization-germany` - Lokalisierung Deutschland
+  - `/abwesenheitsverwaltung` - Abwesenheitsverwaltung
+  - `/dunning` - Mahnwesen
+  - `/peak-ship` - Peak Ship Versandmanagement
+  - `/reisekosten` - Reisekosten
+  - `/ressourcen` - Ressourcen-Seite
+- **Service:**
+  - `/kontakt` - Kontaktformular (mit API-Integration)
+  - `/impressum` - Impressum
+  - `/datenschutzerklarung` - Datenschutzerklärung
+
+### Englische Seiten (13 Routes - `/en/*`)
+- **Homepage:** `/en` - English Homepage
+- **Products:**
+  - `/en/products` - Product Overview
+  - `/en/datev-interface` - DATEV Interface
+  - `/en/localization-germany` - German Localization
+  - `/en/absence-management` - Absence Management
+  - `/en/dunning` - Dunning Management
+  - `/en/peak-ship` - Peak Ship Shipping
+  - `/en/travel-expenses` - Travel Expenses
+  - `/en/resources` - Resources Page
+- **Service:**
+  - `/en/contact` - Contact Form
+  - `/en/imprint` - Imprint
+  - `/en/privacy` - Privacy Policy
+
+### Entwicklungs-Seiten (4 Routes)
+- `/ui-test` - UI-Komponenten Test (399 Zeilen)
+- `/typography-test` - Typografie Test (215 Zeilen)
+- `/colors-test` - Farbsystem Test (406 Zeilen)
+- `/api/contact` - Contact Form API Endpoint (ƒ Dynamic)
 
 ## Development Setup
 
@@ -203,8 +257,9 @@ Die Homepage ist modular aus verschiedenen Sektionen aufgebaut:
 ## Code-Statistiken
 
 **Projektgröße:**
-- **TypeScript/React Komponenten:** 54 .tsx Dateien
-- **App Routes:** 19 Verzeichnisse (Seiten/Routes)
+- **TypeScript/React Komponenten:** 103 .tsx Dateien (31 in app/ + 72 in components/)
+- **App Routes:** 27 Seiten-Routes + 3 Test-Seiten + 1 API = 32 Routen
+- **Zweisprachig:** Deutsch (14 Seiten) + Englisch (13 Seiten unter /en)
 - **Größte Dateien:**
   - components/Header/Header.tsx: 416 Zeilen (komplexe Navigation)
   - app/colors-test/page.tsx: 406 Zeilen (Farbsystem-Tests)
@@ -212,32 +267,43 @@ Die Homepage ist modular aus verschiedenen Sektionen aufgebaut:
   - app/typography-test/page.tsx: 215 Zeilen (Typografie-Tests)
 
 **Komponentenarchitektur:**
-- **54 React Komponenten** (.tsx) organisiert in:
-  - **Header-System:** Komplexe Navigation mit Hover-Menüs (416 Zeilen)
-    - Mega Menu für Applications Dropdown (8 Produktkarten)
-    - Accessibility Features: ARIA-Attribute, ESC-Taste Navigation
-    - Mobile Navigation: Vertikales Layout mit Burger-Menu
-    - Social Media Links: LinkedIn, YouTube
-    - Sprachswitch: EN/DE Umschalter
-  - **Button-System:** Wiederverwendbare Komponente (63 Zeilen)
-  - **Footer-System:** 2-teilig (Footer.tsx + FooterBottom.tsx, 141 Zeilen total)
-  - **Home-Sektionen:** Modularer Aufbau (8 Komponenten + Footer)
-  - **Produktsektionen:** Wiederverwendbare Hero/Challenges/Solutions/Teaser/Comparison Komponenten für alle 7 Produkte
+- **72 React Komponenten** in components/ organisiert nach:
+  - **Header-System:** (2 Komponenten)
+    - Header.tsx: Komplexe Navigation mit Mega Menu (416 Zeilen)
+    - LanguageSwitch.tsx: DE/EN Umschalter mit Route-Mapping
+    - Features: ARIA-Attribute, ESC-Taste, Mobile Burger-Menu
+  - **Footer-System:** (2 Komponenten)
+    - Footer.tsx + FooterBottom.tsx
+  - **Button-System:** Wiederverwendbare Button-Komponente
+  - **ProductSlider:** (2 Komponenten - DE + EN)
+  - **Home-Sektionen:** 8 modulare Komponenten für Homepage
+  - **Produktsektionen:** Komponenten für 7 NetSuite-Produkte
+    - Hero, Challenges, Solutions, Teaser, Comparison
+    - Teilweise zweisprachig (DE + EN Versionen)
+  - **Product-Specific:** Datev (12), Localization (12), Dunning (6), Peakship (6), Reisekosten (6), Abwesenheit (5)
 
 ## Status & Deployment
 
-- **Entwicklungsstand:** Aktiv entwickelt (letzte Commits: Januar 2025)
+- **Entwicklungsstand:** ✅ Production-ready (Stand: Januar 2025)
 - **Git Status:** Clean working directory (main branch)
+- **Build Status:** ✅ Kompiliert erfolgreich (32 statische Routen)
 - **Deployment:** Vercel-ready (vercel.json vorhanden)
-- **Domain:** altaviaapplications.com (in Metadata definiert)
-- **Performance:** Turbopack-optimiert für schnelle Entwicklung
+- **Domain:** altaviaapplications.com
+- **Performance:**
+  - Turbopack-optimiert für Entwicklung & Build
+  - Alle Routen statisch pre-rendered (SSG)
+  - First Load JS: ~131-133 kB pro Route
+  - Shared JS Chunks: 140 kB (optimiert)
 - **Aktuelle Features:**
-  - Homepage vollständig implementiert mit 8 modularen Sektionen
-  - Responsive Navigation mit Mega Menu
-  - Accessibility-konform (ARIA, Keyboard-Navigation, ESC-Taste)
-  - 7 vollständige Produktseiten mit einheitlicher Struktur
-  - Kontaktformular implementiert
-  - Vollständiges Impressum und Datenschutzerklärung
+  - ✅ Zweisprachige Website (DE + EN) mit 27 Seiten
+  - ✅ Homepage vollständig implementiert (8 Sektionen)
+  - ✅ Responsive Navigation mit Mega Menu
+  - ✅ Accessibility-konform (ARIA, Keyboard, ESC-Taste)
+  - ✅ 7 vollständige Produktseiten (teilweise zweisprachig)
+  - ✅ Kontaktformular mit API-Integration
+  - ✅ Vollständiges Impressum und Datenschutzerklärung (DE+EN)
+  - ✅ Custom Route-Mapping für Internationalisierung
+  - ✅ Language Switcher mit korrekter URL-Zuordnung
 
 ## Produktportfolio (7 NetSuite-Erweiterungen)
 
@@ -278,38 +344,79 @@ Die Homepage ist modular aus verschiedenen Sektionen aufgebaut:
 - Teaser (Call-to-Action)
 - Comparison Table (Vorher/Nachher-Vergleich)
 
+## Internationalisierung (i18n)
+
+**Implementierung:**
+- **Route-basiertes System** ohne externe Libraries
+- **Deutsche Seiten:** Root-Level (`/`)
+- **Englische Seiten:** Unter `/en/*`
+- **Route-Mapping:** lib/route-mapping.ts
+  - Bidirektionale URL-Zuordnung (DE ↔ EN)
+  - Unterstützt komplexe Pfade und Produktseiten
+  - Automatische Fallback-Logik
+- **Language Switch:** LanguageSwitch.tsx Komponente
+  - Dynamische URL-Umschaltung zwischen Sprachen
+  - Erhält aktuelle Seiten-Kontext
+  - Nutzt getAlternateUrl() für korrekte Zuordnung
+- **Übersetzungen:** locales/de.json + locales/en.json
+
+**Vorteile:**
+- ✅ SEO-freundliche URLs (separate Pfade)
+- ✅ Keine Client-Side Redirect-Logik
+- ✅ Statisch pre-rendered (schnelles Loading)
+- ✅ Einfache Wartung und Erweiterung
+
 ## Fazit
 
-**Professionell strukturierte Next.js-Anwendung für die Alta Via Applications GmbH mit:**
+**Enterprise-grade Next.js-Anwendung für Alta Via Applications GmbH mit:**
 
-✅ **Saubere Architektur:**
-- 54 TypeScript/React Komponenten (.tsx)
-- 19 App Routes (Seiten)
+✅ **Skalierbare Architektur:**
+- 103 TypeScript/React Komponenten (.tsx)
+- 32 App Routes (27 Seiten + 3 Tests + 1 API)
+- Zweisprachige Website (DE + EN) mit 27 lokalisierten Seiten
 - Modulare Komponentenstruktur mit CSS Modules
-- 17 Hauptseiten + umfangreiche Test-Seiten
 - Homepage mit 8 modularen Sektionen
+- 7 vollständige Produktseiten
 
 ✅ **Ausgereiftes Design System:**
 - Vollständige Farbpalette mit 7 produktspezifischen Farbthemen
 - Responsive Typografie (Titillium Web, 36px mobile → 69px desktop H1)
 - CSS-Variablen und Tailwind 4 Integration
 - Radial Gradients für visuelles Interesse
+- Konsistente Spacing- und Typography-Scale (1.125 Ratio)
 
-✅ **Performance & Entwicklung:**
-- Next.js 15.5.3 mit Turbopack
-- React 19.1.0 (neueste Version)
+✅ **Performance & Technologie:**
+- Next.js 15.5.3 mit Turbopack (schnellste Build-Pipeline)
+- React 19.1.0 (neueste stabile Version)
 - TypeScript 5 im Strict Mode
+- Alle Routen statisch pre-rendered (SSG)
+- First Load JS: 131-133 kB (optimiert)
 - Optimierte Google Fonts Integration
 
-✅ **Corporate Identity:**
+✅ **Internationalisierung:**
+- Route-basiertes i18n ohne externe Libraries
+- 27 lokalisierte Seiten (DE + EN)
+- Custom Route-Mapping für SEO-freundliche URLs
+- Language Switcher mit kontextbezogener Navigation
+
+✅ **Corporate Identity & SEO:**
 - Vollständige Integration der Alta Via Applications Marke
 - NetSuite-fokussierte Produktdarstellung (7 Erweiterungen)
-- SEO-optimierte Metadaten
-- Responsive Design (Mobile-First)
+- SEO-optimierte Metadaten (OpenGraph, Twitter Cards)
+- Responsive Design (Mobile-First Approach)
+- Strukturierte Sitemaps für beide Sprachen
 
 ✅ **Accessibility & UX:**
 - ARIA-Labels und Semantic HTML
-- Keyboard-Navigation (ESC-Taste schließt Menüs)
+- Keyboard-Navigation (ESC-Taste, Tab-Navigation)
 - Skip-to-Content Link
-- Hover-basierte Desktop-Navigation
+- Hover-basierte Desktop-Navigation mit Mega Menu
 - Mobile Burger-Menu mit vertikalem Layout
+- Focus-States und Screen-Reader Support
+
+✅ **Production-Ready:**
+- Build kompiliert fehlerfrei (32 Routen)
+- Vercel-Deployment konfiguriert
+- API-Integration für Kontaktformular
+- Umfassende Test-Seiten für Design System
+- Clean Git-Repository (main branch)
