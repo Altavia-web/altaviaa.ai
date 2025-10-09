@@ -4,24 +4,32 @@ import Image from 'next/image';
 export default function PeakShipSolutions() {
   const features = [
     {
-      title: "Lorem ipsum dolor",
-      description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt."
+      title: "Einfache Carrier-Einrichtung",
+      description: "Legen Sie Speditionskonten direkt in NetSuite an – ohne externe Tools."
     },
     {
-      title: "Consectetur adipiscing",
-      description: "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex."
+      title: "Versandaufträge direkt erstellen",
+      description: "Aufträge entstehen mühelos in NetSuite – Übertragungsfehler gehören der Vergangenheit an."
     },
     {
-      title: "Sed do eiusmod",
-      description: "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat."
+      title: "Automatische Etiketten",
+      description: "Versandetiketten werden automatisch generiert und können direkt im Lager gedruckt werden."
     },
     {
-      title: "Tempor incididunt",
-      description: "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit."
+      title: "Tracking-Nummern inklusive",
+      description: "Sendungen erhalten automatisch Tracking-Codes, die Sie Ihren Kunden sofort mitteilen können."
     },
     {
-      title: "Ullamco laboris",
-      description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque."
+      title: "Status und Zoll im Griff",
+      description: "Verfolgen Sie den Sendungsstatus direkt in NetSuite und erstellen Sie Zollerklärungen bei Bedarf automatisch."
+    },
+    {
+      title: "Breite Carrier-Auswahl",
+      description: "DHL, DPD, UPS, GLS, FedEx und weitere sind integriert – zusätzliche Carrier lassen sich jederzeit ergänzen."
+    },
+    {
+      title: "Nahtlos in NetSuite",
+      description: "Alles läuft innerhalb von NetSuite – schnell, zuverlässig und ohne Systembrüche."
     }
   ];
 
@@ -45,32 +53,12 @@ export default function PeakShipSolutions() {
           className="text-3xl lg:text-4xl font-semibold text-center mb-16 leading-tight mx-auto"
           style={{ color: 'var(--color-dark-blue)', maxWidth: '800px' }}
         >
-          Lorem ipsum dolor sit amet consectetur
+          Versand einfach und integriert
         </h2>
 
-        {/* Features Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-12 gap-y-12 mb-12">
-          {features.slice(0, 2).map((feature, index) => (
-            <div key={index} className="text-left">
-              <h3
-                className="text-xl lg:text-2xl font-semibold mb-3"
-                style={{ color: 'var(--color-dark-blue)' }}
-              >
-                {feature.title}
-              </h3>
-              <p
-                className="text-lg leading-relaxed"
-                style={{ color: 'var(--color-dark-blue)', opacity: 0.85 }}
-              >
-                {feature.description}
-              </p>
-            </div>
-          ))}
-        </div>
-
-        {/* Second row - 3 columns */}
+        {/* Features Grid - All features in responsive grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-12 gap-y-12">
-          {features.slice(2).map((feature, index) => (
+          {features.map((feature, index) => (
             <div key={index} className="text-left">
               <h3
                 className="text-xl lg:text-2xl font-semibold mb-3"

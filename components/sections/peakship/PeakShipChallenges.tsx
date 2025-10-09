@@ -10,15 +10,15 @@ export default function PeakShipChallenges() {
   const slides = [
     {
       icon: "/images/00_ALLGEMEINES/Questionmark/AVA_Questionmark_darkblue.png",
-      heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore?"
+      heading: "Soll Ihr Versandprozess einfach, fehlerfrei und jederzeit erweiterbar laufen – mit allen gängigen Carriern integriert?"
     },
     {
       icon: "/images/00_ALLGEMEINES/Questionmark/AVA_Questionmark_darkblue.png",
-      heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore?"
+      heading: "Müssen Ihre Versandaufträge bisher manuell zwischen NetSuite und Carriertools hin- und herkopiert werden?"
     },
     {
       icon: "/images/00_ALLGEMEINES/Questionmark/AVA_Questionmark_darkblue.png",
-      heading: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore?"
+      heading: "Sollen Ihre Versandetiketten und Trackingnummern direkt im Lager entstehen – ohne Umwege?"
     }
   ];
 
