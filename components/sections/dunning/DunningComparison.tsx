@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import { CheckCircle2, XCircle, ChevronDown } from 'lucide-react';
+import { ChevronDown, CheckCircle2 } from 'lucide-react';
 
 export default function DunningComparison() {
   const [expandedCategories, setExpandedCategories] = useState({
@@ -94,33 +94,33 @@ export default function DunningComparison() {
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
                       Teilweise schon in 60 Minuten startklar (je nach Umfang)
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <XCircle size={28} className="inline-block" style={{ color: '#ef4444' }} />
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
+                      nein
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
+                      ja
                     </td>
                   </tr>
                   <tr className="bg-gray-50">
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
                       Unterstützung bei der Ersteinrichtung
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <XCircle size={28} className="inline-block" style={{ color: '#ef4444' }} />
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
+                      nein
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
+                      ja
                     </td>
                   </tr>
                   <tr className="bg-white">
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
                       Automatische Erstellung von Dokument-Ordnern, Rollen & Templates
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <XCircle size={28} className="inline-block" style={{ color: '#ef4444' }} />
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
+                      nein
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
+                      ja
                     </td>
                   </tr>
                   <tr className="bg-gray-50">
@@ -171,22 +171,22 @@ export default function DunningComparison() {
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
                       Mehrstufiges Mahnwesen (bis 3 Stufen)
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <XCircle size={28} className="inline-block" style={{ color: '#ef4444' }} />
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
+                      nein
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
+                      ja
                     </td>
                   </tr>
                   <tr className="bg-gray-50">
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
                       Mahngebühren & Zinsen
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <XCircle size={28} className="inline-block" style={{ color: '#ef4444' }} />
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
+                      nein
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
+                      ja
                     </td>
                   </tr>
                   <tr className="bg-white">
@@ -196,30 +196,30 @@ export default function DunningComparison() {
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', opacity: 0.7 }}>
                       begrenzt
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
+                      ja
                     </td>
                   </tr>
                   <tr className="bg-gray-50">
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
                       Zentrale Steuerung mit Filteroptionen
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <XCircle size={28} className="inline-block" style={{ color: '#ef4444' }} />
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
+                      nein
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
+                      ja
                     </td>
                   </tr>
                   <tr className="bg-white">
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
                       Lokalisierte & mehrsprachige Templates (PDF/E-Mail)
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <XCircle size={28} className="inline-block" style={{ color: '#ef4444' }} />
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
+                      nein
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
+                      ja
                     </td>
                   </tr>
                   <tr className="bg-gray-50">
@@ -229,8 +229,8 @@ export default function DunningComparison() {
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', opacity: 0.7 }}>
                       begrenzt
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
+                      ja
                     </td>
                   </tr>
                   <tr className="bg-white">
@@ -240,19 +240,19 @@ export default function DunningComparison() {
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', opacity: 0.7 }}>
                       begrenzt
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
+                      ja
                     </td>
                   </tr>
                   <tr className="bg-gray-50">
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
                       Übergabe an Inkasso-Unternehmen
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <XCircle size={28} className="inline-block" style={{ color: '#ef4444' }} />
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
+                      nein
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
+                      ja
                     </td>
                   </tr>
                 </>
@@ -292,22 +292,22 @@ export default function DunningComparison() {
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
                       Einfache Anpassung von Templates ohne HTML
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <XCircle size={28} className="inline-block" style={{ color: '#ef4444' }} />
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
+                      nein
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
+                      ja
                     </td>
                   </tr>
                   <tr className="bg-gray-50">
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
                       Automatische Updates (App-ähnlich)
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <XCircle size={28} className="inline-block" style={{ color: '#ef4444' }} />
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
+                      nein
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
+                      ja
                     </td>
                   </tr>
                   <tr className="bg-white">
@@ -317,8 +317,8 @@ export default function DunningComparison() {
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', opacity: 0.7 }}>
                       begrenzt
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
+                      ja
                     </td>
                   </tr>
                 </>

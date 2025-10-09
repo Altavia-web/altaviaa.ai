@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import { CheckCircle2, XCircle, ChevronDown } from 'lucide-react';
+import { ChevronDown, CheckCircle2 } from 'lucide-react';
 
 export default function DunningComparisonEN() {
   const [expandedCategories, setExpandedCategories] = useState({
@@ -95,10 +95,10 @@ export default function DunningComparisonEN() {
                       Ready to go in 60 minutes in some cases (depending on scope)
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <XCircle size={28} className="inline-block" style={{ color: '#ef4444' }} />
+                      no
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
+                      yes
                     </td>
                   </tr>
                   <tr className="bg-gray-50">
@@ -106,10 +106,10 @@ export default function DunningComparisonEN() {
                       Support during initial setup
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <XCircle size={28} className="inline-block" style={{ color: '#ef4444' }} />
+                      no
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
+                      yes
                     </td>
                   </tr>
                   <tr className="bg-white">
@@ -117,10 +117,10 @@ export default function DunningComparisonEN() {
                       Automatic creation of document folders, roles & templates
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <XCircle size={28} className="inline-block" style={{ color: '#ef4444' }} />
+                      no
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
+                      yes
                     </td>
                   </tr>
                   <tr className="bg-gray-50">
@@ -131,7 +131,7 @@ export default function DunningComparisonEN() {
                       limited
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
+                      yes
                     </td>
                   </tr>
                 </>
@@ -172,10 +172,10 @@ export default function DunningComparisonEN() {
                       Multi-level dunning (up to 3 levels)
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <XCircle size={28} className="inline-block" style={{ color: '#ef4444' }} />
+                      no
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
+                      yes
                     </td>
                   </tr>
                   <tr className="bg-gray-50">
@@ -183,10 +183,10 @@ export default function DunningComparisonEN() {
                       Dunning fees & interest
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <XCircle size={28} className="inline-block" style={{ color: '#ef4444' }} />
+                      no
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
+                      yes
                     </td>
                   </tr>
                   <tr className="bg-white">
@@ -197,7 +197,7 @@ export default function DunningComparisonEN() {
                       limited
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
+                      yes
                     </td>
                   </tr>
                   <tr className="bg-gray-50">
@@ -205,10 +205,10 @@ export default function DunningComparisonEN() {
                       Central control with filter options
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <XCircle size={28} className="inline-block" style={{ color: '#ef4444' }} />
+                      no
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
+                      yes
                     </td>
                   </tr>
                   <tr className="bg-white">
@@ -216,10 +216,10 @@ export default function DunningComparisonEN() {
                       Localized & multilingual templates (PDF/email)
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <XCircle size={28} className="inline-block" style={{ color: '#ef4444' }} />
+                      no
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
+                      yes
                     </td>
                   </tr>
                   <tr className="bg-gray-50">
@@ -230,7 +230,7 @@ export default function DunningComparisonEN() {
                       limited
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
+                      yes
                     </td>
                   </tr>
                   <tr className="bg-white">
@@ -241,7 +241,7 @@ export default function DunningComparisonEN() {
                       limited
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
+                      yes
                     </td>
                   </tr>
                   <tr className="bg-gray-50">
@@ -249,10 +249,10 @@ export default function DunningComparisonEN() {
                       Handover to collection agency
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <XCircle size={28} className="inline-block" style={{ color: '#ef4444' }} />
+                      no
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
+                      yes
                     </td>
                   </tr>
                 </>
@@ -293,10 +293,10 @@ export default function DunningComparisonEN() {
                       Easy template customization without HTML
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <XCircle size={28} className="inline-block" style={{ color: '#ef4444' }} />
+                      no
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
+                      yes
                     </td>
                   </tr>
                   <tr className="bg-gray-50">
@@ -304,10 +304,10 @@ export default function DunningComparisonEN() {
                       Automatic updates (app-like)
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <XCircle size={28} className="inline-block" style={{ color: '#ef4444' }} />
+                      no
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
+                      yes
                     </td>
                   </tr>
                   <tr className="bg-white">
@@ -318,7 +318,7 @@ export default function DunningComparisonEN() {
                       limited
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
+                      yes
                     </td>
                   </tr>
                 </>

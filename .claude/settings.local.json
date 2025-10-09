@@ -17,7 +17,8 @@
       "Bash(npm run typecheck:*)",
       "Bash(npm run:*)",
       "Bash(curl:*)",
-      "Bash(find:*)"
+      "Bash(find:*)",
+      "Bash(taskkill:*)"
     ],
     "deny": [],
     "ask": []
