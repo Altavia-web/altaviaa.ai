@@ -95,6 +95,7 @@
   --bmd-color-1: #ff6120;
   --bmd-color-2: #ff9a55;
   --gradient-bmd: radial-gradient(circle at center, var(--bmd-color-2) 0%, var(--bmd-color-1) 100%);
+  --gradient-bmd-intro: radial-gradient(50% 50% at 50% 50%, rgba(255,255,255,0.8) 0%, #ffddc8 100%);
 
   /* Typography scale with 1.125 ratio */
   --font-size-xs: 0.75rem;      /* 12px */
