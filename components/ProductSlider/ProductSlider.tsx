@@ -243,7 +243,7 @@ export default function ProductSlider({ autoPlaySpeed = 5000 }: ProductSliderPro
             <div
               className="flex gap-6 transition-transform duration-500 ease-in-out"
               style={{
-                transform: `translateX(calc(-${currentIndex} * (${100 / itemsPerView}% + ${6 / itemsPerView}rem)))`
+                transform: `translateX(calc(-${currentIndex} * (${100 / itemsPerView}% + ${1.5 * (itemsPerView - 1) / itemsPerView}rem)))`
               }}
             >
               {duplicatedProducts.map((product, index) => (
@@ -251,7 +251,7 @@ export default function ProductSlider({ autoPlaySpeed = 5000 }: ProductSliderPro
                   key={`${product.id}-${index}`}
                   className="flex-shrink-0 bg-white overflow-hidden flex flex-col"
                   style={{
-                    width: `calc(${100 / itemsPerView}% - ${(itemsPerView - 1) * 6 / itemsPerView}rem)`,
+                    width: `calc(${100 / itemsPerView}% - ${(itemsPerView - 1) * 1.5 / itemsPerView}rem)`,
                     borderRadius: '12px'
                   }}
                 >
