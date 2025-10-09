@@ -7,6 +7,7 @@ import DunningSolutions from '@/components/sections/dunning/DunningSolutions';
 import DunningTeaser from '@/components/sections/dunning/DunningTeaser';
 import DunningTestimonial from '@/components/sections/dunning/DunningTestimonial';
 import DunningComparison from '@/components/sections/dunning/DunningComparison';
+import DunningGrowth from '@/components/sections/dunning/DunningGrowth';
 
 export default function Dunning() {
   return (
@@ -18,6 +19,7 @@ export default function Dunning() {
       <DunningTeaser />
       <DunningTestimonial />
       <DunningComparison />
+      <DunningGrowth />
       <Footer />
     </div>
   );
