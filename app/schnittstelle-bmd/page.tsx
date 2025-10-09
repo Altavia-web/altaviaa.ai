@@ -7,6 +7,7 @@ import BmdBuchhaltung from '@/components/sections/bmd/bmd-buchhaltung';
 import BmdTeaser from '@/components/sections/bmd/bmd-teaser';
 import BmdZitat from '@/components/sections/bmd/bmd-zitat';
 import BmdComparisonTable from '@/components/sections/bmd/bmd-comparison-table';
+import ProductsWeitereLosungen from '@/components/sections/products/products-weitere-loesungen';
 
 export default function SchnittstelleBmd() {
   return (
@@ -18,6 +19,7 @@ export default function SchnittstelleBmd() {
       <BmdTeaser />
       <BmdZitat />
       <BmdComparisonTable />
+      <ProductsWeitereLosungen />
       <Footer />
     </div>
   );

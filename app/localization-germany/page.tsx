@@ -7,6 +7,7 @@ import LocalizationSolutions from '@/components/sections/localization/Localizati
 import LocalizationTeaser from '@/components/sections/localization/LocalizationTeaser';
 import LocalizationTestimonial from '@/components/sections/localization/LocalizationTestimonial';
 import LocalizationComparison from '@/components/sections/localization/LocalizationComparison';
+import ProductsWeitereLosungen from '@/components/sections/products/products-weitere-loesungen';
 
 export default function LocalizationGermany() {
   return (
@@ -18,6 +19,7 @@ export default function LocalizationGermany() {
       <LocalizationTeaser />
       <LocalizationTestimonial />
       <LocalizationComparison />
+      <ProductsWeitereLosungen />
       <Footer />
     </div>
   );

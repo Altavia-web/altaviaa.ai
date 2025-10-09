@@ -7,6 +7,7 @@ import DatevBuchhaltung from '@/components/sections/datev/datev-buchhaltung';
 import DatevTeaser from '@/components/sections/datev/datev-teaser';
 import DatevZitat from '@/components/sections/datev/datev-zitat';
 import DatevComparisonTable from '@/components/sections/datev/datev-comparison-table';
+import ProductsWeitereLosungen from '@/components/sections/products/products-weitere-loesungen';
 
 export default function SchnittstelleDatev() {
   return (
@@ -18,6 +19,7 @@ export default function SchnittstelleDatev() {
       <DatevTeaser />
       <DatevZitat />
       <DatevComparisonTable />
+      <ProductsWeitereLosungen />
       <Footer />
     </div>
   );
