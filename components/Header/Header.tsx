@@ -161,7 +161,7 @@ export default function Header({ locale = 'de' }: HeaderProps) {
               <Link href={productUrls.datev} className={styles.mobileProductLink} onClick={() => setIsMobileMenuOpen(false)}>
                 <span>{t.nav.productsMenu.datev.title}</span>
                 <Image
-                  src="/images/DATEV/AVA_Compass_DATEV.webp"
+                  src="/images/00_Menu/AVA_Compass_DATEV_darkblue_thick.png"
                   alt={t.nav.productsMenu.datev.short}
                   width={24}
                   height={24}
@@ -171,7 +171,7 @@ export default function Header({ locale = 'de' }: HeaderProps) {
               <Link href={productUrls.bmd} className={styles.mobileProductLink} onClick={() => setIsMobileMenuOpen(false)}>
                 <span>{t.nav.productsMenu.bmd.title}</span>
                 <Image
-                  src="/images/DATEV/AVA_Compass_DATEV.webp"
+                  src="/images/00_Menu/AVA_Compass_DATEV_darkblue_thick.png"
                   alt={t.nav.productsMenu.bmd.short}
                   width={24}
                   height={24}
@@ -181,7 +181,7 @@ export default function Header({ locale = 'de' }: HeaderProps) {
               <Link href={productUrls.localization} className={styles.mobileProductLink} onClick={() => setIsMobileMenuOpen(false)}>
                 <span>{t.nav.productsMenu.localization.title}</span>
                 <Image
-                  src="/images/LOCALIZATION/AVA_Map_Localization.webp"
+                  src="/images/00_Menu/AVA_Map_Localization_Darkblue_thick.png"
                   alt={t.nav.productsMenu.localization.short}
                   width={24}
                   height={24}
@@ -191,7 +191,7 @@ export default function Header({ locale = 'de' }: HeaderProps) {
               <Link href={productUrls.localizationAustria} className={styles.mobileProductLink} onClick={() => setIsMobileMenuOpen(false)}>
                 <span>{t.nav.productsMenu.localizationAustria.title}</span>
                 <Image
-                  src="/images/LOCALIZATION/AVA_Map_Localization.webp"
+                  src="/images/00_Menu/AVA_Map_Localization_Darkblue_thick.png"
                   alt={t.nav.productsMenu.localizationAustria.short}
                   width={24}
                   height={24}
@@ -201,7 +201,7 @@ export default function Header({ locale = 'de' }: HeaderProps) {
               <Link href={productUrls.dunning} className={styles.mobileProductLink} onClick={() => setIsMobileMenuOpen(false)}>
                 <span>{t.nav.productsMenu.dunning.title}</span>
                 <Image
-                  src="/images/DUNNING/AVA_Carabiner_Dunning.webp"
+                  src="/images/00_Menu/AVA_Carabiner_Dunning-Darkblue_thick.png"
                   alt={t.nav.productsMenu.dunning.short}
                   width={24}
                   height={24}
@@ -211,7 +211,7 @@ export default function Header({ locale = 'de' }: HeaderProps) {
               <Link href={productUrls.peakship} className={styles.mobileProductLink} onClick={() => setIsMobileMenuOpen(false)}>
                 <span>{t.nav.productsMenu.peakship.title}</span>
                 <Image
-                  src="/images/PEAKSHIP/AVA_Rope_PeakShip.webp"
+                  src="/images/00_Menu/AVA_Rope_PeakShip_Darkblue_thick.png"
                   alt={t.nav.productsMenu.peakship.short}
                   width={24}
                   height={24}
@@ -221,7 +221,7 @@ export default function Header({ locale = 'de' }: HeaderProps) {
               <Link href={productUrls.travel} className={styles.mobileProductLink} onClick={() => setIsMobileMenuOpen(false)}>
                 <span>{t.nav.productsMenu.travel.title}</span>
                 <Image
-                  src="/images/REISEKOSTEN/AVA_Backpack_Reisekosten.webp"
+                  src="/images/00_Menu/AVA_Backpack_Reisekosten_darkblue_thick.png"
                   alt={t.nav.productsMenu.travel.short}
                   width={24}
                   height={24}
@@ -260,7 +260,7 @@ export default function Header({ locale = 'de' }: HeaderProps) {
             >
               <div className={styles.iconWrapper}>
                 <Image
-                  src="/images/DATEV/AVA_Compass_DATEV.webp"
+                  src="/images/00_Menu/AVA_Compass_DATEV_darkblue_thick.png"
                   alt={t.nav.productsMenu.datev.short}
                   width={80}
                   height={80}
@@ -279,7 +279,7 @@ export default function Header({ locale = 'de' }: HeaderProps) {
             >
               <div className={styles.iconWrapper}>
                 <Image
-                  src="/images/DATEV/AVA_Compass_DATEV.webp"
+                  src="/images/00_Menu/AVA_Compass_DATEV_darkblue_thick.png"
                   alt={t.nav.productsMenu.bmd.short}
                   width={80}
                   height={80}
@@ -298,7 +298,7 @@ export default function Header({ locale = 'de' }: HeaderProps) {
             >
               <div className={styles.iconWrapper}>
                 <Image
-                  src="/images/LOCALIZATION/AVA_Map_Localization.webp"
+                  src="/images/00_Menu/AVA_Map_Localization_Darkblue_thick.png"
                   alt={t.nav.productsMenu.localization.short}
                   width={80}
                   height={80}
@@ -317,7 +317,7 @@ export default function Header({ locale = 'de' }: HeaderProps) {
             >
               <div className={styles.iconWrapper}>
                 <Image
-                  src="/images/LOCALIZATION/AVA_Map_Localization.webp"
+                  src="/images/00_Menu/AVA_Map_Localization_Darkblue_thick.png"
                   alt={t.nav.productsMenu.localizationAustria.short}
                   width={80}
                   height={80}
@@ -336,7 +336,7 @@ export default function Header({ locale = 'de' }: HeaderProps) {
             >
               <div className={styles.iconWrapper}>
                 <Image
-                  src="/images/DUNNING/AVA_Carabiner_Dunning.webp"
+                  src="/images/00_Menu/AVA_Carabiner_Dunning-Darkblue_thick.png"
                   alt={t.nav.productsMenu.dunning.short}
                   width={80}
                   height={80}
@@ -355,7 +355,7 @@ export default function Header({ locale = 'de' }: HeaderProps) {
             >
               <div className={styles.iconWrapper}>
                 <Image
-                  src="/images/PEAKSHIP/AVA_Rope_PeakShip.webp"
+                  src="/images/00_Menu/AVA_Rope_PeakShip_Darkblue_thick.png"
                   alt={t.nav.productsMenu.peakship.short}
                   width={80}
                   height={80}
@@ -374,7 +374,7 @@ export default function Header({ locale = 'de' }: HeaderProps) {
             >
               <div className={styles.iconWrapper}>
                 <Image
-                  src="/images/REISEKOSTEN/AVA_Backpack_Reisekosten.webp"
+                  src="/images/00_Menu/AVA_Backpack_Reisekosten_darkblue_thick.png"
                   alt={t.nav.productsMenu.travel.short}
                   width={80}
                   height={80}
