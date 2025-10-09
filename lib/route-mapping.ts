@@ -12,9 +12,11 @@ export const routeMapping = {
   resources: { de: '/ressourcen', en: '/en/resources' },
   productPages: {
     datev: { de: '/schnittstelle-datev', en: '/en/datev-interface' },
+    bmd: { de: '/schnittstelle-bmd', en: '/en/bmd-interface' },
     travel: { de: '/reisekosten', en: '/en/travel-expenses' },
     dunning: { de: '/dunning', en: '/en/dunning' },
     localization: { de: '/localization-germany', en: '/en/localization-germany' },
+    localizationAustria: { de: '/lokalisierung-oesterreich', en: '/en/austrian-localization' },
     absence: { de: '/abwesenheitsverwaltung', en: '/en/absence-management' },
     peakship: { de: '/peak-ship', en: '/en/peak-ship' },
   },
