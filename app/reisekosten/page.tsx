@@ -5,7 +5,6 @@ import ReisekostenHeroContent from '@/components/sections/reisekosten/Reisekoste
 import ReisekostenChallenges from '@/components/sections/reisekosten/ReisekostenChallenges';
 import ReisekostenSolutions from '@/components/sections/reisekosten/ReisekostenSolutions';
 import ReisekostenTeaser from '@/components/sections/reisekosten/ReisekostenTeaser';
-import ReisekostenTestimonial from '@/components/sections/reisekosten/ReisekostenTestimonial';
 import ReisekostenComparison from '@/components/sections/reisekosten/ReisekostenComparison';
 import ReisekostenGrowth from '@/components/sections/reisekosten/ReisekostenGrowth';
 
@@ -17,7 +16,6 @@ export default function Reisekosten() {
       <ReisekostenChallenges />
       <ReisekostenSolutions />
       <ReisekostenTeaser />
-      <ReisekostenTestimonial />
       <ReisekostenComparison />
       <ReisekostenGrowth />
       <Footer />

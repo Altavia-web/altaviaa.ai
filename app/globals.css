@@ -91,6 +91,11 @@
   --gsheet-color-2: #00b577;
   --gradient-gsheet: radial-gradient(circle at center, var(--gsheet-color-2) 0%, var(--gsheet-color-1) 100%);
 
+  /* Product Colors - BMD Interface */
+  --bmd-color-1: #ff6120;
+  --bmd-color-2: #ff9a55;
+  --gradient-bmd: radial-gradient(circle at center, var(--bmd-color-2) 0%, var(--bmd-color-1) 100%);
+
   /* Typography scale with 1.125 ratio */
   --font-size-xs: 0.75rem;      /* 12px */
   --font-size-sm: 0.875rem;     /* 14px */

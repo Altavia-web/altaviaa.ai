@@ -5,7 +5,6 @@ import ReisekostenHeroContentEN from '@/components/sections/reisekosten/Reisekos
 import ReisekostenChallengesEN from '@/components/sections/reisekosten/ReisekostenChallengesEN';
 import ReisekostenSolutionsEN from '@/components/sections/reisekosten/ReisekostenSolutionsEN';
 import ReisekostenTeaser from '@/components/sections/reisekosten/ReisekostenTeaser';
-import ReisekostenTestimonialEN from '@/components/sections/reisekosten/ReisekostenTestimonialEN';
 import ReisekostenComparisonEN from '@/components/sections/reisekosten/ReisekostenComparisonEN';
 import ReisekostenGrowthEN from '@/components/sections/reisekosten/ReisekostenGrowthEN';
 
@@ -17,7 +16,6 @@ export default function TravelExpenses() {
       <ReisekostenChallengesEN />
       <ReisekostenSolutionsEN />
       <ReisekostenTeaser />
-      <ReisekostenTestimonialEN />
       <ReisekostenComparisonEN />
       <ReisekostenGrowthEN />
       <Footer />

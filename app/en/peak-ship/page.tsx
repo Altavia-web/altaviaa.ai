@@ -5,7 +5,6 @@ import PeakShipHeroContentEN from '@/components/sections/peakship/PeakShipHeroCo
 import PeakShipChallengesEN from '@/components/sections/peakship/PeakShipChallengesEN';
 import PeakShipSolutionsEN from '@/components/sections/peakship/PeakShipSolutionsEN';
 import PeakShipTeaserEN from '@/components/sections/peakship/PeakShipTeaserEN';
-import PeakShipTestimonialEN from '@/components/sections/peakship/PeakShipTestimonialEN';
 import PeakShipComparisonEN from '@/components/sections/peakship/PeakShipComparisonEN';
 import PeakShipGrowthEN from '@/components/sections/peakship/PeakShipGrowthEN';
 
@@ -17,7 +16,6 @@ export default function PeakShipPageEN() {
       <PeakShipChallengesEN />
       <PeakShipSolutionsEN />
       <PeakShipTeaserEN />
-      <PeakShipTestimonialEN />
       <PeakShipComparisonEN />
       <PeakShipGrowthEN />
       <Footer />

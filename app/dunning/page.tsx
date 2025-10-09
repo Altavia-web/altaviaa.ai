@@ -5,7 +5,6 @@ import DunningHeroContent from '@/components/sections/dunning/DunningHero';
 import DunningChallenges from '@/components/sections/dunning/DunningChallenges';
 import DunningSolutions from '@/components/sections/dunning/DunningSolutions';
 import DunningTeaser from '@/components/sections/dunning/DunningTeaser';
-import DunningTestimonial from '@/components/sections/dunning/DunningTestimonial';
 import DunningComparison from '@/components/sections/dunning/DunningComparison';
 import DunningGrowth from '@/components/sections/dunning/DunningGrowth';
 
@@ -17,7 +16,6 @@ export default function Dunning() {
       <DunningChallenges />
       <DunningSolutions />
       <DunningTeaser />
-      <DunningTestimonial />
       <DunningComparison />
       <DunningGrowth />
       <Footer />

@@ -5,7 +5,6 @@ import LocalizationAustriaHeroContentEN from '@/components/sections/localization
 import LocalizationAustriaChallengesEN from '@/components/sections/localization-austria/LocalizationAustriaChallengesEN';
 import LocalizationAustriaSolutionsEN from '@/components/sections/localization-austria/LocalizationAustriaSolutionsEN';
 import LocalizationTeaser from '@/components/sections/localization/LocalizationTeaser';
-import LocalizationAustriaTestimonialEN from '@/components/sections/localization-austria/LocalizationAustriaTestimonialEN';
 import LocalizationAustriaComparisonEN from '@/components/sections/localization-austria/LocalizationAustriaComparisonEN';
 import LocalizationAustriaGrowthEN from '@/components/sections/localization-austria/LocalizationAustriaGrowthEN';
 
@@ -17,7 +16,6 @@ export default function AustrianLocalization() {
       <LocalizationAustriaChallengesEN />
       <LocalizationAustriaSolutionsEN />
       <LocalizationTeaser />
-      <LocalizationAustriaTestimonialEN />
       <LocalizationAustriaComparisonEN />
       <LocalizationAustriaGrowthEN />
       <Footer />
