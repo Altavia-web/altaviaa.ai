@@ -33,7 +33,7 @@ export default function Header({ locale = 'de' }: HeaderProps) {
   const productUrls = {
     datev: locale === 'en' ? '/en/datev-interface' : '/schnittstelle-datev',
     localization: locale === 'en' ? '/en/localization-germany' : '/localization-germany',
-    absence: locale === 'en' ? '/en/absence-management' : '/abwesenheitsverwaltung',
+    localizationAustria: locale === 'en' ? '/en/austrian-localization' : '/lokalisierung-oesterreich',
     dunning: locale === 'en' ? '/en/dunning' : '/dunning',
     peakship: locale === 'en' ? '/en/peak-ship' : '/peak-ship',
     travel: locale === 'en' ? '/en/travel-expenses' : '/reisekosten',
@@ -95,7 +95,7 @@ export default function Header({ locale = 'de' }: HeaderProps) {
               >
                 <Link
                   href={productsUrl}
-                  className={`${styles.dropdownButton} ${isActive('/products') || isActive('/en/applications') || isActive('/abwesenheitsverwaltung') || isActive('/schnittstelle-datev') || isActive('/localization-germany') || isActive('/reisekosten') || isActive('/dunning') || isActive('/peak-ship') ? styles.active : ''}`}
+                  className={`${styles.dropdownButton} ${isActive('/products') || isActive('/en/applications') || isActive('/schnittstelle-datev') || isActive('/localization-germany') || isActive('/lokalisierung-oesterreich') || isActive('/en/austrian-localization') || isActive('/reisekosten') || isActive('/en/travel-expenses') || isActive('/dunning') || isActive('/peak-ship') ? styles.active : ''}`}
                   aria-haspopup="true"
                   aria-label={t.nav.productsMenu.title}
                 >
@@ -177,11 +177,11 @@ export default function Header({ locale = 'de' }: HeaderProps) {
                   className="flex-shrink-0"
                 />
               </Link>
-              <Link href={productUrls.absence} className={styles.mobileProductLink} onClick={() => setIsMobileMenuOpen(false)}>
-                <span>{t.nav.productsMenu.absence.title}</span>
+              <Link href={productUrls.localizationAustria} className={styles.mobileProductLink} onClick={() => setIsMobileMenuOpen(false)}>
+                <span>{t.nav.productsMenu.localizationAustria.title}</span>
                 <Image
-                  src="/images/ABWESENHEITSVERWALTUNG/AVA_Tent_Abwesenheit.webp"
-                  alt={t.nav.productsMenu.absence.short}
+                  src="/images/LOCALIZATION/AVA_Map_Localization.webp"
+                  alt={t.nav.productsMenu.localizationAustria.short}
                   width={24}
                   height={24}
                   className="flex-shrink-0"
@@ -212,16 +212,6 @@ export default function Header({ locale = 'de' }: HeaderProps) {
                 <Image
                   src="/images/REISEKOSTEN/AVA_Backpack_Reisekosten.webp"
                   alt={t.nav.productsMenu.travel.short}
-                  width={24}
-                  height={24}
-                  className="flex-shrink-0"
-                />
-              </Link>
-              <Link href={productUrls.absence} className={styles.mobileProductLink} onClick={() => setIsMobileMenuOpen(false)}>
-                <span>{t.nav.productsMenu.absence.title}</span>
-                <Image
-                  src="/images/ABWESENHEITSVERWALTUNG/AVA_Tent_Abwesenheit.webp"
-                  alt={t.nav.productsMenu.absence.short}
                   width={24}
                   height={24}
                   className="flex-shrink-0"
@@ -290,22 +280,22 @@ export default function Header({ locale = 'de' }: HeaderProps) {
             </Link>
 
             <Link
-              href={productUrls.absence}
+              href={productUrls.localizationAustria}
               className={styles.produktCard}
               onClick={closeAllDropdowns}
               role="menuitem"
             >
               <div className={styles.iconWrapper}>
                 <Image
-                  src="/images/ABWESENHEITSVERWALTUNG/AVA_Tent_Abwesenheit.webp"
-                  alt={t.nav.productsMenu.absence.short}
+                  src="/images/LOCALIZATION/AVA_Map_Localization.webp"
+                  alt={t.nav.productsMenu.localizationAustria.short}
                   width={80}
                   height={80}
                   className="w-full h-full object-contain"
                 />
               </div>
-              <h3>{t.nav.productsMenu.absence.title}</h3>
-              <p>{t.nav.productsMenu.absence.description}</p>
+              <h3>{t.nav.productsMenu.localizationAustria.title}</h3>
+              <p>{t.nav.productsMenu.localizationAustria.description}</p>
             </Link>
 
             <Link
@@ -363,25 +353,6 @@ export default function Header({ locale = 'de' }: HeaderProps) {
               </div>
               <h3>{t.nav.productsMenu.travel.title}</h3>
               <p>{t.nav.productsMenu.travel.description}</p>
-            </Link>
-
-            <Link
-              href={productUrls.absence}
-              className={styles.produktCard}
-              onClick={closeAllDropdowns}
-              role="menuitem"
-            >
-              <div className={styles.iconWrapper}>
-                <Image
-                  src="/images/ABWESENHEITSVERWALTUNG/AVA_Tent_Abwesenheit.webp"
-                  alt={t.nav.productsMenu.absence.short}
-                  width={80}
-                  height={80}
-                  className="w-full h-full object-contain"
-                />
-              </div>
-              <h3>{t.nav.productsMenu.absence.title}</h3>
-              <p>{t.nav.productsMenu.absence.description}</p>
             </Link>
           </div>
 

@@ -22,10 +22,10 @@ export const de = {
         short: 'Lokalisierung Deutschland',
         description: 'NetSuite für den deutschen Markt optimiert',
       },
-      absence: {
-        title: 'Abwesenheitsverwaltung für NetSuite',
-        short: 'Abwesenheitsverwaltung',
-        description: 'Urlaubsverwaltung in NetSuite',
+      localizationAustria: {
+        title: 'Lokalisierung Österreich für NetSuite',
+        short: 'Lokalisierung Österreich',
+        description: 'NetSuite für den österreichischen Markt optimiert',
       },
       dunning: {
         title: 'Mahnwesen für NetSuite',
