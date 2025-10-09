@@ -28,7 +28,7 @@ export default function LocalizationAustriaHeroContentEN() {
               style={{ borderColor: 'var(--color-sky-blue)' }}
             >
               <Image
-                src="/images/produkte/AVA_LOKALISIERUNG_DE.webp"
+                src="/images/EN/WebP/AVA_LOKALISIERUNG_AT_EN.webp"
                 alt="Austrian Localization for NetSuite"
                 width={400}
                 height={400}

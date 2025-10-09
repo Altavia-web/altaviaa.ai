@@ -34,7 +34,7 @@ export default function DatevSchnittstelleEN() {
           <div className="flex justify-end">
             <div className="relative w-full max-w-lg">
               <Image
-                src="/images/produkte/AVA_DATEV_DE.webp"
+                src="/images/EN/WebP/AVA_Interface-DATEV_EN.webp"
                 alt="DATEV Interface"
                 width={500}
                 height={500}
