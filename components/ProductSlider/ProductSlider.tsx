@@ -242,7 +242,7 @@ export default function ProductSlider({ autoPlaySpeed = 5000 }: ProductSliderPro
               {products.map((product) => (
                 <div
                   key={product.id}
-                  className="flex-shrink-0 bg-white overflow-hidden shadow-md hover:shadow-xl transition-shadow flex flex-col"
+                  className="flex-shrink-0 bg-white overflow-hidden flex flex-col"
                   style={{
                     width: `calc(((100% - ${(itemsPerView - 1) * 1.5}rem) / ${itemsPerView}) * 0.9)`,
                     borderRadius: '12px'

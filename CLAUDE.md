@@ -38,3 +38,4 @@
 09:47:21.625 Error: Command "npm run build" exited with 1
 - hh
 - manche bilder werden nicht geladen
+- ok, nun siehst den helle blauen border um die beiden bilder logo und produktbild?
