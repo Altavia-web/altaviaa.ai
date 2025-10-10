@@ -4,40 +4,28 @@ import Image from 'next/image';
 export default function LocalizationAustriaSolutions() {
   const features = [
     {
-      title: "Unveränderlichkeit von Buchungen",
-      description: "Finanztransaktionen sind manipulationssicher und erfüllen die gesetzlichen Vorgaben für ordnungsgemäße elektronische Buchführung in Österreich."
-    },
-    {
       title: "UGB-konforme Berichte",
-      description: "Erstellen Sie Bilanzen und Gewinn- und Verlustrechnungen nach österreichischem Standard. Wichtige Finanzberichte wie Kontenblatt und Summen- und Saldenliste sind für Prüfungen und interne Kontrollen enthalten."
+      description: "Erstellen Sie Bilanzen und GuV nach österreichischem Unternehmensgesetzbuch – inklusive Kontenblatt und Summen- und Saldenliste."
     },
     {
-      title: "Umsatzsteuererklärung über FinanzOnline",
-      description: "Übermitteln Sie Umsatzsteuererklärungen direkt und automatisch an die österreichischen Steuerbehörden. Das spart Zeit, reduziert Fehler und sichert die Einhaltung der Vorschriften."
+      title: "GoBD & SuiteTax Compliance",
+      description: "Finanztransaktionen bleiben manipulationssicher. Alle Funktionen unterstützen SuiteTax für eine reibungslose Migration."
     },
     {
-      title: "E-Rechnung Österreich",
-      description: "Erstellen Sie mühelos die benötigten E-Rechnungs-Dateien aus Ihren Rechnungen und Gutschriften per Knopfdruck und erfüllen Sie so die gesetzliche E-Rechnungspflicht in Österreich."
+      title: "Nahtlose Anbindung an BMD",
+      description: "Stellen Sie sicher, dass Ihre Finanzdaten aus NetSuite korrekt im BMD-System ankommen – verlässlich und ohne Umwege."
     },
     {
-      title: "Mehrwertsteuerrückrechnung (Skonto)",
-      description: "Sichern Sie die korrekte Reduktion der anteiligen Mehrwertsteuer bei Skontoabzügen durch automatische Journalbuchungen und bleiben Sie konform mit dem österreichischen Steuerrecht."
+      title: "Reisekostenabrechnung nach österreichischem Recht",
+      description: "Tagesgelder, Kilometergelder, gemischte Reisen – alles steuerkonform in NetSuite abbilden."
     },
     {
-      title: "Flexibles Besteuerungsdatum",
-      description: "Erfassen Sie Belegdatum, Buchungsdatum und Steuerpunktdatum getrennt. Dies ermöglicht genaue Periodenzuordnung und die Einhaltung von Steuervorschriften."
+      title: "Umsatzsteuerkorrektur bei Skonti",
+      description: "Unsere Lösung erstellt automatisch zusätzliche Buchungen für Skonti und gewährleistet korrekte Steuerberechnung."
     },
     {
-      title: "Umsatzsteuer-ID-Prüfung",
-      description: "Optimieren Sie grenzüberschreitende Transaktionen innerhalb der EU mit unserer VAT-ID-Prüfung und gewährleisten Sie einen reibungslosen Verifizierungsprozess für die Umsatzsteuer-IDs der Handelspartner."
-    },
-    {
-      title: "EU-Umsatzsteuer",
-      description: "Steuern auf Verkaufstransaktionen werden überprüft und falls notwendig korrigiert. Damit schließen wir Lücken im NetSuite Standard."
-    },
-    {
-      title: "Rechnungsabgrenzung",
-      description: "Vereinfachen Sie die Erstellung von Rückstellungen für nicht genehmigte Rechnungen und unterstützen Sie einen reibungslosen Monats-, Quartals- oder Jahresabschluss."
+      title: "Flexibles Steuer- und Buchungsdatum",
+      description: "Buchen Sie Dokumentdatum, Buchungsdatum und Steuerpunktdatum getrennt – für exakte Periodenzuordnung."
     }
   ];
 
@@ -61,7 +49,7 @@ export default function LocalizationAustriaSolutions() {
           className="text-3xl lg:text-4xl font-semibold text-center mb-16 leading-tight mx-auto"
           style={{ color: 'var(--color-dark-blue)', maxWidth: '800px' }}
         >
-          Erobern Sie die österreichische Compliance
+          Alles für Ihren Erfolg in Österreich
         </h2>
 
         {/* Features Grid - 3 columns */}

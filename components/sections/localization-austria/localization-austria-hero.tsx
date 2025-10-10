@@ -18,6 +18,9 @@ export default function LocalizationAustriaHero() {
             <h1 className="mb-6 text-white">
               Lokalisierung Österreich für NetSuite
             </h1>
+            <h2 className="text-white" style={{ fontSize: '1.5rem', fontWeight: 600, lineHeight: '1.3' }}>
+              Ihr sicherer Weg zur österreichischen Compliance
+            </h2>
           </div>
 
           {/* Image - Right */}

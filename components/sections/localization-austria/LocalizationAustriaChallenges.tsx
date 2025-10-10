@@ -10,15 +10,15 @@ export default function LocalizationAustriaChallenges() {
   const slides = [
     {
       icon: "/images/00_ALLGEMEINES/Questionmark/AVA_Questionmark_white.png",
-      heading: "Sie benötigen ein ordnungsgemäßes Kontenblatt oder eine Summen- und Saldenliste für Audits oder die interne Berichterstattung aus NetSuite?"
+      heading: "Sie benötigen UGB-konforme Finanzberichte – direkt aus NetSuite und ohne manuelle Arbeit?"
     },
     {
       icon: "/images/00_ALLGEMEINES/Questionmark/AVA_Questionmark_white.png",
-      heading: "Sie fragen sich, wie Sie die österreichischen und EU-Mehrwertsteuerverfahren mit NetSuite bewältigen können?"
+      heading: "Ihre BMD-Schnittstelle soll reibungslos funktionieren und die Reisekostenabrechnung alle österreichischen Steuervorschriften erfüllen?"
     },
     {
       icon: "/images/00_ALLGEMEINES/Questionmark/AVA_Questionmark_white.png",
-      heading: "Sie möchten konforme Dateien für die E-Rechnung erstellen?"
+      heading: "Sie wollen sichergehen, dass Ihre NetSuite-Daten jederzeit revisionssicher sind?"
     }
   ];
 

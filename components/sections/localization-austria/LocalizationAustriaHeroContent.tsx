@@ -12,12 +12,12 @@ export default function LocalizationAustriaHeroContent() {
 
           {/* Left Column - Text Content */}
           <div style={{ color: 'var(--color-dark-blue)' }}>
-            <h2 className="text-2xl lg:text-3xl font-semibold mb-6 leading-tight">
-              Optimieren Sie NetSuite für den österreichischen Markt – präzise, konform, einsatzbereit
-            </h2>
+            <h3 className="text-2xl lg:text-3xl font-semibold mb-6 leading-tight">
+              Nahtlose Integration von UGB über BMD bis Reisekostenabrechnung
+            </h3>
 
             <p className="text-lg leading-relaxed">
-              Die österreichische Geschäftswelt stellt besondere Anforderungen an Buchhaltung und Compliance. NetSuite ist die Basis, aber erst mit der Lokalisierung Österreich wird Ihr System wirklich UGB- und BAO-konform. Wir ergänzen alle Funktionen, die österreichische Unternehmen für eine prüfungssichere und effiziente Finanzverwaltung benötigen.
+              Um in Österreich rechtssicher mit NetSuite zu arbeiten, braucht es mehr als den Standard. Unsere Lokalisierung Österreich schließt die Lücken und bietet eine nahtlose Integration von UGB-Berichten, BMD-Export und Reisekostenabrechnung. So sind Sie optimal für den österreichischen Markt gerüstet – vom ersten Tag an.
             </p>
           </div>
 
