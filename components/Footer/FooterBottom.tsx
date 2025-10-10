@@ -22,27 +22,27 @@ export default function FooterBottom({ locale = 'de' }: FooterBottomProps) {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 py-12">
           {/* Logo & Company Info (Left) */}
           <div className="flex flex-col items-start">
-            <div className="flex items-center mb-4">
-              <Image
-                src="/images/logo/AVA_Bildmarke_WEB_RGB_300px (1).png"
-                alt="Alta Via Applications Logo"
-                width={38}
-                height={38}
-                className="mr-3"
-              />
-              <span
-                style={{
-                  fontFamily: 'Titillium Web',
-                  fontWeight: 700,
-                  fontSize: '18px',
-                  lineHeight: '140%',
-                  letterSpacing: '0%',
-                  color: '#002E64'
-                }}
-              >
-                Alta Via Applications
-              </span>
-            </div>
+            <Image
+              src="/images/logo/AVA_Bildmarke_WEB_RGB_300px (1).png"
+              alt="Alta Via Applications Logo"
+              width={38}
+              height={38}
+              className="mb-2"
+            />
+            <span
+              style={{
+                fontFamily: 'Titillium Web',
+                fontWeight: 700,
+                fontSize: '18px',
+                lineHeight: '140%',
+                letterSpacing: '0%',
+                color: '#002E64',
+                marginBottom: '0.5rem',
+                display: 'block'
+              }}
+            >
+              Alta Via Applications
+            </span>
             <div className="leading-relaxed">
               <p
                 style={{
