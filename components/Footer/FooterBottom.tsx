@@ -75,13 +75,13 @@ export default function FooterBottom({ locale = 'de' }: FooterBottomProps) {
           {/* Contact & CTA (Center) */}
           <div className="flex flex-col items-start md:items-center" style={{marginBottom: '2.5%'}}>
             <h3
+              className="text-left md:text-center"
               style={{
                 fontFamily: 'Titillium Web',
                 fontWeight: 700,
                 fontSize: '28px',
                 lineHeight: '110%',
                 letterSpacing: '0%',
-                textAlign: 'center',
                 color: '#002E64',
                 marginBottom: '1rem'
               }}
@@ -92,13 +92,13 @@ export default function FooterBottom({ locale = 'de' }: FooterBottomProps) {
               <div>
                 <a
                   href="mailto:sales@altaviaa.ai"
+                  className="text-left md:text-center"
                   style={{
                     fontFamily: 'Titillium Web',
                     fontWeight: 400,
                     fontSize: '18px',
                     lineHeight: '140%',
                     letterSpacing: '0%',
-                    textAlign: 'center',
                     color: '#000',
                     textDecoration: 'none',
                     display: 'block'
@@ -111,13 +111,13 @@ export default function FooterBottom({ locale = 'de' }: FooterBottomProps) {
               <div>
                 <a
                   href="tel:+4930837906556"
+                  className="text-left md:text-center"
                   style={{
                     fontFamily: 'Titillium Web',
                     fontWeight: 400,
                     fontSize: '18px',
                     lineHeight: '140%',
                     letterSpacing: '0%',
-                    textAlign: 'center',
                     color: '#000',
                     textDecoration: 'none',
                     display: 'block'
