@@ -73,7 +73,18 @@ export default function FooterBottom({ locale = 'de' }: FooterBottomProps) {
 
           {/* Contact & CTA (Center) */}
           <div className="flex flex-col items-start md:items-center">
-            <h3 className="text-lg font-semibold mb-4">
+            <h3
+              style={{
+                fontFamily: 'Titillium Web',
+                fontWeight: 700,
+                fontSize: '28px',
+                lineHeight: '110%',
+                letterSpacing: '0%',
+                textAlign: 'center',
+                color: '#002E64',
+                marginBottom: '1rem'
+              }}
+            >
               {ctaText}
             </h3>
             <div className="space-y-2">
