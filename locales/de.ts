@@ -71,7 +71,7 @@ export const de = {
       altImage: 'Alta Via Lokalisierung Deutschland Map',
     },
     company: {
-      heading: 'Alta Via Applications: Innovation und DACH-Compliance für NetSuite-Anwender',
+      heading: 'Alta Via Applications:\nInnovation und DACH-Compliance für NetSuite-Anwender',
       companyName: 'Alta Via Applications',
       paragraph1: 'Alta Via Applications  ist aus der Beratungserfahrung der Alta Via Consulting hervorgegangen – als eigenständige Produktfirma mit klarem Fokus auf NetSuite-Erweiterungen. Was wir entwickeln, entsteht direkt aus dem Gelände unserer Kunden – konkret, anwenderfreundlich und mit Blick auf Ihre gesamte Route.',
       paragraph2: 'Wir konzentrieren uns auf das, was Sie für den nächsten Schritt brauchen: robuste Tools, präzise Ausrichtung und kontinuierliche Weiterentwicklung.',
