@@ -10,15 +10,15 @@ export default function ReisekostenChallengesEN() {
   const slides = [
     {
       icon: "/images/00_ALLGEMEINES/Questionmark/AVA_Questionmark_darkblue.webp",
-      heading: "Do you want to handle travel expense reports without manual calculations and Excel spreadsheets?"
+      heading: "Do you want to manage travel expense reports without manual calculations and spreadsheets?"
     },
     {
       icon: "/images/00_ALLGEMEINES/Questionmark/AVA_Questionmark_darkblue.webp",
-      heading: "Should your team process international trips, allowances, and foreign currencies directly in NetSuite – simply and error-free?"
+      heading: "Would you like your team to handle international trips, per diem allowances, and multiple currencies directly in NetSuite – easily and error-free?"
     },
     {
       icon: "/images/00_ALLGEMEINES/Questionmark/AVA_Questionmark_darkblue.webp",
-      heading: "Are you looking for a solution that accelerates approvals and automatically creates audit-proof reports?"
+      heading: "Are you looking for a solution that accelerates approvals and automatically delivers audit-proof reports?"
     }
   ];
 

@@ -5,27 +5,27 @@ export default function ReisekostenSolutionsEN() {
   const features = [
     {
       title: "Automatic Allowances",
-      description: "Meal and accommodation allowances are automatically calculated according to German law – correct, up-to-date, and without manual work."
+      description: "Meal and lodging allowances are automatically calculated according to German law – correct, current, and without manual effort."
     },
     {
-      title: "Easy Trip Recording",
-      description: "Enter start, destination, times, and kilometers – the module creates the appropriate travel items and automatically considers overnight stays."
+      title: "Intuitive Trip Entry",
+      description: "Enter start, destination, times, and distances – the module generates the appropriate travel items and automatically accounts for overnight stays."
     },
     {
       title: "Multi-Currency & Receipts",
-      description: "Record expenses in different currencies and attach receipts directly – transparent and audit-proof."
+      description: "Record expenses in various currencies and attach receipts directly – transparent and audit-proof."
     },
     {
-      title: "Custom Approval Workflows",
-      description: "Reports run through the integrated workflow – fast approvals, clear responsibilities, full control."
+      title: "Flexible Approval Workflows",
+      description: "Reports move through your integrated workflow – quick approvals, clear responsibilities, full traceability."
     },
     {
-      title: "Annually Updated Rates",
-      description: "Allowances are updated annually by Alta Via – you stay compliant without any effort."
+      title: "Annual Rate Updates",
+      description: "Allowances are updated annually by Alta Via – you stay compliant without lifting a finger."
     },
     {
-      title: "Seamless NetSuite Integration",
-      description: "All processes run in NetSuite – no external tools, no system breaks."
+      title: "Full NetSuite Integration",
+      description: "Everything runs inside NetSuite – no external tools, no breaks in your system."
     }
   ];
 
@@ -49,7 +49,7 @@ export default function ReisekostenSolutionsEN() {
           className="text-3xl lg:text-4xl font-semibold text-center mb-16 leading-tight mx-auto"
           style={{ color: 'var(--color-dark-blue)', maxWidth: '800px' }}
         >
-          Travel Expenses Simply Managed
+          Travel Expenses Made Easy
         </h2>
 
         {/* Features Grid - All features in responsive grid */}

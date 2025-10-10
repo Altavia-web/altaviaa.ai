@@ -12,12 +12,12 @@ export default function ReisekostenHeroContentEN() {
 
           {/* Left Column - Text Content */}
           <div style={{ color: 'var(--color-dark-blue)' }}>
-            <h2 className="text-2xl lg:text-3xl font-semibold mb-6 leading-tight">
-              Process Travel Expenses – Simply, Quickly, Compliant
-            </h2>
+            <h3 className="text-2xl lg:text-3xl font-semibold mb-6 leading-tight">
+              From Allowances to Reimbursements – All in One Module
+            </h3>
 
             <p className="text-lg leading-relaxed">
-              With Travel Expenses for NetSuite from Alta Via Applications, you automate allowances, simplify approvals, and accelerate reimbursements. Whether domestic, international, or multi-currency: the module eliminates manual calculations and spreadsheets – and ensures transparent, audit-proof processes directly in your ERP.
+              With Travel Expenses for NetSuite by Alta Via Applications, you automate per diem calculations, streamline approvals, and accelerate reimbursements. Whether they're domestic, international, or multi-currency: the module eliminates manual calculations and spreadsheets – delivering transparent, audit-proof processes directly in your ERP.
             </p>
           </div>
 
