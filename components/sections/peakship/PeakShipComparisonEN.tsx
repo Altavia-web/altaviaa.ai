@@ -30,14 +30,14 @@ export default function PeakShipComparisonEN() {
 
         {/* Main Heading */}
         <h2
-          className="text-3xl lg:text-4xl font-semibold text-center mb-12 leading-tight"
+          className="text-2xl lg:text-4xl font-semibold text-center mb-12 leading-tight"
           style={{ color: 'var(--color-dark-blue)' }}
         >
           Feature Comparison: Shipping with Peak Ship
         </h2>
 
-        {/* Comparison Table */}
-        <div className="overflow-x-auto shadow-lg rounded-lg">
+        {/* Comparison Table - Desktop Only */}
+        <div className="hidden lg:block overflow-x-auto shadow-lg rounded-lg">
           <table className="w-full border-collapse">
 
             {/* Sticky Header */}

@@ -182,9 +182,7 @@ export default function LocalizationComparison() {
 
         {/* Mobile Card Layout - Hidden on Desktop */}
         <div className="lg:hidden space-y-6">
-          {categories.map((category) => {
-            const categoryKey = getCategoryKey(category.name);
-            return (
+          {categories.map((category) => (
               <div key={category.name}>
                 {/* Category Header */}
                 <div
@@ -281,8 +279,7 @@ export default function LocalizationComparison() {
                   ))}
                 </div>
               </div>
-            );
-          })}
+          ))}
         </div>
 
         </div>
