@@ -32,19 +32,6 @@ const features = [
 export default function BmdBuchhaltungEN() {
   return (
     <section className="bg-white py-16">
-      {/* Image */}
-      <div className="w-full mb-12 flex justify-center">
-        <div style={{ height: '170px' }}>
-          <Image
-            src="/images/BMD/AVA_Solution_Bmd.png"
-            alt="BMD Solution"
-            width={1200}
-            height={525}
-            style={{ height: '170px', width: 'auto' }}
-          />
-        </div>
-      </div>
-
       {/* Content Container */}
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
@@ -63,7 +50,7 @@ export default function BmdBuchhaltungEN() {
         </h2>
 
         {/* Feature Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {features.map((feature) => (
             <div key={feature.id} className="text-left">
               <h3
@@ -93,19 +80,6 @@ export default function BmdBuchhaltungEN() {
               </p>
             </div>
           ))}
-        </div>
-      </div>
-
-      {/* Second Image */}
-      <div className="w-full mt-12 flex justify-center">
-        <div className="w-full px-6 md:px-0 md:w-auto" style={{ maxHeight: '400px' }}>
-          <Image
-            src="/images/BMD/AVA_BMD_EN.webp"
-            alt="BMD Export"
-            width={700}
-            height={306}
-            className="w-full h-auto md:w-auto md:h-[400px]"
-          />
         </div>
       </div>
     </section>
