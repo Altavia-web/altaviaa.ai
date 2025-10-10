@@ -27,7 +27,7 @@ export default function BmdHeroEN() {
           <div className="flex justify-end">
             <div className="relative w-full max-w-lg">
               <Image
-                src="/images/BMD/AVA_Compass_BMD-WHITE.webp"
+                src="/images/DATEV/AVA_Compass_DATEV-WHITE.webp"
                 alt="BMD Compass"
                 width={500}
                 height={500}
