@@ -98,7 +98,7 @@ export default function FooterBottom({ locale = 'de' }: FooterBottomProps) {
                     lineHeight: '140%',
                     letterSpacing: '0%',
                     textAlign: 'center',
-                    color: '#5095cb',
+                    color: '#000',
                     textDecoration: 'none',
                     display: 'block'
                   }}
@@ -117,7 +117,7 @@ export default function FooterBottom({ locale = 'de' }: FooterBottomProps) {
                     lineHeight: '140%',
                     letterSpacing: '0%',
                     textAlign: 'center',
-                    color: '#5095cb',
+                    color: '#000',
                     textDecoration: 'none',
                     display: 'block'
                   }}
