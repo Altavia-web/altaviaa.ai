@@ -26,8 +26,18 @@ export default function BmdSchnittstelleEN() {
                 color: '#002E64'
               }}
             >
-              BMD eG&apos;s accounting software is the standard for tax advisors and auditors in Germany. With the BMD-certified SuiteApp &ldquo;Interface BMD for NetSuite,&rdquo; you can easily transfer all accounting data from your NetSuite ERP system to BMD for further processing or closing.
+              Secure Export of Your Accounting Data from NetSuite to BMD
             </h3>
+            <p
+              style={{
+                fontFamily: 'Titillium Web',
+                fontSize: '18px',
+                lineHeight: '140%',
+                color: '#002E64'
+              }}
+            >
+              Companies in Austria that use the cloud ERP NetSuite often find themselves working across two worlds: financial data is managed in NetSuite, while tax advisors rely on BMD. To bring both sides together seamlessly, the BMD Interface for NetSuite by Alta Via Applications enables a secure export of accounting data from NetSuite, which can then be imported into BMD. Data is provided as a CSV file that can be downloaded from NetSuite and uploaded into BMD – efficient, compliant, and without double data entry.
+            </p>
           </div>
 
           {/* Image - Right */}

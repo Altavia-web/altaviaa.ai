@@ -16,10 +16,10 @@ export default function BmdHeroEN() {
           {/* Text Content - Left */}
           <div className="text-left">
             <h1 className="mb-6 text-white">
-              BMD Interface 3.0 for NetSuite
+              BMD Interface for NetSuite
             </h1>
             <h2 className="text-white">
-              The direct path to accounting with BMD
+              Your Bridge to BMD Accounting
             </h2>
           </div>
 

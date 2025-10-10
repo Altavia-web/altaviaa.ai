@@ -5,15 +5,15 @@ import React, { useState, useEffect } from 'react';
 const questions = [
   {
     id: 1,
-    text: 'Do you still export postings manually from NetSuite to BMD—with the risk of errors and rework?'
+    text: 'Do you want to export accounting data from NetSuite easily and import it into BMD without duplicate entries?'
   },
   {
     id: 2,
-    text: 'Do payments or payroll data from BMD have to be maintained in NetSuite?'
+    text: 'Should the transfer of VAT postings from NetSuite to BMD be structured, accurate, and BMD-compliant?'
   },
   {
     id: 3,
-    text: 'Are you missing clean reconciliation for each transaction directly in NetSuite?'
+    text: 'Are you looking for a solution that seamlessly supports Austrian standards and ensures complete compliance?'
   }
 ];
 

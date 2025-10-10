@@ -4,43 +4,28 @@ import Image from 'next/image';
 const features = [
   {
     id: 1,
-    title: 'Data transfer between NetSuite and BMD',
-    description: 'Master data (e.g., account labels, debtors/creditors) and booking-relevant transactions can be imported and exported between NetSuite and BMD – version 3.0 closes the loop.'
+    title: 'CSV Export of Accounting Data',
+    description: 'Master data and journal entries are exported from NetSuite as CSV files and can then be imported into BMD.'
   },
   {
     id: 2,
-    title: 'SuiteTax compatibility',
-    description: 'The SuiteApp supports both Legacy Tax and SuiteTax, meaning that functions are also available to clients with a SuiteTax setup.'
+    title: 'Automatic Account Mapping',
+    description: 'Receivables and payables from NetSuite are assigned directly to the correct BMD accounts.'
   },
   {
     id: 3,
-    title: 'Automatic personal account assignment',
-    description: 'Receivables and payables from LuL in NetSuite are posted to the corresponding BMD personal account.'
+    title: 'Accurate VAT Transfer',
+    description: 'NetSuite\'s VAT logic is automatically converted into BMD-compliant gross postings.'
   },
   {
     id: 4,
-    title: 'Sales tax posting',
-    description: 'The NetSuite VAT logic is converted into a gross posting for BMD.'
+    title: 'Revenue Recognition & Multibook',
+    description: 'Supports parallel valuations and revenue recognition.'
   },
   {
     id: 5,
-    title: 'Revenue recognition & multibook',
-    description: 'The solution supports revenue recognition and parallel valuations.'
-  },
-  {
-    id: 6,
-    title: 'Reconciliation per transaction',
-    description: 'In NetSuite, you can analyze the corresponding BMD posting directly for each transaction, which simplifies reconciliation.'
-  },
-  {
-    id: 7,
-    title: 'Document transfer',
-    description: 'Documents can be transferred directly to BMD Unternehmen online to display document images in BMD for transaction and archiving purposes.'
-  },
-  {
-    id: 8,
-    title: 'Overwriting CSV files',
-    description: 'CSV files are overwritten directly in NetSuite via the custom record user interface.'
+    title: 'Easy Reconciliation',
+    description: 'Directly analyze every transaction in NetSuite, along with the corresponding BMD posting.'
   }
 ];
 
@@ -74,7 +59,7 @@ export default function BmdBuchhaltungEN() {
             color: '#002E64'
           }}
         >
-          What the BMD Interface 3.0 does for you
+          Transfer Accounting Data Securely and Efficiently
         </h2>
 
         {/* Feature Grid */}
