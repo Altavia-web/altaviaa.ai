@@ -13,8 +13,12 @@ export default function DunningHeroEN() {
           {/* Left Column - Text Content */}
           <div style={{ color: 'var(--color-dark-blue)' }}>
             <h3 className="text-2xl lg:text-3xl font-semibold mb-6 leading-tight">
-              Time is money: with Dunning for NetSuite by Alta Via Applications, you automate receivables management and reduce the risk of payment defaults. With version 4.0, getting started is easier than ever: in just 60 minutes, your dunning process is ready to go – no complex setup required. Simply select the subsidiary, enter the bank details, and reminders will run automatically, transparently, and reliably – directly from your ERP system. Save valuable time, relieve your team, and secure long-term liquidity.
+              Collect Efficiently, Secure Liquidity – Directly from NetSuite
             </h3>
+
+            <p className="text-lg leading-relaxed">
+              Time is money: with Dunning for NetSuite by Alta Via Applications, you automate receivables management and reduce the risk of payment defaults. With version 4.0, getting started is easier than ever: in just 60 minutes, your dunning process is ready to go – no complex setup required. Simply select the subsidiary, enter the bank details, and reminders will run automatically, transparently, and reliably – directly from your ERP system. Save valuable time, relieve your team, and secure long-term liquidity.
+            </p>
           </div>
 
           {/* Right Column - Product Image */}
