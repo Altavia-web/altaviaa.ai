@@ -20,7 +20,7 @@ export default function FooterBottom({ locale = 'de' }: FooterBottomProps) {
     <>
       <div className="px-6" style={{backgroundColor: 'var(--color-ice-blue)', color: '#000'}}>
         <div className="mx-auto" style={{width: '80%'}}>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 py-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12" style={{paddingTop: '38.4px', paddingBottom: '38.4px'}}>
             {/* Logo & Company Info (Left) */}
           <div className="flex flex-col items-start">
             <Image
