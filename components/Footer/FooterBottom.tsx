@@ -17,7 +17,7 @@ export default function FooterBottom({ locale = 'de' }: FooterBottomProps) {
   const ariaLegalNav = isEnglish ? 'Legal links' : 'Rechtliche Links';
 
   return (
-    <div className="px-6" style={{backgroundColor: 'var(--color-ice-blue)', color: '#000'}}>
+    <div className="px-6" style={{background: 'linear-gradient(180deg, rgba(80, 149, 203, 0.4) 0%, rgba(168, 220, 244, 0.4) 100%)', color: '#000'}}>
       <div className="mx-auto" style={{width: '80%'}}>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 py-12">
           {/* Logo & Company Info (Left) */}
