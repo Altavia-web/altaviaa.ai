@@ -3,7 +3,6 @@ import Footer from '@/components/Footer';
 import ProductsHero from '@/components/sections/products/products-hero';
 import ProductSlider from '@/components/ProductSlider/ProductSlider';
 import ProductsTeaser from '@/components/sections/products/products-teaser';
-import ProductsTestimonial from '@/components/sections/products/products-testimonial';
 
 export default function Products() {
   return (
@@ -21,7 +20,6 @@ export default function Products() {
       </section>
 
       <ProductsTeaser />
-      <ProductsTestimonial />
       <Footer />
     </div>
   );

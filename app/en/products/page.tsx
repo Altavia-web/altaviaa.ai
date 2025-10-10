@@ -4,7 +4,6 @@ import Footer from '@/components/Footer';
 import ProductsHeroEN from '@/components/sections/products/products-hero-en';
 import ProductSliderEN from '@/components/ProductSlider/ProductSliderEN';
 import ProductsTeaser from '@/components/sections/products/products-teaser';
-import ProductsTestimonial from '@/components/sections/products/products-testimonial';
 
 export const metadata: Metadata = {
   title: 'Products - Alta Via Applications',
@@ -33,7 +32,6 @@ export default function ProductsPageEN() {
       </section>
 
       <ProductsTeaser />
-      <ProductsTestimonial />
       <Footer />
     </div>
   );
