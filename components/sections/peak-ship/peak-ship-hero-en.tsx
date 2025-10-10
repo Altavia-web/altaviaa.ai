@@ -16,8 +16,11 @@ export default function PeakShipHeroEN() {
           {/* Text Content - Left */}
           <div className="text-left">
             <h1 className="mb-6 text-white">
-              Peak Ship for NetSuite
+              PeakShip for NetSuite
             </h1>
+            <h2 className="text-white" style={{ fontSize: '1.5rem', fontWeight: 600, lineHeight: '1.3' }}>
+              Ship Efficiently – Directly from Your ERP
+            </h2>
           </div>
 
           {/* Image - Right */}
