@@ -202,10 +202,10 @@ export default function BmdComparisonTable() {
       >
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-2xl lg:text-3xl font-semibold mb-6 text-white leading-tight">
-            Ständig in Bewegung. Stets up to date.
+            Stabil verbunden. Flexibel erweiterbar.
           </h3>
           <p className="text-lg lg:text-xl text-white leading-relaxed">
-            Version 3.0 bringt SuiteTax-Kompatibilität, den Import von Transaktionsdateien aus BMD nach NetSuite sowie das CSV-Override direkt in NetSuite. Damit entfällt manuelles Nacharbeiten und Sie bleiben flexibel bei Sonderfällen.
+            Die BMD-Schnittstelle passt sich Ihren Anforderungen an und entwickelt sich mit NetSuite weiter. So bleibt der Datentransfer zuverlässig, konform und jederzeit bereit für neue Prozesse – für eine reibungslose Zusammenarbeit zwischen NetSuite und BMD.
           </p>
         </div>
       </div>
