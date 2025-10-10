@@ -131,23 +131,37 @@ export default function FooterBottom({ locale = 'de' }: FooterBottomProps) {
 
           {/* Legal Links (Right) */}
           <div className="flex flex-col items-start md:items-end">
-            <nav aria-label={ariaLegalNav} className="space-y-2">
-              <div>
-                <Link
-                  href={privacyLink}
-                  className="text-sm opacity-80 hover:opacity-100 transition-opacity duration-200"
-                >
-                  {privacyLabel}
-                </Link>
-              </div>
-              <div>
-                <Link
-                  href={imprintLink}
-                  className="text-sm opacity-80 hover:opacity-100 transition-opacity duration-200"
-                >
-                  {imprintLabel}
-                </Link>
-              </div>
+            <nav aria-label={ariaLegalNav} className="flex gap-4">
+              <Link
+                href={privacyLink}
+                style={{
+                  fontFamily: 'Titillium Web',
+                  fontWeight: 400,
+                  fontSize: '14px',
+                  lineHeight: '140%',
+                  letterSpacing: '0%',
+                  textAlign: 'right',
+                  color: '#002E64',
+                  textDecoration: 'none'
+                }}
+              >
+                {privacyLabel}
+              </Link>
+              <Link
+                href={imprintLink}
+                style={{
+                  fontFamily: 'Titillium Web',
+                  fontWeight: 400,
+                  fontSize: '14px',
+                  lineHeight: '140%',
+                  letterSpacing: '0%',
+                  textAlign: 'right',
+                  color: '#002E64',
+                  textDecoration: 'none'
+                }}
+              >
+                {imprintLabel}
+              </Link>
             </nav>
           </div>
         </div>
