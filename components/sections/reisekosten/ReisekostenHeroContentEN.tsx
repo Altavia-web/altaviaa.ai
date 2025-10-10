@@ -17,7 +17,7 @@ export default function ReisekostenHeroContentEN() {
             </h3>
 
             <p className="text-lg leading-relaxed">
-              With Travel Expenses for NetSuite by Alta Via Applications, you automate per diem calculations, streamline approvals, and accelerate reimbursements. Whether they're domestic, international, or multi-currency: the module eliminates manual calculations and spreadsheets – delivering transparent, audit-proof processes directly in your ERP.
+              With Travel Expenses for NetSuite by Alta Via Applications, you automate per diem calculations, streamline approvals, and accelerate reimbursements. Whether they&apos;re domestic, international, or multi-currency: the module eliminates manual calculations and spreadsheets – delivering transparent, audit-proof processes directly in your ERP.
             </p>
           </div>
 
