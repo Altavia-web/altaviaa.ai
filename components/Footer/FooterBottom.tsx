@@ -91,7 +91,17 @@ export default function FooterBottom({ locale = 'de' }: FooterBottomProps) {
               <div>
                 <a
                   href="mailto:sales@altaviaa.ai"
-                  className="text-blue-600 hover:text-blue-800 transition-colors duration-200 text-sm"
+                  style={{
+                    fontFamily: 'Titillium Web',
+                    fontWeight: 400,
+                    fontSize: '18px',
+                    lineHeight: '140%',
+                    letterSpacing: '0%',
+                    textAlign: 'center',
+                    color: '#5095cb',
+                    textDecoration: 'none',
+                    display: 'block'
+                  }}
                   aria-label={isEnglish ? 'Email sales@altaviaa.ai' : 'E-Mail an sales@altaviaa.ai senden'}
                 >
                   sales@altaviaa.ai
@@ -100,7 +110,17 @@ export default function FooterBottom({ locale = 'de' }: FooterBottomProps) {
               <div>
                 <a
                   href="tel:+4930837906556"
-                  className="text-blue-600 hover:text-blue-800 transition-colors duration-200 text-sm"
+                  style={{
+                    fontFamily: 'Titillium Web',
+                    fontWeight: 400,
+                    fontSize: '18px',
+                    lineHeight: '140%',
+                    letterSpacing: '0%',
+                    textAlign: 'center',
+                    color: '#5095cb',
+                    textDecoration: 'none',
+                    display: 'block'
+                  }}
                   aria-label={isEnglish ? 'Call +49 30 83790656' : 'Anrufen unter +49 30 83790656'}
                 >
                   +49 30 83790656
