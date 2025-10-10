@@ -22,7 +22,7 @@ export default function FooterBottom({ locale = 'de' }: FooterBottomProps) {
         <div className="mx-auto" style={{width: '80%'}}>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12" style={{paddingTop: '38.4px', paddingBottom: '38.4px', alignItems: 'end'}}>
             {/* Logo & Company Info (Left) */}
-          <div className="flex flex-col items-start" style={{marginBottom: '5%'}}>
+          <div className="flex flex-col items-start" style={{marginBottom: '2.5%'}}>
             <Image
               src="/images/logo/AVA_Bildmarke_WEB_RGB_300px (1).png"
               alt="Alta Via Applications Logo"
@@ -73,7 +73,7 @@ export default function FooterBottom({ locale = 'de' }: FooterBottomProps) {
           </div>
 
           {/* Contact & CTA (Center) */}
-          <div className="flex flex-col items-start md:items-center" style={{marginBottom: '5%'}}>
+          <div className="flex flex-col items-start md:items-center" style={{marginBottom: '2.5%'}}>
             <h3
               style={{
                 fontFamily: 'Titillium Web',
@@ -131,7 +131,7 @@ export default function FooterBottom({ locale = 'de' }: FooterBottomProps) {
           </div>
 
           {/* Legal Links (Right) */}
-          <div className="flex flex-col items-start md:items-end" style={{marginBottom: '5%'}}>
+          <div className="flex flex-col items-start md:items-end" style={{marginBottom: '2.5%'}}>
             <nav aria-label={ariaLegalNav} className="flex gap-4">
               <Link
                 href={privacyLink}
