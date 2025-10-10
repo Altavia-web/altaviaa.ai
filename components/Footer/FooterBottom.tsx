@@ -26,8 +26,8 @@ export default function FooterBottom({ locale = 'de' }: FooterBottomProps) {
             <Image
               src="/images/logo/AVA_Bildmarke_WEB_RGB_300px (1).png"
               alt="Alta Via Applications Logo"
-              width={38}
-              height={38}
+              width={46}
+              height={46}
               className="mb-2"
             />
             <span
