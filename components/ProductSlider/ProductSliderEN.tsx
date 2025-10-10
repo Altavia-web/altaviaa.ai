@@ -16,45 +16,54 @@ interface Product {
 
 interface ProductSliderENProps {
   autoPlaySpeed?: number;
+  currentProductSlug?: string;
 }
 
 const products: Product[] = [
   {
-    id: 'absence-management',
-    name: 'Absence Management',
-    image: '/images/produkte/AVA_ABWESENHEIT_DE (1).webp',
-    color: '#00789e',
-    link: '/en/absence-management',
-    description: 'With the Alta Via Vacation and Deployment Planning bundle, you can manage all employee absences in NetSuite...'
-  },
-  {
     id: 'datev-export',
-    name: 'DATEV Export',
-    image: '/images/produkte/AVA_DATEV_DE.webp',
+    name: 'DATEV Interface',
+    image: '/images/EN/WebP/AVA_Interface-DATEV_EN.webp',
     color: '#009b87',
     link: '/en/datev-interface',
     description: 'DATEV accounting software is the standard in tax consulting and auditing in Germany...'
   },
   {
-    id: 'localization',
-    name: 'Localization Germany',
-    image: '/images/produkte/AVA_LOKALISIERUNG_DE.webp',
+    id: 'bmd-export',
+    name: 'BMD Interface',
+    image: '/images/EN/WebP/AVA_BMD_EN.webp',
+    color: '#ff6120',
+    link: '/en/bmd-interface',
+    description: 'Seamless integration with BMD accounting software for Austrian businesses...'
+  },
+  {
+    id: 'localization-de',
+    name: 'German Localization',
+    image: '/images/EN/WebP/AVA_LOKALISIERUNG_DE_EN.webp',
     color: '#003399',
     link: '/en/localization-germany',
     description: 'Through years of consulting at Alta Via, several enhancements have proven valuable for working with NetSuite in Germany...'
   },
   {
+    id: 'localization-at',
+    name: 'Austrian Localization',
+    image: '/images/EN/WebP/AVA_LOKALISIERUNG_AT_EN.webp',
+    color: '#003399',
+    link: '/en/austrian-localization',
+    description: 'Comprehensive localization features for Austrian legal and tax requirements...'
+  },
+  {
     id: 'travel-expenses',
     name: 'Travel Expenses',
-    image: '/images/produkte/AVA_REISEKOSTEN_DE (1).webp',
+    image: '/images/EN/WebP/AVA_REISEKOSTEN_EN.webp',
     color: '#7bcfc9',
     link: '/en/travel-expenses',
     description: 'Record and manage travel expenses efficiently in NetSuite with automatic expense accounting and approval workflows...'
   },
   {
     id: 'dunning',
-    name: 'Dunning',
-    image: '/images/produkte/AVA_MAHNWESEN_DE (1).webp',
+    name: 'Dunning Management',
+    image: '/images/EN/WebP/AVA_MAHNWESEN_EN.webp',
     color: '#980000',
     link: '/en/dunning',
     description: 'Automate your dunning process with intelligent escalation levels and legally compliant dunning templates for the German market...'
@@ -62,22 +71,33 @@ const products: Product[] = [
   {
     id: 'peak-ship',
     name: 'Peak Ship',
-    image: '/images/produkte/AVA_PEAK SHIP_DE (1).webp',
+    image: '/images/EN/WebP/AVA_PEAK SHIP_EN.webp',
     color: '#ffba00',
     link: '/en/peak-ship',
     description: 'Peak Ship optimizes your shipping processes in NetSuite with integration to all major shipping service providers...'
   }
 ];
 
-export default function ProductSliderEN({ autoPlaySpeed = 5000 }: ProductSliderENProps) {
+export default function ProductSliderEN({ autoPlaySpeed = 5000, currentProductSlug }: ProductSliderENProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const [itemsPerView, setItemsPerView] = useState(3);
   const [touchStart, setTouchStart] = useState(0);
   const [touchEnd, setTouchEnd] = useState(0);
+  const [isTransitioning, setIsTransitioning] = useState(true);
 
-  const totalSlides = Math.ceil(products.length / itemsPerView);
+  // Filter out current product if specified
+  const filteredProducts = currentProductSlug
+    ? products.filter(p => !p.link.includes(currentProductSlug))
+    : products;
 
+  // Duplicate products for infinite loop
+  const duplicatedProducts = [...filteredProducts, ...filteredProducts];
+
+  // Calculate total slides based on filtered products
+  const totalSlides = filteredProducts.length;
+
+  // Handle responsive items per view
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth < 768) {
@@ -94,16 +114,31 @@ export default function ProductSliderEN({ autoPlaySpeed = 5000 }: ProductSliderE
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  // Auto-play functionality with infinite loop
   useEffect(() => {
     if (!isHovered && autoPlaySpeed > 0) {
       const interval = setInterval(() => {
-        setCurrentIndex((prev) => (prev + 1) % totalSlides);
+        setCurrentIndex((prev) => prev + 1);
       }, autoPlaySpeed);
 
       return () => clearInterval(interval);
     }
-  }, [isHovered, autoPlaySpeed, totalSlides]);
+  }, [isHovered, autoPlaySpeed]);
 
+  // Reset to start seamlessly when reaching the end
+  useEffect(() => {
+    if (currentIndex >= totalSlides) {
+      setTimeout(() => {
+        setIsTransitioning(false);
+        setCurrentIndex(0);
+        setTimeout(() => {
+          setIsTransitioning(true);
+        }, 50);
+      }, 500);
+    }
+  }, [currentIndex, totalSlides]);
+
+  // Navigation handlers
   const goToSlide = useCallback((index: number) => {
     setCurrentIndex(index);
   }, []);
@@ -116,6 +151,7 @@ export default function ProductSliderEN({ autoPlaySpeed = 5000 }: ProductSliderE
     setCurrentIndex((prev) => (prev + 1) % totalSlides);
   }, [totalSlides]);
 
+  // Keyboard navigation
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === 'ArrowLeft') {
@@ -129,6 +165,7 @@ export default function ProductSliderEN({ autoPlaySpeed = 5000 }: ProductSliderE
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [goToPrevious, goToNext]);
 
+  // Touch handlers for mobile swipe
   const handleTouchStart = (e: React.TouchEvent) => {
     if (e.targetTouches[0]) {
       setTouchStart(e.targetTouches[0].clientX);
@@ -153,7 +190,7 @@ export default function ProductSliderEN({ autoPlaySpeed = 5000 }: ProductSliderE
 
   return (
     <section className="py-16 px-6 bg-white">
-      <div className="max-w-7xl mx-auto">
+      <div className="max-w-5xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12">
           <h2
@@ -218,19 +255,20 @@ export default function ProductSliderEN({ autoPlaySpeed = 5000 }: ProductSliderE
           </button>
 
           {/* Product Cards */}
-          <div className="overflow-hidden px-2">
+          <div className="overflow-hidden">
             <div
-              className="flex gap-6 transition-transform duration-500 ease-in-out"
+              className="flex gap-6"
               style={{
-                transform: `translateX(-${currentIndex * 100}%)`
+                transform: `translateX(calc(-${currentIndex} * (calc(${100 / itemsPerView}% - ${(itemsPerView - 1) * 1.5 / itemsPerView}rem) + 1.5rem)))`,
+                transition: isTransitioning ? 'transform 500ms ease-in-out' : 'none'
               }}
             >
-              {products.map((product) => (
+              {duplicatedProducts.map((product, index) => (
                 <div
-                  key={product.id}
-                  className="flex-shrink-0 bg-white overflow-hidden shadow-md hover:shadow-xl transition-shadow flex flex-col"
+                  key={`${product.id}-${index}`}
+                  className="flex-shrink-0 bg-white overflow-hidden flex flex-col"
                   style={{
-                    width: `calc(((100% - ${(itemsPerView - 1) * 1.5}rem) / ${itemsPerView}) * 0.9)`,
+                    width: `calc(${100 / itemsPerView}% - ${(itemsPerView - 1) * 1.5 / itemsPerView}rem)`,
                     borderRadius: '12px'
                   }}
                 >
