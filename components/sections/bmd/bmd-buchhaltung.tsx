@@ -4,43 +4,28 @@ import Image from 'next/image';
 const features = [
   {
     id: 1,
-    title: 'Datenübertragung zwischen NetSuite und BMD',
-    description: 'Stammdaten (z. B. Kontenbeschriftungen, Debitoren/Kreditoren) und buchungsrelevante Transaktionen lassen sich zwischen NetSuite und BMD importieren und exportieren – Version 3.0 schließt den Loop.'
+    title: 'CSV-Export von Buchungsdaten',
+    description: 'Stammdaten und Buchungsstapel werden aus NetSuite als CSV-Datei exportiert und können anschließend in BMD importiert werden.'
   },
   {
     id: 2,
-    title: 'SuiteTax-Kompatibilität',
-    description: 'Die SuiteApp unterstützt sowohl Legacy Tax als auch SuiteTax – Funktionen stehen damit auch bei Mandanten mit SuiteTax-Setup zur Verfügung.'
+    title: 'Personenkonten automatisch buchen',
+    description: 'Forderungen und Verbindlichkeiten aus NetSuite werden den passenden BMD-Personenkonten zugeordnet.'
   },
   {
     id: 3,
-    title: 'Automatische Personenkonten-Zuordnung',
-    description: 'Forderungen und Verbindlichkeiten aus LuL in NetSuite werden auf entsprechende BMD-Personenkonto gebucht.'
+    title: 'Umsatzsteuer korrekt übertragen',
+    description: 'Die NetSuite-Logik für MwSt. wird automatisch in eine BMD-konforme Bruttobuchung umgewandelt.'
   },
   {
     id: 4,
-    title: 'Umsatzsteuer-Buchung',
-    description: 'Die NetSuite-Mehrwertsteuerlogik wird für BMD in eine Bruttobuchung überführt.'
+    title: 'Erlösrealisierung & Multibook',
+    description: 'Unterstützt parallele Bewertungen und Erlösrealisierungen.'
   },
   {
     id: 5,
-    title: 'Erlösrealisierung & Multibook',
-    description: 'Die Lösung unterstützt Erlösrealisierungen und parallele Bewertungen.'
-  },
-  {
-    id: 6,
-    title: 'Abstimmung je Transaktion',
-    description: 'In NetSuite können Sie direkt zu jeder Transaktion die entsprechende BMD-Buchung analysieren, was die Abstimmung vereinfacht.'
-  },
-  {
-    id: 7,
-    title: 'Belegübernahme',
-    description: 'Belege können direkt an BMD Unternehmen online übertragen werden, um Belegbilder in BMD zu den Vorgängen und zu Archivierungszwecken anzuzeigen.'
-  },
-  {
-    id: 8,
-    title: 'Überschreiben von CSV-Dateien',
-    description: 'Das Überschreiben von CSV-Dateien wird direkt in NetSuite über die benutzerdefinierte Datensatz-Benutzeroberfläche abgewickelt.'
+    title: 'Einfache Abstimmung',
+    description: 'Direkte Analyse jeder Transaktion in NetSuite inklusive passender BMD-Buchung.'
   }
 ];
 
@@ -74,7 +59,7 @@ export default function BmdBuchhaltung() {
             color: '#002E64'
           }}
         >
-          Was die BMD Schnittstelle 3.0 für Sie leistet
+          Buchhaltungsdaten sicher und effizient übertragen
         </h2>
 
         {/* Feature Grid */}

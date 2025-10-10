@@ -26,8 +26,18 @@ export default function BmdSchnittstelle() {
                 color: '#002E64'
               }}
             >
-              Die Buchhaltungssoftware der BMD eG ist in Deutschland der Standard bei Steuerberatern und Wirtschaftsprüfern. Mit der von BMD zertifizierten SuiteApp &bdquo;Schnittstelle BMD für NetSuite&ldquo; können Sie auf einfache Weise sämtliche Buchungsdaten aus Ihrem NetSuite-ERP-System zur Weiterverarbeitung bzw. zum Buchungsabschluss nach BMD überführen.
+              Sicherer Export Ihrer Buchungsdaten aus NetSuite nach BMD
             </h3>
+            <p
+              style={{
+                fontFamily: 'Titillium Web',
+                fontSize: '18px',
+                lineHeight: '140%',
+                color: '#002E64'
+              }}
+            >
+              Unternehmen in Österreich, die das Cloud-ERP NetSuite nutzen, bewegen sich oft zwischen zwei Welten: Finanzdaten liegen in NetSuite, während der Steuerberater mit BMD arbeitet. Damit beide Seiten nahtlos zusammenfinden, sorgt die BMD Schnittstelle für NetSuite von Alta Via Applications für einen sicheren Export von Buchungsdaten aus NetSuite - damit sie problemlos in BMD importiert werden können. Buchungsdaten werden als CSV-Datei bereitgestellt und manuell in BMD eingespielt – effizient, rechtssicher und ohne doppelte Datenerfassung.
+            </p>
           </div>
 
           {/* Image - Right */}

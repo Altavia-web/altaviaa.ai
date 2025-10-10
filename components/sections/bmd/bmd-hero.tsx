@@ -16,7 +16,7 @@ export default function BmdHero() {
           {/* Text Content - Left */}
           <div className="text-left">
             <h1 className="mb-6 text-white">
-              Schnittstelle BMD 3.0 für NetSuite
+              BMD Schnittstelle für NetSuite
             </h1>
             <h2 className="text-white">
               Der direkte Pfad zur Buchhaltung mit BMD

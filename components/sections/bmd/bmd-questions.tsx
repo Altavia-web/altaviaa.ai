@@ -5,15 +5,15 @@ import React, { useState, useEffect } from 'react';
 const questions = [
   {
     id: 1,
-    text: 'Exportieren Sie Buchungen noch manuell aus NetSuite nach BMD – mit Risiko für Fehler und Nacharbeit?'
+    text: 'Möchten Sie Buchungsdaten aus NetSuite einfach exportieren und ohne Doppeleingaben in BMD übernehmen?'
   },
   {
     id: 2,
-    text: 'Müssen Zahlungen oder Payroll-Daten aus BMD in NetSuite nachgepflegt werden?'
+    text: 'Soll die Übertragung der Umsatzsteuer-Buchungen aus NetSuite nach BMD strukturiert, fehlerfrei und BMD-konform erfolgen?'
   },
   {
     id: 3,
-    text: 'Fehlt Ihnen die saubere Abstimmung je Transaktion direkt in NetSuite?'
+    text: 'Suchen Sie eine Lösung, die den österreichischen Standard nahtlos unterstützt und volle Rechtssicherheit gibt?'
   }
 ];
 
