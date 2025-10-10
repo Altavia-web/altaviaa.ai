@@ -4,7 +4,6 @@ import BmdHeroEN from '@/components/sections/bmd/bmd-hero-en';
 import BmdSchnittstelleEN from '@/components/sections/bmd/bmd-schnittstelle-en';
 import BmdQuestionsEN from '@/components/sections/bmd/bmd-questions-en';
 import BmdBuchhaltungEN from '@/components/sections/bmd/bmd-buchhaltung-en';
-import BmdTeaserEN from '@/components/sections/bmd/bmd-teaser-en';
 import BmdComparisonTableEN from '@/components/sections/bmd/bmd-comparison-table-en';
 import ProductSliderEN from '@/components/ProductSlider/ProductSliderEN';
 
@@ -15,7 +14,6 @@ export default function BmdInterfacePage() {
       <BmdSchnittstelleEN />
       <BmdQuestionsEN />
       <BmdBuchhaltungEN />
-      <BmdTeaserEN />
       <BmdComparisonTableEN />
       <ProductSliderEN currentProductSlug="bmd-interface" />
       <Footer />
