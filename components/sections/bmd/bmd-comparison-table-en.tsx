@@ -56,16 +56,29 @@ export default function BmdComparisonTableEN() {
     );
   };
 
+  const renderMobileCell = (value: string) => {
+    if (value === 'check') {
+      return <CheckCircle2 className="w-6 h-6" style={{ color: '#00b577' }} />;
+    }
+    if (value === 'x') {
+      return <XCircle className="w-6 h-6" style={{ color: '#ff4100' }} />;
+    }
+    return (
+      <span style={{ fontFamily: 'Titillium Web', fontWeight: 400, fontSize: '16px', color: '#000000' }}>
+        {value}
+      </span>
+    );
+  };
+
   return (
     <section className="bg-white">
       <div className="py-16 max-w-6xl mx-auto px-6">
         {/* Heading */}
         <h2
-          className="text-center mb-8"
+          className="text-center mb-8 text-2xl lg:text-4xl"
           style={{
             fontFamily: 'Titillium Web',
             fontWeight: 700,
-            fontSize: '44px',
             lineHeight: '110%',
             letterSpacing: '0',
             color: '#002e64'
@@ -74,8 +87,8 @@ export default function BmdComparisonTableEN() {
           How the BMD Interface Simplifies Data Transfer
         </h2>
 
-        {/* Table */}
-        <div className="overflow-x-auto">
+        {/* Desktop Table - Hidden on Mobile */}
+        <div className="hidden lg:block overflow-x-auto">
           <table className="w-full border border-gray-200">
             {/* Header */}
             <thead>
@@ -175,6 +188,108 @@ export default function BmdComparisonTableEN() {
               ))}
             </tbody>
           </table>
+        </div>
+
+        {/* Mobile Card Layout - Hidden on Desktop */}
+        <div className="lg:hidden space-y-6">
+          {categories.map((category) => (
+            <div key={category.name}>
+              {/* Category Header */}
+              <div
+                className="py-3 px-4 mb-3"
+                style={{
+                  backgroundColor: '#f3f4f6',
+                  borderRadius: '0.5rem'
+                }}
+              >
+                <div className="flex items-center gap-2">
+                  <Check className="w-5 h-5" style={{ color: 'var(--bmd-color-1)' }} />
+                  <span
+                    style={{
+                      fontFamily: 'Titillium Web',
+                      fontWeight: 600,
+                      fontSize: '18px',
+                      color: '#002e64'
+                    }}
+                  >
+                    {category.name}
+                  </span>
+                </div>
+              </div>
+
+              {/* Feature Cards */}
+              <div className="space-y-3">
+                {category.features.map((feature) => (
+                  <div
+                    key={feature.id}
+                    className="p-4"
+                    style={{
+                      backgroundColor: '#ffffff',
+                      border: '1px solid #e5e7eb',
+                      borderRadius: '0.5rem',
+                      borderBottom: '3px solid var(--bmd-color-2)'
+                    }}
+                  >
+                    {/* Feature Name */}
+                    <div
+                      className="mb-3 pb-3"
+                      style={{
+                        fontFamily: 'Titillium Web',
+                        fontWeight: 500,
+                        fontSize: '16px',
+                        lineHeight: '140%',
+                        color: '#002e64',
+                        borderBottom: '1px solid #e5e7eb'
+                      }}
+                    >
+                      {feature.feature}
+                    </div>
+
+                    {/* Comparison Grid */}
+                    <div className="grid grid-cols-2 gap-3">
+                      {/* NetSuite Column */}
+                      <div>
+                        <div
+                          className="mb-2 text-xs"
+                          style={{
+                            fontFamily: 'Titillium Web',
+                            fontWeight: 600,
+                            color: '#6b7280',
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.05em'
+                          }}
+                        >
+                          NetSuite Standard
+                        </div>
+                        <div className="flex items-center justify-center p-2">
+                          {renderMobileCell(feature.netsuite)}
+                        </div>
+                      </div>
+
+                      {/* BMD Column */}
+                      <div>
+                        <div
+                          className="mb-2 text-xs"
+                          style={{
+                            fontFamily: 'Titillium Web',
+                            fontWeight: 600,
+                            color: '#6b7280',
+                            textTransform: 'uppercase',
+                            letterSpacing: '0.05em'
+                          }}
+                        >
+                          BMD Interface
+                        </div>
+                        <div className="flex items-center justify-center p-2">
+                          {renderMobileCell(feature.altaVia)}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          ))}
         </div>
       </div>
 

@@ -84,6 +84,14 @@ export default function LocalizationComparisonEN() {
     );
   };
 
+  const renderMobileCell = (value: string) => {
+    return (
+      <span style={{ fontFamily: 'Titillium Web', fontWeight: 400, fontSize: '16px', color: 'var(--color-dark-blue)' }}>
+        {value}
+      </span>
+    );
+  };
+
   return (
     <section className="bg-white">
       <div className="py-20 lg:py-24 px-8 lg:px-12">
@@ -91,14 +99,14 @@ export default function LocalizationComparisonEN() {
 
           {/* Main Heading */}
           <h2
-            className="text-3xl lg:text-4xl font-semibold text-center mb-12 leading-tight"
+            className="text-2xl lg:text-4xl font-semibold text-center mb-12 leading-tight"
             style={{ color: 'var(--color-dark-blue)' }}
           >
             How Localization Germany for NetSuite complements the NetSuite-native solution
           </h2>
 
-          {/* Comparison Table */}
-          <div className="overflow-x-auto shadow-lg rounded-lg">
+          {/* Desktop Comparison Table - Hidden on Mobile */}
+          <div className="hidden lg:block overflow-x-auto shadow-lg rounded-lg">
           <table className="w-full border-collapse">
 
             {/* Sticky Header */}
@@ -170,6 +178,111 @@ export default function LocalizationComparisonEN() {
 
             </tbody>
           </table>
+        </div>
+
+        {/* Mobile Card Layout - Hidden on Desktop */}
+        <div className="lg:hidden space-y-6">
+          {categories.map((category) => {
+            const categoryKey = getCategoryKey(category.name);
+            return (
+              <div key={category.name}>
+                {/* Category Header */}
+                <div
+                  className="py-3 px-4 mb-3"
+                  style={{
+                    backgroundColor: '#f3f4f6',
+                    borderRadius: '0.5rem'
+                  }}
+                >
+                  <div className="flex items-center gap-2">
+                    <CheckCircle2 size={20} style={{ color: 'var(--color-mid-blue)' }} />
+                    <span
+                      style={{
+                        fontFamily: 'Titillium Web',
+                        fontWeight: 600,
+                        fontSize: '18px',
+                        color: 'var(--color-dark-blue)'
+                      }}
+                    >
+                      {category.name}
+                    </span>
+                  </div>
+                </div>
+
+                {/* Feature Cards */}
+                <div className="space-y-3">
+                  {category.features.map((feature) => (
+                    <div
+                      key={feature.id}
+                      className="p-4"
+                      style={{
+                        backgroundColor: '#ffffff',
+                        border: '1px solid #e5e7eb',
+                        borderRadius: '0.5rem',
+                        borderBottom: '3px solid var(--color-sky-blue)'
+                      }}
+                    >
+                      {/* Feature Name */}
+                      <div
+                        className="mb-3 pb-3"
+                        style={{
+                          fontFamily: 'Titillium Web',
+                          fontWeight: 500,
+                          fontSize: '16px',
+                          lineHeight: '140%',
+                          color: 'var(--color-dark-blue)',
+                          borderBottom: '1px solid #e5e7eb'
+                        }}
+                      >
+                        {feature.feature}
+                      </div>
+
+                      {/* Comparison Grid */}
+                      <div className="grid grid-cols-2 gap-3">
+                        {/* NetSuite Column */}
+                        <div>
+                          <div
+                            className="mb-2 text-xs"
+                            style={{
+                              fontFamily: 'Titillium Web',
+                              fontWeight: 600,
+                              color: '#6b7280',
+                              textTransform: 'uppercase',
+                              letterSpacing: '0.05em'
+                            }}
+                          >
+                            NetSuite
+                          </div>
+                          <div className="flex items-center justify-center p-2">
+                            {renderMobileCell(feature.netsuite)}
+                          </div>
+                        </div>
+
+                        {/* AVA Column */}
+                        <div>
+                          <div
+                            className="mb-2 text-xs"
+                            style={{
+                              fontFamily: 'Titillium Web',
+                              fontWeight: 600,
+                              color: '#6b7280',
+                              textTransform: 'uppercase',
+                              letterSpacing: '0.05em'
+                            }}
+                          >
+                            AVA Localization
+                          </div>
+                          <div className="flex items-center justify-center p-2">
+                            {renderMobileCell(feature.altaVia)}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            );
+          })}
         </div>
 
         </div>
