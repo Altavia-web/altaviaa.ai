@@ -15,35 +15,18 @@ interface Category {
 
 const categories: Category[] = [
   {
-    name: 'Mapping',
+    name: 'Setup',
     features: [
-      { id: 1, feature: 'Zuordnung von NetSuite-Konten zu BMD', netsuite: 'ja', altaVia: 'ja' },
-      { id: 2, feature: 'Zuordnung von Steuerkennzeichen', netsuite: 'ja', altaVia: 'ja (Legacy Tax)' },
-      { id: 3, feature: 'Zuordnung von automatischen Konten', netsuite: 'ja', altaVia: 'ja' },
-      { id: 4, feature: 'Zuordnung von BMD - Personenkonto', netsuite: 'ja', altaVia: 'ja' },
-      { id: 5, feature: 'Zuordnung von Kostenstellen', netsuite: 'ja', altaVia: 'ja' }
+      { id: 1, feature: 'Datenübertragung von Stammdaten & Buchungsstapeln (als CSV-Datei zur manuellen Übertragung)', netsuite: 'x', altaVia: 'check' }
     ]
   },
   {
     name: 'Funktionen',
     features: [
-      { id: 6, feature: 'Datentransfer: NetSuite->BMD', netsuite: 'ja', altaVia: 'ja' },
-      { id: 7, feature: 'Datentransfer: BMD->NetSuite', netsuite: 'ja', altaVia: 'ja' },
-      { id: 8, feature: 'Automatische Zuweisung von Personenkontos in NetSuite', netsuite: 'ja', altaVia: 'nein' },
-      { id: 9, feature: 'API zwischen den Systemen', netsuite: 'ja', altaVia: 'ja' },
-      { id: 10, feature: 'Übertragung von Beleglink und PDF an BMD', netsuite: 'nein', altaVia: 'ja' },
-      { id: 11, feature: 'Integration in BMD Unternehmen Online', netsuite: 'nein', altaVia: 'ja' },
-      { id: 12, feature: 'Multibook-Unterstützung', netsuite: 'ja', altaVia: 'ja' },
-      { id: 13, feature: 'Import historischer Daten', netsuite: 'ja', altaVia: 'ja' },
-      { id: 14, feature: 'Überschreiben von CSV-Dateien', netsuite: 'nein', altaVia: 'ja' }
-    ]
-  },
-  {
-    name: 'Installation / Dokumentation',
-    features: [
-      { id: 15, feature: 'Installationszeit', netsuite: '+20 Std.', altaVia: '2 Std.' },
-      { id: 16, feature: 'Nur Bundle-Installation', netsuite: 'nein', altaVia: 'ja' },
-      { id: 17, feature: 'Nutzung ohne separaten Nutzer-Account/ohne separate Nutzer-Lizenz möglich', netsuite: 'nein', altaVia: 'ja' }
+      { id: 2, feature: 'Automatische Personenkonten-Zuordnung', netsuite: 'x', altaVia: 'check' },
+      { id: 3, feature: 'Umsatzsteuer-Buchungen korrekt abbilden (Bruttobuchung)', netsuite: 'x', altaVia: 'check' },
+      { id: 4, feature: 'Erlösrealisierung & Multibook', netsuite: 'x', altaVia: 'check' },
+      { id: 5, feature: 'Abstimmung je Transaktion', netsuite: 'x', altaVia: 'check' }
     ]
   }
 ];
@@ -88,7 +71,7 @@ export default function BmdComparisonTable() {
             color: '#002e64'
           }}
         >
-          Wie die BMD Schnittstelle 3.0 für NetSuite die NetSuite-native Lösung ergänzt
+          Wie die BMD Schnittstelle die Übertragung vereinfacht
         </h2>
 
         {/* Table */}
@@ -119,7 +102,7 @@ export default function BmdComparisonTable() {
                     color: '#ffffff'
                   }}
                 >
-                  NetSuite BMD
+                  NetSuite Standard ohne Schnittstelle
                 </th>
                 <th
                   className="py-4 px-4 text-center"
@@ -131,7 +114,7 @@ export default function BmdComparisonTable() {
                     color: '#ffffff'
                   }}
                 >
-                  AVA BMD Schnittstelle 3.0 für NetSuite
+                  BMD Schnittstelle für NetSuite von Alta Via Applications
                 </th>
               </tr>
             </thead>
