@@ -30,13 +30,44 @@ export default function FooterBottom({ locale = 'de' }: FooterBottomProps) {
                 height={32}
                 className="mr-3"
               />
-              <span className="text-lg font-semibold">
+              <span
+                style={{
+                  fontFamily: 'Titillium Web',
+                  fontWeight: 700,
+                  fontSize: '18px',
+                  lineHeight: '140%',
+                  letterSpacing: '0%',
+                  color: '#002E64'
+                }}
+              >
                 Alta Via Applications
               </span>
             </div>
-            <div className="text-sm opacity-80 leading-relaxed">
-              <p>Nadistr. 12</p>
-              <p>80809 München</p>
+            <div className="leading-relaxed">
+              <p
+                style={{
+                  fontFamily: 'Titillium Web',
+                  fontWeight: 400,
+                  fontSize: '14px',
+                  lineHeight: '140%',
+                  letterSpacing: '0%',
+                  color: '#002E64'
+                }}
+              >
+                Nadistr. 12
+              </p>
+              <p
+                style={{
+                  fontFamily: 'Titillium Web',
+                  fontWeight: 400,
+                  fontSize: '14px',
+                  lineHeight: '140%',
+                  letterSpacing: '0%',
+                  color: '#002E64'
+                }}
+              >
+                80809 München
+              </p>
             </div>
           </div>
 
