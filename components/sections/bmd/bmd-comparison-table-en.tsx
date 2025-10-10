@@ -15,35 +15,18 @@ interface Category {
 
 const categories: Category[] = [
   {
-    name: 'Mapping',
+    name: 'Setup',
     features: [
-      { id: 1, feature: 'Mapping of NetSuite accounts to BMD', netsuite: 'yes', altaVia: 'yes' },
-      { id: 2, feature: 'Mapping of tax codes', netsuite: 'yes', altaVia: 'yes (Legacy Tax)' },
-      { id: 3, feature: 'Mapping of automatic accounts', netsuite: 'yes', altaVia: 'yes' },
-      { id: 4, feature: 'Mapping of BMD - personal account', netsuite: 'yes', altaVia: 'yes' },
-      { id: 5, feature: 'Mapping of cost centers', netsuite: 'yes', altaVia: 'yes' }
+      { id: 1, feature: 'Export of master data and journal entries (CSV file for manual import)', netsuite: 'x', altaVia: 'check' }
     ]
   },
   {
-    name: 'Functions',
+    name: 'Features',
     features: [
-      { id: 6, feature: 'Data transfer: NetSuite->BMD', netsuite: 'yes', altaVia: 'yes' },
-      { id: 7, feature: 'Data transfer: BMD->NetSuite', netsuite: 'yes', altaVia: 'yes' },
-      { id: 8, feature: 'Automatic assignment of personal accounts in NetSuite', netsuite: 'yes', altaVia: 'no' },
-      { id: 9, feature: 'API between systems', netsuite: 'yes', altaVia: 'yes' },
-      { id: 10, feature: 'Transfer of document link and PDF to BMD', netsuite: 'no', altaVia: 'yes' },
-      { id: 11, feature: 'Integration in BMD Unternehmen Online', netsuite: 'no', altaVia: 'yes' },
-      { id: 12, feature: 'Multibook support', netsuite: 'yes', altaVia: 'yes' },
-      { id: 13, feature: 'Import of historical data', netsuite: 'yes', altaVia: 'yes' },
-      { id: 14, feature: 'Overwriting CSV files', netsuite: 'no', altaVia: 'yes' }
-    ]
-  },
-  {
-    name: 'Installation / Documentation',
-    features: [
-      { id: 15, feature: 'Installation time', netsuite: '+20 hrs.', altaVia: '2 hrs.' },
-      { id: 16, feature: 'Bundle-only installation', netsuite: 'no', altaVia: 'yes' },
-      { id: 17, feature: 'Usage without separate user account/without separate user license possible', netsuite: 'no', altaVia: 'yes' }
+      { id: 2, feature: 'Automatic account mapping (receivables & payables)', netsuite: 'x', altaVia: 'check' },
+      { id: 3, feature: 'Accurate VAT transfer using gross method', netsuite: 'x', altaVia: 'check' },
+      { id: 4, feature: 'Revenue recognition & Multibook support', netsuite: 'x', altaVia: 'check' },
+      { id: 5, feature: 'Transaction-level reconciliation', netsuite: 'x', altaVia: 'check' }
     ]
   }
 ];
@@ -88,7 +71,7 @@ export default function BmdComparisonTableEN() {
             color: '#002e64'
           }}
         >
-          How the BMD Interface 3.0 for NetSuite complements the NetSuite-native solution
+          How the BMD Interface Simplifies Data Transfer
         </h2>
 
         {/* Table */}
@@ -119,7 +102,7 @@ export default function BmdComparisonTableEN() {
                     color: '#ffffff'
                   }}
                 >
-                  NetSuite BMD
+                  NetSuite Standard without a BMD Interface
                 </th>
                 <th
                   className="py-4 px-4 text-center"
@@ -131,7 +114,7 @@ export default function BmdComparisonTableEN() {
                     color: '#ffffff'
                   }}
                 >
-                  AVA BMD Interface 3.0 for NetSuite
+                  BMD Interface for NetSuite by Alta Via Applications
                 </th>
               </tr>
             </thead>
