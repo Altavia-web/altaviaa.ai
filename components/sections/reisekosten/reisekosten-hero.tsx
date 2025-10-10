@@ -18,6 +18,9 @@ export default function ReisekostenHero() {
             <h1 className="mb-6 text-white">
               Reisekosten für NetSuite
             </h1>
+            <h2 className="text-white" style={{ fontSize: '1.5rem', fontWeight: 600, lineHeight: '1.3' }}>
+              Reisekosten abrechnen – einfach, schnell, compliant
+            </h2>
           </div>
 
           {/* Image - Right */}
