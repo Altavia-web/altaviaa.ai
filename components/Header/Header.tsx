@@ -28,7 +28,7 @@ export default function Header({ locale = 'de' }: HeaderProps) {
   // Generate locale-aware URLs
   const baseUrl = locale === 'en' ? '/en' : '';
   const contactUrl = locale === 'en' ? '/en/contact' : '/kontakt';
-  const productsUrl = locale === 'en' ? '/en/applications' : '/products';
+  const productsUrl = locale === 'en' ? '/en/products' : '/products';
 
   const productUrls = {
     datev: locale === 'en' ? '/en/datev-interface' : '/schnittstelle-datev',
@@ -96,7 +96,7 @@ export default function Header({ locale = 'de' }: HeaderProps) {
               >
                 <Link
                   href={productsUrl}
-                  className={`${styles.dropdownButton} ${isActive('/products') || isActive('/en/applications') || isActive('/schnittstelle-datev') || isActive('/schnittstelle-bmd') || isActive('/en/bmd-interface') || isActive('/localization-germany') || isActive('/lokalisierung-oesterreich') || isActive('/en/austrian-localization') || isActive('/reisekosten') || isActive('/en/travel-expenses') || isActive('/dunning') || isActive('/peak-ship') ? styles.active : ''}`}
+                  className={`${styles.dropdownButton} ${isActive('/products') || isActive('/en/products') || isActive('/schnittstelle-datev') || isActive('/schnittstelle-bmd') || isActive('/en/bmd-interface') || isActive('/localization-germany') || isActive('/lokalisierung-oesterreich') || isActive('/en/austrian-localization') || isActive('/reisekosten') || isActive('/en/travel-expenses') || isActive('/dunning') || isActive('/peak-ship') ? styles.active : ''}`}
                   aria-haspopup="true"
                   aria-label={t.nav.productsMenu.title}
                 >
