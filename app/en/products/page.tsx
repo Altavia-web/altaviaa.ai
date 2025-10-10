@@ -11,6 +11,9 @@ export const metadata: Metadata = {
   description: 'Discover our NetSuite extensions for the German market',
 };
 
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
 export default function ProductsPageEN() {
   return (
     <div className="min-h-screen">
