@@ -18,6 +18,9 @@ export default function LocalizationGermanyHero() {
             <h1 className="mb-6 text-white">
               Lokalisierung Deutschland für NetSuite
             </h1>
+            <h2 className="text-white" style={{ fontSize: '1.5rem', fontWeight: 600, lineHeight: '1.3' }}>
+              Optimieren Sie NetSuite für den deutschen Markt – präzise, konform, einsatzbereit
+            </h2>
           </div>
 
           {/* Image - Right */}

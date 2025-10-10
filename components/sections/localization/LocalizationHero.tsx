@@ -12,13 +12,13 @@ export default function LocalizationHero() {
 
           {/* Left Column - Text Content */}
           <div style={{ color: 'var(--color-dark-blue)' }}>
-            <h2 className="text-2xl lg:text-3xl font-semibold mb-6 leading-tight">
-              Optimieren Sie NetSuite für den deutschen Markt – präzise, konform, einsatzbereit
-            </h2>
-
-            <h3 className="text-lg leading-relaxed">
-              Die deutsche Geschäftswelt stellt besondere Anforderungen an Buchhaltung und Compliance. NetSuite ist die Basis, aber erst mit der Lokalisierung Deutschland wird Ihr System wirklich GoBD- und HGB-konform. Wir ergänzen alle Funktionen, die deutsche Unternehmen für eine prüfungssichere und effiziente Finanzverwaltung benötigen.
+            <h3 className="text-2xl lg:text-3xl font-semibold mb-6 leading-tight">
+              Von GoBD bis HGB – vollständig integriert in Ihr NetSuite-System
             </h3>
+
+            <p className="text-lg leading-relaxed">
+              Die deutsche Geschäftswelt stellt besondere Anforderungen an Buchhaltung und Compliance. NetSuite ist die Basis, aber erst mit der Lokalisierung Deutschland wird Ihr System wirklich GoBD- und HGB-konform. Wir ergänzen alle Funktionen, die deutsche Unternehmen für eine prüfungssichere und effiziente Finanzverwaltung benötigen.
+            </p>
           </div>
 
           {/* Right Column - Product Image */}
