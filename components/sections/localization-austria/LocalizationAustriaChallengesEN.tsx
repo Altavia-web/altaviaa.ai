@@ -10,15 +10,15 @@ export default function LocalizationAustriaChallengesEN() {
   const slides = [
     {
       icon: "/images/00_ALLGEMEINES/Questionmark/AVA_Questionmark_white.png",
-      heading: "Do you need a proper chart of accounts or a trial balance for audits or internal reporting from NetSuite?"
+      heading: "Do you need UGB-compliant financial reports – directly from NetSuite and without manual work?"
     },
     {
       icon: "/images/00_ALLGEMEINES/Questionmark/AVA_Questionmark_white.png",
-      heading: "Are you wondering how to handle Austrian and EU VAT procedures with NetSuite?"
+      heading: "Do you want your BMD interface to work smoothly and your travel expense reports to comply with all Austrian tax regulations?"
     },
     {
       icon: "/images/00_ALLGEMEINES/Questionmark/AVA_Questionmark_white.png",
-      heading: "Do you want to create compliant files for e-invoicing?"
+      heading: "Do you want to ensure that your NetSuite data is audit-proof at all times?"
     }
   ];
 

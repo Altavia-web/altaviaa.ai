@@ -12,12 +12,12 @@ export default function LocalizationAustriaHeroContentEN() {
 
           {/* Left Column - Text Content */}
           <div style={{ color: 'var(--color-dark-blue)' }}>
-            <h2 className="text-2xl lg:text-3xl font-semibold mb-6 leading-tight">
-              Optimize NetSuite for the Austrian Market – Precise, Compliant, Ready to Use
-            </h2>
+            <h3 className="text-2xl lg:text-3xl font-semibold mb-6 leading-tight">
+              Seamless Integration from UGB through BMD to Travel Expense Management
+            </h3>
 
             <p className="text-lg leading-relaxed">
-              The Austrian business environment places special requirements on accounting and compliance. NetSuite is the foundation, but only with Austrian Localization does your system become truly UGB and BAO compliant. We add all the features that Austrian companies need for audit-proof and efficient financial management.
+              To work with NetSuite in Austria in a legally compliant manner, you need more than just the standard version. Our Austrian localization closes the gaps and offers seamless integration of UGB reports, BMD export, and travel expense law. This means you are optimally equipped for the Austrian market – right from day one.
             </p>
           </div>
 

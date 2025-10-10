@@ -4,40 +4,28 @@ import Image from 'next/image';
 export default function LocalizationAustriaSolutionsEN() {
   const features = [
     {
-      title: "Immutability of Postings",
-      description: "Financial transactions are tamper-proof and comply with statutory requirements for proper electronic accounting in Austria."
+      title: "UGB-Compliant Reporting",
+      description: "Prepare balance sheets and P&L statements in accordance with Austrian company law – including account sheets and trial balance."
     },
     {
-      title: "UGB-Compliant Reports",
-      description: "Create balance sheets and profit and loss statements according to Austrian standards. Important financial reports such as chart of accounts and trial balance are included for audits and internal controls."
+      title: "GoBD & SuiteTax Compliance",
+      description: "Financial transactions remain tamper-proof. All functions fully support SuiteTax for a smooth migration."
     },
     {
-      title: "VAT Return via FinanzOnline",
-      description: "Submit VAT returns directly and automatically to the Austrian tax authorities. This saves time, reduces errors, and ensures compliance."
+      title: "Integrated BMD Export",
+      description: "Transfer posting data from NetSuite directly into Austria's widely used BMD system – securely and without detours."
     },
     {
-      title: "Austrian E-Invoicing",
-      description: "Effortlessly create the required e-invoice files from your invoices and credit notes at the touch of a button and comply with the legal e-invoicing requirement in Austria."
+      title: "Travel Expense Reporting Under Austrian Law",
+      description: "Per diems, mileage allowances, mixed trips – all mapped in NetSuite in full compliance with Austrian tax rules."
     },
     {
-      title: "VAT Recalculation (Cash Discount)",
-      description: "Ensure the correct reduction of proportional VAT for cash discounts through automatic journal entries and remain compliant with Austrian tax law."
+      title: "Correct VAT & Cash Discount Handling",
+      description: "Our solution automatically creates additional entries for cash discounts and ensures accurate tax calculation."
     },
     {
-      title: "Flexible Tax Date",
-      description: "Record document date, posting date, and tax point date separately. This enables accurate period allocation and compliance with tax regulations."
-    },
-    {
-      title: "VAT ID Verification",
-      description: "Optimize cross-border transactions within the EU with our VAT ID verification and ensure a smooth verification process for trading partners&apos; VAT IDs."
-    },
-    {
-      title: "EU VAT",
-      description: "Taxes on sales transactions are verified and corrected if necessary. This closes gaps in the NetSuite standard."
-    },
-    {
-      title: "Accrual Accounting",
-      description: "Simplify the creation of provisions for unapproved invoices and support a smooth monthly, quarterly, or annual closing."
+      title: "Flexible Tax and Posting Dates",
+      description: "Book document date, posting date, and tax point date separately – for precise period allocation."
     }
   ];
 
@@ -61,7 +49,7 @@ export default function LocalizationAustriaSolutionsEN() {
           className="text-3xl lg:text-4xl font-semibold text-center mb-16 leading-tight mx-auto"
           style={{ color: 'var(--color-dark-blue)', maxWidth: '800px' }}
         >
-          Master Austrian Compliance
+          Everything You Need for Success in Austria
         </h2>
 
         {/* Features Grid - 3 columns */}

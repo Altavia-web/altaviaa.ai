@@ -16,8 +16,11 @@ export default function LocalizationAustriaHeroEN() {
           {/* Text Content - Left */}
           <div className="text-left">
             <h1 className="mb-6 text-white">
-              Austrian Localization for NetSuite
+              Localization Austria for NetSuite
             </h1>
+            <h2 className="text-white" style={{ fontSize: '1.5rem', fontWeight: 600, lineHeight: '1.3' }}>
+              Your Secure Path to Austrian Compliance
+            </h2>
           </div>
 
           {/* Image - Right */}
