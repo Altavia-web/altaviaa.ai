@@ -79,7 +79,7 @@ export default function BmdComparisonTable() {
           <table className="w-full border border-gray-200">
             {/* Header */}
             <thead>
-              <tr style={{ backgroundColor: '#009b87' }}>
+              <tr style={{ backgroundColor: 'var(--bmd-color-1)' }}>
                 <th
                   className="py-4 px-4 text-left"
                   style={{
@@ -136,7 +136,7 @@ export default function BmdComparisonTable() {
                       }}
                     >
                       <div className="flex items-center gap-2">
-                        <Check className="w-5 h-5" style={{ color: '#009b87' }} />
+                        <Check className="w-5 h-5" style={{ color: 'var(--bmd-color-1)' }} />
                         {category.name}
                       </div>
                     </td>
@@ -148,7 +148,7 @@ export default function BmdComparisonTable() {
                       key={feature.id}
                       style={{
                         backgroundColor: '#ffffff',
-                        borderBottom: '2px solid #78dc3c'
+                        borderBottom: '2px solid var(--bmd-color-2)'
                       }}
                     >
                       <td
