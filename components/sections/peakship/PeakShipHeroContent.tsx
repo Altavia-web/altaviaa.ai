@@ -12,9 +12,9 @@ export default function PeakShipHeroContent() {
 
           {/* Left Column - Text Content */}
           <div style={{ color: 'var(--color-dark-blue)' }}>
-            <h2 className="text-2xl lg:text-3xl font-semibold mb-6 leading-tight">
-              Effizient versenden – direkt aus Ihrem ERP
-            </h2>
+            <h3 className="text-2xl lg:text-3xl font-semibold mb-6 leading-tight">
+              Alles für Ihren Versand direkt in NetSuite integriert
+            </h3>
 
             <p className="text-lg leading-relaxed">
               Mit PeakShip für NetSuite machen Sie Ihre Versandprozesse so einfach wie nie: Etiketten, Tracking, Zollunterlagen – alles läuft direkt aus Ihrem ERP. Kein Hin- und Herkopieren, kein Risiko von Übertragungsfehlern, sondern ein nahtloser Ablauf vom Auftrag bis zur Auslieferung.

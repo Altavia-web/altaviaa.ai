@@ -18,6 +18,9 @@ export default function PeakShipHero() {
             <h1 className="mb-6 text-white">
               PeakShip für NetSuite
             </h1>
+            <h2 className="text-white" style={{ fontSize: '1.5rem', fontWeight: 600, lineHeight: '1.3' }}>
+              Effizient versenden – direkt aus Ihrem ERP
+            </h2>
           </div>
 
           {/* Image - Right */}
