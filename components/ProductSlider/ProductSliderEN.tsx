@@ -37,7 +37,7 @@ const products: Product[] = [
     description: 'Seamless integration with BMD accounting software for Austrian businesses...'
   },
   {
-    id: 'localization-de',
+    id: 'lokalisierung',
     name: 'German Localization',
     image: '/images/EN/WebP/AVA_LOKALISIERUNG_DE_EN.webp',
     color: '#003399',
@@ -45,7 +45,7 @@ const products: Product[] = [
     description: 'Through years of consulting at Alta Via, several enhancements have proven valuable for working with NetSuite in Germany...'
   },
   {
-    id: 'localization-at',
+    id: 'lokalisierung-at',
     name: 'Austrian Localization',
     image: '/images/EN/WebP/AVA_LOKALISIERUNG_AT_EN.webp',
     color: '#003399',
@@ -53,7 +53,7 @@ const products: Product[] = [
     description: 'Comprehensive localization features for Austrian legal and tax requirements...'
   },
   {
-    id: 'travel-expenses',
+    id: 'reisekosten',
     name: 'Travel Expenses',
     image: '/images/EN/WebP/AVA_REISEKOSTEN_EN.webp',
     color: '#7bcfc9',
