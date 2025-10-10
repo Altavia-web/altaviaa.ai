@@ -26,7 +26,7 @@ export default function LocalizationGermanyPageEN() {
       <LocalizationTestimonialEN />
       <LocalizationComparisonEN />
       <ProductSliderEN currentProductSlug="localization-germany" />
-      <Footer />
+      <Footer locale="en" />
     </div>
   );
 }

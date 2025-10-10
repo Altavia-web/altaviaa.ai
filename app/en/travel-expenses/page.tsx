@@ -20,7 +20,7 @@ export default function TravelExpenses() {
       <ReisekostenComparisonEN />
       <ReisekostenGrowthEN />
       <ProductSliderEN currentProductSlug="travel-expenses" />
-      <Footer />
+      <Footer locale="en" />
     </div>
   );
 }

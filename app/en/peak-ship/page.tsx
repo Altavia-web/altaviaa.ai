@@ -20,7 +20,7 @@ export default function PeakShipPageEN() {
       <PeakShipComparisonEN />
       <PeakShipGrowthEN />
       <ProductSliderEN currentProductSlug="peak-ship" />
-      <Footer />
+      <Footer locale="en" />
     </div>
   );
 }

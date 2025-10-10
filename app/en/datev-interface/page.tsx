@@ -20,7 +20,7 @@ export default function DatevInterfacePage() {
       <DatevZitatEN />
       <DatevComparisonTableEN />
       <ProductSliderEN currentProductSlug="datev-interface" />
-      <Footer />
+      <Footer locale="en" />
     </div>
   );
 }

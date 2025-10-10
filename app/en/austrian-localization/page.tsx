@@ -20,7 +20,7 @@ export default function AustrianLocalization() {
       <LocalizationAustriaComparisonEN />
       <LocalizationAustriaGrowthEN />
       <ProductSliderEN currentProductSlug="austrian-localization" />
-      <Footer />
+      <Footer locale="en" />
     </div>
   );
 }

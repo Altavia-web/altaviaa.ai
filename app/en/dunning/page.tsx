@@ -20,7 +20,7 @@ export default function DunningPageEN() {
       <DunningComparisonEN />
       <DunningGrowthEN />
       <ProductSliderEN currentProductSlug="dunning" />
-      <Footer />
+      <Footer locale="en" />
     </div>
   );
 }

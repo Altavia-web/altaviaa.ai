@@ -32,7 +32,7 @@ export default function ProductsPageEN() {
       </section>
 
       <ProductsTeaser />
-      <Footer />
+      <Footer locale="en" />
     </div>
   );
 }

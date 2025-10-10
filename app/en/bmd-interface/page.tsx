@@ -16,7 +16,7 @@ export default function BmdInterfacePage() {
       <BmdBuchhaltungEN />
       <BmdComparisonTableEN />
       <ProductSliderEN currentProductSlug="bmd-interface" />
-      <Footer />
+      <Footer locale="en" />
     </div>
   );
 }
