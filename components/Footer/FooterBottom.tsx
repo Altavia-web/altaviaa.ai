@@ -1,5 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { type Locale } from '@/lib/i18n';
 
 interface FooterBottomProps {
@@ -22,21 +23,13 @@ export default function FooterBottom({ locale = 'de' }: FooterBottomProps) {
           {/* Logo & Company Info (Left) */}
           <div className="flex flex-col items-start">
             <div className="flex items-center mb-4">
-              <div className="w-8 h-8 bg-blue-600 rounded flex items-center justify-center mr-3">
-                <svg
-                  width="16"
-                  height="16"
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="text-white"
-                >
-                  <path
-                    d="M8 2L14 8L8 14L2 8L8 2Z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </div>
+              <Image
+                src="/images/logo/AVA_Bildmarke_WEB_RGB_300px (1).png"
+                alt="Alta Via Applications Logo"
+                width={32}
+                height={32}
+                className="mr-3"
+              />
               <span className="text-lg font-semibold">
                 Alta Via Applications
               </span>
