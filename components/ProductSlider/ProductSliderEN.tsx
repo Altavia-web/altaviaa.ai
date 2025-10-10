@@ -191,33 +191,6 @@ export default function ProductSliderEN({ autoPlaySpeed = 5000, currentProductSl
   return (
     <section className="py-16 px-6 bg-white">
       <div className="max-w-5xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-12">
-          <h2
-            className="font-bold mb-4"
-            style={{
-              fontFamily: 'Titillium Web',
-              fontSize: '44px',
-              lineHeight: '110%',
-              color: '#002e64'
-            }}
-          >
-            Discover More from Alta Via Applications
-          </h2>
-          <p
-            className="mx-auto"
-            style={{
-              fontFamily: 'Titillium Web',
-              fontSize: '18px',
-              lineHeight: '140%',
-              color: '#000000',
-              maxWidth: '800px'
-            }}
-          >
-            Find the right tools to streamline your business processes and accelerate growth with NetSuite.
-          </p>
-        </div>
-
         {/* Slider Container */}
         <div
           className="relative"
