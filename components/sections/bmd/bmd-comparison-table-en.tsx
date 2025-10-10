@@ -202,10 +202,10 @@ export default function BmdComparisonTableEN() {
       >
         <div className="max-w-4xl mx-auto text-center">
           <h3 className="text-2xl lg:text-3xl font-semibold mb-6 text-white leading-tight">
-            Reliably connected. Flexibly expandable.
+            Stable Connection. Flexible by Design.
           </h3>
           <p className="text-lg lg:text-xl text-white leading-relaxed">
-            The BMD interface adapts to your requirements and evolves with NetSuite. This keeps data transfer reliable, compliant, and always ready for new processes – ensuring seamless collaboration between NetSuite and BMD.
+            The BMD interface adapts to your requirements and evolves with NetSuite. This ensures reliable, compliant data transfer and keeps systems always ready for new processes, facilitating seamless collaboration between NetSuite and BMD.
           </p>
         </div>
       </div>
