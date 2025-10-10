@@ -43,12 +43,12 @@
 
 /* Colors - Filled variants */
 .midBlueFilled {
-  background-color: #1e40af;
-  color: white;
+  background-color: #5095cb;
+  color: #ffffff;
 }
 
 .midBlueFilled:hover:not(:disabled) {
-  background-color: #1d4ed8;
+  background-color: #4085bb;
 }
 
 .orangeFilled {
@@ -90,13 +90,13 @@
 /* Colors - Outlined variants */
 .midBlueOutlined {
   background-color: transparent;
-  color: #1e40af;
-  border: 2px solid #1e40af;
+  color: #5095cb;
+  border: 2px solid #5095cb;
 }
 
 .midBlueOutlined:hover:not(:disabled) {
-  background-color: #1e40af;
-  color: white;
+  background-color: #5095cb;
+  color: #ffffff;
 }
 
 .orangeOutlined {
