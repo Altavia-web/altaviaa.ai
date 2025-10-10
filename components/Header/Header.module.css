@@ -162,13 +162,12 @@
   font-weight: 600;
   color: #002e64;
   text-decoration: none;
-  background-color: white;
   border-radius: 0.5rem;
   transition: all 0.2s ease;
 }
 
 .mobileMainLink:hover {
-  background-color: rgba(255, 255, 255, 0.8);
+  opacity: 0.8;
 }
 
 .mobileProductList {
@@ -186,13 +185,53 @@
   font-size: 0.875rem;
   color: #002e64;
   text-decoration: none;
-  background-color: white;
   border-radius: 0.375rem;
   transition: all 0.2s ease;
 }
 
 .mobileProductLink:hover {
-  background-color: rgba(255, 255, 255, 0.8);
+  opacity: 0.8;
+}
+
+.mobileFooterSection {
+  background-color: #002e64;
+  margin: 0.5rem -1rem -1rem -1rem;
+  padding: 1rem;
+}
+
+.mobileFooterContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.mobileFooterLink {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: white;
+  font-size: 0.875rem;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.mobileFooterLink:hover {
+  opacity: 0.8;
+}
+
+.mobileSocialLinks {
+  display: flex;
+  gap: 1rem;
+}
+
+.mobileSocialLinks a {
+  color: white;
+  transition: all 0.2s;
+}
+
+.mobileSocialLinks a:hover {
+  opacity: 0.8;
 }
 
 .mobileProductLink svg {

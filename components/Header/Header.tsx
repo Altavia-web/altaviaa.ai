@@ -238,6 +238,24 @@ export default function Header({ locale = 'de' }: HeaderProps) {
             >
               {t.nav.contact}
             </Link>
+
+            {/* Mobile Footer Section */}
+            <div className={styles.mobileFooterSection}>
+              <div className={styles.mobileFooterContent}>
+                <a href={`${baseUrl}/download-broschuere`} className={styles.mobileFooterLink}>
+                  <Download size={20} />
+                  <span>{t.nav.downloadBrochure}</span>
+                </a>
+                <div className={styles.mobileSocialLinks}>
+                  <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">
+                    <Linkedin size={20} />
+                  </a>
+                  <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer">
+                    <Youtube size={20} />
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         )}
       </header>
