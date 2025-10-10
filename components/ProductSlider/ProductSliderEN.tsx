@@ -202,7 +202,7 @@ export default function ProductSliderEN({ autoPlaySpeed = 5000, currentProductSl
               color: '#002e64'
             }}
           >
-            We Deliver Solutions for You to Reach NetSuite&apos;s Highest Peaks
+            Discover More from Alta Via Applications
           </h2>
           <p
             className="mx-auto"
@@ -214,7 +214,7 @@ export default function ProductSliderEN({ autoPlaySpeed = 5000, currentProductSl
               maxWidth: '800px'
             }}
           >
-            Discover our applications and make your NetSuite system fit for the DACH market:
+            Find the right tools to streamline your business processes and accelerate growth with NetSuite.
           </p>
         </div>
 

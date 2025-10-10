@@ -7,6 +7,7 @@ import PeakShipSolutionsEN from '@/components/sections/peakship/PeakShipSolution
 import PeakShipTeaserEN from '@/components/sections/peakship/PeakShipTeaserEN';
 import PeakShipComparisonEN from '@/components/sections/peakship/PeakShipComparisonEN';
 import PeakShipGrowthEN from '@/components/sections/peakship/PeakShipGrowthEN';
+import ProductSliderEN from '@/components/ProductSlider/ProductSliderEN';
 
 export default function PeakShipPageEN() {
   return (
@@ -18,6 +19,7 @@ export default function PeakShipPageEN() {
       <PeakShipTeaserEN />
       <PeakShipComparisonEN />
       <PeakShipGrowthEN />
+      <ProductSliderEN currentProductSlug="peak-ship" />
       <Footer />
     </div>
   );

@@ -7,6 +7,7 @@ import BmdBuchhaltungEN from '@/components/sections/bmd/bmd-buchhaltung-en';
 import BmdTeaserEN from '@/components/sections/bmd/bmd-teaser-en';
 import BmdZitatEN from '@/components/sections/bmd/bmd-zitat-en';
 import BmdComparisonTableEN from '@/components/sections/bmd/bmd-comparison-table-en';
+import ProductSliderEN from '@/components/ProductSlider/ProductSliderEN';
 
 export default function BmdInterfacePage() {
   return (
@@ -18,6 +19,7 @@ export default function BmdInterfacePage() {
       <BmdTeaserEN />
       <BmdZitatEN />
       <BmdComparisonTableEN />
+      <ProductSliderEN currentProductSlug="bmd-interface" />
       <Footer />
     </div>
   );

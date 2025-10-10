@@ -7,6 +7,7 @@ import ReisekostenSolutionsEN from '@/components/sections/reisekosten/Reisekoste
 import ReisekostenTeaser from '@/components/sections/reisekosten/ReisekostenTeaser';
 import ReisekostenComparisonEN from '@/components/sections/reisekosten/ReisekostenComparisonEN';
 import ReisekostenGrowthEN from '@/components/sections/reisekosten/ReisekostenGrowthEN';
+import ProductSliderEN from '@/components/ProductSlider/ProductSliderEN';
 
 export default function TravelExpenses() {
   return (
@@ -18,6 +19,7 @@ export default function TravelExpenses() {
       <ReisekostenTeaser />
       <ReisekostenComparisonEN />
       <ReisekostenGrowthEN />
+      <ProductSliderEN currentProductSlug="travel-expenses" />
       <Footer />
     </div>
   );

@@ -7,6 +7,7 @@ import DunningSolutionsEN from '@/components/sections/dunning/DunningSolutionsEN
 import DunningTeaserEN from '@/components/sections/dunning/DunningTeaserEN';
 import DunningComparisonEN from '@/components/sections/dunning/DunningComparisonEN';
 import DunningGrowthEN from '@/components/sections/dunning/DunningGrowthEN';
+import ProductSliderEN from '@/components/ProductSlider/ProductSliderEN';
 
 export default function DunningPageEN() {
   return (
@@ -18,6 +19,7 @@ export default function DunningPageEN() {
       <DunningTeaserEN />
       <DunningComparisonEN />
       <DunningGrowthEN />
+      <ProductSliderEN currentProductSlug="dunning" />
       <Footer />
     </div>
   );

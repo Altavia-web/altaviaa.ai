@@ -8,6 +8,7 @@ import LocalizationSolutionsEN from '@/components/sections/localization/Localiza
 import LocalizationTeaserEN from '@/components/sections/localization/LocalizationTeaserEN';
 import LocalizationTestimonialEN from '@/components/sections/localization/LocalizationTestimonialEN';
 import LocalizationComparisonEN from '@/components/sections/localization/LocalizationComparisonEN';
+import ProductSliderEN from '@/components/ProductSlider/ProductSliderEN';
 
 export const metadata: Metadata = {
   title: 'Localization Germany - Alta Via Applications',
@@ -24,6 +25,7 @@ export default function LocalizationGermanyPageEN() {
       <LocalizationTeaserEN />
       <LocalizationTestimonialEN />
       <LocalizationComparisonEN />
+      <ProductSliderEN currentProductSlug="localization-germany" />
       <Footer />
     </div>
   );

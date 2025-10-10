@@ -7,6 +7,7 @@ import LocalizationAustriaSolutionsEN from '@/components/sections/localization-a
 import LocalizationTeaser from '@/components/sections/localization/LocalizationTeaser';
 import LocalizationAustriaComparisonEN from '@/components/sections/localization-austria/LocalizationAustriaComparisonEN';
 import LocalizationAustriaGrowthEN from '@/components/sections/localization-austria/LocalizationAustriaGrowthEN';
+import ProductSliderEN from '@/components/ProductSlider/ProductSliderEN';
 
 export default function AustrianLocalization() {
   return (
@@ -18,6 +19,7 @@ export default function AustrianLocalization() {
       <LocalizationTeaser />
       <LocalizationAustriaComparisonEN />
       <LocalizationAustriaGrowthEN />
+      <ProductSliderEN currentProductSlug="austrian-localization" />
       <Footer />
     </div>
   );

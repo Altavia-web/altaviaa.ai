@@ -7,6 +7,7 @@ import DatevBuchhaltungEN from '@/components/sections/datev/datev-buchhaltung-en
 import DatevTeaserEN from '@/components/sections/datev/datev-teaser-en';
 import DatevZitatEN from '@/components/sections/datev/datev-zitat-en';
 import DatevComparisonTableEN from '@/components/sections/datev/datev-comparison-table-en';
+import ProductSliderEN from '@/components/ProductSlider/ProductSliderEN';
 
 export default function DatevInterfacePage() {
   return (
@@ -18,6 +19,7 @@ export default function DatevInterfacePage() {
       <DatevTeaserEN />
       <DatevZitatEN />
       <DatevComparisonTableEN />
+      <ProductSliderEN currentProductSlug="datev-interface" />
       <Footer />
     </div>
   );
