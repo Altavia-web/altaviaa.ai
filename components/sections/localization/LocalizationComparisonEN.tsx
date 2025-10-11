@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import { CheckCircle2, ChevronDown } from 'lucide-react';
+import { CheckCircle2, XCircle, ChevronDown } from 'lucide-react';
 
 interface FeatureRow {
   id: number;
@@ -75,9 +75,23 @@ export default function LocalizationComparisonEN() {
   };
 
   const renderCell = (value: string) => {
+    if (value === 'check' || value === 'ja' || value === 'yes') {
+      return (
+        <div className="flex justify-center">
+          <CheckCircle2 className="w-7 h-7" style={{ color: '#00b577' }} />
+        </div>
+      );
+    }
+    if (value === 'x' || value === 'nein' || value === 'no') {
+      return (
+        <div className="flex justify-center">
+          <XCircle className="w-7 h-7" style={{ color: '#ff4100' }} />
+        </div>
+      );
+    }
     return (
       <div className="flex justify-center">
-        <span className="text-base" style={{ color: 'var(--color-dark-blue)' }}>
+        <span style={{ fontFamily: 'Titillium Web', fontWeight: 400, fontSize: '18px', color: '#000000' }}>
           {value}
         </span>
       </div>
@@ -85,6 +99,20 @@ export default function LocalizationComparisonEN() {
   };
 
   const renderMobileCell = (value: string) => {
+    if (value === 'check' || value === 'ja' || value === 'yes') {
+      return (
+        <div className="flex justify-center">
+          <CheckCircle2 className="w-7 h-7" style={{ color: '#00b577' }} />
+        </div>
+      );
+    }
+    if (value === 'x' || value === 'nein' || value === 'no') {
+      return (
+        <div className="flex justify-center">
+          <XCircle className="w-7 h-7" style={{ color: '#ff4100' }} />
+        </div>
+      );
+    }
     return (
       <span style={{ fontFamily: 'Titillium Web', fontWeight: 400, fontSize: '16px', color: 'var(--color-dark-blue)' }}>
         {value}

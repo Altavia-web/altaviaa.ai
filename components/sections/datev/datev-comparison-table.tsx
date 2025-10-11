@@ -50,14 +50,14 @@ const categories: Category[] = [
 
 export default function DatevComparisonTable() {
   const renderCell = (value: string) => {
-    if (value === 'check') {
+    if (value === 'check' || value === 'ja') {
       return (
         <div className="flex justify-center">
           <CheckCircle2 className="w-7 h-7" style={{ color: '#00b577' }} />
         </div>
       );
     }
-    if (value === 'x') {
+    if (value === 'x' || value === 'nein') {
       return (
         <div className="flex justify-center">
           <XCircle className="w-7 h-7" style={{ color: '#ff4100' }} />

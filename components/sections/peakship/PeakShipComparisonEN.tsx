@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import { CheckCircle2, ChevronDown } from 'lucide-react';
+import { CheckCircle2, XCircle, ChevronDown } from 'lucide-react';
 
 export default function PeakShipComparisonEN() {
   const [expandedCategories, setExpandedCategories] = useState({
@@ -22,6 +22,30 @@ export default function PeakShipComparisonEN() {
       e.preventDefault();
       toggleCategory(category);
     }
+  };
+
+  const renderCell = (value: string) => {
+    if (value === 'check' || value === 'ja' || value === 'yes') {
+      return (
+        <div className="flex justify-center">
+          <CheckCircle2 className="w-7 h-7" style={{ color: '#00b577' }} />
+        </div>
+      );
+    }
+    if (value === 'x' || value === 'nein' || value === 'no') {
+      return (
+        <div className="flex justify-center">
+          <XCircle className="w-7 h-7" style={{ color: '#ff4100' }} />
+        </div>
+      );
+    }
+    return (
+      <div className="flex justify-center">
+        <span style={{ fontFamily: 'Titillium Web', fontWeight: 400, fontSize: '18px', color: '#000000' }}>
+          {value}
+        </span>
+      </div>
+    );
   };
 
   return (
@@ -94,22 +118,22 @@ export default function PeakShipComparisonEN() {
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
                       Setting up carrier accounts directly in NetSuite
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
-                      no
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                      {renderCell('no')}
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
-                      yes
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                      {renderCell('yes')}
                     </td>
                   </tr>
                   <tr className="bg-gray-50">
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
                       Standalone bundle, easy installation
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
-                      no
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                      {renderCell('no')}
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
-                      yes
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                      {renderCell('yes')}
                     </td>
                   </tr>
                 </>
@@ -149,66 +173,66 @@ export default function PeakShipComparisonEN() {
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
                       Create shipping orders directly in NetSuite
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)', color: 'var(--color-dark-blue)', opacity: 0.7 }}>
-                      limited
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                      {renderCell('limited')}
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
-                      yes
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                      {renderCell('yes')}
                     </td>
                   </tr>
                   <tr className="bg-gray-50">
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
                       Automatic creation & printing of shipping labels (PDF & Zebra format)
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
-                      no
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                      {renderCell('no')}
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
-                      yes
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                      {renderCell('yes')}
                     </td>
                   </tr>
                   <tr className="bg-white">
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
                       Automated tracking numbers and status
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
-                      no
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                      {renderCell('no')}
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
-                      yes
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                      {renderCell('yes')}
                     </td>
                   </tr>
                   <tr className="bg-gray-50">
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
                       Automatic creation of customs declarations (for international shipments)
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
-                      no
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                      {renderCell('no')}
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
-                      yes
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                      {renderCell('yes')}
                     </td>
                   </tr>
                   <tr className="bg-white">
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
                       Support for multiple accounts per carrier & multiple packages per delivery
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
-                      no
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                      {renderCell('no')}
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
-                      yes
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                      {renderCell('yes')}
                     </td>
                   </tr>
                   <tr className="bg-gray-50">
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
                       Wide selection of integrated carriers (DHL, DPD, UPS, GLS, FedEx …)
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
-                      no
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                      {renderCell('no')}
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
-                      yes
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                      {renderCell('yes')}
                     </td>
                   </tr>
                 </>
@@ -248,22 +272,22 @@ export default function PeakShipComparisonEN() {
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
                       Regular updates (NetSuite releases + new carriers)
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)', color: 'var(--color-dark-blue)', opacity: 0.7 }}>
-                      limited
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                      {renderCell('limited')}
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
-                      yes
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                      {renderCell('yes')}
                     </td>
                   </tr>
                   <tr className="bg-gray-50">
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
                       Extension with additional carriers upon customer request
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
-                      no
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                      {renderCell('no')}
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
-                      yes
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                      {renderCell('yes')}
                     </td>
                   </tr>
                 </>

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import { ChevronDown, CheckCircle2 } from 'lucide-react';
+import { ChevronDown, CheckCircle2, XCircle } from 'lucide-react';
 
 export default function DunningComparison() {
   const [expandedCategories, setExpandedCategories] = useState({
@@ -24,15 +24,47 @@ export default function DunningComparison() {
     }
   };
 
+  const renderCell = (value: string) => {
+    if (value === 'check' || value === 'ja' || value === 'yes') {
+      return (
+        <div className="flex justify-center">
+          <CheckCircle2 className="w-7 h-7" style={{ color: '#00b577' }} />
+        </div>
+      );
+    }
+    if (value === 'x' || value === 'nein' || value === 'no') {
+      return (
+        <div className="flex justify-center">
+          <XCircle className="w-7 h-7" style={{ color: '#ff4100' }} />
+        </div>
+      );
+    }
+    return (
+      <div className="flex justify-center">
+        <span style={{ fontFamily: 'Titillium Web', fontWeight: 400, fontSize: '18px', color: '#000000' }}>
+          {value}
+        </span>
+      </div>
+    );
+  };
+
   const renderMobileCell = (value: string | React.ReactNode) => {
-    if (value === 'ja') {
-      return <span className="text-green-600 font-semibold">ja</span>;
-    }
-    if (value === 'nein') {
-      return <span className="text-red-500 font-semibold">nein</span>;
-    }
-    if (value === 'begrenzt') {
-      return <span className="text-gray-600 opacity-70">begrenzt</span>;
+    if (typeof value === 'string') {
+      if (value === 'check' || value === 'ja' || value === 'yes') {
+        return (
+          <div className="flex justify-center">
+            <CheckCircle2 className="w-7 h-7" style={{ color: '#00b577' }} />
+          </div>
+        );
+      }
+      if (value === 'x' || value === 'nein' || value === 'no') {
+        return (
+          <div className="flex justify-center">
+            <XCircle className="w-7 h-7" style={{ color: '#ff4100' }} />
+          </div>
+        );
+      }
+      return <span style={{ fontFamily: 'Titillium Web', fontWeight: 400, fontSize: '16px', color: '#000000' }}>{value}</span>;
     }
     if (React.isValidElement(value)) {
       return value;
@@ -110,44 +142,44 @@ export default function DunningComparison() {
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
                       Teilweise schon in 60 Minuten startklar (je nach Umfang)
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
-                      nein
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                      {renderCell('nein')}
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
-                      ja
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                      {renderCell('ja')}
                     </td>
                   </tr>
                   <tr className="bg-gray-50">
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
                       Unterstützung bei der Ersteinrichtung
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
-                      nein
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                      {renderCell('nein')}
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
-                      ja
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                      {renderCell('ja')}
                     </td>
                   </tr>
                   <tr className="bg-white">
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
                       Automatische Erstellung von Dokument-Ordnern, Rollen & Templates
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
-                      nein
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                      {renderCell('nein')}
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
-                      ja
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                      {renderCell('ja')}
                     </td>
                   </tr>
                   <tr className="bg-gray-50">
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
                       Individuelle Einstellungen pro Subsidiary
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', opacity: 0.7 }}>
-                      begrenzt
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                      {renderCell('begrenzt')}
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
+                      {renderCell('ja')}
                     </td>
                   </tr>
                 </>
@@ -187,88 +219,88 @@ export default function DunningComparison() {
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
                       Mehrstufiges Mahnwesen (bis 3 Stufen)
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
-                      nein
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                      {renderCell('nein')}
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
-                      ja
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                      {renderCell('ja')}
                     </td>
                   </tr>
                   <tr className="bg-gray-50">
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
                       Mahngebühren & Zinsen
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
-                      nein
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                      {renderCell('nein')}
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
-                      ja
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                      {renderCell('ja')}
                     </td>
                   </tr>
                   <tr className="bg-white">
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
                       Automatisierte Mahnläufe
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', opacity: 0.7 }}>
-                      begrenzt
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                      {renderCell('begrenzt')}
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
-                      ja
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                      {renderCell('ja')}
                     </td>
                   </tr>
                   <tr className="bg-gray-50">
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
                       Zentrale Steuerung mit Filteroptionen
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
-                      nein
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                      {renderCell('nein')}
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
-                      ja
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                      {renderCell('ja')}
                     </td>
                   </tr>
                   <tr className="bg-white">
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
                       Lokalisierte & mehrsprachige Templates (PDF/E-Mail)
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
-                      nein
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                      {renderCell('nein')}
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
-                      ja
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                      {renderCell('ja')}
                     </td>
                   </tr>
                   <tr className="bg-gray-50">
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
                       Direkter Versand per E-Mail (inkl. CC/BCC)
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', opacity: 0.7 }}>
-                      begrenzt
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                      {renderCell('begrenzt')}
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
-                      ja
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                      {renderCell('ja')}
                     </td>
                   </tr>
                   <tr className="bg-white">
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
                       Fehlerhandling (klare Meldungen, Rechnungsbezug)
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', opacity: 0.7 }}>
-                      begrenzt
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                      {renderCell('begrenzt')}
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
-                      ja
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                      {renderCell('ja')}
                     </td>
                   </tr>
                   <tr className="bg-gray-50">
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
                       Übergabe an Inkasso-Unternehmen
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
-                      nein
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                      {renderCell('nein')}
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
-                      ja
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                      {renderCell('ja')}
                     </td>
                   </tr>
                 </>
@@ -308,33 +340,33 @@ export default function DunningComparison() {
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
                       Einfache Anpassung von Templates ohne HTML
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
-                      nein
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                      {renderCell('nein')}
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
-                      ja
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                      {renderCell('ja')}
                     </td>
                   </tr>
                   <tr className="bg-gray-50">
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
                       Automatische Updates (App-ähnlich)
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
-                      nein
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                      {renderCell('nein')}
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
-                      ja
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                      {renderCell('ja')}
                     </td>
                   </tr>
                   <tr className="bg-white">
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
                       Transparenz durch Logging & Dokumentverknüpfungen
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', opacity: 0.7 }}>
-                      begrenzt
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                      {renderCell('begrenzt')}
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', fontWeight: 400 }}>
-                      ja
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                      {renderCell('ja')}
                     </td>
                   </tr>
                 </>

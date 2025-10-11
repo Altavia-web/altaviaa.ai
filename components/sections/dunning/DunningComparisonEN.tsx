@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import { ChevronDown, CheckCircle2 } from 'lucide-react';
+import { ChevronDown, CheckCircle2, XCircle } from 'lucide-react';
 
 export default function DunningComparisonEN() {
   const [expandedCategories, setExpandedCategories] = useState({
@@ -24,15 +24,47 @@ export default function DunningComparisonEN() {
     }
   };
 
+  const renderCell = (value: string) => {
+    if (value === 'check' || value === 'ja' || value === 'yes') {
+      return (
+        <div className="flex justify-center">
+          <CheckCircle2 className="w-7 h-7" style={{ color: '#00b577' }} />
+        </div>
+      );
+    }
+    if (value === 'x' || value === 'nein' || value === 'no') {
+      return (
+        <div className="flex justify-center">
+          <XCircle className="w-7 h-7" style={{ color: '#ff4100' }} />
+        </div>
+      );
+    }
+    return (
+      <div className="flex justify-center">
+        <span style={{ fontFamily: 'Titillium Web', fontWeight: 400, fontSize: '18px', color: '#000000' }}>
+          {value}
+        </span>
+      </div>
+    );
+  };
+
   const renderMobileCell = (value: string | React.ReactNode) => {
-    if (value === 'yes') {
-      return <span className="text-green-600 font-semibold">yes</span>;
-    }
-    if (value === 'no') {
-      return <span className="text-red-500 font-semibold">no</span>;
-    }
-    if (value === 'limited') {
-      return <span className="text-gray-600 opacity-70">limited</span>;
+    if (typeof value === 'string') {
+      if (value === 'check' || value === 'ja' || value === 'yes') {
+        return (
+          <div className="flex justify-center">
+            <CheckCircle2 className="w-7 h-7" style={{ color: '#00b577' }} />
+          </div>
+        );
+      }
+      if (value === 'x' || value === 'nein' || value === 'no') {
+        return (
+          <div className="flex justify-center">
+            <XCircle className="w-7 h-7" style={{ color: '#ff4100' }} />
+          </div>
+        );
+      }
+      return <span style={{ fontFamily: 'Titillium Web', fontWeight: 400, fontSize: '16px', color: '#000000' }}>{value}</span>;
     }
     if (React.isValidElement(value)) {
       return value;
@@ -111,10 +143,10 @@ export default function DunningComparisonEN() {
                       Ready to go in 60 minutes in some cases (depending on scope)
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      no
+                      {renderCell('no')}
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      yes
+                      {renderCell('yes')}
                     </td>
                   </tr>
                   <tr className="bg-gray-50">
@@ -122,10 +154,10 @@ export default function DunningComparisonEN() {
                       Support during initial setup
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      no
+                      {renderCell('no')}
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      yes
+                      {renderCell('yes')}
                     </td>
                   </tr>
                   <tr className="bg-white">
@@ -133,21 +165,21 @@ export default function DunningComparisonEN() {
                       Automatic creation of document folders, roles & templates
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      no
+                      {renderCell('no')}
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      yes
+                      {renderCell('yes')}
                     </td>
                   </tr>
                   <tr className="bg-gray-50">
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
                       Individual settings per subsidiary
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', opacity: 0.7 }}>
-                      limited
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                      {renderCell('limited')}
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      yes
+                      {renderCell('yes')}
                     </td>
                   </tr>
                 </>
@@ -188,10 +220,10 @@ export default function DunningComparisonEN() {
                       Multi-level dunning (up to 3 levels)
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      no
+                      {renderCell('no')}
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      yes
+                      {renderCell('yes')}
                     </td>
                   </tr>
                   <tr className="bg-gray-50">
@@ -199,21 +231,21 @@ export default function DunningComparisonEN() {
                       Dunning fees & interest
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      no
+                      {renderCell('no')}
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      yes
+                      {renderCell('yes')}
                     </td>
                   </tr>
                   <tr className="bg-white">
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
                       Automated dunning runs
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', opacity: 0.7 }}>
-                      limited
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                      {renderCell('limited')}
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      yes
+                      {renderCell('yes')}
                     </td>
                   </tr>
                   <tr className="bg-gray-50">
@@ -221,10 +253,10 @@ export default function DunningComparisonEN() {
                       Central control with filter options
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      no
+                      {renderCell('no')}
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      yes
+                      {renderCell('yes')}
                     </td>
                   </tr>
                   <tr className="bg-white">
@@ -232,32 +264,32 @@ export default function DunningComparisonEN() {
                       Localized & multilingual templates (PDF/email)
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      no
+                      {renderCell('no')}
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      yes
+                      {renderCell('yes')}
                     </td>
                   </tr>
                   <tr className="bg-gray-50">
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
                       Direct sending via email (incl. CC/BCC)
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', opacity: 0.7 }}>
-                      limited
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                      {renderCell('limited')}
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      yes
+                      {renderCell('yes')}
                     </td>
                   </tr>
                   <tr className="bg-white">
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
                       Error handling (clear messages, invoice reference)
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', opacity: 0.7 }}>
-                      limited
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                      {renderCell('limited')}
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      yes
+                      {renderCell('yes')}
                     </td>
                   </tr>
                   <tr className="bg-gray-50">
@@ -265,10 +297,10 @@ export default function DunningComparisonEN() {
                       Handover to collection agency
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      no
+                      {renderCell('no')}
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      yes
+                      {renderCell('yes')}
                     </td>
                   </tr>
                 </>
@@ -309,10 +341,10 @@ export default function DunningComparisonEN() {
                       Easy template customization without HTML
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      no
+                      {renderCell('no')}
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      yes
+                      {renderCell('yes')}
                     </td>
                   </tr>
                   <tr className="bg-gray-50">
@@ -320,21 +352,21 @@ export default function DunningComparisonEN() {
                       Automatic updates (app-like)
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      no
+                      {renderCell('no')}
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      yes
+                      {renderCell('yes')}
                     </td>
                   </tr>
                   <tr className="bg-white">
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
                       Transparency through logging & document links
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)', color: 'var(--color-dark-blue)', opacity: 0.7 }}>
-                      limited
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                      {renderCell('limited')}
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
-                      yes
+                      {renderCell('yes')}
                     </td>
                   </tr>
                 </>
