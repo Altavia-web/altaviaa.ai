@@ -24,20 +24,36 @@ export default function PeakShipComparison() {
     }
   };
 
+  const renderMobileCell = (value: string | React.ReactNode) => {
+    if (value === 'ja') {
+      return <span className="text-green-600 font-semibold">ja</span>;
+    }
+    if (value === 'nein') {
+      return <span className="text-red-500 font-semibold">nein</span>;
+    }
+    if (value === 'begrenzt') {
+      return <span className="text-gray-600 opacity-70">begrenzt</span>;
+    }
+    if (React.isValidElement(value)) {
+      return value;
+    }
+    return value;
+  };
+
   return (
     <section className="py-20 lg:py-24 px-8 lg:px-12 bg-white">
       <div className="max-w-7xl mx-auto">
 
         {/* Main Heading */}
         <h2
-          className="text-3xl lg:text-4xl font-semibold text-center mb-12 leading-tight"
+          className="text-2xl lg:text-4xl font-semibold text-center mb-12 leading-tight"
           style={{ color: 'var(--color-dark-blue)' }}
         >
           PeakShip für NetSuite im Vergleich
         </h2>
 
-        {/* Comparison Table */}
-        <div className="overflow-x-auto shadow-lg rounded-lg">
+        {/* Comparison Table - Desktop Only */}
+        <div className="hidden lg:block overflow-x-auto shadow-lg rounded-lg">
           <table className="w-full border-collapse">
 
             {/* Sticky Header */}
@@ -271,6 +287,210 @@ export default function PeakShipComparison() {
 
             </tbody>
           </table>
+        </div>
+
+        {/* Mobile Card Layout */}
+        <div className="lg:hidden space-y-6">
+
+          {/* Setup Category */}
+          <div>
+            <div
+              className="flex items-center gap-2 mb-4 pb-2"
+              style={{ borderBottom: '2px solid var(--color-peakship-secondary)' }}
+            >
+              <CheckCircle2 size={20} style={{ color: 'var(--color-peakship-primary)' }} />
+              <h3 className="font-semibold text-lg" style={{ color: 'var(--color-dark-blue)' }}>Setup</h3>
+            </div>
+
+            <div className="space-y-4">
+              <div className="border rounded-lg p-4" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                <div className="font-medium mb-3" style={{ color: 'var(--color-dark-blue)' }}>
+                  Einrichtung von Carrier-Konten direkt in NetSuite
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">NetSuite Standard</div>
+                    <div className="font-medium">{renderMobileCell('nein')}</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">PeakShip für NetSuite</div>
+                    <div className="font-medium">{renderMobileCell('ja')}</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border rounded-lg p-4" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                <div className="font-medium mb-3" style={{ color: 'var(--color-dark-blue)' }}>
+                  Eigenständiges Bundle, einfache Installation
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">NetSuite Standard</div>
+                    <div className="font-medium">{renderMobileCell('nein')}</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">PeakShip für NetSuite</div>
+                    <div className="font-medium">{renderMobileCell('ja')}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Funktionen Category */}
+          <div>
+            <div
+              className="flex items-center gap-2 mb-4 pb-2"
+              style={{ borderBottom: '2px solid var(--color-peakship-secondary)' }}
+            >
+              <CheckCircle2 size={20} style={{ color: 'var(--color-peakship-primary)' }} />
+              <h3 className="font-semibold text-lg" style={{ color: 'var(--color-dark-blue)' }}>Funktionen</h3>
+            </div>
+
+            <div className="space-y-4">
+              <div className="border rounded-lg p-4" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                <div className="font-medium mb-3" style={{ color: 'var(--color-dark-blue)' }}>
+                  Versandaufträge direkt in NetSuite erstellen
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">NetSuite Standard</div>
+                    <div className="font-medium">{renderMobileCell('begrenzt')}</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">PeakShip für NetSuite</div>
+                    <div className="font-medium">{renderMobileCell('ja')}</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border rounded-lg p-4" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                <div className="font-medium mb-3" style={{ color: 'var(--color-dark-blue)' }}>
+                  Automatische Erstellung & Druck von Versandetiketten (PDF & Zebra-Format)
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">NetSuite Standard</div>
+                    <div className="font-medium">{renderMobileCell('nein')}</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">PeakShip für NetSuite</div>
+                    <div className="font-medium">{renderMobileCell('ja')}</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border rounded-lg p-4" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                <div className="font-medium mb-3" style={{ color: 'var(--color-dark-blue)' }}>
+                  Automatisierte Tracking-Nummern und -Status
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">NetSuite Standard</div>
+                    <div className="font-medium">{renderMobileCell('nein')}</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">PeakShip für NetSuite</div>
+                    <div className="font-medium">{renderMobileCell('ja')}</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border rounded-lg p-4" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                <div className="font-medium mb-3" style={{ color: 'var(--color-dark-blue)' }}>
+                  Automatische Erstellung von Zollerklärungen (bei internationalen Sendungen)
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">NetSuite Standard</div>
+                    <div className="font-medium">{renderMobileCell('nein')}</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">PeakShip für NetSuite</div>
+                    <div className="font-medium">{renderMobileCell('ja')}</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border rounded-lg p-4" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                <div className="font-medium mb-3" style={{ color: 'var(--color-dark-blue)' }}>
+                  Unterstützung mehrerer Konten pro Carrier & mehrere Pakete pro Lieferung
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">NetSuite Standard</div>
+                    <div className="font-medium">{renderMobileCell('nein')}</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">PeakShip für NetSuite</div>
+                    <div className="font-medium">{renderMobileCell('ja')}</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border rounded-lg p-4" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                <div className="font-medium mb-3" style={{ color: 'var(--color-dark-blue)' }}>
+                  Breite Auswahl an integrierten Carriern (DHL, DPD, UPS, GLS, FedEx …)
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">NetSuite Standard</div>
+                    <div className="font-medium">{renderMobileCell('nein')}</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">PeakShip für NetSuite</div>
+                    <div className="font-medium">{renderMobileCell('ja')}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Wartung & Updates Category */}
+          <div>
+            <div
+              className="flex items-center gap-2 mb-4 pb-2"
+              style={{ borderBottom: '2px solid var(--color-peakship-secondary)' }}
+            >
+              <CheckCircle2 size={20} style={{ color: 'var(--color-peakship-primary)' }} />
+              <h3 className="font-semibold text-lg" style={{ color: 'var(--color-dark-blue)' }}>Wartung & Updates</h3>
+            </div>
+
+            <div className="space-y-4">
+              <div className="border rounded-lg p-4" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                <div className="font-medium mb-3" style={{ color: 'var(--color-dark-blue)' }}>
+                  Regelmäßige Updates (NetSuite-Releases + neue Carrier)
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">NetSuite Standard</div>
+                    <div className="font-medium">{renderMobileCell('begrenzt')}</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">PeakShip für NetSuite</div>
+                    <div className="font-medium">{renderMobileCell('ja')}</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border rounded-lg p-4" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                <div className="font-medium mb-3" style={{ color: 'var(--color-dark-blue)' }}>
+                  Erweiterung um zusätzliche Carrier auf Kundenwunsch
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">NetSuite Standard</div>
+                    <div className="font-medium">{renderMobileCell('nein')}</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">PeakShip für NetSuite</div>
+                    <div className="font-medium">{renderMobileCell('ja')}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
 
       </div>

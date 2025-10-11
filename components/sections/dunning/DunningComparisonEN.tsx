@@ -24,20 +24,36 @@ export default function DunningComparisonEN() {
     }
   };
 
+  const renderMobileCell = (value: string | React.ReactNode) => {
+    if (value === 'yes') {
+      return <span className="text-green-600 font-semibold">yes</span>;
+    }
+    if (value === 'no') {
+      return <span className="text-red-500 font-semibold">no</span>;
+    }
+    if (value === 'limited') {
+      return <span className="text-gray-600 opacity-70">limited</span>;
+    }
+    if (React.isValidElement(value)) {
+      return value;
+    }
+    return value;
+  };
+
   return (
     <section className="py-20 lg:py-24 px-8 lg:px-12 bg-white">
       <div className="max-w-7xl mx-auto">
 
         {/* Main Heading */}
         <h2
-          className="text-3xl lg:text-4xl font-semibold text-center mb-12 leading-tight"
+          className="text-2xl lg:text-4xl font-semibold text-center mb-12 leading-tight"
           style={{ color: 'var(--color-dark-blue)' }}
         >
           Why Dunning for NetSuite by Alta Via Applications Does More Than NetSuite Standard
         </h2>
 
-        {/* Comparison Table */}
-        <div className="overflow-x-auto shadow-lg rounded-lg">
+        {/* Comparison Table - Desktop Only */}
+        <div className="hidden lg:block overflow-x-auto shadow-lg rounded-lg">
           <table className="w-full border-collapse">
 
             {/* Sticky Header */}
@@ -326,6 +342,290 @@ export default function DunningComparisonEN() {
 
             </tbody>
           </table>
+        </div>
+
+        {/* Mobile Card Layout */}
+        <div className="lg:hidden space-y-6">
+
+          {/* Setup Category */}
+          <div>
+            <div
+              className="flex items-center gap-2 mb-4 pb-2"
+              style={{ borderBottom: '2px solid var(--color-mahnwesen-secondary)' }}
+            >
+              <CheckCircle2 size={20} style={{ color: 'var(--color-mahnwesen-primary)' }} />
+              <h3 className="font-semibold text-lg" style={{ color: 'var(--color-dark-blue)' }}>Setup</h3>
+            </div>
+
+            <div className="space-y-4">
+              <div className="border rounded-lg p-4" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                <div className="font-medium mb-3" style={{ color: 'var(--color-dark-blue)' }}>
+                  Ready to go in 60 minutes in some cases (depending on scope)
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">NetSuite Standard</div>
+                    <div className="font-medium">{renderMobileCell('no')}</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">Dunning for NetSuite</div>
+                    <div className="font-medium">{renderMobileCell('yes')}</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border rounded-lg p-4" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                <div className="font-medium mb-3" style={{ color: 'var(--color-dark-blue)' }}>
+                  Support during initial setup
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">NetSuite Standard</div>
+                    <div className="font-medium">{renderMobileCell('no')}</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">Dunning for NetSuite</div>
+                    <div className="font-medium">{renderMobileCell('yes')}</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border rounded-lg p-4" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                <div className="font-medium mb-3" style={{ color: 'var(--color-dark-blue)' }}>
+                  Automatic creation of document folders, roles & templates
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">NetSuite Standard</div>
+                    <div className="font-medium">{renderMobileCell('no')}</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">Dunning for NetSuite</div>
+                    <div className="font-medium">{renderMobileCell('yes')}</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border rounded-lg p-4" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                <div className="font-medium mb-3" style={{ color: 'var(--color-dark-blue)' }}>
+                  Individual settings per subsidiary
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">NetSuite Standard</div>
+                    <div className="font-medium">{renderMobileCell('limited')}</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">Dunning for NetSuite</div>
+                    <div className="font-medium">{renderMobileCell('yes')}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Functions Category */}
+          <div>
+            <div
+              className="flex items-center gap-2 mb-4 pb-2"
+              style={{ borderBottom: '2px solid var(--color-mahnwesen-secondary)' }}
+            >
+              <CheckCircle2 size={20} style={{ color: 'var(--color-mahnwesen-primary)' }} />
+              <h3 className="font-semibold text-lg" style={{ color: 'var(--color-dark-blue)' }}>Functions</h3>
+            </div>
+
+            <div className="space-y-4">
+              <div className="border rounded-lg p-4" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                <div className="font-medium mb-3" style={{ color: 'var(--color-dark-blue)' }}>
+                  Multi-level dunning (up to 3 levels)
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">NetSuite Standard</div>
+                    <div className="font-medium">{renderMobileCell('no')}</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">Dunning for NetSuite</div>
+                    <div className="font-medium">{renderMobileCell('yes')}</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border rounded-lg p-4" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                <div className="font-medium mb-3" style={{ color: 'var(--color-dark-blue)' }}>
+                  Dunning fees & interest
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">NetSuite Standard</div>
+                    <div className="font-medium">{renderMobileCell('no')}</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">Dunning for NetSuite</div>
+                    <div className="font-medium">{renderMobileCell('yes')}</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border rounded-lg p-4" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                <div className="font-medium mb-3" style={{ color: 'var(--color-dark-blue)' }}>
+                  Automated dunning runs
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">NetSuite Standard</div>
+                    <div className="font-medium">{renderMobileCell('limited')}</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">Dunning for NetSuite</div>
+                    <div className="font-medium">{renderMobileCell('yes')}</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border rounded-lg p-4" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                <div className="font-medium mb-3" style={{ color: 'var(--color-dark-blue)' }}>
+                  Central control with filter options
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">NetSuite Standard</div>
+                    <div className="font-medium">{renderMobileCell('no')}</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">Dunning for NetSuite</div>
+                    <div className="font-medium">{renderMobileCell('yes')}</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border rounded-lg p-4" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                <div className="font-medium mb-3" style={{ color: 'var(--color-dark-blue)' }}>
+                  Localized & multilingual templates (PDF/email)
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">NetSuite Standard</div>
+                    <div className="font-medium">{renderMobileCell('no')}</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">Dunning for NetSuite</div>
+                    <div className="font-medium">{renderMobileCell('yes')}</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border rounded-lg p-4" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                <div className="font-medium mb-3" style={{ color: 'var(--color-dark-blue)' }}>
+                  Direct sending via email (incl. CC/BCC)
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">NetSuite Standard</div>
+                    <div className="font-medium">{renderMobileCell('limited')}</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">Dunning for NetSuite</div>
+                    <div className="font-medium">{renderMobileCell('yes')}</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border rounded-lg p-4" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                <div className="font-medium mb-3" style={{ color: 'var(--color-dark-blue)' }}>
+                  Error handling (clear messages, invoice reference)
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">NetSuite Standard</div>
+                    <div className="font-medium">{renderMobileCell('limited')}</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">Dunning for NetSuite</div>
+                    <div className="font-medium">{renderMobileCell('yes')}</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border rounded-lg p-4" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                <div className="font-medium mb-3" style={{ color: 'var(--color-dark-blue)' }}>
+                  Handover to collection agency
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">NetSuite Standard</div>
+                    <div className="font-medium">{renderMobileCell('no')}</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">Dunning for NetSuite</div>
+                    <div className="font-medium">{renderMobileCell('yes')}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Maintenance & Updates Category */}
+          <div>
+            <div
+              className="flex items-center gap-2 mb-4 pb-2"
+              style={{ borderBottom: '2px solid var(--color-mahnwesen-secondary)' }}
+            >
+              <CheckCircle2 size={20} style={{ color: 'var(--color-mahnwesen-primary)' }} />
+              <h3 className="font-semibold text-lg" style={{ color: 'var(--color-dark-blue)' }}>Maintenance & Updates</h3>
+            </div>
+
+            <div className="space-y-4">
+              <div className="border rounded-lg p-4" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                <div className="font-medium mb-3" style={{ color: 'var(--color-dark-blue)' }}>
+                  Easy template customization without HTML
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">NetSuite Standard</div>
+                    <div className="font-medium">{renderMobileCell('no')}</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">Dunning for NetSuite</div>
+                    <div className="font-medium">{renderMobileCell('yes')}</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border rounded-lg p-4" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                <div className="font-medium mb-3" style={{ color: 'var(--color-dark-blue)' }}>
+                  Automatic updates (app-like)
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">NetSuite Standard</div>
+                    <div className="font-medium">{renderMobileCell('no')}</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">Dunning for NetSuite</div>
+                    <div className="font-medium">{renderMobileCell('yes')}</div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border rounded-lg p-4" style={{ borderColor: 'var(--color-mahnwesen-secondary)' }}>
+                <div className="font-medium mb-3" style={{ color: 'var(--color-dark-blue)' }}>
+                  Transparency through logging & document links
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">NetSuite Standard</div>
+                    <div className="font-medium">{renderMobileCell('limited')}</div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">Dunning for NetSuite</div>
+                    <div className="font-medium">{renderMobileCell('yes')}</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
 
       </div>
