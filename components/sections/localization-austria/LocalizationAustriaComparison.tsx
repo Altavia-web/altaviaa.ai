@@ -19,30 +19,25 @@ const categories: Category[] = [
   {
     name: 'Setup',
     features: [
-      { id: 1, feature: 'Unterstützung bei der Ersteinrichtung', netsuite: 'nein', altaVia: 'ja' },
-      { id: 2, feature: 'Individuelle Einstellungen und Dashboards für jede Tochtergesellschaft', netsuite: 'nein', altaVia: 'ja' }
+      { id: 1, feature: 'Übertragung von Buchungsdaten aus NetSuite nach BMD', netsuite: 'nein', altaVia: 'ja' },
+      { id: 2, feature: 'Texte für Druckformulare (mehrsprachig)', netsuite: 'nein', altaVia: 'ja' }
     ]
   },
   {
-    name: 'Funktionen',
+    name: 'Berichte & Compliance',
     features: [
-      { id: 3, feature: 'Österreichische Berichtsanforderungen', netsuite: 'begrenzt', altaVia: 'ja' },
-      { id: 4, feature: 'Kontenblatt', netsuite: 'begrenzt', altaVia: 'ja' },
-      { id: 5, feature: 'Mehrwertsteuerrückerstattung', netsuite: 'begrenzt', altaVia: 'ja' },
-      { id: 6, feature: 'Verprobung USt-ID', netsuite: 'begrenzt', altaVia: 'ja' },
-      { id: 7, feature: 'Allgemeine EU-Steuer', netsuite: 'nein', altaVia: 'ja' },
-      { id: 8, feature: 'PDF Texte/Steuertexte', netsuite: 'nein', altaVia: 'ja' },
-      { id: 9, feature: 'Steuerstichtag', netsuite: 'nein', altaVia: 'ja' },
-      { id: 10, feature: 'E-Rechnung Österreich', netsuite: 'nein', altaVia: 'ja' },
-      { id: 11, feature: 'Unveränderlichkeit von Buchungen', netsuite: 'begrenzt', altaVia: 'ja' },
-      { id: 12, feature: 'Rechnungsabgrenzungsposten', netsuite: 'nein', altaVia: 'ja' },
-      { id: 13, feature: 'FinanzOnline Integration', netsuite: 'begrenzt', altaVia: 'ja' }
+      { id: 3, feature: 'UGB-konforme Berichte (Bilanz & GuV)', netsuite: 'nein', altaVia: 'ja' },
+      { id: 4, feature: 'Kontenblatt sowie Summen- und Saldenliste', netsuite: 'nein', altaVia: 'ja' },
+      { id: 5, feature: 'SuiteTax Compliance', netsuite: 'nein (nur Legacy Tax)', altaVia: 'ja' }
     ]
   },
   {
-    name: 'Installation / Dokumentation',
+    name: 'Buchungen & Steuern',
     features: [
-      { id: 14, feature: 'Direkte Installation über SuiteBundle', netsuite: 'ja', altaVia: 'ja' }
+      { id: 6, feature: 'Umsatzsteuer-Skonto (VAT Clawback)', netsuite: 'nein', altaVia: 'ja' },
+      { id: 7, feature: 'Steuer- & Buchungsdatum getrennt erfassen (Document/Posting/Tax Point Date)', netsuite: 'begrenzt', altaVia: 'ja' },
+      { id: 8, feature: 'VAT-ID-Prüfung', netsuite: 'nein', altaVia: 'ja' },
+      { id: 9, feature: 'Reisekostenabrechnung nach österreichischem Recht (Taggeld, Kilometergeld, gemischte Reisen)', netsuite: 'nein', altaVia: 'ja' }
     ]
   }
 ];
@@ -50,8 +45,8 @@ const categories: Category[] = [
 export default function LocalizationAustriaComparison() {
   const [expandedCategories, setExpandedCategories] = useState({
     setup: true,
-    funktionen: true,
-    installation: true
+    berichte: true,
+    buchungen: true
   });
 
   const toggleCategory = (category: keyof typeof expandedCategories) => {
@@ -70,8 +65,8 @@ export default function LocalizationAustriaComparison() {
 
   const getCategoryKey = (categoryName: string): keyof typeof expandedCategories => {
     if (categoryName === 'Setup') return 'setup';
-    if (categoryName === 'Funktionen') return 'funktionen';
-    return 'installation';
+    if (categoryName === 'Berichte & Compliance') return 'berichte';
+    return 'buchungen';
   };
 
   const renderCell = (value: string) => {

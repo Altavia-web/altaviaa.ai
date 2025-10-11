@@ -19,30 +19,25 @@ const categories: Category[] = [
   {
     name: 'Setup',
     features: [
-      { id: 1, feature: 'Initial setup support', netsuite: 'no', altaVia: 'yes' },
-      { id: 2, feature: 'Individual settings and dashboards for each subsidiary', netsuite: 'no', altaVia: 'yes' }
+      { id: 1, feature: 'Transfer of accounting data from NetSuite to BMD', netsuite: 'no', altaVia: 'yes' },
+      { id: 2, feature: 'Texts for print forms (multilingual)', netsuite: 'no', altaVia: 'yes' }
     ]
   },
   {
-    name: 'Features',
+    name: 'Reports & Compliance',
     features: [
-      { id: 3, feature: 'Austrian Reporting Requirements', netsuite: 'limited', altaVia: 'yes' },
-      { id: 4, feature: 'Chart of Accounts', netsuite: 'limited', altaVia: 'yes' },
-      { id: 5, feature: 'VAT Recalculation', netsuite: 'limited', altaVia: 'yes' },
-      { id: 6, feature: 'VAT ID Verification', netsuite: 'limited', altaVia: 'yes' },
-      { id: 7, feature: 'General EU Tax', netsuite: 'no', altaVia: 'yes' },
-      { id: 8, feature: 'PDF Texts/Tax Texts', netsuite: 'no', altaVia: 'yes' },
-      { id: 9, feature: 'Tax Point Date', netsuite: 'no', altaVia: 'yes' },
-      { id: 10, feature: 'Austrian E-Invoicing', netsuite: 'no', altaVia: 'yes' },
-      { id: 11, feature: 'Immutability of Postings', netsuite: 'limited', altaVia: 'yes' },
-      { id: 12, feature: 'Accrual Items', netsuite: 'no', altaVia: 'yes' },
-      { id: 13, feature: 'FinanzOnline Integration', netsuite: 'limited', altaVia: 'yes' }
+      { id: 3, feature: 'UGB-compliant reports (Balance Sheet & P&L)', netsuite: 'no', altaVia: 'yes' },
+      { id: 4, feature: 'Chart of Accounts and Trial Balance', netsuite: 'no', altaVia: 'yes' },
+      { id: 5, feature: 'SuiteTax Compliance', netsuite: 'no (Legacy Tax only)', altaVia: 'yes' }
     ]
   },
   {
-    name: 'Installation / Documentation',
+    name: 'Postings & Taxes',
     features: [
-      { id: 14, feature: 'Direct Installation via SuiteBundle', netsuite: 'yes', altaVia: 'yes' }
+      { id: 6, feature: 'VAT Clawback (VAT on cash discounts)', netsuite: 'no', altaVia: 'yes' },
+      { id: 7, feature: 'Separate capture of tax & posting date (Document/Posting/Tax Point Date)', netsuite: 'limited', altaVia: 'yes' },
+      { id: 8, feature: 'VAT ID Verification', netsuite: 'no', altaVia: 'yes' },
+      { id: 9, feature: 'Travel expense reimbursement according to Austrian law (per diems, mileage, mixed trips)', netsuite: 'no', altaVia: 'yes' }
     ]
   }
 ];
@@ -50,8 +45,8 @@ const categories: Category[] = [
 export default function LocalizationAustriaComparisonEN() {
   const [expandedCategories, setExpandedCategories] = useState({
     setup: true,
-    funktionen: true,
-    installation: true
+    reports: true,
+    postings: true
   });
 
   const toggleCategory = (category: keyof typeof expandedCategories) => {
@@ -70,8 +65,8 @@ export default function LocalizationAustriaComparisonEN() {
 
   const getCategoryKey = (categoryName: string): keyof typeof expandedCategories => {
     if (categoryName === 'Setup') return 'setup';
-    if (categoryName === 'Features') return 'funktionen';
-    return 'installation';
+    if (categoryName === 'Reports & Compliance') return 'reports';
+    return 'postings';
   };
 
   const renderCell = (value: string) => {
