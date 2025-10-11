@@ -26,7 +26,7 @@ const products: Product[] = [
     image: '/images/EN/WebP/AVA_Interface-DATEV_EN.webp',
     color: '#009b87',
     link: '/en/datev-interface',
-    description: 'DATEV eG's accounting software is the standard for tax advisors and auditors in Germany. With the DATEV-certified SuiteApp "Interface DATEV for NetSuite," you can easily transfer all accounting...'
+    description: 'DATEV eG\'s accounting software is the standard for tax advisors and auditors in Germany. With the DATEV-certified SuiteApp "Interface DATEV for NetSuite," you can easily transfer all accounting...'
   },
   {
     id: 'bmd-export',
@@ -58,7 +58,7 @@ const products: Product[] = [
     image: '/images/EN/WebP/AVA_REISEKOSTEN_EN.webp',
     color: '#7bcfc9',
     link: '/en/travel-expenses',
-    description: 'With Travel Expenses for NetSuite by Alta Via Applications, you automate per diem calculations, streamline approvals, and accelerate reimbursements. Whether they're domestic, international, or m...'
+    description: 'With Travel Expenses for NetSuite by Alta Via Applications, you automate per diem calculations, streamline approvals, and accelerate reimbursements. Whether they\'re domestic, international, or m...'
   },
   {
     id: 'dunning',
