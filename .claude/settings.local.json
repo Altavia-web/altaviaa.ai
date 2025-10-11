@@ -21,7 +21,13 @@
       "Bash(taskkill:*)",
       "Bash(git fetch:*)",
       "Bash(git pull:*)",
-      "Bash(git ls-tree:*)"
+      "Bash(git ls-tree:*)",
+      "Bash(for:*)",
+      "Bash(do)",
+      "Bash(done)",
+      "Bash(if grep -q \"width.*80%\" \"$file\")",
+      "Bash(then)",
+      "Bash(fi)"
     ],
     "deny": [],
     "ask": []

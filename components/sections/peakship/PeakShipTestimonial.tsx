@@ -31,7 +31,7 @@ export default function PeakShipTestimonial() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 mx-auto px-6 text-center" style={{ width: '80%' }}>
+      <div className="relative z-10 mx-auto px-6 text-center w-[85%] lg:w-[70%]">
         {/* Quote Text */}
         <p
           className="mb-8"

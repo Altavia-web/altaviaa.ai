@@ -11,7 +11,7 @@ export default function DatevHeroEN() {
       }}
     >
       {/* Content */}
-      <div className="relative z-10 mx-auto px-6" style={{ width: '80%' }}>
+      <div className="relative z-10 mx-auto px-6 w-[90%] md:w-[80%]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Text Content - Left */}
           <div className="text-left">

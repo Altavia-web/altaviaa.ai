@@ -11,7 +11,7 @@ export default function HomeMarketOptimization({ locale = 'de' }: HomeMarketOpti
 
   return (
     <section className="py-16 px-6 bg-white">
-      <div className="mx-auto" style={{width: '80%'}}>
+      <div className="mx-auto w-[90%] md:w-[80%]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content - Left Column */}
           <div>
