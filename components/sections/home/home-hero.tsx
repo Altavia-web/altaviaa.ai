@@ -38,8 +38,8 @@ export default function HomeHero({ locale = 'de' }: HomeHeroProps) {
           download
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white font-semibold py-4 px-8 rounded-lg transition-colors duration-200 inline-flex items-center text-lg hover:opacity-90"
-          style={{backgroundColor: 'var(--color-orange)'}}
+          className="text-white font-semibold py-4 px-8 rounded-lg transition-colors duration-200 inline-flex items-center text-lg hover:opacity-90 no-underline"
+          style={{backgroundColor: 'var(--color-orange)', color: 'white'}}
         >
           {t.home.hero.cta}
           <svg
