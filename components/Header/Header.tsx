@@ -251,10 +251,10 @@ export default function Header({ locale = 'de' }: HeaderProps) {
                   <span>{t.nav.downloadBrochure}</span>
                 </a>
                 <div className={styles.mobileSocialLinks}>
-                  <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.linkedin.com/company/alta-via-applications-gmbh" target="_blank" rel="noopener noreferrer">
                     <Linkedin size={20} />
                   </a>
-                  <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer">
+                  <a href="https://www.youtube.com/@altaviaconsulting" target="_blank" rel="noopener noreferrer">
                     <Youtube size={20} />
                   </a>
                 </div>
@@ -422,10 +422,10 @@ export default function Header({ locale = 'de' }: HeaderProps) {
                 <span>{t.nav.downloadBrochure}</span>
               </a>
               <div className={styles.socialLinks}>
-                <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.linkedin.com/company/alta-via-applications-gmbh" target="_blank" rel="noopener noreferrer">
                   <Linkedin size={20} />
                 </a>
-                <a href="https://youtube.com/" target="_blank" rel="noopener noreferrer">
+                <a href="https://www.youtube.com/@altaviaconsulting" target="_blank" rel="noopener noreferrer">
                   <Youtube size={20} />
                 </a>
               </div>
