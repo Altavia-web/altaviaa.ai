@@ -26,7 +26,6 @@ export default function Header({ locale = 'de' }: HeaderProps) {
   const isActive = (path: string) => pathname === path || pathname.startsWith(path + '/');
 
   // Generate locale-aware URLs
-  const contactUrl = locale === 'en' ? '/en/contact' : '/kontakt';
   const productsUrl = locale === 'en' ? '/en/products' : '/products';
 
   const productUrls = {
@@ -117,14 +116,14 @@ export default function Header({ locale = 'de' }: HeaderProps) {
                 </Link>
               </div>
 
-              {/* Kontakt Link (no dropdown) */}
-              <Link
+              {/* Kontakt Link (no dropdown) - Temporarily removed */}
+              {/* <Link
                 href={contactUrl}
                 className={`${styles.dropdownButton} ${isActive('/kontakt') || isActive('/en/contact') ? styles.active : ''}`}
                 aria-label={t.nav.contact}
               >
                 <span>{t.nav.contact}</span>
-              </Link>
+              </Link> */}
             </div>
 
             {/* Mobile Menu Button */}
@@ -229,14 +228,14 @@ export default function Header({ locale = 'de' }: HeaderProps) {
               </Link>
             </div>
 
-            {/* Kontakt Link */}
-            <Link
+            {/* Kontakt Link - Temporarily removed */}
+            {/* <Link
               href={contactUrl}
               className={styles.mobileMainLink}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {t.nav.contact}
-            </Link>
+            </Link> */}
 
             {/* Mobile Footer Section */}
             <div className={styles.mobileFooterSection}>
