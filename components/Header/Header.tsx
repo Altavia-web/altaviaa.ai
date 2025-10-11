@@ -242,7 +242,13 @@ export default function Header({ locale = 'de' }: HeaderProps) {
             {/* Mobile Footer Section */}
             <div className={styles.mobileFooterSection}>
               <div className={styles.mobileFooterContent}>
-                <a href={`${baseUrl}/download-broschuere`} className={styles.mobileFooterLink}>
+                <a
+                  href={locale === 'en' ? '/images/AVA Product Brochure_EN.pdf' : '/images/AVA-Produktbroschuere_DE.pdf'}
+                  className={styles.mobileFooterLink}
+                  download
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <Download size={20} />
                   <span>{t.nav.downloadBrochure}</span>
                 </a>
@@ -407,7 +413,13 @@ export default function Header({ locale = 'de' }: HeaderProps) {
           {/* Footer-Section */}
           <div className={styles.footerSection}>
             <div className={styles.footerContent}>
-              <a href={`${baseUrl}/download-broschuere`} className={styles.footerLink}>
+              <a
+                href={locale === 'en' ? '/images/AVA Product Brochure_EN.pdf' : '/images/AVA-Produktbroschuere_DE.pdf'}
+                className={styles.footerLink}
+                download
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <Download size={20} />
                 <span>{t.nav.downloadBrochure}</span>
               </a>
