@@ -5,9 +5,9 @@ import { CheckCircle2, XCircle, ChevronDown } from 'lucide-react';
 
 export default function ReisekostenComparison() {
   const [expandedCategories, setExpandedCategories] = useState({
-    mapping: true,
-    funktionen: false,
-    installation: false
+    setup: true,
+    funktionen: true,
+    reporting: true
   });
 
   const toggleCategory = (category: keyof typeof expandedCategories) => {
@@ -33,7 +33,7 @@ export default function ReisekostenComparison() {
           className="text-3xl lg:text-4xl font-semibold text-center mb-12 leading-tight"
           style={{ color: 'var(--color-dark-blue)' }}
         >
-          Lorem ipsum dolor sit amet consectetur adipiscing elit
+          Alle Reisekosten-Funktionen auf einen Blick
         </h2>
 
         {/* Comparison Table */}
@@ -50,25 +50,25 @@ export default function ReisekostenComparison() {
                   Funktionsvergleich
                 </th>
                 <th className="text-center py-5 px-6 text-white font-semibold text-base lg:text-lg">
-                  NetSuite Standard
+                  NetSuite Expense Management
                 </th>
                 <th className="text-center py-5 px-6 text-white font-semibold text-base lg:text-lg">
-                  Alta Via Reisekosten
+                  Reisekostenverwaltung für NetSuite von Alta Via Applications
                 </th>
               </tr>
             </thead>
 
             <tbody>
 
-              {/* CATEGORY 1: MAPPING */}
+              {/* CATEGORY 1: SETUP */}
               <tr>
                 <td colSpan={3} className="p-0">
                   <div
                     role="button"
                     tabIndex={0}
-                    aria-expanded={expandedCategories.mapping}
-                    onClick={() => toggleCategory('mapping')}
-                    onKeyDown={(e) => handleKeyDown(e, 'mapping')}
+                    aria-expanded={expandedCategories.setup}
+                    onClick={() => toggleCategory('setup')}
+                    onKeyDown={(e) => handleKeyDown(e, 'setup')}
                     className="flex items-center gap-3 py-4 px-6 cursor-pointer transition-colors"
                     style={{
                       backgroundColor: '#f0f0f0',
@@ -77,22 +77,22 @@ export default function ReisekostenComparison() {
                     }}
                   >
                     <CheckCircle2 size={20} style={{ color: 'var(--color-reisekosten-primary)' }} />
-                    <span className="font-semibold text-base lg:text-lg">Lorem ipsum</span>
+                    <span className="font-semibold text-base lg:text-lg">Setup</span>
                     <ChevronDown
                       size={20}
                       className="ml-auto transition-transform duration-300"
                       style={{
-                        transform: expandedCategories.mapping ? 'rotate(180deg)' : 'rotate(0deg)'
+                        transform: expandedCategories.setup ? 'rotate(180deg)' : 'rotate(0deg)'
                       }}
                     />
                   </div>
                 </td>
               </tr>
-              {expandedCategories.mapping && (
+              {expandedCategories.setup && (
                 <>
                   <tr className="bg-white">
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-reisekosten-secondary)' }}>
-                      Lorem ipsum dolor sit amet
+                      Hinterlegen von Spesensätzen & Kilometerpauschalen für Inland und Ausland
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-reisekosten-secondary)' }}>
                       <XCircle size={28} className="inline-block" style={{ color: '#ef4444' }} />
@@ -103,7 +103,18 @@ export default function ReisekostenComparison() {
                   </tr>
                   <tr className="bg-gray-50">
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-reisekosten-secondary)' }}>
-                      Consectetur adipiscing elit
+                      Hinterlegung von individuellen Fahrtkosten für unterschiedliche Fahrzeugtypen
+                    </td>
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-reisekosten-secondary)' }}>
+                      <XCircle size={28} className="inline-block" style={{ color: '#ef4444' }} />
+                    </td>
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-reisekosten-secondary)' }}>
+                      <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
+                    </td>
+                  </tr>
+                  <tr className="bg-white">
+                    <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-reisekosten-secondary)' }}>
+                      Individuelle Sachbezugswerte für jeden Mitarbeiter
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-reisekosten-secondary)' }}>
                       <XCircle size={28} className="inline-block" style={{ color: '#ef4444' }} />
@@ -147,10 +158,10 @@ export default function ReisekostenComparison() {
                 <>
                   <tr className="bg-white">
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-reisekosten-secondary)' }}>
-                      Sed do eiusmod tempor
+                      Automatische Berechnung von Kilometergeld und Spesensätzen
                     </td>
-                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-reisekosten-secondary)', color: 'var(--color-dark-blue)', opacity: 0.7 }}>
-                      begrenzt
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-reisekosten-secondary)' }}>
+                      <XCircle size={28} className="inline-block" style={{ color: '#ef4444' }} />
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-reisekosten-secondary)' }}>
                       <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
@@ -158,7 +169,40 @@ export default function ReisekostenComparison() {
                   </tr>
                   <tr className="bg-gray-50">
                     <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-reisekosten-secondary)' }}>
-                      Incididunt ut labore
+                      Berechnung von Sachbezugswerten bei Nutzung von Firmenfahrzeugen
+                    </td>
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-reisekosten-secondary)' }}>
+                      <XCircle size={28} className="inline-block" style={{ color: '#ef4444' }} />
+                    </td>
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-reisekosten-secondary)' }}>
+                      <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
+                    </td>
+                  </tr>
+                  <tr className="bg-white">
+                    <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-reisekosten-secondary)' }}>
+                      Gemischte Reisen (Unterscheidung zwischen dienstlichen und privaten Reisezeiten)
+                    </td>
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-reisekosten-secondary)' }}>
+                      <XCircle size={28} className="inline-block" style={{ color: '#ef4444' }} />
+                    </td>
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-reisekosten-secondary)' }}>
+                      <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
+                    </td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-reisekosten-secondary)' }}>
+                      Abwesenheitszeiträume & Unterbrechungen werden beim Spesensatz berücksichtigt
+                    </td>
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-reisekosten-secondary)' }}>
+                      <XCircle size={28} className="inline-block" style={{ color: '#ef4444' }} />
+                    </td>
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-reisekosten-secondary)' }}>
+                      <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
+                    </td>
+                  </tr>
+                  <tr className="bg-white">
+                    <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-reisekosten-secondary)' }}>
+                      Verrechnung von Verpflegungsleistungen des Arbeitgebers nach österreichischem Recht
                     </td>
                     <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-reisekosten-secondary)' }}>
                       <XCircle size={28} className="inline-block" style={{ color: '#ef4444' }} />
@@ -170,15 +214,15 @@ export default function ReisekostenComparison() {
                 </>
               )}
 
-              {/* CATEGORY 3: INSTALLATION */}
+              {/* CATEGORY 3: REPORTING & COMPLIANCE */}
               <tr>
                 <td colSpan={3} className="p-0">
                   <div
                     role="button"
                     tabIndex={0}
-                    aria-expanded={expandedCategories.installation}
-                    onClick={() => toggleCategory('installation')}
-                    onKeyDown={(e) => handleKeyDown(e, 'installation')}
+                    aria-expanded={expandedCategories.reporting}
+                    onClick={() => toggleCategory('reporting')}
+                    onKeyDown={(e) => handleKeyDown(e, 'reporting')}
                     className="flex items-center gap-3 py-4 px-6 cursor-pointer transition-colors hover:bg-gray-200"
                     style={{
                       backgroundColor: '#f0f0f0',
@@ -187,29 +231,42 @@ export default function ReisekostenComparison() {
                     }}
                   >
                     <CheckCircle2 size={20} style={{ color: 'var(--color-reisekosten-primary)' }} />
-                    <span className="font-semibold text-base lg:text-lg">Installation</span>
+                    <span className="font-semibold text-base lg:text-lg">Reporting & Compliance</span>
                     <ChevronDown
                       size={20}
                       className="ml-auto transition-transform duration-300"
                       style={{
-                        transform: expandedCategories.installation ? 'rotate(180deg)' : 'rotate(0deg)'
+                        transform: expandedCategories.reporting ? 'rotate(180deg)' : 'rotate(0deg)'
                       }}
                     />
                   </div>
                 </td>
               </tr>
-              {expandedCategories.installation && (
-                <tr className="bg-white">
-                  <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-reisekosten-secondary)' }}>
-                    Direkte Installation über SuiteBundle
-                  </td>
-                  <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-reisekosten-secondary)' }}>
-                    <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
-                  </td>
-                  <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-reisekosten-secondary)' }}>
-                    <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
-                  </td>
-                </tr>
+              {expandedCategories.reporting && (
+                <>
+                  <tr className="bg-white">
+                    <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-reisekosten-secondary)' }}>
+                      Automatische Dokumentation in einem behördenkonformen Reisekostenprotokoll
+                    </td>
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-reisekosten-secondary)' }}>
+                      <XCircle size={28} className="inline-block" style={{ color: '#ef4444' }} />
+                    </td>
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-reisekosten-secondary)' }}>
+                      <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
+                    </td>
+                  </tr>
+                  <tr className="bg-gray-50">
+                    <td className="py-4 px-6 text-left border-b" style={{ borderColor: 'var(--color-reisekosten-secondary)' }}>
+                      Automatische Weitergabe von Taggeldern, Kilometergeld und Sachbezügen an die Lohnbuchhaltung
+                    </td>
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-reisekosten-secondary)' }}>
+                      <XCircle size={28} className="inline-block" style={{ color: '#ef4444' }} />
+                    </td>
+                    <td className="py-4 px-6 text-center border-b" style={{ borderColor: 'var(--color-reisekosten-secondary)' }}>
+                      <CheckCircle2 size={28} className="inline-block" style={{ color: '#22c55e' }} />
+                    </td>
+                  </tr>
+                </>
               )}
 
             </tbody>
