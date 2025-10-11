@@ -26,7 +26,6 @@ export default function Header({ locale = 'de' }: HeaderProps) {
   const isActive = (path: string) => pathname === path || pathname.startsWith(path + '/');
 
   // Generate locale-aware URLs
-  const baseUrl = locale === 'en' ? '/en' : '';
   const contactUrl = locale === 'en' ? '/en/contact' : '/kontakt';
   const productsUrl = locale === 'en' ? '/en/products' : '/products';
 
