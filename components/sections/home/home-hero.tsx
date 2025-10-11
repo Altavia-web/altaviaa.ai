@@ -33,7 +33,11 @@ export default function HomeHero({ locale = 'de' }: HomeHeroProps) {
         <p className="text-2xl md:text-3xl mb-8 leading-relaxed opacity-90">
           {t.home.hero.subtitle}
         </p>
-        <button
+        <a
+          href={locale === 'en' ? '/images/AVA Product Brochure_EN.pdf' : '/images/AVA-Produktbroschuere_DE.pdf'}
+          download
+          target="_blank"
+          rel="noopener noreferrer"
           className="text-white font-semibold py-4 px-8 rounded-lg transition-colors duration-200 inline-flex items-center text-lg hover:opacity-90"
           style={{backgroundColor: 'var(--color-orange)'}}
         >
@@ -46,7 +50,7 @@ export default function HomeHero({ locale = 'de' }: HomeHeroProps) {
           >
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
           </svg>
-        </button>
+        </a>
       </div>
     </section>
   );
