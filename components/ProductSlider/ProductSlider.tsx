@@ -26,7 +26,7 @@ const products: Product[] = [
     image: '/images/DE/WebP/AVA_DATEV-Schnittstelle_DE.webp',
     color: '#009b87',
     link: '/schnittstelle-datev',
-    description: 'Die Buchhaltungssoftware der DATEV ist in Deutschland der Standard in der Steuerberatung und Wirtschaftsprüfung...'
+    description: 'Die Buchhaltungssoftware der DATEV eG ist in Deutschland der Standard bei Steuerberatern und Wirtschaftsprüfern. Mit der von DATEV zertifizierten SuiteApp können Sie auf einfache Weise säm...'
   },
   {
     id: 'bmd-export',
@@ -34,7 +34,7 @@ const products: Product[] = [
     image: '/images/DE/WebP/AVA_BMD_DE.webp',
     color: '#ff6120',
     link: '/schnittstelle-bmd',
-    description: 'Dummy Text für BMD Schnittstelle...'
+    description: 'Unternehmen in Österreich, die das Cloud-ERP NetSuite nutzen, bewegen sich oft zwischen zwei Welten: Finanzdaten liegen in NetSuite, während der Steuerberater mit BMD arbeitet. Damit beide Se...'
   },
   {
     id: 'lokalisierung',
@@ -42,7 +42,7 @@ const products: Product[] = [
     image: '/images/DE/WebP/AVA_LOKALISIERUNG_DE_DE.webp',
     color: '#003399',
     link: '/localization-germany',
-    description: 'In der Beratung von Alta Via haben sich über die Jahre einige Ergänzungen bewährt, die die Arbeit mit NetSuite in Deutschland verbessern...'
+    description: 'Die deutsche Geschäftswelt stellt besondere Anforderungen an Buchhaltung und Compliance. NetSuite ist die Basis, aber erst mit der Lokalisierung Deutschland wird Ihr System wirklich GoBD- und ...'
   },
   {
     id: 'lokalisierung-at',
@@ -50,7 +50,7 @@ const products: Product[] = [
     image: '/images/DE/WebP/AVA_LOKALISIERUNG_AT_DE.webp',
     color: '#003399',
     link: '/lokalisierung-oesterreich',
-    description: 'Dummy Text für Lokalisierung Österreich...'
+    description: 'Um in Österreich rechtssicher mit NetSuite zu arbeiten, braucht es mehr als den Standard. Unsere Lokalisierung Österreich schließt die Lücken und bietet eine nahtlose Integration von UGB-Beric...'
   },
   {
     id: 'reisekosten',
@@ -58,7 +58,7 @@ const products: Product[] = [
     image: '/images/DE/WebP/AVA_REISEKOSTEN_DE.webp',
     color: '#7bcfc9',
     link: '/reisekosten',
-    description: 'Erfassen und verwalten Sie Reisekosten effizient in NetSuite mit automatischer Spesenabrechnung und Genehmigungsworkflows...'
+    description: 'Mit Reisekosten für NetSuite von Alta Via Applications automatisieren Sie Pauschalen, vereinfachen Genehmigungen und beschleunigen Erstattungen. Ob Inland, Ausland oder mehrere Währungen: Das...'
   },
   {
     id: 'dunning',
@@ -66,7 +66,7 @@ const products: Product[] = [
     image: '/images/DE/WebP/AVA_MAHNWESEN_DE.webp',
     color: '#980000',
     link: '/dunning',
-    description: 'Automatisieren Sie Ihr Mahnwesen mit intelligenten Eskalationsstufen und rechtssicheren Mahnvorlagen für den deutschen Markt...'
+    description: 'Zeit ist Geld: Mit Mahnwesen für NetSuite von Alta Via Applications automatisieren Sie Ihr Forderungsmanagement und verhindern Zahlungsausfälle. Mit Version 4.0 ist der Einstieg so einfach wi...'
   },
   {
     id: 'peak-ship',
@@ -74,7 +74,7 @@ const products: Product[] = [
     image: '/images/DE/WebP/AVA_PEAK SHIP_DE.webp',
     color: '#ffba00',
     link: '/peak-ship',
-    description: 'Peak Ship optimiert Ihre Versandprozesse in NetSuite mit Integration zu allen gängigen Versanddienstleistern...'
+    description: 'Mit PeakShip für NetSuite machen Sie Ihre Versandprozesse so einfach wie nie: Etiketten, Tracking, Zollunterlagen – alles läuft direkt aus Ihrem ERP. Kein Hin- und Herkopieren, kein Risiko von...'
   }
 ];
 

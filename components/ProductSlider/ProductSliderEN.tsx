@@ -26,7 +26,7 @@ const products: Product[] = [
     image: '/images/EN/WebP/AVA_Interface-DATEV_EN.webp',
     color: '#009b87',
     link: '/en/datev-interface',
-    description: 'DATEV accounting software is the standard in tax consulting and auditing in Germany...'
+    description: 'DATEV eG's accounting software is the standard for tax advisors and auditors in Germany. With the DATEV-certified SuiteApp "Interface DATEV for NetSuite," you can easily transfer all accounting...'
   },
   {
     id: 'bmd-export',
@@ -34,7 +34,7 @@ const products: Product[] = [
     image: '/images/EN/WebP/AVA_BMD_EN.webp',
     color: '#ff6120',
     link: '/en/bmd-interface',
-    description: 'Seamless integration with BMD accounting software for Austrian businesses...'
+    description: 'Companies in Austria that use the cloud ERP NetSuite often find themselves working across two worlds: financial data is managed in NetSuite, while tax advisors rely on BMD. To bring both sides...'
   },
   {
     id: 'lokalisierung',
@@ -42,7 +42,7 @@ const products: Product[] = [
     image: '/images/EN/WebP/AVA_LOKALISIERUNG_DE_EN.webp',
     color: '#003399',
     link: '/en/localization-germany',
-    description: 'Through years of consulting at Alta Via, several enhancements have proven valuable for working with NetSuite in Germany...'
+    description: 'The German business world places special demands on accounting and compliance. NetSuite is the foundation, but only with localization for Germany will your system truly be GoBD and HGB compliant...'
   },
   {
     id: 'lokalisierung-at',
@@ -50,7 +50,7 @@ const products: Product[] = [
     image: '/images/EN/WebP/AVA_LOKALISIERUNG_AT_EN.webp',
     color: '#003399',
     link: '/en/austrian-localization',
-    description: 'Comprehensive localization features for Austrian legal and tax requirements...'
+    description: 'To work with NetSuite in Austria in a legally compliant manner, you need more than just the standard version. Our Austrian localization closes the gaps and offers seamless integration of UGB re...'
   },
   {
     id: 'reisekosten',
@@ -58,7 +58,7 @@ const products: Product[] = [
     image: '/images/EN/WebP/AVA_REISEKOSTEN_EN.webp',
     color: '#7bcfc9',
     link: '/en/travel-expenses',
-    description: 'Record and manage travel expenses efficiently in NetSuite with automatic expense accounting and approval workflows...'
+    description: 'With Travel Expenses for NetSuite by Alta Via Applications, you automate per diem calculations, streamline approvals, and accelerate reimbursements. Whether they're domestic, international, or m...'
   },
   {
     id: 'dunning',
@@ -66,7 +66,7 @@ const products: Product[] = [
     image: '/images/EN/WebP/AVA_MAHNWESEN_EN.webp',
     color: '#980000',
     link: '/en/dunning',
-    description: 'Automate your dunning process with intelligent escalation levels and legally compliant dunning templates for the German market...'
+    description: 'Time is money: with Dunning for NetSuite by Alta Via Applications, you automate receivables management and reduce the risk of payment defaults. With version 4.0, getting started is easier than e...'
   },
   {
     id: 'peak-ship',
@@ -74,7 +74,7 @@ const products: Product[] = [
     image: '/images/EN/WebP/AVA_PEAK SHIP_EN.webp',
     color: '#ffba00',
     link: '/en/peak-ship',
-    description: 'Peak Ship optimizes your shipping processes in NetSuite with integration to all major shipping service providers...'
+    description: 'With PeakShip for NetSuite, shipping has never been easier: labels, tracking, customs documents – everything runs directly from your ERP. No copy-pasting between systems, no risk of transfer erro...'
   }
 ];
 
