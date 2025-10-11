@@ -4,14 +4,14 @@ import Image from 'next/image';
 export default function LocalizationAustriaHero() {
   return (
     <section
-      className="relative flex items-center justify-center"
+      className="relative flex items-center justify-center pt-[5vh] lg:pt-0"
       style={{
         minHeight: '72vh',
         background: 'var(--gradient-lokalisierung)'
       }}
     >
       {/* Content */}
-      <div className="relative z-10 mx-auto px-6" style={{ width: '80%' }}>
+      <div className="relative z-10 mx-auto px-6 w-[95%] lg:w-[80%]">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Text Content - Left */}
           <div className="text-left">

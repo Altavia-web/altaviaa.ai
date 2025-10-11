@@ -4,7 +4,7 @@ import Image from 'next/image';
 export default function ReisekostenHero() {
   return (
     <section
-      className="py-16 lg:py-20 px-8"
+      className="pt-[5vh] lg:pt-0 pb-16 lg:pb-20 px-8"
       style={{ backgroundColor: 'rgba(123, 207, 201, 0.4)' }}
     >
       <div className="max-w-7xl mx-auto">
