@@ -27,6 +27,13 @@ export const metadata: Metadata = {
   authors: [{ name: "Alta Via Applications" }],
   creator: "Alta Via Applications",
   metadataBase: new URL("https://altaviaapplications.com"),
+  icons: {
+    icon: [
+      { url: "/images/logo/AVA_Bildmarke_WEB_RGB_300px (1).png" },
+    ],
+    shortcut: "/images/logo/AVA_Bildmarke_WEB_RGB_300px (1).png",
+    apple: "/images/logo/AVA_Bildmarke_WEB_RGB_300px (1).png",
+  },
   alternates: {
     canonical: '/',
     languages: {
