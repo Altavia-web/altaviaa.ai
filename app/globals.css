@@ -195,7 +195,7 @@ h6, .h6 {
   /* Content containers 93% width */
   main,
   .container,
-  section > div:not(.absolute):not(.relative):not([style*="grid"]) {
+  section:not([class*="slider"]):not([class*="Slider"]) > div:not(.absolute):not(.relative):not([style*="grid"]):not(.max-w-5xl):not([class*="max-w"]) {
     width: 93%;
     max-width: 93vw;
     margin-left: auto;
