@@ -5,7 +5,6 @@ import DatevSchnittstelleEN from '@/components/sections/datev/datev-schnittstell
 import DatevQuestionsEN from '@/components/sections/datev/datev-questions-en';
 import DatevBuchhaltungEN from '@/components/sections/datev/datev-buchhaltung-en';
 import DatevTeaserEN from '@/components/sections/datev/datev-teaser-en';
-import DatevZitatEN from '@/components/sections/datev/datev-zitat-en';
 import DatevComparisonTableEN from '@/components/sections/datev/datev-comparison-table-en';
 import ProductSliderEN from '@/components/ProductSlider/ProductSliderEN';
 
@@ -17,7 +16,6 @@ export default function DatevInterfacePage() {
       <DatevQuestionsEN />
       <DatevBuchhaltungEN />
       <DatevTeaserEN />
-      <DatevZitatEN />
       <DatevComparisonTableEN />
       <ProductSliderEN currentProductSlug="datev-interface" />
       <Footer locale="en" />
