@@ -210,13 +210,6 @@ h6, .h6 {
     max-width: 100%;
     height: auto;
   }
-
-  /* Prevent grid/flex items from overflowing */
-  .grid,
-  .flex {
-    max-width: 100%;
-    overflow-x: hidden;
-  }
 }
 
 /* Desktop responsive headings */
