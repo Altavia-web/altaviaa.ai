@@ -47,7 +47,7 @@ export default function ContactPage() {
       name: formData.get('name') as string,
       email: formData.get('email') as string,
       company: formData.get('company') as string,
-      source: formData.get('source') as string,
+      hearAboutUs: formData.get('hearAboutUs') as string,
       message: formData.get('message') as string,
     };
 
@@ -204,21 +204,27 @@ export default function ContactPage() {
             )}
           </div>
 
-          {/* Source Field */}
+          {/* Hear About Us Field */}
           <div>
             <label
-              htmlFor="source"
+              htmlFor="hearAboutUs"
               className="block font-semibold text-[#002e64] mb-2"
             >
               Wie haben Sie von uns erfahren?
             </label>
-            <input
-              id="source"
-              name="source"
-              type="text"
-              placeholder="z.B. Google, LinkedIn, Empfehlung..."
+            <select
+              id="hearAboutUs"
+              name="hearAboutUs"
               className="w-full bg-[#eaf3f9] border border-transparent rounded-lg px-4 py-3 text-base focus:border-[#5095cb] focus:ring-2 focus:ring-[#a8dcf4] focus:outline-none transition-all"
-            />
+            >
+              <option value="">Bitte wählen...</option>
+              <option value="Google">Google</option>
+              <option value="LinkedIn">LinkedIn</option>
+              <option value="Empfehlung">Empfehlung</option>
+              <option value="NetSuite">NetSuite</option>
+              <option value="Veranstaltung">Veranstaltung</option>
+              <option value="Sonstiges">Sonstiges</option>
+            </select>
           </div>
 
           {/* Message Field */}

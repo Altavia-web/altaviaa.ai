@@ -5,7 +5,7 @@ interface ContactFormData {
   name: string;
   email: string;
   company: string;
-  source?: string;
+  hearAboutUs?: string;
   message?: string;
 }
 
@@ -52,12 +52,11 @@ export async function POST(request: NextRequest) {
     }
 
     // Check if NetSuite environment variables are configured
-    const netsuiteApiUrl = process.env.NETSUITE_API_URL;
-    const netsuiteApiKey = process.env.NETSUITE_API_KEY;
-    const netsuiteAccountId = process.env.NETSUITE_ACCOUNT_ID;
+    const netsuiteRestletUrl = process.env.NETSUITE_RESTLET_URL;
+    const netsuiteAuthToken = process.env.NETSUITE_AUTH_TOKEN;
 
-    if (!netsuiteApiUrl || !netsuiteApiKey || !netsuiteAccountId) {
-      console.error('NetSuite API configuration missing');
+    if (!netsuiteRestletUrl || !netsuiteAuthToken) {
+      console.error('NetSuite RESTLet configuration missing');
 
       // In development, log the form data instead of sending to NetSuite
       if (process.env.NODE_ENV === 'development') {
@@ -65,7 +64,7 @@ export async function POST(request: NextRequest) {
         console.log('Name:', body.name);
         console.log('Email:', body.email);
         console.log('Company:', body.company);
-        console.log('Source:', body.source || 'Not provided');
+        console.log('Hear About Us:', body.hearAboutUs || 'Not provided');
         console.log('Message:', body.message || 'No message');
         console.log('==========================================');
 
@@ -82,40 +81,32 @@ export async function POST(request: NextRequest) {
       );
     }
 
-    // Split name into first and last name
-    const nameParts = body.name.trim().split(' ');
-    const firstName = nameParts[0];
-    const lastName = nameParts.length > 1 ? nameParts.slice(1).join(' ') : nameParts[0];
-
-    // Prepare NetSuite payload
+    // Prepare NetSuite RESTLet payload according to specifications
     const netsuitePayload = {
-      recordType: 'lead',
-      fields: {
-        companyname: body.company,
-        firstname: firstName,
-        lastname: lastName,
-        email: body.email,
-        comments: body.message || '',
-        leadsource: body.source || 'Website Kontaktformular',
-        custentity_website_source: 'altaviaapplications.com',
-        custentity_submission_date: new Date().toISOString(),
-      },
+      name: body.name,
+      email: body.email,
+      companyname: body.company,
+      hearAboutUs: body.hearAboutUs || '',
+      comments: body.message || '',
+      leadsource: 'altaviaa.ai - Contact Form',
+      sourceForm: 'altaviaa.ai',
+      entitystatus: 6, // Lead Unqualified
     };
 
-    // Send to NetSuite
-    const netsuiteResponse = await fetch(netsuiteApiUrl, {
+    // Send to NetSuite RESTLet
+    const netsuiteResponse = await fetch(netsuiteRestletUrl, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${netsuiteApiKey}`,
-        'Account-Id': netsuiteAccountId,
+        'Authorization': netsuiteAuthToken,
+        'User-Agent': 'Mozilla/5.0',
       },
       body: JSON.stringify(netsuitePayload),
     });
 
     if (!netsuiteResponse.ok) {
       const errorText = await netsuiteResponse.text();
-      console.error('NetSuite API Error:', errorText);
+      console.error('NetSuite RESTLet Error:', errorText);
 
       return NextResponse.json(
         { error: 'Fehler beim Senden der Nachricht. Bitte versuchen Sie es später erneut.' },
@@ -128,7 +119,7 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({
       success: true,
       message: 'Nachricht erfolgreich gesendet',
-      netsuiteId: netsuiteData.id || netsuiteData.internalId,
+      netsuiteId: netsuiteData.id || netsuiteData.internalId || netsuiteData.leadId,
     });
 
   } catch (error) {
