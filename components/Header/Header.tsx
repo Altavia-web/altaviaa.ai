@@ -27,6 +27,7 @@ export default function Header({ locale = 'de' }: HeaderProps) {
 
   // Generate locale-aware URLs
   const productsUrl = locale === 'en' ? '/en/products' : '/products';
+  const contactUrl = locale === 'en' ? '/en/contact' : '/kontakt';
 
   const productUrls = {
     datev: locale === 'en' ? '/en/datev-interface' : '/schnittstelle-datev',
@@ -116,14 +117,14 @@ export default function Header({ locale = 'de' }: HeaderProps) {
                 </Link>
               </div>
 
-              {/* Kontakt Link (no dropdown) - Temporarily removed */}
-              {/* <Link
+              {/* Kontakt Link (no dropdown) */}
+              <Link
                 href={contactUrl}
                 className={`${styles.dropdownButton} ${isActive('/kontakt') || isActive('/en/contact') ? styles.active : ''}`}
                 aria-label={t.nav.contact}
               >
                 <span>{t.nav.contact}</span>
-              </Link> */}
+              </Link>
             </div>
 
             {/* Mobile Menu Button */}
@@ -228,14 +229,14 @@ export default function Header({ locale = 'de' }: HeaderProps) {
               </Link>
             </div>
 
-            {/* Kontakt Link - Temporarily removed */}
-            {/* <Link
+            {/* Kontakt Link */}
+            <Link
               href={contactUrl}
               className={styles.mobileMainLink}
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {t.nav.contact}
-            </Link> */}
+            </Link>
 
             {/* Mobile Footer Section */}
             <div className={styles.mobileFooterSection}>
