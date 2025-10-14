@@ -21,7 +21,8 @@
       "Bash(taskkill:*)",
       "Bash(git fetch:*)",
       "Bash(git pull:*)",
-      "Bash(git ls-tree:*)"
+      "Bash(git ls-tree:*)",
+      "Bash(timeout:*)"
     ],
     "deny": [],
     "ask": []
