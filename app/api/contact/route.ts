@@ -94,6 +94,10 @@ export async function POST(request: NextRequest) {
     };
 
     // Send to NetSuite RESTLet
+    console.log('Sending to NetSuite RESTLet...');
+    console.log('URL:', netsuiteRestletUrl);
+    console.log('Payload:', JSON.stringify(netsuitePayload));
+
     const netsuiteResponse = await fetch(netsuiteRestletUrl, {
       method: 'POST',
       headers: {
@@ -104,9 +108,13 @@ export async function POST(request: NextRequest) {
       body: JSON.stringify(netsuitePayload),
     });
 
+    console.log('NetSuite Response Status:', netsuiteResponse.status);
+
     if (!netsuiteResponse.ok) {
       const errorText = await netsuiteResponse.text();
-      console.error('NetSuite RESTLet Error:', errorText);
+      console.error('NetSuite RESTLet Error Response:', errorText);
+      console.error('NetSuite Response Status:', netsuiteResponse.status);
+      console.error('NetSuite Response Headers:', JSON.stringify(Object.fromEntries(netsuiteResponse.headers.entries())));
 
       return NextResponse.json(
         { error: 'Fehler beim Senden der Nachricht. Bitte versuchen Sie es später erneut.' },
@@ -115,6 +123,7 @@ export async function POST(request: NextRequest) {
     }
 
     const netsuiteData = await netsuiteResponse.json();
+    console.log('NetSuite Success Response:', netsuiteData);
 
     return NextResponse.json({
       success: true,
