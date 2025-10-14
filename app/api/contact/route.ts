@@ -52,8 +52,8 @@ export async function POST(request: NextRequest) {
     }
 
     // Check if NetSuite environment variables are configured
-    const netsuiteRestletUrl = process.env.NETSUITE_RESTLET_URL;
-    const netsuiteAuthToken = process.env.NETSUITE_AUTH_TOKEN;
+    const netsuiteRestletUrl = process.env.NETSUITE_RESTLET_URL || 'https://678440.extforms.netsuite.com/app/site/hosting/scriptlet.nl?script=2566&deploy=1&compid=678440&ns-at=AAEJ7tMQAvWxrRoW6gcjHjNopCrdycD5KmjcncMOHVQXhiFKRnw';
+    const netsuiteAuthToken = process.env.NETSUITE_AUTH_TOKEN || 'MWM3MmZmY2ZjNTZmZjljM2NiMmNkMDNlMWFkNzgzYjU5NGIyNGZkZmI3MjA2ZDI1MzcwMmI3ZDVlODYxYWQ0Nw==';
 
     if (!netsuiteRestletUrl || !netsuiteAuthToken) {
       console.error('NetSuite RESTLet configuration missing');
