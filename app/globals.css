@@ -329,3 +329,154 @@ li {
 .space-y-section > * + * {
   margin-top: 2rem;
 }
+
+/* ========================================
+   Klaro! Consent Manager Customization
+   ======================================== */
+
+/* Cookie Notice (Banner) Styling */
+.klaro .cookie-notice {
+  background-color: white !important;
+  border-top: 3px solid var(--color-mid-blue) !important;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1) !important;
+  font-family: 'Titillium Web', var(--font-titillium), system-ui, sans-serif !important;
+}
+
+.klaro .cookie-notice .cn-body {
+  color: var(--color-dark-blue) !important;
+}
+
+/* Modal Styling */
+.klaro .cookie-modal .cm-modal {
+  background-color: white !important;
+  border: 2px solid var(--color-mid-blue) !important;
+  font-family: 'Titillium Web', var(--font-titillium), system-ui, sans-serif !important;
+}
+
+.klaro .cookie-modal .cm-header {
+  border-bottom: 1px solid var(--color-ice-blue) !important;
+}
+
+.klaro .cookie-modal .cm-body {
+  color: var(--color-dark-blue) !important;
+}
+
+/* Button Styling - Primary (Accept All) */
+.klaro .cm-btn.cm-btn-success,
+.klaro .cookie-notice .cn-buttons .cm-btn.cm-btn-success {
+  background-color: var(--color-mid-blue) !important;
+  border-color: var(--color-mid-blue) !important;
+  color: white !important;
+  font-weight: 600 !important;
+  transition: all 0.2s ease !important;
+}
+
+.klaro .cm-btn.cm-btn-success:hover,
+.klaro .cookie-notice .cn-buttons .cm-btn.cm-btn-success:hover {
+  background-color: var(--color-dark-blue) !important;
+  border-color: var(--color-dark-blue) !important;
+}
+
+/* Button Styling - Secondary (Save Selection) */
+.klaro .cm-btn.cm-btn-info,
+.klaro .cookie-notice .cn-buttons .cm-btn.cm-btn-info {
+  background-color: transparent !important;
+  border: 2px solid var(--color-mid-blue) !important;
+  color: var(--color-mid-blue) !important;
+  font-weight: 600 !important;
+  transition: all 0.2s ease !important;
+}
+
+.klaro .cm-btn.cm-btn-info:hover,
+.klaro .cookie-notice .cn-buttons .cm-btn.cm-btn-info:hover {
+  background-color: var(--color-ice-blue) !important;
+  border-color: var(--color-dark-blue) !important;
+  color: var(--color-dark-blue) !important;
+}
+
+/* Button Styling - Decline */
+.klaro .cm-btn.cm-btn-danger,
+.klaro .cookie-notice .cn-buttons .cm-btn.cm-btn-danger {
+  background-color: transparent !important;
+  border: 1px solid #666 !important;
+  color: #666 !important;
+  font-weight: 400 !important;
+  transition: all 0.2s ease !important;
+}
+
+.klaro .cm-btn.cm-btn-danger:hover {
+  background-color: #f5f5f5 !important;
+  border-color: #333 !important;
+  color: #333 !important;
+}
+
+/* Link Styling */
+.klaro a,
+.klaro .cm-link {
+  color: var(--color-mid-blue) !important;
+  text-decoration: underline !important;
+  transition: color 0.2s ease !important;
+}
+
+.klaro a:hover,
+.klaro .cm-link:hover {
+  color: var(--color-dark-blue) !important;
+}
+
+/* Toggle Switch Styling */
+.klaro .cm-list-input:checked + .cm-list-label .slider {
+  background-color: var(--color-mid-blue) !important;
+}
+
+.klaro .cm-list-input:focus + .cm-list-label .slider {
+  box-shadow: 0 0 0 3px var(--color-sky-blue) !important;
+}
+
+/* Service Description */
+.klaro .cm-app-description {
+  color: #666 !important;
+  font-size: 14px !important;
+}
+
+/* Required Badge */
+.klaro .cm-required {
+  background-color: var(--color-ice-blue) !important;
+  color: var(--color-dark-blue) !important;
+  border: 1px solid var(--color-mid-blue) !important;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+  .klaro .cookie-notice {
+    padding: 1rem !important;
+  }
+
+  .klaro .cookie-notice .cn-buttons {
+    flex-direction: column !important;
+    width: 100% !important;
+  }
+
+  .klaro .cookie-notice .cn-buttons .cm-btn {
+    width: 100% !important;
+    margin: 0.25rem 0 !important;
+  }
+
+  .klaro .cookie-modal .cm-modal {
+    width: 95% !important;
+    max-height: 90vh !important;
+  }
+}
+
+/* Z-Index Fix - Ensure banner is above everything else */
+.klaro .cookie-notice,
+.klaro .cookie-modal {
+  z-index: 9999 !important;
+}
+
+/* Focus States for Accessibility */
+.klaro .cm-btn:focus,
+.klaro .cm-link:focus,
+.klaro .cm-list-input:focus + .cm-list-label {
+  outline: 2px solid var(--color-mid-blue) !important;
+  outline-offset: 2px !important;
+}

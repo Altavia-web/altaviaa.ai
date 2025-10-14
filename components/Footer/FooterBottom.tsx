@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
@@ -13,8 +15,15 @@ export default function FooterBottom({ locale = 'de' }: FooterBottomProps) {
   const imprintLink = isEnglish ? '/en/imprint' : '/impressum';
   const privacyLabel = isEnglish ? 'Privacy Policy' : 'Datenschutz';
   const imprintLabel = isEnglish ? 'Imprint' : 'Impressum';
+  const cookieLabel = isEnglish ? 'Cookie Settings' : 'Cookie-Einstellungen';
   const ctaText = isEnglish ? 'Acquire NetSuite App?' : 'App für NetSuite erwerben?';
   const ariaLegalNav = isEnglish ? 'Legal links' : 'Rechtliche Links';
+
+  const handleCookieSettings = () => {
+    if (typeof window !== 'undefined' && window.klaro) {
+      window.klaro.show();
+    }
+  };
 
   return (
     <>
@@ -132,7 +141,7 @@ export default function FooterBottom({ locale = 'de' }: FooterBottomProps) {
 
           {/* Legal Links (Right) */}
           <div className="flex flex-col items-start md:items-end" style={{marginBottom: '2.5%'}}>
-            <nav aria-label={ariaLegalNav} className="flex gap-4">
+            <nav aria-label={ariaLegalNav} className="flex flex-wrap gap-4">
               <Link
                 href={privacyLink}
                 style={{
@@ -163,6 +172,30 @@ export default function FooterBottom({ locale = 'de' }: FooterBottomProps) {
               >
                 {imprintLabel}
               </Link>
+              <button
+                onClick={handleCookieSettings}
+                type="button"
+                style={{
+                  fontFamily: 'Titillium Web',
+                  fontWeight: 400,
+                  fontSize: '14px',
+                  lineHeight: '140%',
+                  letterSpacing: '0%',
+                  textAlign: 'right',
+                  color: '#002E64',
+                  textDecoration: 'none',
+                  background: 'none',
+                  border: 'none',
+                  cursor: 'pointer',
+                  padding: 0,
+                  transition: 'color 0.2s ease'
+                }}
+                onMouseEnter={(e) => e.currentTarget.style.color = '#5095CB'}
+                onMouseLeave={(e) => e.currentTarget.style.color = '#002E64'}
+                aria-label={cookieLabel}
+              >
+                {cookieLabel}
+              </button>
             </nav>
           </div>
         </div>
