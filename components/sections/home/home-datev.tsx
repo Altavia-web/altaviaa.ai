@@ -11,6 +11,9 @@ interface HomeDatevProps {
 export default function HomeDatev({ locale = 'de' }: HomeDatevProps) {
   const t = useTranslations(locale);
   const datevLink = locale === 'en' ? '/en/datev-interface' : '/schnittstelle-datev';
+  const imageSrc = locale === 'en'
+    ? '/images/EN/WebP/AVA_Interface-DATEV_EN.webp'
+    : '/images/DE/WebP/AVA_DATEV-Schnittstelle_DE.webp';
 
   return (
     <section className="py-16 lg:py-20 px-6" style={{ background: 'var(--gradient-datev)' }}>
@@ -38,7 +41,7 @@ export default function HomeDatev({ locale = 'de' }: HomeDatevProps) {
           {/* Rechte Spalte - Bild */}
           <div className="order-1 lg:order-2">
             <Image
-              src="/images/produkte/AVA_DATEV_DE.webp"
+              src={imageSrc}
               alt={t.home.datev.altImage}
               width={500}
               height={400}

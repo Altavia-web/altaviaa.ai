@@ -9,6 +9,9 @@ interface HomeLokalisierungProps {
 
 export default function HomeLokalisierung({ locale = 'de' }: HomeLokalisierungProps) {
   const t = useTranslations(locale);
+  const imageSrc = locale === 'en'
+    ? '/images/EN/WebP/AVA_LOKALISIERUNG_DE_EN.webp'
+    : '/images/DE/WebP/AVA_LOKALISIERUNG_DE_DE.webp';
 
   return (
     <section className="py-16 lg:py-20 px-6" style={{ background: 'var(--gradient-lokalisierung)' }}>
@@ -18,7 +21,7 @@ export default function HomeLokalisierung({ locale = 'de' }: HomeLokalisierungPr
           {/* Linke Spalte - Bild */}
           <div className="order-2 lg:order-1">
             <Image
-              src="/images/produkte/AVA_LOKALISIERUNG_DE.webp"
+              src={imageSrc}
               alt={t.home.localization.altImage}
               width={500}
               height={400}
