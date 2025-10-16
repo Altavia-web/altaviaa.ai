@@ -50,7 +50,7 @@ export default function DunningSolutionsEN() {
 
         {/* Main heading */}
         <h2
-          className="text-3xl lg:text-4xl font-semibold text-center mb-24 leading-tight mx-auto"
+          className="text-3xl lg:text-4xl font-semibold text-center mb-8 leading-tight mx-auto"
           style={{ color: 'var(--color-dark-blue)', maxWidth: '800px' }}
         >
           Automated Dunning, Always Under Control
@@ -61,7 +61,7 @@ export default function DunningSolutionsEN() {
           {features.map((feature, index) => (
             <div key={index} className="text-left">
               <h3
-                className="text-xl lg:text-2xl font-semibold mb-8"
+                className="text-xl lg:text-2xl font-semibold mb-6"
                 style={{ color: 'var(--color-dark-blue)' }}
               >
                 {feature.title}

@@ -35,7 +35,7 @@ export default function BmdBuchhaltung() {
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
         <h2
-          className="text-center mb-24"
+          className="text-center mb-8"
           style={{
             fontFamily: 'Titillium Web',
             fontWeight: 700,
@@ -53,7 +53,7 @@ export default function BmdBuchhaltung() {
           {features.map((feature) => (
             <div key={feature.id} className="text-left">
               <h3
-                className="mb-8"
+                className="mb-6"
                 style={{
                   fontFamily: 'Titillium Web',
                   fontWeight: 700,
