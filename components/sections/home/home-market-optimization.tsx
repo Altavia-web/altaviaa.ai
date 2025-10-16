@@ -19,9 +19,7 @@ export default function HomeMarketOptimization({ locale = 'de' }: HomeMarketOpti
               {t.home.marketOptimization.heading}
             </h2>
             <p className="text-xl leading-relaxed" style={{color: '#000000'}}>
-              {t.home.marketOptimization.paragraph.split('Alta Via Lokalisierung Deutschland')[0]}
-              <strong>{t.home.marketOptimization.altaViaLocalization}</strong>
-              {t.home.marketOptimization.paragraph.split('Alta Via Lokalisierung Deutschland')[1]}
+              {t.home.marketOptimization.paragraph}
             </p>
           </div>
 
