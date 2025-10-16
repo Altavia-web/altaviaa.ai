@@ -138,7 +138,7 @@ export default function ContactPage() {
               aria-describedby={errors.name ? 'name-error' : undefined}
               placeholder="Max Mustermann"
               onBlur={handleBlur}
-              className="w-full bg-[#eaf3f9] border border-transparent rounded-lg px-4 py-3 text-base focus:border-[#5095cb] focus:ring-2 focus:ring-[#a8dcf4] focus:outline-none transition-all"
+              className="w-full bg-[#eaf3f9] border border-transparent rounded-lg px-4 py-3 text-base text-[#002e64] focus:border-[#5095cb] focus:ring-2 focus:ring-[#a8dcf4] focus:outline-none transition-all"
             />
             {errors.name && (
               <p id="name-error" role="alert" className="mt-2 text-sm text-[#ff4100] flex items-center gap-1">
@@ -166,7 +166,7 @@ export default function ContactPage() {
               aria-describedby={errors.email ? 'email-error' : undefined}
               placeholder="max.mustermann@firma.de"
               onBlur={handleBlur}
-              className="w-full bg-[#eaf3f9] border border-transparent rounded-lg px-4 py-3 text-base focus:border-[#5095cb] focus:ring-2 focus:ring-[#a8dcf4] focus:outline-none transition-all"
+              className="w-full bg-[#eaf3f9] border border-transparent rounded-lg px-4 py-3 text-base text-[#002e64] focus:border-[#5095cb] focus:ring-2 focus:ring-[#a8dcf4] focus:outline-none transition-all"
             />
             {errors.email && (
               <p id="email-error" role="alert" className="mt-2 text-sm text-[#ff4100] flex items-center gap-1">
@@ -194,7 +194,7 @@ export default function ContactPage() {
               aria-describedby={errors.company ? 'company-error' : undefined}
               placeholder="Ihr Unternehmen GmbH"
               onBlur={handleBlur}
-              className="w-full bg-[#eaf3f9] border border-transparent rounded-lg px-4 py-3 text-base focus:border-[#5095cb] focus:ring-2 focus:ring-[#a8dcf4] focus:outline-none transition-all"
+              className="w-full bg-[#eaf3f9] border border-transparent rounded-lg px-4 py-3 text-base text-[#002e64] focus:border-[#5095cb] focus:ring-2 focus:ring-[#a8dcf4] focus:outline-none transition-all"
             />
             {errors.company && (
               <p id="company-error" role="alert" className="mt-2 text-sm text-[#ff4100] flex items-center gap-1">
@@ -215,7 +215,7 @@ export default function ContactPage() {
             <select
               id="hearAboutUs"
               name="hearAboutUs"
-              className="w-full bg-[#eaf3f9] border border-transparent rounded-lg px-4 py-3 text-base focus:border-[#5095cb] focus:ring-2 focus:ring-[#a8dcf4] focus:outline-none transition-all"
+              className="w-full bg-[#eaf3f9] border border-transparent rounded-lg px-4 py-3 text-base text-[#002e64] focus:border-[#5095cb] focus:ring-2 focus:ring-[#a8dcf4] focus:outline-none transition-all"
             >
               <option value="">Bitte wählen...</option>
               <option value="Google">Google</option>
