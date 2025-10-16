@@ -66,7 +66,7 @@ export const de = {
     },
     marketOptimization: {
       heading: 'Ihr Kompass für NetSuite im DACH-Gebiet',
-      paragraph: 'NetSuite ist ein starker Wegbegleiter für Ihr Unternehmen. Doch der Pfad durch das "DACH-Gelände" kann komplex sein, besonders wenn es um lokale Compliance geht. Alta Via Applications ist Ihr verlässlicher Kompass: Wir entwickeln unsere Lokalisierungen und anderen Bundles kontinuierlich weiter und passen sie umgehend an gesetzliche Änderungen an. So bleiben Sie auf dem Weg nach oben stets auf dem neuesten Stand.',
+      paragraph: 'NetSuite ist ein starker Wegbegleiter für Ihr Unternehmen. Doch der Pfad durch das "DACH-Gelände" kann komplex sein, besonders wenn es um lokale Compliance geht. Wir sind Ihr verlässlicher Kompass: Wir entwickeln unsere Lokalisierungen und anderen Bundles kontinuierlich weiter und passen sie umgehend an gesetzliche Änderungen an. So bleiben Sie auf dem Weg nach oben stets auf dem neuesten Stand.',
       altaViaLocalization: 'Alta Via Applications',
       altImage: 'Alta Via Lokalisierung Deutschland Map',
     },

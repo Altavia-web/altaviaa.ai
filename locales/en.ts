@@ -66,7 +66,7 @@ export const en = {
     },
     marketOptimization: {
       heading: 'Your Compass for NetSuite in the DACH Region',
-      paragraph: 'NetSuite is a powerful companion for your business. However, navigating the path through the "DACH region" can be complex, particularly when it comes to local compliance. Alta Via Applications is your reliable compass: We continuously develop our localizations and other bundles, adapting them immediately to legal changes. This ensures that you always stay up to date on your way to the top.',
+      paragraph: 'NetSuite is a powerful companion for your business. However, navigating the path through the "DACH region" can be complex, particularly when it comes to local compliance. We are your reliable compass: We continuously develop our localizations and other bundles, adapting them immediately to legal changes. This ensures that you always stay up to date on your way to the top.',
       altaViaLocalization: 'Alta Via Applications',
       altImage: 'Alta Via Localization Germany Map',
     },
