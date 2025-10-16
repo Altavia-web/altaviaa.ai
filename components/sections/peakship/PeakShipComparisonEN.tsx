@@ -297,6 +297,250 @@ export default function PeakShipComparisonEN() {
           </table>
         </div>
 
+        {/* Mobile Card Layout */}
+        <div className="lg:hidden space-y-6">
+
+          {/* Setup Category */}
+          <div>
+            <div
+              className="flex items-center gap-2 mb-4 pb-2"
+              style={{ borderBottom: '2px solid var(--color-peakship-secondary)' }}
+            >
+              <CheckCircle2 size={20} style={{ color: 'var(--color-peakship-primary)' }} />
+              <h3 className="font-semibold text-lg" style={{ color: 'var(--color-dark-blue)' }}>Setup</h3>
+            </div>
+
+            <div className="space-y-4">
+              <div className="border rounded-lg p-4" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                <div className="font-medium mb-3" style={{ color: 'var(--color-dark-blue)' }}>
+                  Setting up carrier accounts directly in NetSuite
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">NetSuite Standard</div>
+                    <div className="font-medium flex justify-center">
+                      <XCircle className="w-7 h-7" style={{ color: '#ff4100' }} />
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">PeakShip for NetSuite</div>
+                    <div className="font-medium flex justify-center">
+                      <CheckCircle2 className="w-7 h-7" style={{ color: '#00b577' }} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border rounded-lg p-4" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                <div className="font-medium mb-3" style={{ color: 'var(--color-dark-blue)' }}>
+                  Standalone bundle, easy installation
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">NetSuite Standard</div>
+                    <div className="font-medium flex justify-center">
+                      <XCircle className="w-7 h-7" style={{ color: '#ff4100' }} />
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">PeakShip for NetSuite</div>
+                    <div className="font-medium flex justify-center">
+                      <CheckCircle2 className="w-7 h-7" style={{ color: '#00b577' }} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Features Category */}
+          <div>
+            <div
+              className="flex items-center gap-2 mb-4 pb-2"
+              style={{ borderBottom: '2px solid var(--color-peakship-secondary)' }}
+            >
+              <CheckCircle2 size={20} style={{ color: 'var(--color-peakship-primary)' }} />
+              <h3 className="font-semibold text-lg" style={{ color: 'var(--color-dark-blue)' }}>Features</h3>
+            </div>
+
+            <div className="space-y-4">
+              <div className="border rounded-lg p-4" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                <div className="font-medium mb-3" style={{ color: 'var(--color-dark-blue)' }}>
+                  Create shipping orders directly in NetSuite
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">NetSuite Standard</div>
+                    <div className="font-medium">
+                      <span style={{ fontFamily: 'Titillium Web', fontWeight: 400, fontSize: '16px', color: '#000000' }}>limited</span>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">PeakShip for NetSuite</div>
+                    <div className="font-medium flex justify-center">
+                      <CheckCircle2 className="w-7 h-7" style={{ color: '#00b577' }} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border rounded-lg p-4" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                <div className="font-medium mb-3" style={{ color: 'var(--color-dark-blue)' }}>
+                  Automatic creation & printing of shipping labels (PDF & Zebra format)
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">NetSuite Standard</div>
+                    <div className="font-medium flex justify-center">
+                      <XCircle className="w-7 h-7" style={{ color: '#ff4100' }} />
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">PeakShip for NetSuite</div>
+                    <div className="font-medium flex justify-center">
+                      <CheckCircle2 className="w-7 h-7" style={{ color: '#00b577' }} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border rounded-lg p-4" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                <div className="font-medium mb-3" style={{ color: 'var(--color-dark-blue)' }}>
+                  Automated tracking numbers and status
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">NetSuite Standard</div>
+                    <div className="font-medium flex justify-center">
+                      <XCircle className="w-7 h-7" style={{ color: '#ff4100' }} />
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">PeakShip for NetSuite</div>
+                    <div className="font-medium flex justify-center">
+                      <CheckCircle2 className="w-7 h-7" style={{ color: '#00b577' }} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border rounded-lg p-4" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                <div className="font-medium mb-3" style={{ color: 'var(--color-dark-blue)' }}>
+                  Automatic creation of customs declarations (for international shipments)
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">NetSuite Standard</div>
+                    <div className="font-medium flex justify-center">
+                      <XCircle className="w-7 h-7" style={{ color: '#ff4100' }} />
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">PeakShip for NetSuite</div>
+                    <div className="font-medium flex justify-center">
+                      <CheckCircle2 className="w-7 h-7" style={{ color: '#00b577' }} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border rounded-lg p-4" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                <div className="font-medium mb-3" style={{ color: 'var(--color-dark-blue)' }}>
+                  Support for multiple accounts per carrier & multiple packages per delivery
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">NetSuite Standard</div>
+                    <div className="font-medium flex justify-center">
+                      <XCircle className="w-7 h-7" style={{ color: '#ff4100' }} />
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">PeakShip for NetSuite</div>
+                    <div className="font-medium flex justify-center">
+                      <CheckCircle2 className="w-7 h-7" style={{ color: '#00b577' }} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border rounded-lg p-4" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                <div className="font-medium mb-3" style={{ color: 'var(--color-dark-blue)' }}>
+                  Wide selection of integrated carriers (DHL, DPD, UPS, GLS, FedEx …)
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">NetSuite Standard</div>
+                    <div className="font-medium flex justify-center">
+                      <XCircle className="w-7 h-7" style={{ color: '#ff4100' }} />
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">PeakShip for NetSuite</div>
+                    <div className="font-medium flex justify-center">
+                      <CheckCircle2 className="w-7 h-7" style={{ color: '#00b577' }} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Maintenance & Updates Category */}
+          <div>
+            <div
+              className="flex items-center gap-2 mb-4 pb-2"
+              style={{ borderBottom: '2px solid var(--color-peakship-secondary)' }}
+            >
+              <CheckCircle2 size={20} style={{ color: 'var(--color-peakship-primary)' }} />
+              <h3 className="font-semibold text-lg" style={{ color: 'var(--color-dark-blue)' }}>Maintenance & Updates</h3>
+            </div>
+
+            <div className="space-y-4">
+              <div className="border rounded-lg p-4" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                <div className="font-medium mb-3" style={{ color: 'var(--color-dark-blue)' }}>
+                  Regular updates (NetSuite releases + new carriers)
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">NetSuite Standard</div>
+                    <div className="font-medium">
+                      <span style={{ fontFamily: 'Titillium Web', fontWeight: 400, fontSize: '16px', color: '#000000' }}>limited</span>
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">PeakShip for NetSuite</div>
+                    <div className="font-medium flex justify-center">
+                      <CheckCircle2 className="w-7 h-7" style={{ color: '#00b577' }} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div className="border rounded-lg p-4" style={{ borderColor: 'var(--color-peakship-secondary)' }}>
+                <div className="font-medium mb-3" style={{ color: 'var(--color-dark-blue)' }}>
+                  Extension with additional carriers upon customer request
+                </div>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">NetSuite Standard</div>
+                    <div className="font-medium flex justify-center">
+                      <XCircle className="w-7 h-7" style={{ color: '#ff4100' }} />
+                    </div>
+                  </div>
+                  <div>
+                    <div className="text-sm text-gray-600 mb-1">PeakShip for NetSuite</div>
+                    <div className="font-medium flex justify-center">
+                      <CheckCircle2 className="w-7 h-7" style={{ color: '#00b577' }} />
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
       </div>
     </section>
   );
