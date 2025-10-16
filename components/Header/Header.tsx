@@ -71,7 +71,7 @@ export default function Header({ locale = 'de' }: HeaderProps) {
             {/* Logo Section */}
             <Link href="/" className={styles.logoLink}>
               <Image
-                src="/images/logo/AVA_Logo.webp"
+                src="/images/logo/AVA_Logo.png"
                 alt="Alta Via Applications Logo"
                 width={320}
                 height={320}
