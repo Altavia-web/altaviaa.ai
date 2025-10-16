@@ -117,6 +117,12 @@ const config: Config = {
           secondary: '#00b577',
         },
 
+        // Product Colors - BMD Interface
+        bmd: {
+          primary: '#ff6120',
+          secondary: '#ff9a55',
+        },
+
         // Legacy primary colors for backward compatibility
         primary: {
           50: '#eff6ff',

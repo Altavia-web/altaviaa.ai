@@ -257,6 +257,37 @@ export default function ColorsTestPage() {
                   <p className="text-xs text-gray-600">radial-gradient from #00b577 to #005f32</p>
                 </div>
               </div>
+              <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
+                <div className="h-32 w-full" style={{ background: 'var(--gradient-bmd)' }}></div>
+                <div className="p-4">
+                  <h4 className="font-semibold text-gray-900 mb-1">BMD Gradient</h4>
+                  <p className="text-xs text-gray-500 mb-2">style={`{{ background: 'var(--gradient-bmd)' }}`}</p>
+                  <p className="text-xs text-gray-600">radial-gradient from #ff9a55 to #ff6120</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Intro Gradients */}
+          <div className="mt-8">
+            <h3 className="text-lg font-medium text-gray-800 mb-4">Intro Gradients (Soft Backgrounds)</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
+                <div className="h-32 w-full" style={{ background: 'var(--gradient-datev-intro)' }}></div>
+                <div className="p-4">
+                  <h4 className="font-semibold text-gray-900 mb-1">DATEV Intro Gradient</h4>
+                  <p className="text-xs text-gray-500 mb-2">style={`{{ background: 'var(--gradient-datev-intro)' }}`}</p>
+                  <p className="text-xs text-gray-600">radial-gradient from rgba(255,255,255,0.8) to #cdebe7</p>
+                </div>
+              </div>
+              <div className="bg-white rounded-lg border border-gray-200 overflow-hidden">
+                <div className="h-32 w-full" style={{ background: 'var(--gradient-bmd-intro)' }}></div>
+                <div className="p-4">
+                  <h4 className="font-semibold text-gray-900 mb-1">BMD Intro Gradient</h4>
+                  <p className="text-xs text-gray-500 mb-2">style={`{{ background: 'var(--gradient-bmd-intro)' }}`}</p>
+                  <p className="text-xs text-gray-600">radial-gradient from rgba(255,255,255,0.8) to #ffddc8</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
@@ -319,6 +350,14 @@ export default function ColorsTestPage() {
             secondaryHex="#00b577"
             primaryClass="bg-gsheet-primary"
             secondaryClass="bg-gsheet-secondary"
+          />
+
+          <ProductColorSection
+            productName="BMD Interface"
+            primaryHex="#ff6120"
+            secondaryHex="#ff9a55"
+            primaryClass="bg-bmd-primary"
+            secondaryClass="bg-bmd-secondary"
           />
         </section>
 
@@ -384,7 +423,7 @@ export default function ColorsTestPage() {
                 <li><strong>Border:</strong> border-dark-blue, border-skyBlue, border-midBlue, etc.</li>
                 <li><strong>Alpha variants:</strong> bg-darkBlue-40, bg-darkBlue-70, etc.</li>
                 <li><strong>Gradients:</strong> bg-gradient-dark-to-mid, bg-gradient-mid-to-sky, bg-gradient-orange-to-yellow</li>
-                <li><strong>Product colors:</strong> bg-datev-primary, text-peakship-secondary, etc.</li>
+                <li><strong>Product colors:</strong> bg-datev-primary, text-peakship-secondary, bg-bmd-primary, etc.</li>
               </ul>
             </div>
 
