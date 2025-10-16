@@ -70,13 +70,13 @@ export default function PeakShipComparisonEN() {
               style={{ backgroundColor: 'var(--color-peakship-primary)' }}
             >
               <tr>
-                <th className="text-left py-5 px-6 text-white font-semibold text-base lg:text-lg">
+                <th className="text-left py-5 px-6 font-semibold text-base lg:text-lg" style={{ color: '#002e64' }}>
                   Feature comparison
                 </th>
-                <th className="text-center py-5 px-6 text-white font-semibold text-base lg:text-lg">
+                <th className="text-center py-5 px-6 font-semibold text-base lg:text-lg" style={{ color: '#002e64' }}>
                   NetSuite Standard
                 </th>
-                <th className="text-center py-5 px-6 text-white font-semibold text-base lg:text-lg">
+                <th className="text-center py-5 px-6 font-semibold text-base lg:text-lg" style={{ color: '#002e64' }}>
                   PeakShip for NetSuite by Alta Via Applications
                 </th>
               </tr>

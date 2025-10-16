@@ -46,13 +46,13 @@ export default function ReisekostenComparisonEN() {
               style={{ backgroundColor: 'var(--color-reisekosten-primary)' }}
             >
               <tr>
-                <th className="text-left py-5 px-6 text-white font-semibold text-base lg:text-lg">
+                <th className="text-left py-5 px-6 font-semibold text-base lg:text-lg" style={{ color: '#002e64' }}>
                   Feature Comparison
                 </th>
-                <th className="text-center py-5 px-6 text-white font-semibold text-base lg:text-lg">
+                <th className="text-center py-5 px-6 font-semibold text-base lg:text-lg" style={{ color: '#002e64' }}>
                   NetSuite Expense Management
                 </th>
-                <th className="text-center py-5 px-6 text-white font-semibold text-base lg:text-lg">
+                <th className="text-center py-5 px-6 font-semibold text-base lg:text-lg" style={{ color: '#002e64' }}>
                   Travel Expense Management for NetSuite by Alta Via Applications
                 </th>
               </tr>
