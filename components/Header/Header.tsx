@@ -118,13 +118,19 @@ export default function Header({ locale = 'de' }: HeaderProps) {
               </div>
 
               {/* Kontakt Link (no dropdown) */}
-              <Link
-                href={contactUrl}
-                className={`${styles.dropdownButton} ${isActive('/kontakt') || isActive('/en/contact') ? styles.active : ''}`}
-                aria-label={t.nav.contact}
+              <div
+                onMouseEnter={() => {
+                  setIsApplicationsOpen(false);
+                }}
               >
-                <span>{t.nav.contact}</span>
-              </Link>
+                <Link
+                  href={contactUrl}
+                  className={`${styles.dropdownButton} ${isActive('/kontakt') || isActive('/en/contact') ? styles.active : ''}`}
+                  aria-label={t.nav.contact}
+                >
+                  <span>{t.nav.contact}</span>
+                </Link>
+              </div>
             </div>
 
             {/* Mobile Menu Button */}
