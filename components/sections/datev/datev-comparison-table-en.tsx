@@ -1,5 +1,7 @@
-import React from 'react';
-import { CheckCircle2, XCircle, Check } from 'lucide-react';
+'use client';
+
+import React, { useState } from 'react';
+import { CheckCircle2, XCircle, Check, ChevronDown } from 'lucide-react';
 
 interface FeatureRow {
   id: number;
@@ -49,6 +51,20 @@ const categories: Category[] = [
 ];
 
 export default function DatevComparisonTableEN() {
+  const [openCategories, setOpenCategories] = useState<Set<string>>(new Set([categories[0]?.name || '']));
+
+  const toggleCategory = (categoryName: string) => {
+    setOpenCategories(prev => {
+      const newSet = new Set(prev);
+      if (newSet.has(categoryName)) {
+        newSet.delete(categoryName);
+      } else {
+        newSet.add(categoryName);
+      }
+      return newSet;
+    });
+  };
+
   const renderCell = (value: string) => {
     if (value === 'check' || value === 'yes') {
       return (
@@ -151,92 +167,120 @@ export default function DatevComparisonTableEN() {
 
             {/* Body */}
             <tbody>
-              {categories.map((category) => (
-                <React.Fragment key={category.name}>
-                  {/* Category Row */}
-                  <tr style={{ backgroundColor: '#f3f4f6' }}>
-                    <td
-                      colSpan={3}
-                      className="py-3 px-4"
-                      style={{
-                        fontFamily: 'Titillium Web',
-                        fontWeight: 600,
-                        fontSize: '18px',
-                        color: '#002e64'
-                      }}
-                    >
-                      <div className="flex items-center gap-2">
-                        <Check className="w-5 h-5" style={{ color: '#009b87' }} />
-                        {category.name}
-                      </div>
-                    </td>
-                  </tr>
-
-                  {/* Feature Rows */}
-                  {category.features.map((feature) => (
+              {categories.map((category) => {
+                const isOpen = openCategories.has(category.name);
+                return (
+                  <React.Fragment key={category.name}>
+                    {/* Category Row - Clickable */}
                     <tr
-                      key={feature.id}
-                      style={{
-                        backgroundColor: '#ffffff',
-                        borderBottom: '2px solid #78dc3c'
-                      }}
+                      style={{ backgroundColor: '#f3f4f6', cursor: 'pointer' }}
+                      onClick={() => toggleCategory(category.name)}
                     >
                       <td
-                        className="py-4 px-4"
+                        colSpan={3}
+                        className="py-3 px-4"
                         style={{
                           fontFamily: 'Titillium Web',
-                          fontWeight: 400,
+                          fontWeight: 600,
                           fontSize: '18px',
-                          lineHeight: '140%',
-                          color: '#1e293b'
+                          color: '#002e64'
                         }}
                       >
-                        {feature.feature}
-                      </td>
-                      <td className="py-4 px-4">
-                        {renderCell(feature.netsuite)}
-                      </td>
-                      <td className="py-4 px-4">
-                        {renderCell(feature.altaVia)}
+                        <div className="flex items-center justify-between">
+                          <div className="flex items-center gap-2">
+                            <Check className="w-5 h-5" style={{ color: '#009b87' }} />
+                            {category.name}
+                          </div>
+                          <ChevronDown
+                            className="w-5 h-5 transition-transform duration-200"
+                            style={{
+                              color: '#002e64',
+                              transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)'
+                            }}
+                          />
+                        </div>
                       </td>
                     </tr>
-                  ))}
-                </React.Fragment>
-              ))}
+
+                    {/* Feature Rows - Collapsible */}
+                    {isOpen && category.features.map((feature) => (
+                      <tr
+                        key={feature.id}
+                        style={{
+                          backgroundColor: '#ffffff',
+                          borderBottom: '2px solid #78dc3c'
+                        }}
+                      >
+                        <td
+                          className="py-4 px-4"
+                          style={{
+                            fontFamily: 'Titillium Web',
+                            fontWeight: 400,
+                            fontSize: '18px',
+                            lineHeight: '140%',
+                            color: '#1e293b'
+                          }}
+                        >
+                          {feature.feature}
+                        </td>
+                        <td className="py-4 px-4">
+                          {renderCell(feature.netsuite)}
+                        </td>
+                        <td className="py-4 px-4">
+                          {renderCell(feature.altaVia)}
+                        </td>
+                      </tr>
+                    ))}
+                  </React.Fragment>
+                );
+              })}
             </tbody>
           </table>
         </div>
 
         {/* Mobile Card Layout - Hidden on Desktop */}
         <div className="lg:hidden space-y-6">
-          {categories.map((category) => (
-            <div key={category.name}>
-              {/* Category Header */}
-              <div
-                className="py-3 px-4 mb-3"
-                style={{
-                  backgroundColor: '#f3f4f6',
-                  borderRadius: '0.5rem'
-                }}
-              >
-                <div className="flex items-center gap-2">
-                  <Check className="w-5 h-5" style={{ color: '#009b87' }} />
-                  <span
-                    style={{
-                      fontFamily: 'Titillium Web',
-                      fontWeight: 600,
-                      fontSize: '18px',
-                      color: '#002e64'
-                    }}
-                  >
-                    {category.name}
-                  </span>
+          {categories.map((category) => {
+            const isOpen = openCategories.has(category.name);
+            return (
+              <div key={category.name}>
+                {/* Category Header - Clickable */}
+                <div
+                  className="py-3 px-4 mb-3 cursor-pointer"
+                  style={{
+                    backgroundColor: '#f3f4f6',
+                    borderRadius: '0.5rem'
+                  }}
+                  onClick={() => toggleCategory(category.name)}
+                >
+                  <div className="flex items-center justify-between">
+                    <div className="flex items-center gap-2">
+                      <Check className="w-5 h-5" style={{ color: '#009b87' }} />
+                      <span
+                        style={{
+                          fontFamily: 'Titillium Web',
+                          fontWeight: 600,
+                          fontSize: '18px',
+                          color: '#002e64'
+                        }}
+                      >
+                        {category.name}
+                      </span>
+                    </div>
+                    <ChevronDown
+                      className="w-5 h-5 transition-transform duration-200"
+                      style={{
+                        color: '#002e64',
+                        transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)'
+                      }}
+                    />
+                  </div>
                 </div>
-              </div>
 
-              {/* Feature Cards */}
-              <div className="space-y-3">
-                {category.features.map((feature) => (
+                {/* Feature Cards - Collapsible */}
+                {isOpen && (
+                  <div className="space-y-3">
+                    {category.features.map((feature) => (
                   <div
                     key={feature.id}
                     className="p-4"
@@ -302,11 +346,13 @@ export default function DatevComparisonTableEN() {
                         </div>
                       </div>
                     </div>
-                  </div>
-                ))}
-              </div>
+                    </div>
+                  ))}
+                </div>
+              )}
             </div>
-          ))}
+          );
+          })}
         </div>
       </div>
 
