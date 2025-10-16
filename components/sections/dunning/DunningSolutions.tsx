@@ -50,7 +50,7 @@ export default function DunningSolutions() {
 
         {/* Main heading */}
         <h2
-          className="text-3xl lg:text-4xl font-semibold text-center mb-20 leading-tight mx-auto"
+          className="text-3xl lg:text-4xl font-semibold text-center mb-24 leading-tight mx-auto"
           style={{ color: 'var(--color-dark-blue)', maxWidth: '800px' }}
         >
           Mahnungen automatisiert und im Griff

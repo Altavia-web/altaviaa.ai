@@ -151,7 +151,7 @@ h2, .h2 {
   font-size: var(--font-size-3xl);
   line-height: 1.2;
   font-weight: 600;
-  margin: 0 0 0.875rem;
+  margin: 0;
 }
 
 h3, .h3 {
