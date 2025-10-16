@@ -69,7 +69,7 @@ export default function LocalizationSolutions() {
           {features.map((feature, index) => (
             <div key={index} className="text-left">
               <h3
-                className="text-xl lg:text-2xl font-semibold mb-3"
+                className="text-xl lg:text-2xl font-semibold mb-8"
                 style={{ color: 'var(--color-dark-blue)' }}
               >
                 {feature.title}

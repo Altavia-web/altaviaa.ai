@@ -53,7 +53,7 @@ export default function BmdBuchhaltung() {
           {features.map((feature) => (
             <div key={feature.id} className="text-left">
               <h3
-                className="mb-3"
+                className="mb-8"
                 style={{
                   fontFamily: 'Titillium Web',
                   fontWeight: 700,
