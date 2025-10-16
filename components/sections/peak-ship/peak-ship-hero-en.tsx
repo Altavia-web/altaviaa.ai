@@ -15,10 +15,10 @@ export default function PeakShipHeroEN() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Text Content - Left */}
           <div className="text-left">
-            <h1 className="mb-6 text-white">
+            <h1 className="mb-6" style={{ color: '#002e64' }}>
               PeakShip for NetSuite
             </h1>
-            <h2 className="text-white" style={{ fontSize: '1.5rem', fontWeight: 600, lineHeight: '1.3' }}>
+            <h2 style={{ fontSize: '1.5rem', fontWeight: 600, lineHeight: '1.3', color: '#002e64' }}>
               Ship Efficiently – Directly from Your ERP
             </h2>
           </div>
