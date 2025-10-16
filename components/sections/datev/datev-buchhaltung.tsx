@@ -64,7 +64,7 @@ export default function DatevBuchhaltung() {
       <div className="max-w-7xl mx-auto px-6">
         {/* Heading */}
         <h2
-          className="text-center mb-12"
+          className="text-center mb-20"
           style={{
             fontFamily: 'Titillium Web',
             fontWeight: 700,

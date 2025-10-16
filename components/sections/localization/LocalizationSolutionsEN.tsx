@@ -58,7 +58,7 @@ export default function LocalizationSolutionsEN() {
 
         {/* Main heading */}
         <h2
-          className="text-3xl lg:text-4xl font-semibold text-center mb-16 leading-tight mx-auto"
+          className="text-3xl lg:text-4xl font-semibold text-center mb-20 leading-tight mx-auto"
           style={{ color: 'var(--color-dark-blue)', maxWidth: '800px' }}
         >
           Conquer German compliance
