@@ -24,7 +24,7 @@ export default function PeakShipHeroContentEN() {
           {/* Right Column - Product Image */}
           <div className="flex justify-center lg:justify-end">
             <div
-              className="relative w-full max-w-md border-4 rounded-lg overflow-hidden"
+              className="relative w-[105%] max-w-[105%] lg:w-[70%] lg:max-w-[70%] border-4 rounded-lg overflow-hidden mb-6 lg:mb-0"
               style={{ borderColor: 'var(--color-peakship-primary)' }}
             >
               <Image
