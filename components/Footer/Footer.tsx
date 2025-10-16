@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from 'next/image';
-import Button from '@/components/Button';
 import FooterBottom from './FooterBottom';
 import styles from './Footer.module.css';
 import { useTranslations, type Locale } from '@/lib/i18n';
@@ -32,14 +31,6 @@ export default function Footer({ locale = 'de' }: FooterProps) {
               <p className={styles.description}>
                 {t.footer.description}
               </p>
-              <Button
-                variant="filled"
-                color="midBlue"
-                size="lg"
-                showArrow={true}
-              >
-                {t.footer.cta}
-              </Button>
             </div>
 
             {/* Right: Image */}
