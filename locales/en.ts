@@ -13,13 +13,13 @@ export const en = {
     productsMenu: {
       title: 'Applications',
       datev: {
-        title: 'DATEV Interface for NetSuite',
-        short: 'DATEV Interface',
+        title: 'Interface DATEV for NetSuite',
+        short: 'Interface DATEV',
         description: 'Seamless integration between NetSuite and DATEV',
       },
       bmd: {
-        title: 'BMD Interface for NetSuite',
-        short: 'BMD Interface',
+        title: 'Interface BMD for NetSuite',
+        short: 'Interface BMD',
         description: 'Seamless integration between NetSuite and BMD',
       },
       localization: {
@@ -131,7 +131,7 @@ export const en = {
   },
   products: {
     datev: {
-      title: 'DATEV Interface',
+      title: 'Interface DATEV',
       subtitle: 'Seamless integration between NetSuite and DATEV',
       description: 'Export your NetSuite booking data directly to DATEV financial accounting',
     },

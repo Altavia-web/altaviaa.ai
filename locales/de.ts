@@ -13,13 +13,13 @@ export const de = {
     productsMenu: {
       title: 'Applications',
       datev: {
-        title: 'DATEV Schnittstelle für NetSuite',
-        short: 'DATEV Schnittstelle',
+        title: 'Schnittstelle DATEV für NetSuite',
+        short: 'Schnittstelle DATEV',
         description: 'Nahtlose Integration zwischen NetSuite und DATEV',
       },
       bmd: {
-        title: 'BMD Schnittstelle für NetSuite',
-        short: 'BMD Schnittstelle',
+        title: 'Schnittstelle BMD für NetSuite',
+        short: 'Schnittstelle BMD',
         description: 'Nahtlose Integration zwischen NetSuite und BMD',
       },
       localization: {
@@ -131,7 +131,7 @@ export const de = {
   },
   products: {
     datev: {
-      title: 'DATEV Schnittstelle',
+      title: 'Schnittstelle DATEV',
       subtitle: 'Nahtlose Integration zwischen NetSuite und DATEV',
       description: 'Exportieren Sie Ihre NetSuite-Buchungsdaten direkt in die DATEV-Finanzbuchführung',
     },
