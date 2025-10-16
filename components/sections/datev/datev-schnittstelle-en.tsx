@@ -42,7 +42,7 @@ export default function DatevSchnittstelleEN() {
 
           {/* Image - Right */}
           <div className="flex justify-end">
-            <div className="relative w-[105%] max-w-[105%] lg:w-[70%] lg:max-w-[70%] mb-6 lg:mb-0">
+            <div className="relative w-[105%] max-w-[105%] lg:w-[70%] lg:max-w-[70%] mb-6 lg:mb-0 mt-[10%]">
               <Image
                 src="/images/EN/WebP/AVA_Interface-DATEV_EN.webp"
                 alt="DATEV Interface"
