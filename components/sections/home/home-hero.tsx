@@ -34,7 +34,7 @@ export default function HomeHero({ locale = 'de' }: HomeHeroProps) {
           {t.home.hero.subtitle}
         </p>
         <a
-          href={locale === 'en' ? '/images/AVA Product Brochure_EN.pdf' : '/images/AVA Produktbroschüre_DE.pdf'}
+          href={locale === 'en' ? '/images/AVA%20Product%20Brochure_EN.pdf' : '/images/AVA%20Produktbrosch%C3%BCre_DE.pdf'}
           download
           target="_blank"
           rel="noopener noreferrer"
