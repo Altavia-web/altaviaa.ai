@@ -22,7 +22,7 @@ interface ProductSliderENProps {
 const products: Product[] = [
   {
     id: 'datev-export',
-    name: 'DATEV Interface',
+    name: 'Interface DATEV',
     image: '/images/EN/WebP/AVA_Interface-DATEV_EN.webp',
     color: '#009b87',
     link: '/en/datev-interface',
