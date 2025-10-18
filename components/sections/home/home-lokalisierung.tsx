@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
-import { CheckCircle } from 'lucide-react';
+import { CheckCircle, ArrowRight } from 'lucide-react';
+import Link from 'next/link';
 import { useTranslations, type Locale } from '@/lib/i18n';
 
 interface HomeLokalisierungProps {
@@ -9,6 +10,7 @@ interface HomeLokalisierungProps {
 
 export default function HomeLokalisierung({ locale = 'de' }: HomeLokalisierungProps) {
   const t = useTranslations(locale);
+  const lokalisierungLink = locale === 'en' ? '/en/localization-germany' : '/lokalisierung-deutschland';
   const imageSrc = locale === 'en'
     ? '/images/EN/WebP/AVA_LOKALISIERUNG_DE_EN.webp'
     : '/images/DE/WebP/AVA_LOKALISIERUNG_DE_DE.webp';
@@ -46,9 +48,16 @@ export default function HomeLokalisierung({ locale = 'de' }: HomeLokalisierungPr
               ))}
             </ul>
 
-            <p className="text-xl leading-relaxed">
+            <p className="text-xl leading-relaxed mb-8">
               {t.home.localization.result}
             </p>
+
+            <Link href={lokalisierungLink}>
+              <button className="bg-white text-gray-900 px-8 py-4 rounded-lg font-semibold text-lg flex items-center gap-3 hover:bg-gray-100 transition-colors shadow-lg">
+                {t.common.learnMore}
+                <ArrowRight className="w-5 h-5" />
+              </button>
+            </Link>
           </div>
         </div>
       </div>
