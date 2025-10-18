@@ -92,10 +92,10 @@ export const de = {
       altImage: 'Lokalisierung Deutschland für NetSuite',
     },
     datev: {
-      heading: 'Alta Via DATEV Export für NetSuite – Der direkte Pfad zur Finanzbuchhaltung mit DATEV',
-      paragraph: 'Mit der von DATEV-zertifizierten SuiteApp "DATEV Export für NetSuite" gelangen Ihre Buchungsdaten sicher und strukturiert in die DATEV-Finanzbuchführung. Alle relevanten Informationen – von Stammdaten bis zu Transaktionen – werden im DATEV-Format exportiert und können direkt übernommen werden. Damit gelingt die Zusammenarbeit mit Steuerberatern ohne Umwege.',
+      heading: 'Alta Via Schnittstelle DATEV für NetSuite – Der direkte Pfad zur Finanzbuchhaltung mit DATEV',
+      paragraph: 'Mit der von DATEV-zertifizierten SuiteApp "Schnittstelle DATEV für NetSuite" gelangen Ihre Buchungsdaten sicher und strukturiert in die DATEV-Finanzbuchführung. Alle relevanten Informationen – von Stammdaten bis zu Transaktionen – werden im DATEV-Format exportiert und können direkt übernommen werden. Damit gelingt die Zusammenarbeit mit Steuerberatern ohne Umwege.',
       cta: 'Mehr erfahren',
-      altImage: 'DATEV Export für NetSuite',
+      altImage: 'Schnittstelle DATEV für NetSuite',
     },
     compliance: {
       heading: 'Bleiben Sie stets compliant und dem nächsten Schritt voraus',

@@ -92,10 +92,10 @@ export const en = {
       altImage: 'Localization Germany for NetSuite',
     },
     datev: {
-      heading: 'Alta Via DATEV Export for NetSuite – The Direct Path to Financial Accounting with DATEV',
-      paragraph: 'With the DATEV-certified SuiteApp "DATEV Export for NetSuite", your booking data reaches DATEV financial accounting securely and in a structured manner. All relevant information – from master data to transactions – is exported in DATEV format and can be directly adopted. This enables seamless collaboration with tax advisors.',
+      heading: 'Alta Via Interface DATEV for NetSuite – The Direct Path to Financial Accounting with DATEV',
+      paragraph: 'With the DATEV-certified SuiteApp "Interface DATEV for NetSuite", your booking data reaches DATEV financial accounting securely and in a structured manner. All relevant information – from master data to transactions – is exported in DATEV format and can be directly adopted. This enables seamless collaboration with tax advisors.',
       cta: 'Learn more',
-      altImage: 'DATEV Export for NetSuite',
+      altImage: 'Interface DATEV for NetSuite',
     },
     compliance: {
       heading: 'Stay Compliant and Ahead of the Next Step',
